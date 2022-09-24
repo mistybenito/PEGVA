@@ -1,0 +1,277 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+@font-face
+{
+    font-family: 'Nunito-VariableFont_wght';
+    src: url('fonts/Nunito-VariableFont_wght.ttf');
+}
+body
+{
+    font-family: 'Nunito-VariableFont_wght';
+    background-image:url("images/bground.png");
+    background-attachment: fixed; 
+	background-position: center; 
+	background-size: cover;
+}
+nav
+{
+    height: 80px;
+    width: 100%;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+label.title
+{
+    color: rgb(242, 242, 242);
+    font-size: 20px;
+    line-height: 80px;
+    font-weight: bold;
+    margin-left: 50px;
+    letter-spacing: 4px;
+}
+nav ul
+{
+    display: block;
+    margin-right: 20px;
+    padding: 0;
+    list-style: none;
+    float: right;
+}
+ul li
+{ 
+    color: white;
+    display: inline-block;
+    position: relative;
+    line-height: 80px;
+    margin: 0 5px;
+    text-transform: uppercase;
+}
+li ul 
+{
+    display: none;
+}
+ul li a 
+{
+    display: block;
+    text-decoration: none;
+    white-space: nowrap;
+    color: white;
+}
+li ul.course
+{
+    height: 400px;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar 
+{
+    padding-right: 3px;
+    width: 10px;
+}
+::-webkit-scrollbar-track 
+{
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb 
+{
+    background-color: #0082e6;
+    border-radius: 100px;
+    box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+}
+li:hover > ul 
+{
+    background-color: #0c2a7a;
+    display: block; 
+    position: absolute;
+}
+
+ul:before,
+ul:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+ul:after {
+    clear: both;
+}
+a:hover
+{
+    color: rgb(0, 0, 0);
+    
+}
+.chckbtn
+{
+    font-size: 30px;
+    color: black;
+    float: right;
+    line-height: 80px;
+    margin-right: 30px;
+    cursor: pointer;
+    display: none;
+}
+#check
+{
+    display: none;
+}
+@media (max-width: 952px)
+{
+    label.title
+    {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    h1
+    {
+        font-size: 20px;
+    }
+    nav ul li a
+    {
+        font-size: 16px;
+    }
+    
+}
+@media (max-width: 858px)
+{   
+    .chckbtn
+    {
+        display: block;
+    }
+    ul
+    {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #214198;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: .5s;
+    }
+    nav ul li
+    {
+        display: block;
+    }
+    nav ul li a
+    {
+        font-size: 20px;
+        margin: 50px 0;
+        line-height: 30px; 
+    }
+    a:hover
+    {
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul
+    {
+        left: 0;
+    }
+    
+}
+h1
+{
+    text-align: center;
+    color: white;
+    margin: 25px 0;
+}
+#div1
+{
+    margin-top: 6px;
+    margin-bottom: 11px;
+    margin-left: 10%;
+    width: max-content;
+}
+.search
+{
+    width: 25px;
+    height: auto;
+    margin-top: 5px;
+}
+.searchbtn
+{
+    width: 40px;
+    height: 36px;
+    border: 1px solid white;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 3px;
+}
+input[type=text],textarea 
+{    
+    padding: 15px;
+    font-size: 17px;
+    background-color: transparent;
+    resize: none;
+    width: fit-content;
+    border: 3px solid white;
+    height: 20px;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+    color: white;
+}
+::placeholder 
+{ /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(210, 210, 210);
+    opacity: .5; /* Firefox */
+}
+  
+:-ms-input-placeholder 
+{ /* Internet Explorer 10-11 */
+    color: rgb(210, 210, 210);
+}
+  
+::-ms-input-placeholder 
+{ /* Microsoft Edge */
+    color: rgb(210, 210, 210);
+}
+#div2
+{
+    width: inherit;
+    height: 100%;
+}
+table.student-list-content
+{
+    border-collapse: collapse;
+    margin: auto;
+    border-radius: 25px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+tbody
+{
+    border-radius: 25px;
+}
+th
+{
+	border-bottom: 2px solid rgb(72, 72, 72);
+	background-color: rgb(247, 247, 247);
+	padding: 1em;
+    color: #214198;
+}
+td 
+{
+	padding: 1em;
+}
+tr
+{
+    padding: 10px 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+#footer 
+{
+    background-color: #0c2a7a;
+    text-align: center;
+    line-height: 80px;
+    color: white;
+    margin: 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
