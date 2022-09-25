@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .content-selection {
+    width: 500px;
+    margin: 0 auto;
+  }
+  
+  .content-selection select 
+  {
+     width: 100px;
+     padding: 5px;
+     font-size: 14px;
+     line-height: 1;
+     border-radius: 0;
+     height: 34px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    box-shadow: 0 3px 0 #ccc;
+
+     }
+  select {
+    background: #333;
+    color: #fff;
+    
+  }

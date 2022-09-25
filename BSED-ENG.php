@@ -23,7 +23,7 @@
                 <li><a href="students.php">Student List</a></li>
                 <li><a href="#">Curriculum</a>
                 <ul class="course">
-                    <li><a href="">ABREED</a></li>
+                    <li><a href="#">ABREED</a></li>
                     <li><a href="#">BEED</a></li>
                     <li><a href="BSED-ENG.php">BSED-ENG</a></li>
                     <li><a href="#">BSED-MATH</a></li>
@@ -42,7 +42,7 @@
 	
 	<form name="form1" method="post" action="code.php"  style="height:550px;">
 		<p name="courses[]" id="courses">Course:</p>
-		<p name="courses[]" id="courses">BSCS</p>
+		<p name="courses[]" id="courses">BSED-ENG</p>
 		<label>Year Level:</label>
 			<select name="yearlevel[]" id="yearlevel">
 				<option value="first">First Year</option>
@@ -66,7 +66,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Science in Computer Science/First Year/1st Sem";
+				$ref_table = "Course&Curriculum/Bachelor of Education in English/First Year/1st Sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
