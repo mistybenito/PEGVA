@@ -1,12 +1,17 @@
 <?php
     include_once("dbcon.php");
+	include("navbar.php");
     session_start();
 ?>
 <!DOCTYPE html>
 <html>
 
 <head>
-
+<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="curriculum-style.css" rel="stylesheet" type="text/css">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -14,91 +19,25 @@
 <!-- Drop downn section and options -->
 <div class="content-selection">
   <select id="mySelect" onchange="npup.doSelect(this);">
-      <option value="">Curriculum</option>
+      <option value="">Year and Semester</option>
       <!-- the option values are suffixes for the elements to show -->
-      <option value="0">BSED-ENG</option>
-      <option value="1">BSCS</option>
-      <option value="2">two</option>
+      <option value="0">1st Year, 1st Sem</option>
+      <option value="1">1st Year, 2nd Sem</option>
+      <option value="2">2nd Year, 1st Sem</option>
+	  <option value="3">2nd Year, 2nd Sem</option>
+	  <option value="4">3rd Year, 1st Sem</option>
+	  <option value="5">3rd Year, 2nd Sem</option>
+	  <option value="6">4th Year, 1st Sem</option>
+	  <option value="7">4th Year, 2nd Sem</option>
   </select>
 </div> <!-- end of content-selection -->
 <!-- container for any elements that are to be in the game -->
 <div id="mySpecialElements">
     <!--  these have ids that end with and index  for easy retrieval in "findeElement" function  below-->
     <div id="npup0" class="hidden">
-    <h3>BSED-ENG</h3> 
+    <h3>BSCS 1st Year, 1st Sem</h3> 
     <form name="form1" method="post" action="code.php"  style="height:550px;">
-		<p name="courses[]" id="courses">Course:</p>
-		<p name="courses[]" id="courses">BSED-ENG</p>
-		<label>Year Level:</label>
-			<select name="yearlevel[]" id="yearlevel">
-				<option value="first">First Year</option>
-				<option value="sec">Second Year</option>
-				<option value="third">Third Year</option>
-				<option value="fourth">Fourt Year</option>
-			</select>
-		<label>Semester:</label>
-			<select name="semester[]" id="semester">
-				<option value="onesem">1st Semester</option>
-				<option value="twosem">2nd Semester</option>
-			</select>		   
-<center>
-	<table>
-			<tr> 
-			<th>Course Code</th>
-			<th>Discriptive Title</th>
-			<th>Unit</th>
-			<th>Pre-Requisite</th>
-		</tr>
-			<?php
-			include('dbcon.php');
-				
-				$ref_table = "Course&Curriculum/Bachelor of Education in English/First Year/1st Sem";
-				$fetchdata = $database->getReference($ref_table)->getValue();
-					if($fetchdata > 0 )
-					{
-						$i = 0;
-					foreach($fetchdata as $key => $row)
-					{
-			?>
-		<tr>
-			<td><?=$row['Course_Code']; ?></td>
-			<td><?=$row['Description']; ?></td>
-			<td><?=$row['Unit']; ?></td>
-			<td><?=$row['Pre-Req']; ?></td>
-		</tr>
-			<?php
-				}
-			}
-					else
-					{
-			?>
-			<td colspan = "4"> No Record found </td> 
-			<?php
-			}
-			?>
-		</table> 
-		<center><button type="submit" name="update_registrar" id="update" value="Update"> Update </center>
-		<center><a href="subjects.php">SUBJECT</a><center>
-	</center>
-	</form>
-    </div>
-    <div id="npup1" class="hidden">
-      <h3>BSCS</h3>
-      <form name="form1" method="post" action="code.php"  style="height:550px;">
-		<p name="courses[]" id="courses">Course:</p>
-		<p name="courses[]" id="courses">BSCS</p>
-		<label>Year Level:</label>
-			<select name="yearlevel[]" id="yearlevel">
-				<option value="first">First Year</option>
-				<option value="sec">Second Year</option>
-				<option value="third">Third Year</option>
-				<option value="fourth">Fourt Year</option>
-			</select>
-		<label>Semester:</label>
-			<select name="semester[]" id="semester">
-				<option value="onesem">1st Semester</option>
-				<option value="twosem">2nd Semester</option>
-			</select>		   
+		<p name="courses[]" id="courses">Course: BSCS</p>
 <center>
 	<table>
 			<tr> 
@@ -140,12 +79,354 @@
 	</center>
 	</form>
     </div>
-    <div id="npup2" class="hidden">
-      <h3>Div 2</h3>
-      <p>This is Div 2 content.</p>
-      <p>Continue the content here.....</p>
+    <div id="npup1" class="hidden">
+      <h3>BSCS 1st Year, 2nd Sem</h3>
+      <form name="form1" method="post" action="code.php"  style="height:550px;">
+		<p name="courses[]" id="courses">Course: BSCS</p>		   
+<center>
+	<table>
+			<tr> 
+			<th>Course Code</th>
+			<th>Discriptive Title</th>
+			<th>Unit</th>
+			<th>Pre-Requisite</th>
+		</tr>
+			<?php
+			include('dbcon.php');
+				
+				$ref_table = "Course&Curriculum/Bachelor of Science in Computer Science/First Year/2nd Sem";
+				$fetchdata = $database->getReference($ref_table)->getValue();
+					if($fetchdata > 0 )
+					{
+						$i = 0;
+					foreach($fetchdata as $key => $row)
+					{
+			?>
+		<tr>
+			<td><?=$row['Course_Code']; ?></td>
+			<td><?=$row['Desc_title']; ?></td>
+			<td><?=$row['Unit']; ?></td>
+			<td><?=$row['Pre-Req']; ?></td>
+		</tr>
+			<?php
+				}
+			}
+					else
+					{
+			?>
+			<td colspan = "4"> No Record found </td> 
+			<?php
+			}
+			?>
+		</table> 
+		<center><button type="submit" name="update_registrar" id="update" value="Update"> Update </center>
+		<center><a href="subjects.php">SUBJECT</a><center>
+	</center>
+	</form>
     </div>
+
+
+    <div id="npup2" class="hidden">
+      <h3>BSCS 2nd Year, 1st Sem</h3>
+      <form name="form1" method="post" action="code.php"  style="height:550px;">
+		<p name="courses[]" id="courses">Course: BSCS</p>		   
+<center>
+	<table>
+			<tr> 
+			<th>Course Code</th>
+			<th>Discriptive Title</th>
+			<th>Unit</th>
+			<th>Pre-Requisite</th>
+		</tr>
+			<?php
+			include('dbcon.php');
+				
+				$ref_table = "Course&Curriculum/Bachelor of Science in Computer Science/Second Year/1st Sem";
+				$fetchdata = $database->getReference($ref_table)->getValue();
+					if($fetchdata > 0 )
+					{
+						$i = 0;
+					foreach($fetchdata as $key => $row)
+					{
+			?>
+		<tr>
+			<td><?=$row['Course_Code']; ?></td>
+			<td><?=$row['Desc_title']; ?></td>
+			<td><?=$row['Unit']; ?></td>
+			<td><?=$row['Pre-Req']; ?></td>
+		</tr>
+			<?php
+				}
+			}
+					else
+					{
+			?>
+			<td colspan = "4"> No Record found </td> 
+			<?php
+			}
+			?>
+		</table> 
+		<center><button type="submit" name="update_registrar" id="update" value="Update"> Update </center>
+		<center><a href="subjects.php">SUBJECT</a><center>
+	</center>
+    </div>
+
+	<div id="npup3" class="hidden">
+      <h3>BSCS 2nd Year, 2nd Sem</h3>
+      <form name="form1" method="post" action="code.php"  style="height:550px;">
+		<p name="courses[]" id="courses">Course: BSCS</p>		   
+<center>
+	<table>
+			<tr> 
+			<th>Course Code</th>
+			<th>Discriptive Title</th>
+			<th>Unit</th>
+			<th>Pre-Requisite</th>
+		</tr>
+			<?php
+			include('dbcon.php');
+				
+				$ref_table = "Course&Curriculum/Bachelor of Science in Computer Science/Second Year/2nd Sem";
+				$fetchdata = $database->getReference($ref_table)->getValue();
+					if($fetchdata > 0 )
+					{
+						$i = 0;
+					foreach($fetchdata as $key => $row)
+					{
+			?>
+		<tr>
+			<td><?=$row['Course_Code']; ?></td>
+			<td><?=$row['Desc_title']; ?></td>
+			<td><?=$row['Unit']; ?></td>
+			<td><?=$row['Pre-Req']; ?></td>
+		</tr>
+			<?php
+				}
+			}
+					else
+					{
+			?>
+			<td colspan = "4"> No Record found </td> 
+			<?php
+			}
+			?>
+		</table> 
+		<center><button type="submit" name="update_registrar" id="update" value="Update"> Update </center>
+		<center><a href="subjects.php">SUBJECT</a><center>
+	</center>
+    </div>
+	<div id="npup4" class="hidden">
+      <h3>BSCS 3rd Year, 1st Sem</h3>
+      <form name="form1" method="post" action="code.php"  style="height:550px;">
+		<p name="courses[]" id="courses">Course: BSCS</p>		   
+<center>
+	<table>
+			<tr> 
+			<th>Course Code</th>
+			<th>Discriptive Title</th>
+			<th>Unit</th>
+			<th>Pre-Requisite</th>
+		</tr>
+			<?php
+			include('dbcon.php');
+				
+				$ref_table = "Course&Curriculum/Bachelor of Science in Computer Science/Third Year/1st Sem";
+				$fetchdata = $database->getReference($ref_table)->getValue();
+					if($fetchdata > 0 )
+					{
+						$i = 0;
+					foreach($fetchdata as $key => $row)
+					{
+			?>
+		<tr>
+			<td><?=$row['Course_Code']; ?></td>
+			<td><?=$row['Desc_title']; ?></td>
+			<td><?=$row['Unit']; ?></td>
+			<td><?=$row['Pre-Req']; ?></td>
+		</tr>
+			<?php
+				}
+			}
+					else
+					{
+			?>
+			<td colspan = "4"> No Record found </td> 
+			<?php
+			}
+			?>
+		</table> 
+		<center><button type="submit" name="update_registrar" id="update" value="Update"> Update </center>
+		<center><a href="subjects.php">SUBJECT</a><center>
+	</center>
+    </div>
+
+	<div id="npup5" class="hidden">
+      <h3>BSCS 3rd Year, 2nd Sem</h3>
+      <form name="form1" method="post" action="code.php"  style="height:550px;">
+		<p name="courses[]" id="courses">Course: BSCS</p>		   
+<center>
+	<table>
+			<tr> 
+			<th>Course Code</th>
+			<th>Discriptive Title</th>
+			<th>Unit</th>
+			<th>Pre-Requisite</th>
+		</tr>
+			<?php
+			include('dbcon.php');
+				
+				$ref_table = "Course&Curriculum/Bachelor of Science in Computer Science/Third Year/2nd Sem";
+				$fetchdata = $database->getReference($ref_table)->getValue();
+					if($fetchdata > 0 )
+					{
+						$i = 0;
+					foreach($fetchdata as $key => $row)
+					{
+			?>
+		<tr>
+			<td><?=$row['Course_Code']; ?></td>
+			<td><?=$row['Desc_title']; ?></td>
+			<td><?=$row['Unit']; ?></td>
+			<td><?=$row['Pre-Req']; ?></td>
+		</tr>
+			<?php
+				}
+			}
+					else
+					{
+			?>
+			<td colspan = "4"> No Record found </td> 
+			<?php
+			}
+			?>
+		</table> 
+		<center><button type="submit" name="update_registrar" id="update" value="Update"> Update </center>
+		<center><a href="subjects.php">SUBJECT</a><center>
+	</center>
+    </div>
+
+	<div id="npup6" class="hidden">
+      <h3>BSCS 4th Year, 1st Sem</h3>
+      <form name="form1" method="post" action="code.php"  style="height:550px;">
+		<p name="courses[]" id="courses">Course: BSCS</p>		   
+<center>
+	<table>
+			<tr> 
+			<th>Course Code</th>
+			<th>Discriptive Title</th>
+			<th>Unit</th>
+			<th>Pre-Requisite</th>
+		</tr>
+			<?php
+			include('dbcon.php');
+				
+				$ref_table = "Course&Curriculum/Bachelor of Science in Computer Science/Fourth Year/1st Sem";
+				$fetchdata = $database->getReference($ref_table)->getValue();
+					if($fetchdata > 0 )
+					{
+						$i = 0;
+					foreach($fetchdata as $key => $row)
+					{
+			?>
+		<tr>
+			<td><?=$row['Course_Code']; ?></td>
+			<td><?=$row['Desc_title']; ?></td>
+			<td><?=$row['Unit']; ?></td>
+			<td><?=$row['Pre-Req']; ?></td>
+		</tr>
+			<?php
+				}
+			}
+					else
+					{
+			?>
+			<td colspan = "4"> No Record found </td> 
+			<?php
+			}
+			?>
+		</table> 
+		<center><button type="submit" name="update_registrar" id="update" value="Update"> Update </center>
+		<center><a href="subjects.php">SUBJECT</a><center>
+	</center>
+    </div>
+
+	<div id="npup7" class="hidden">
+      <h3>BSCS 4th Year, 2nd Sem</h3>
+      <form name="form1" method="post" action="code.php"  style="height:550px;">
+		<p name="courses[]" id="courses">Course: BSCS</p>		   
+<center>
+	<table>
+			<tr> 
+			<th>Course Code</th>
+			<th>Discriptive Title</th>
+			<th>Unit</th>
+			<th>Pre-Requisite</th>
+		</tr>
+			<?php
+			include('dbcon.php');
+				
+				$ref_table = "Course&Curriculum/Bachelor of Science in Computer Science/Fourth Year/2nd Sem";
+				$fetchdata = $database->getReference($ref_table)->getValue();
+					if($fetchdata > 0 )
+					{
+						$i = 0;
+					foreach($fetchdata as $key => $row)
+					{
+			?>
+		<tr>
+			<td><?=$row['Course_Code']; ?></td>
+			<td><?=$row['Desc_title']; ?></td>
+			<td><?=$row['Unit']; ?></td>
+			<td><?=$row['Pre-Req']; ?></td>
+		</tr>
+			<?php
+				}
+			}
+					else
+					{
+			?>
+			<td colspan = "4"> No Record found </td> 
+			<?php
+			}
+			?>
+		</table> 
+		<center><button type="submit" name="update_registrar" id="update" value="Update"> Update </center>
+		<center><a href="subjects.php">SUBJECT</a><center>
+	</center>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script>
 window.npup = (function (containerId, baseId) {
     // save the container of your special element
