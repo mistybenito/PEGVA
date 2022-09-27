@@ -10,7 +10,6 @@
 <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="curriculum-style.css" rel="stylesheet" type="text/css">
-        
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -45,32 +44,44 @@
 			<th>Discriptive Title</th>
 			<th>Unit</th>
 			<th>Pre-Requisite</th>
+            <th>Grade</th>
 		</tr>
 			<?php
 			include('dbcon.php');
-				
-				$ref_table = "Course&Curriculum/Bachelor of Science in Computer Science/First Year/1st Sem";
-				$fetchdata = $database->getReference($ref_table)->getValue();
-					if($fetchdata > 0 )
+			
+				if(isset($_POST['id']))
 					{
-						$i = 0;
+						$key_child = $_POST['id'];
+						$fetchdata = $database->getReference('User/'.$key_child.'/Grades/1st Year/1st Sem')->getValue();
+						if($fetchdata > 0 )
+					{
+						$i = 0;	
 					foreach($fetchdata as $key => $row)
 					{
-			?>
-		<tr>
-			<td><?=$row['Course_Code']; ?></td>
-			<td><?=$row['Desc_title']; ?></td>
-			<td><?=$row['Unit']; ?></td>
-			<td><?=$row['Pre-Req']; ?></td>
-		</tr>
-			<?php
+							?>
+						<tr>
+							<td><?=$row['Course_Code']; ?></td>
+							<td><?=$row['Desc_title']; ?></td>	 	
+							<td><?=$row['Unit']; ?></td>
+							<td><?=$row['Pre-Req']; ?></td>
+							<td><?=$row['Grade']; ?> </td>
+						</tr>
+
+							<?php
 				}
 			}
+			else
+					{
+					?>
+						<td colspan = "5"> No Record found </td> 
+					<?php
+			}
+		}
 					else
 					{
-			?>
-			<td colspan = "4"> No Record found </td> 
-			<?php
+					?>
+						<td colspan = "5"> Nothing found </td> 
+					<?php
 			}
 			?>
 		</table> 
@@ -79,6 +90,11 @@
 	</center>
 	</form>
     </div>
+
+
+
+
+
     <div id="npup1" class="hidden">
       <h3>BSCS 1st Year, 2nd Sem</h3>
       <form name="form1" method="post" action="code.php"  style="height:550px;">

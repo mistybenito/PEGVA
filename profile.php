@@ -87,6 +87,9 @@
 		</tr>
 		</table> 
         <center><button type="submit" name="update_registrar" id="update" value="Update"> Update </center>
+		<a href="samplegrades.php?id=<?=$key_child?>"> samplegrades </a>
+
+		<a href="studentsubjectsample.php?id=<?=$key_child?>"> samplegrades </a>
 		
 	</form>
         
