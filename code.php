@@ -8,7 +8,6 @@ if (isset($_POST['TEST']))
 
 {
     $key = $_POST['key'];
-    $key_child = $_POST['key_child'];
     $ccode= $_POST['Course_Code'];
     $desc= $_POST['Desc_title'];
     $unit= $_POST['Unit'];
@@ -23,18 +22,18 @@ if (isset($_POST['TEST']))
         'Grade' => $grade,
     ];
 
-
-    $addData_result = $database->getReference('User/'.$key.'/Grades/1st Year/1st Sem')->push($addData);
+    $ref_table = 'User/'.$key.'/Grades/1st Year/1st Sem';
+    $addData_result = $database->getReference($ref_table)->push($addData);
 
     if($addData_result)
     {
         $_SESSION['status'] = "Subject Added Successfully";
-        header('Location: samplegrades.php');
+        header('Location: students.php');
     }
     else
     {
         $_SESSION['status'] = "Subject not addded";
-        header('Location: samplegrades.php');
+        header('Location: students.php');
     }
 }
 // ADD SUBJECT CODE BSCS 1ST SEM 1ST YEAR

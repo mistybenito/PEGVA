@@ -20,7 +20,16 @@
 <fieldset>
 	<legend>Subject Description</legend>
 	<table>
-		
+	<?php
+	if(isset($_GET['id']))
+	{
+		$key_child = $_GET['id'];
+		$ref_table = 'User';
+		$getdata = $database->getReference($ref_table)->getChild($key_child)->getValue();
+		if($getdata > 0)
+		{
+			?>
+			<input type="hidden" name = "key" value = "<?=$key_child;?>">
 		<tr> 
 			<td>Course Code</td>
 			<td><input type="text" name = "Course_Code" ></td>
@@ -43,6 +52,22 @@
 		</tr>
 		</table> 
 	</form>
+	<?php
+		}
+		else
+		{
+			$_SESSION['status'] = "No record found.";
+			header('Location: reg.php');
+			exit();
+		}
+	}
+	else
+		{
+			$_SESSION['status'] = "Not found.";
+			header('Location: reg.php');
+			exit();
+		}
+	?>
 	<center><button type="submit" name="TEST" id="update"  value = "TEST"> Add Subject </button></center></div>
 </fieldset>
 </body>
