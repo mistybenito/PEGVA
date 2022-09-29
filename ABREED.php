@@ -339,8 +339,9 @@
 </fieldset>
 
 </div>	
-
-<center><button type="submit" name="update_registrar" id="update" value="Update"> Update </center>
-
+<div id="btns">
+		<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update</button>
+		<input type="button" onclick="window.location.href='subjects.php';" id="add_btn" value="Add Subjects"/>
+		</div>
 </body>
 </html>

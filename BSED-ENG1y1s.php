@@ -68,8 +68,8 @@
 			}
 			?>
 		</table> 
-		<center><button type="submit" name="update_registrar" id="update" value="Update"> Update </center>
-		<center><a href="subjects.php">SUBJECT</a><center>
+		<center><button type="submit" name="update_registrar" id="update_btn" value="Update"> Update</button></center>
+		<center><input type="button" onclick="window.location.href='subjects.php';" id="add_btn" value="Add Subjects"/><center>
 	</center>
 	</form>
 

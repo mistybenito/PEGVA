@@ -12,10 +12,10 @@
     <link href="subjects.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<h1>Adding Subject</h1>
-    <div id="div1">
+<h2>Adding Subject</h2>
+<div id="div1">
 	
-	<form name="form1" method="post" action="code.php"  style="height:400px;">
+<form name="form1" method="post" action="code.php"  style="height:400px;">
 	
 <fieldset>
 	<legend>Subject Description</legend>
@@ -38,9 +38,13 @@
 			<td>Pre-Requisite</td>
 			<td><input type="text" name=  "Pre-Req"></td>
 		</tr>
-		</table> 
+	</table> 
 	</form>
 	<center><button type="submit" name="add_subject_bscs_1y_2s" id="update"  value = "add_subject"> Add Subject </button></center></div>
 </fieldset>
+</div>
+<div  id="footer">
+    <p>All content copyright © 2022, PEGVA.</p>
+</div>	
 </body>
 </html>

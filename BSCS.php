@@ -23,8 +23,8 @@
                 <li><a href="students.php">Student List</a></li>
                 <li><a href="#">Curriculum</a>
                 <ul class="course">
-                    <li><a href="">ABREED</a></li>
-                    <li><a href="#">BEED</a></li>
+				<li><a href="ABREED1.php">ABREED</a></li>
+                    <li><a href="BEED1y1s.php">BEED</a></li>
                     <li><a href="BSED-ENG.php">BSED-ENG</a></li>
                     <li><a href="#">BSED-MATH</a></li>
                     <li><a href="#">BSED-SCI</a></li>
@@ -41,19 +41,17 @@
     <div class="div1">
 	
 	<form name="form1" method="post" action="code.php"  style="height:550px;">
-		<p name="courses[]" id="courses">Course:</p>
-		<p name="courses[]" id="courses">BSCS</p>
-		<label>Year Level:</label>
+		<p name="courses[]" id="courses">Course: BSCS</p>
+		<label>Year Level and Semester:</label>
 			<select name="yearlevel[]" id="yearlevel">
-				<option value="first">First Year</option>
-				<option value="sec">Second Year</option>
-				<option value="third">Third Year</option>
-				<option value="fourth">Fourt Year</option>
-			</select>
-		<label>Semester:</label>
-			<select name="semester[]" id="semester">
-				<option value="onesem">1st Semester</option>
-				<option value="twosem">2nd Semester</option>
+				<option value="0">1st Year, 1st Sem</option>
+      			<option value="1">1st Year, 2nd Sem</option>
+      			<option value="2">2nd Year, 1st Sem</option>
+	  			<option value="3">2nd Year, 2nd Sem</option>
+	  			<option value="4">3rd Year, 1st Sem</option>
+	  			<option value="5">3rd Year, 2nd Sem</option>
+	  			<option value="6">4th Year, 1st Sem</option>
+	  			<option value="7">4th Year, 2nd Sem</option>
 			</select>		   
 <center>
 	<table>
@@ -90,9 +88,11 @@
 			<?php
 			}
 			?>
-		</table> 
-		<center><button type="submit" name="update_registrar" id="update" value="Update"> Update </center>
-		<center><a href="subjects.php">SUBJECT</a><center>
+		</table>
+		<div id="btns">
+		<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update</button>
+		<input type="button" onclick="window.location.href='subjects.php';" id="add_btn" value="Add Subjects"/>
+		</div>
 	</center>
 	</form>
 

@@ -19,10 +19,14 @@ body
 	background-position: center; 
 	background-size: cover;
 }
-h1
+h2
 {
     text-align: center;
     color: white;
+}
+h3
+{
+    color: black;
 }
 #div1
 {
@@ -62,7 +66,7 @@ table
     font-size: 14px;
     cursor: pointer;
 }
-input[type=text], input[type=tel]
+input[type=text]
 {
   	width: 350px;
  	padding: 12px 20px;
@@ -78,10 +82,12 @@ fieldset
 }
 select 
 {
-    width: 120px;
+    width: 250px;
     text-align: center;
     padding: 11px 1px;
-    margin: 5px 0;
+    margin: 25px 0;
+    cursor: pointer;
+    box-shadow: 0 12px 15px 0 rgb(0 0 0 / 17%), 0 0px 15px 0 rgb(0 0 0);
 }
 #footer 
 {
@@ -94,4 +100,15 @@ select
     left: 0;
     bottom: 0;
     width: 100%;
+}
+#update
+{
+    background-color: #214198;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 20px;
 }

@@ -29,7 +29,7 @@ if (isset($_POST['TEST']))
     if($addData_result)
     {
         $_SESSION['status'] = "Subject Added Successfully";
-        header('Location: samplegrades.php');
+        header('Location: samplegrades.php?=id'.$key);
     }
     else
     {

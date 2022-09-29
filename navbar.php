@@ -17,14 +17,15 @@
                 <li><a href="students.php">Student List</a></li>
                 <li><a href="#">Curriculum</a>
                 <ul class="course">
-                    <li><a href="#">ABREED</a></li>
-                    <li><a href="#">BEED</a></li>
+                    <li><a href="ABREED1.php">ABREED</a></li>
+                    <li><a href="BEED1y1s.php">BEED</a></li>
                     <li><a href="BSED-ENG.php">BSED-ENG</a></li>
                     <li><a href="#">BSED-MATH</a></li>
                     <li><a href="#">BSED-SCI</a></li>
                     <li><a href="#">BSBA</a></li>
                     <li><a href="BSCS.php">BSCS</a></li>
                     <li><a href="#">BSOA</a></li>
+                </ul>
                 </ul>
                 </li>
                 <li><a href="practice.php">Home</a></li>
