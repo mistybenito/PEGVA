@@ -1,67 +1,42 @@
 <?php
     include_once("dbcon.php");
+	include("navbar.php");
     session_start();
 ?>
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>BSED-ENG</title>
-        <meta charset="UTF-8">
+
+<head>
+<meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="curriculum-style.css" rel="stylesheet" type="text/css">
-        
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    <body>
-	<nav>
-            <input type="checkbox" id="check">
-            <label for="check" class="chckbtn">
-                <i class="fa fa-bars"></i>
-            </label>
-            <label class="title">Cainta Catholic College</label>
-            <ul class="main-navigation">
-                <li><a href="students.php">Student List</a></li>
-                <li><a href="#">Curriculum</a>
-                <ul class="course">
-				    <li><a href="ABREED1.php">ABREED</a></li>
-                    <li><a href="BEED.php">BEED</a></li>
-                    <li><a href="BSED-ENG.php">BSED-ENG</a></li>
-                    <li><a href="#">BSED-MATH</a></li>
-                    <li><a href="#">BSED-SCI</a></li>
-                    <li><a href="#">BSED-ENG </a></li>
-                    <li><a href="BSCS.php">BSCS</a></li>
-                    <li><a href="#">BSOA</a></li>
-                </ul>
-                </li>
-                <li><a href="practice.php">Home</a></li>
-                <li><a href="logout.php">Logout</a></li>
-            </ul>
-        </nav>
+</head>
+<body>
 
 
-	<h2>Curriculum</h2>
-    <div class="div1">
-	
-	<form name="form1" method="post" action="code.php"  style="height:550px;">
-		<p name="courses[]" id="courses">Course: Bachelor of Secondary Education, Major in English</p>
-		<label>Year Level and Semester:</label>
-			<select id="yearlevel" onchange="npup.doSelect(this);">
-				<option><b>-- Year and Semester --</b></option>
-				<option value="0">1st Year, 1st Sem</option>
-      			<option value="1">1st Year, 2nd Sem</option>
-      			<option value="2">2nd Year, 1st Sem</option>
-	  			<option value="3">2nd Year, 2nd Sem</option>
-	  			<option value="4">3rd Year, 1st Sem</option>
-	  			<option value="5">3rd Year, 2nd Sem</option>
-	  			<option value="6">4th Year, 1st Sem</option>
-	  			<option value="7">4th Year, 2nd Sem</option>
-			</select>		   
-<center>
-	<div id="mySpecialElements">
+<!-- Drop downn section and options -->
+<div class="content-selection">
+  <select id="mySelect" onchange="npup.doSelect(this);">
+      <option value="">Year and Semester</option>
+      <!-- the option values are suffixes for the elements to show -->
+      <option value="0">1st Year, 1st Sem</option>
+      <option value="1">1st Year, 2nd Sem</option>
+      <option value="2">2nd Year, 1st Sem</option>
+	  <option value="3">2nd Year, 2nd Sem</option>
+	  <option value="4">3rd Year, 1st Sem</option>
+	  <option value="5">3rd Year, 2nd Sem</option>
+	  <option value="6">4th Year, 1st Sem</option>
+	  <option value="7">4th Year, 2nd Sem</option>
+  </select>
+</div> <!-- end of content-selection -->
+<!-- container for any elements that are to be in the game -->
+<div id="mySpecialElements">
     <!--  these have ids that end with and index  for easy retrieval in "findeElement" function  below-->
     <div id="npup0" class="hidden">
-    <h3>BSED-ENG 1st Year, 1st Sem</h3> 
+    <h3>BSCS 1st Year, 1st Sem</h3> 
     <form name="form1" method="post" action="code.php"  style="height:550px;">
+		<p name="courses[]" id="courses">Course: BSCS</p>
 <center>
 	<table>
 			<tr> 
@@ -69,45 +44,53 @@
 			<th>Discriptive Title</th>
 			<th>Unit</th>
 			<th>Pre-Requisite</th>
+            <th>Grade</th>
 		</tr>
 			<?php
 			include('dbcon.php');
-				
-				$ref_table = "Course&Curriculum/Bachelor of Secondary Education, Major in English/First Year/1st Sem";
-				$fetchdata = $database->getReference($ref_table)->getValue();
-					if($fetchdata > 0 )
+			
+				if(isset($_GET['id']))
 					{
-						$i = 0;
-					foreach($fetchdata as $key => $row)
+						$key_child = $_GET['id'];
+						$ref_table = 'User/'.$key_child.'/Grades/1st Year/1st Sem';
+						$row = $database->getReference($ref_table)->getChild($key_child)->getChild($key_child)->getValue();
+						if($row > 0 )
 					{
-			?>
-		<tr>
-			<td><?=$row['Course_Code']; ?></td>
-			<td><?=$row['Desc_title']; ?></td>
-			<td><?=$row['Unit']; ?></td>
-			<td><?=$row['Pre-Req']; ?></td>
-		</tr>
-			<?php
+							?>
+						<tr>
+							<input type="hidden" name = "id" value = "<?=$key_child;?>">
+							<td><?=$row['Course_Code']; ?></td>
+							<td><?=$row['Desc_title']; ?></td>	 	
+							<td><?=$row['Unit']; ?></td>
+							<td><?=$row['Pre-Req']; ?></td>
+							<td><?=$row['Grade']; ?> </td>
+						</tr>
+							<?php
 				}
 			}
-					else
+			else
 					{
-			?>
-			<td colspan = "4"> No Record found </td> 
-			<?php
+					?>
+						<td colspan = "5"> No Record found </td> 
+					<?php
 			}
+
 			?>
 		</table> 
-		<div id="btns">
-		<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update</button>
-		<input type="button" onclick="window.location.href='BSED-ENG_add_subjects.php';" id="add_btn" value="Add Subjects"/>
-		</div>
+		<center><button type="submit" name="update_registrar" id="update" value="Update"> Update </center>
+		<center><a href="subjectsamp.php">SUBJECT</a><center>
 	</center>
 	</form>
     </div>
+
+
+
+
+
     <div id="npup1" class="hidden">
-      <h3>BSED-ENG 1st Year, 2nd Sem</h3>
-      <form name="form1" method="post" action="code.php"  style="height:550px;">	   
+      <h3>BSCS 1st Year, 2nd Sem</h3>
+      <form name="form1" method="post" action="code.php"  style="height:550px;">
+		<p name="courses[]" id="courses">Course: BSCS</p>		   
 <center>
 	<table>
 			<tr> 
@@ -119,7 +102,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Secondary Education, Major in English/First Year/2nd Sem";
+				$ref_table = "Course&Curriculum/Bachelor of Science in Computer Science/First Year/2nd Sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -144,18 +127,17 @@
 			}
 			?>
 		</table> 
-		<div id="btns">
-		<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update</button>
-		<input type="button" onclick="window.location.href='BSED-ENG_add_subjects.php';" id="add_btn" value="Add Subjects"/>
-		</div>
+		<center><button type="submit" name="update_registrar" id="update" value="Update"> Update </center>
+		<center><a href="subjects.php">SUBJECT</a><center>
 	</center>
 	</form>
     </div>
 
 
     <div id="npup2" class="hidden">
-      <h3>BSED-ENG 2nd Year, 1st Sem</h3>
-      <form name="form1" method="post" action="code.php"  style="height:550px;">   
+      <h3>BSCS 2nd Year, 1st Sem</h3>
+      <form name="form1" method="post" action="code.php"  style="height:550px;">
+		<p name="courses[]" id="courses">Course: BSCS</p>		   
 <center>
 	<table>
 			<tr> 
@@ -167,7 +149,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Secondary Education, Major in English/Second Year/1st Sem";
+				$ref_table = "Course&Curriculum/Bachelor of Science in Computer Science/Second Year/1st Sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -192,16 +174,15 @@
 			}
 			?>
 		</table> 
-		<div id="btns">
-		<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update</button>
-		<input type="button" onclick="window.location.href='BSED-ENG_add_subjects.php';" id="add_btn" value="Add Subjects"/>
-		</div>
+		<center><button type="submit" name="update_registrar" id="update" value="Update"> Update </center>
+		<center><a href="subjects.php">SUBJECT</a><center>
 	</center>
     </div>
 
 	<div id="npup3" class="hidden">
-      <h3>BSED-ENG 2nd Year, 2nd Sem</h3>
-      <form name="form1" method="post" action="code.php"  style="height:550px;">	   
+      <h3>BSCS 2nd Year, 2nd Sem</h3>
+      <form name="form1" method="post" action="code.php"  style="height:550px;">
+		<p name="courses[]" id="courses">Course: BSCS</p>		   
 <center>
 	<table>
 			<tr> 
@@ -213,7 +194,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Secondary Education, Major in English/Second Year/2nd Sem";
+				$ref_table = "Course&Curriculum/Bachelor of Science in Computer Science/Second Year/2nd Sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -238,15 +219,14 @@
 			}
 			?>
 		</table> 
-		<div id="btns">
-		<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update</button>
-		<input type="button" onclick="window.location.href='BSED-ENG_add_subjects.php';" id="add_btn" value="Add Subjects"/>
-		</div>
+		<center><button type="submit" name="update_registrar" id="update" value="Update"> Update </center>
+		<center><a href="subjects.php">SUBJECT</a><center>
 	</center>
     </div>
 	<div id="npup4" class="hidden">
-      <h3>BSED-ENG 3rd Year, 1st Sem</h3>
-      <form name="form1" method="post" action="code.php"  style="height:550px;">	   
+      <h3>BSCS 3rd Year, 1st Sem</h3>
+      <form name="form1" method="post" action="code.php"  style="height:550px;">
+		<p name="courses[]" id="courses">Course: BSCS</p>		   
 <center>
 	<table>
 			<tr> 
@@ -258,7 +238,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Secondary Education, Major in English/Third Year/1st Sem";
+				$ref_table = "Course&Curriculum/Bachelor of Science in Computer Science/Third Year/1st Sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -283,16 +263,15 @@
 			}
 			?>
 		</table> 
-		<div id="btns">
-		<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update</button>
-		<input type="button" onclick="window.location.href='BSED-ENG_add_subjects.php';" id="add_btn" value="Add Subjects"/>
-		</div>
+		<center><button type="submit" name="update_registrar" id="update" value="Update"> Update </center>
+		<center><a href="subjects.php">SUBJECT</a><center>
 	</center>
     </div>
 
 	<div id="npup5" class="hidden">
-      <h3>BSED-ENG 3rd Year, 2nd Sem</h3>
-      <form name="form1" method="post" action="code.php"  style="height:550px;">   
+      <h3>BSCS 3rd Year, 2nd Sem</h3>
+      <form name="form1" method="post" action="code.php"  style="height:550px;">
+		<p name="courses[]" id="courses">Course: BSCS</p>		   
 <center>
 	<table>
 			<tr> 
@@ -304,7 +283,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Secondary Education, Major in English/Third Year/2nd Sem";
+				$ref_table = "Course&Curriculum/Bachelor of Science in Computer Science/Third Year/2nd Sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -329,16 +308,15 @@
 			}
 			?>
 		</table> 
-		<div id="btns">
-		<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update</button>
-		<input type="button" onclick="window.location.href='BSED-ENG_add_subjects.php';" id="add_btn" value="Add Subjects"/>
-		</div>
+		<center><button type="submit" name="update_registrar" id="update" value="Update"> Update </center>
+		<center><a href="subjects.php">SUBJECT</a><center>
 	</center>
     </div>
 
 	<div id="npup6" class="hidden">
-      <h3>BSED-ENG 4th Year, 1st Sem</h3>
-      <form name="form1" method="post" action="code.php"  style="height:550px;">	   
+      <h3>BSCS 4th Year, 1st Sem</h3>
+      <form name="form1" method="post" action="code.php"  style="height:550px;">
+		<p name="courses[]" id="courses">Course: BSCS</p>		   
 <center>
 	<table>
 			<tr> 
@@ -350,7 +328,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Secondary Education, Major in English/Fourth Year/1st Sem";
+				$ref_table = "Course&Curriculum/Bachelor of Science in Computer Science/Fourth Year/1st Sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -375,16 +353,15 @@
 			}
 			?>
 		</table> 
-		<div id="btns">
-		<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update</button>
-		<input type="button" onclick="window.location.href='BSED-ENG_add_subjects.php';" id="add_btn" value="Add Subjects"/>
-		</div>
+		<center><button type="submit" name="update_registrar" id="update" value="Update"> Update </center>
+		<center><a href="subjects.php">SUBJECT</a><center>
 	</center>
     </div>
 
 	<div id="npup7" class="hidden">
-      <h3>BSED-ENG 4th Year, 2nd Sem</h3>
-      <form name="form1" method="post" action="code.php"  style="height:550px;">	   
+      <h3>BSCS 4th Year, 2nd Sem</h3>
+      <form name="form1" method="post" action="code.php"  style="height:550px;">
+		<p name="courses[]" id="courses">Course: BSCS</p>		   
 <center>
 	<table>
 			<tr> 
@@ -396,7 +373,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Secondary Education, Major in English/Fourth Year/2nd Sem";
+				$ref_table = "Course&Curriculum/Bachelor of Science in Computer Science/Fourth Year/2nd Sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -421,14 +398,8 @@
 			}
 			?>
 		</table> 
-		<div id="btns">
-		<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update</button>
-		<input type="button" onclick="window.location.href='subjects.php';" id="add_btn" value="Add Subjects"/>
-		</div>
-		<div id="btns">
-		<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update</button>
-		<input type="button" onclick="window.location.href='BSED-ENG_add_subjects.php';" id="add_btn" value="Add Subjects"/>
-		</div>
+		<center><button type="submit" name="update_registrar" id="update" value="Update"> Update </center>
+		<center><a href="subjects.php">SUBJECT</a><center>
 	</center>
     </div>
 
@@ -446,6 +417,7 @@
 
 
 
+</div>
 
 
 
@@ -462,34 +434,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div  id="footer">
-    <p>All content copyright © 2022, PEGVA.</p>
-</div>	
 
 <script>
 window.npup = (function (containerId, baseId) {
