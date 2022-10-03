@@ -44,11 +44,11 @@
 	include('dbcon.php');
 	if(isset($_GET['id']))
 	{
-		$key_child = $_GET['id'];
-		$ref_table = 'User';
-		$getdata = $database->getReference($ref_table)->getChild($key_child)->getValue();
-		if($getdata > 0)
-		{
+			$key_child = $_GET['id'];
+			$ref_table = 'User';
+			$getdata = $database->getReference($ref_table)->getChild($key_child)->getValue();
+			if($getdata > 0)
+			{
 	?>
         <form name="form1" method="post" action="code.php"  style="height:600px;">
 		<table>
@@ -87,9 +87,9 @@
 		</tr>
 		</table> 
         <center><button type="submit" name="update_registrar" id="update" value="Update"> Update </center>
-		<a href="samplegrades.php?id=<?=$key_child?>"> samplegrades </a>
+		<a href="view_grades.php?id=<?=$key_child?>"> View Grades </a>
 
-		<a href="studentsubjectsample.php?id=<?=$key_child?>"> samplegrades </a>
+		<a href="add_grades.php?id=<?=$key_child?>"> Add Grades </a>
 		
 	</form>
         

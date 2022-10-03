@@ -1,14 +1,13 @@
 <?php
 session_start();
 include('dbcon.php');
-
-
-// TEST CODE
+// TEST CODE 2
 if (isset($_POST['TEST']))
 
 {
     $key = $_POST['key'];
     $key_child = $_POST['key_child'];
+    $course= $_POST['Course'];
     $ccode= $_POST['Course_Code'];
     $desc= $_POST['Desc_title'];
     $unit= $_POST['Unit'];
@@ -16,6 +15,44 @@ if (isset($_POST['TEST']))
     $grade= $_POST['Grade'];
 
     $addData = [
+        'Course' => $course,
+        'Course_Code' => $ccode,
+        'Desc_title' => $desc,
+        'Unit' => $unit,    
+        'Pre-Req'=> $prereq,
+        'Grade' => $grade,
+    ];
+
+
+    $addData_result = $database->getReference('User/'.$key.'/Grades/1st Year/2nd Sem')->push($addData);
+
+    if($addData_result)
+    {
+        $_SESSION['status'] = "Subject Added Successfully";
+        header('Location: samplegrades1.php?=id'.$key);
+    }
+    else
+    {
+        $_SESSION['status'] = "Subject not addded";
+        header('Location: samplegrades1.php'.$key);
+    }
+}
+
+// TEST CODE
+if (isset($_POST['TEST']))
+
+{
+    $key = $_POST['key'];
+    $key_child = $_POST['key_child'];
+    $course= $_POST['Course'];
+    $ccode= $_POST['Course_Code'];
+    $desc= $_POST['Desc_title'];
+    $unit= $_POST['Unit'];
+    $prereq= $_POST['Pre-Req'];
+    $grade= $_POST['Grade'];
+
+    $addData = [
+        'Course' => $course,
         'Course_Code' => $ccode,
         'Desc_title' => $desc,
         'Unit' => $unit,    
@@ -29,12 +66,12 @@ if (isset($_POST['TEST']))
     if($addData_result)
     {
         $_SESSION['status'] = "Subject Added Successfully";
-        header('Location: samplegrades.php?=id'.$key);
+        header('Location: samplegrades1.php?=id'.$key);
     }
     else
     {
         $_SESSION['status'] = "Subject not addded";
-        header('Location: samplegrades.php');
+        header('Location: samplegrades1.php'.$key);
     }
 }
 // ADD SUBJECT CODE BSCS 1ST SEM 1ST YEAR
