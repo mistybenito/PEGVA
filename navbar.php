@@ -8,7 +8,7 @@
 
 
 <nav>
-            <input type="checkbox" id="check">
+        <input type="checkbox" id="check">
             <label for="check" class="chckbtn">
                 <i class="fa fa-bars"></i>
             </label>
@@ -17,18 +17,17 @@
                 <li><a href="students.php">Student List</a></li>
                 <li><a href="#">Curriculum</a>
                 <ul class="course">
-                    <li><a href="ABREED1.php">ABREED</a></li>
-                    <li><a href="BEED1y1s.php">BEED</a></li>
+					<li><a href="ABREED.php">ABREED</a></li>
+                    <li><a href="BEED.php">BEED</a></li>
                     <li><a href="BSED-ENG.php">BSED-ENG</a></li>
-                    <li><a href="#">BSED-MATH</a></li>
-                    <li><a href="#">BSED-SCI</a></li>
-                    <li><a href="#">BSBA</a></li>
+                    <li><a href="BSED-MATH.php">BSED-MATH</a></li>
+                    <li><a href="BSED-SCI.php">BSED-SCI</a></li>
+                    <li><a href="BSBA.php">BSBA</a></li>
                     <li><a href="BSCS.php">BSCS</a></li>
-                    <li><a href="#">BSOA</a></li>
-                </ul>
+                    <li><a href="BSOA.php">BSOA</a></li>
                 </ul>
                 </li>
-                <li><a href="practice.php">Home</a></li>
+                <li><a href="reg.php">Home</a></li>
                 <li><a href="logout.php">Logout</a></li>
             </ul>
-        </nav>
+    </nav>

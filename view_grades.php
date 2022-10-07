@@ -9,13 +9,14 @@
 <head>
 <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="curriculum-style.css" rel="stylesheet" type="text/css">
+        <link href="grades.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-
+<h2>Student Remarks</h2>
 
 <!-- Drop downn section and options -->
+<center>
 <div class="content-selection">
   <select id="mySelect" onchange="npup.doSelect(this);">
       <option value="">Year and Semester</option>
@@ -29,15 +30,20 @@
 	  <option value="6">4th Year, 1st Sem</option>
 	  <option value="7">4th Year, 2nd Sem</option>
   </select>
-</div> <!-- end of content-selection -->
+</div>
+</center>
+<!-- end of content-selection -->
+
+
 <!-- container for any elements that are to be in the game -->
 <div id="mySpecialElements">
     <!--  these have ids that end with and index  for easy retrieval in "findeElement" function  below-->
     <div id="npup0" class="hidden">
     <h3>1st Year, 1st Sem</h3> 
-    <form name="form1" method="post" action="code.php"  style="height:550px;">
-<center>
-	<table>
+ <center>    
+	<form name="form1" method="post" action="code.php"  style="height:550px;">
+
+	 <table>
 			<tr> 
 				<th>Course</th>
 				<th>Course Code</th>
@@ -90,12 +96,14 @@
 			
 
 			?>
-		</table> 
-		<center><button type="submit" name="update_registrar" id="update" value="Update"> Update </center>
-		<center><a href="view_grades.php?id=<?=$key_child?>">SUBJECT</a><center>
-	</center>
+		</table>
+		<div id="btns">
+			<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update </button>
+			<input type="button" onclick="window.location.href='add_grades.php?';" id="add_btn" value="Add Grade"/>
+		</div>
 	</form>
-    </div>
+  </div>
+ </center>
 
 
 
@@ -103,9 +111,10 @@
 
     <div id="npup1" class="hidden">
       <h3>1st Year, 2nd Sem</h3>
-      <form name="form1" method="post" action="code.php"  style="height:550px;">	   
 <center>
-<table>
+ <form name="form1" method="post" action="code.php"  style="height:550px;">	   
+
+	<table>
 			<tr> 
 				<th>Course</th>
 				<th>Course Code</th>
@@ -156,18 +165,20 @@
 			}
 			?>
 		</table> 
-		<center><button type="submit" name="update_registrar" id="update" value="Update"> Update </center>
-		<center><a href="view_grades.php?id=<?=$key_child?>">SUBJECT</a><center>
-	</center>
+		<div id="btns">
+			<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update </button>
+			<input type="button" onclick="window.location.href='add_grades.php?';" id="add_btn" value="Add Grade"/>
+		</div>
 	</form>
     </div>
+	</center>
 
 
     <div id="npup2" class="hidden">
       <h3>2nd Year, 1st Sem</h3>
-      <form name="form1" method="post" action="code.php"  style="height:550px;">	   
 <center>
-<table>
+	<form name="form1" method="post" action="code.php"  style="height:550px;">	   
+	<table>
 			<tr> 
 				<th>Course</th>
 				<th>Course Code</th>
@@ -220,15 +231,20 @@
 
 			?>
 		</table> 
-		<center><button type="submit" name="update_registrar" id="update" value="Update"> Update </center>
-		<center><a href="view_grades.php?id=<?=$key_child?>">SUBJECT</a><center>
-	</center>
+		<div id="btns">
+			<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update </button>
+			<input type="button" onclick="window.location.href='add_grades.php?';" id="add_btn" value="Add Grade"/>
+		</div>
+		</form>
     </div>
+	
+</center>
 
 	<div id="npup3" class="hidden">
       <h3>2nd Year, 2nd Sem</h3>
-      <form name="form1" method="post" action="code.php"  style="height:550px;">		   
-<center>
+<center>      
+	<form name="form1" method="post" action="code.php"  style="height:550px;">		   
+
 <table>
 			<tr> 
 				<th>Course</th>
@@ -283,10 +299,14 @@
 
 			?>
 		</table> 
-		<center><button href = "add_grades.php" type="submit" name="update_registrar" id="update" value="Update"> Update </center>
-		<center><a href="add_grades.php?id=<?=$key_child?>">Add Subject</a><center>
-	</center>
+		<div id="btns">
+			<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update </button>
+			<input type="button" onclick="window.location.href='add_grades.php?';" id="add_btn" value="Add Grade"/>
+		</div>
+		</form>
     </div>
+	
+	</center>
 
 
 
@@ -296,8 +316,9 @@
 
 	<div id="npup4" class="hidden">
       <h3>3rd Year, 1st Sem</h3>
-      <form name="form1" method="post" action="code.php"  style="height:550px;">   
-<center>
+<center>      
+	<form name="form1" method="post" action="code.php"  style="height:550px;">   
+
 <table>
 			<tr> 
 				<th>Course</th>
@@ -352,17 +373,21 @@
 
 			?>
 		</table> 
-		<center><button type="submit" name="update_registrar" id="update" value="Update"> Update </center>
-		<center><a href="view_grades.php?id=<?=$key_child?>">SUBJECT</a><center>
-	</center>
+		<div id="btns">
+			<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update </button>
+			<input type="button" onclick="window.location.href='add_grades.php?';" id="add_btn" value="Add Grade"/>
+		</div>
+		</form>
     </div>
 
+	</center>
 
 
 	<div id="npup5" class="hidden">
       <h3>3rd Year, 2nd Sem</h3>
-      <form name="form1" method="post" action="code.php"  style="height:550px;">	   
-<center>
+<center>      
+	<form name="form1" method="post" action="code.php"  style="height:550px;">	   
+
 <table>
 			<tr> 
 				<th>Course</th>
@@ -414,17 +439,21 @@
 			}
 			?>
 		</table> 
-		<center><button type="submit" name="update_registrar" id="update" value="Update"> Update </center>
-		<center><a href="view_grades.php?id=<?=$key_child?>">SUBJECT</a></center>
-	</center>
+		<div id="btns">
+			<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update </button>
+			<input type="button" onclick="window.location.href='add_grades.php?';" id="add_btn" value="Add Grade"/>
+		</div>
+		</form>
     </div>
+</center>
 
 
 
 	<div id="npup6" class="hidden">
       <h3>4th Year, 1st Sem</h3>
-      <form name="form1" method="post" action="code.php"  style="height:550px;">	   
-<center>
+<center>      
+	<form name="form1" method="post" action="code.php"  style="height:550px;">	   
+
 	<table>
 			<tr> 
 				<th>Course</th>
@@ -479,15 +508,19 @@
 
 			?>
 		</table> 
-		<center><button type="submit" name="update_registrar" id="update" value="Update"> Update </center>
-		<center><a href="view_grades.php?id=<?=$key_child?>">SUBJECT</a><center>
-	</center>
+		<div id="btns">
+			<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update </button>
+			<input type="button" onclick="window.location.href='add_grades.php?';" id="add_btn" value="Add Grade"/>
+		</div>
+		</form>
     </div>
+	</center>
 
 	<div id="npup7" class="hidden">
       <h3>4th Year, 2nd Sem</h3>
-      <form name="form1" method="post" action="code.php"  style="height:550px;">	   
-<center>
+<center>      
+	<form name="form1" method="post" action="code.php"  style="height:550px;">	   
+
 <table>
 			<tr> 
 				<th>Course</th>
@@ -542,23 +575,14 @@
 
 			?>
 		</table> 
-		<center><button type="submit" name="update_registrar" id="update" value="Update"> Update </center>
-		<center><a href="view_grades.php?id=<?=$key_child?>">SUBJECT</a><center>
-	</center>
+		<div id="btns">
+			<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update </button>
+			<input type="button" onclick="window.location.href='add_grades.php?';" id="add_btn" value="Add Grade"/>
+		</div>
+		</form>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
+	</center>
 
 
 </div>
@@ -623,5 +647,10 @@ window.npup = (function (containerId, baseId) {
     };
 })('mySpecialElements', 'npup'); // give the routine a container id of your special elements, and the base id of those elements
 </script>
+
+
+<div  id="footer">
+    <p>All content copyright © 2022, PEGVA.</p>
+</div>
 </body>
 </html>

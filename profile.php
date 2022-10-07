@@ -1,5 +1,6 @@
 <?php
     include_once("dbcon.php");
+	include("navbar.php");
     session_start();
 ?>
 <!DOCTYPE html>
@@ -13,30 +14,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-	<nav>
-            <input type="checkbox" id="check">
-            <label for="check" class="chckbtn">
-                <i class="fa fa-bars"></i>
-            </label>
-            <label class="title">Cainta Catholic College</label>
-            <ul class="main-navigation">
-                <li><a href="students.php">Student List</a></li>
-                <li><a href="#">Curriculum</a>
-                <ul class="course">
-                    <li><a href="ABREED1.php">ABREED</a></li>
-                    <li><a href="#">BEED</a></li>
-                    <li><a href="#">BSED-ENG</a></li>
-                    <li><a href="#">BSED-MATH</a></li>
-                    <li><a href="#">BSED-SCI</a></li>
-                    <li><a href="#">BSBA</a></li>
-                    <li><a href="BSCS.php">BSCS</a></li>
-                    <li><a href="#">BSOA</a></li>
-                </ul>
-                </li>
-                <li><a href="practice.php">Home</a></li>
-                <li><a href="logout.php">Logout</a></li>
-            </ul>
-        </nav>
+
     <h2>Student Information</h2>
 
     <div class="div1">
@@ -50,47 +28,49 @@
 			if($getdata > 0)
 			{
 	?>
-        <form name="form1" method="post" action="code.php"  style="height:600px;">
+        <form name="form1" method="post" action="code.php"  style="height:500px;">
 		<table>
 		<input type="hidden" name = "key" value = "<?=$key_child;?>">
         <tr> 
 			<td>Fullname:</td>
-			<td><input type="text" name="Name" value = "<?=$getdata['Name']; ?>" ></td>
-		</tr>
-		<tr> 
-			<td>Phone No.:</td>
-			<td><input type="text" name="Contact_Number" value = "<?=$getdata['Contact_Number']; ?>" ></td>
+			<td><input type="text" id="name" name="Name" value = "<?=$getdata['Name']; ?>" ></td>
 		</tr>
         <tr> 
 			<td>Address:</td>
-			<td><input type="text" name="Address" value = "<?=$getdata['Address']; ?>" ></td>
+			<td><input type="text" id="address" name="Address" value = "<?=$getdata['Address']; ?>" ></td>
 		</tr>
 		<tr> 
-			<td>Birthdate:</td>
-			<td><input type="date" name="Birthday" value = "<?=$getdata['Birthday'];?>" ></td>
+			<td>Phone No.:</td>
+			<td><input type="text" id="num" name="Contact_Number" value = "<?=$getdata['Contact_Number']; ?>" >
+			&emsp;
+			Birthdate:
+				<input type="date" name="Birthday" value = "<?=$getdata['Birthday'];?>" >
+			</td>
 		</tr>
 		<tr> 
 			<td>Mother's Fullname:</td>
-			<td><input type="text" name="Mother" value = "<?=$getdata['Mother']; ?>" ></td>
-		</tr>
-		<tr> 
-			<td>Phone no. of Mother:</td>
-			<td><input type="text" name="Mother_number" value = "<?=$getdata['Mother_number']; ?>" ></td>
+			<td><input type="text" id="mother" name="Mother" value = "<?=$getdata['Mother']; ?>" >
+			&emsp;
+			Phone no. of Mother:
+				<input type="text" id="num" name="Mother_number" value = "<?=$getdata['Mother_number']; ?>" >
+			</td>
 		</tr>
 		<tr> 
 			<td>Father's Fullname:</td>
-			<td><input type="text" name="Father" value = "<?=$getdata['Father']; ?>" ></td>
+			<td><input type="text" id="father" name="Father" value = "<?=$getdata['Father']; ?>" >
+			&emsp;
+			Phone no. of Father:
+				<input type="text" id="num" name="Father_number" value = "<?=$getdata['Father_number']; ?>" >
+			</td>
 		</tr>
-		<tr>
-			<td>Phone no. of Father:</td>
-			<td><input type="text" name="Father_number" value = "<?=$getdata['Father_number']; ?>" ></td>
-		</tr>
-		</table> 
-        <center><button type="submit" name="update_registrar" id="update" value="Update"> Update </center>
-		<a href="view_grades.php?id=<?=$key_child?>"> View Grades </a>
-
-		<a href="add_grades.php?id=<?=$key_child?>"> Add Grades </a>
-		
+		</table>
+		<center>
+		<div id="btns">
+			<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update </button>
+			<input type="button" onclick="window.location.href='view_grades.php?';" id="view_btn" value="View Grades"/>
+			<input type="button" onclick="window.location.href='add_grades.php?';" id="add_grade_btn" value="Add Remarks"/>
+		</div>
+		</center>
 	</form>
         
     <?php

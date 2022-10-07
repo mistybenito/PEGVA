@@ -1,5 +1,6 @@
 <?php
     include_once("dbcon.php");
+	include("navbar.php");
     session_start();
 ?>
 <!DOCTYPE html>
@@ -13,31 +14,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-	<nav>
-            <input type="checkbox" id="check">
-            <label for="check" class="chckbtn">
-                <i class="fa fa-bars"></i>
-            </label>
-            <label class="title">Cainta Catholic College</label>
-            <ul class="main-navigation">
-                <li><a href="students.php">Student List</a></li>
-                <li><a href="#">Curriculum</a>
-                <ul class="course">
-					<li><a href="ABREED.php">ABREED</a></li>
-                    <li><a href="BEED.php">BEED</a></li>
-                    <li><a href="BSED-ENG.php">BSED-ENG</a></li>
-                    <li><a href="#">BSED-MATH</a></li>
-                    <li><a href="#">BSED-SCI</a></li>
-                    <li><a href="#">BSBA</a></li>
-                    <li><a href="BSCS.php">BSCS</a></li>
-                    <li><a href="#">BSOA</a></li>
-                </ul>
-                </li>
-                <li><a href="practice.php">Home</a></li>
-                <li><a href="logout.php">Logout</a></li>
-            </ul>
-        </nav>
-
 
 	<h2>Curriculum</h2>
     <div class="div1">
@@ -61,10 +37,10 @@
     <!--  these have ids that end with and index  for easy retrieval in "findeElement" function  below-->
     <div id="npup0" class="hidden">
     <h3>ABREED 1st Year, 1st Sem</h3> 
-    <form name="form1" method="post" action="code.php"  style="height:550px;">
-<center>
+    <form name="form1" method="post" action="code.php" >
+
 	<table>
-			<tr> 
+		<tr> 
 			<th>Course Code</th>
 			<th>Discriptive Title</th>
 			<th>Unit</th>
@@ -102,7 +78,6 @@
 		<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update</button>
 		<input type="button" onclick="window.location.href='ABREED_add_subjects.php';" id="add_btn" value="Add Subjects"/>
 		</div>
-	</center>
 	</form>
     </div>
     <div id="npup1" class="hidden">
@@ -432,6 +407,7 @@
 	</center>
     </div>
 
+</div>
 
 
 
@@ -474,22 +450,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div  id="footer">
-    <p>All content copyright © 2022, PEGVA.</p>
-</div>	
+	
 
 <script>
 window.npup = (function (containerId, baseId) {
@@ -535,5 +496,10 @@ window.npup = (function (containerId, baseId) {
     };
 })('mySpecialElements', 'npup'); // give the routine a container id of your special elements, and the base id of those elements
 </script>
+
+<div  id="footer">
+    <p>All content copyright © 2022, PEGVA.</p>
+</div>
+
 </body>
 </html>
