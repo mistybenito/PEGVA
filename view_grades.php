@@ -51,6 +51,7 @@
 				<th>Unit</th>
 				<th>Pre-Requisite</th>
 				<th>Grade</th>
+				<th>Delete</th>
 			</tr>
 			<?php
 			include('dbcon.php');
@@ -82,14 +83,14 @@
 			else
 			{
 				?>
-				<td colspan = "6"> Nothing Found </td>
+				<td colspan = "7"> Nothing Found </td>
 				<?php
 			}
 		}
 			else
 					{
 					?>
-						<td colspan = "6"> No Record found </td> 
+						<td colspan = "7"> No Record found </td> 
 					<?php
 			}
 	
@@ -99,7 +100,7 @@
 		</table>
 		<div id="btns">
 			<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update </button>
-			<input type="button" onclick="window.location.href='add_grades.php?';" id="add_btn" value="Add Grade"/>
+			<input type="button" onclick="window.location.href='add_grades.php?id=<?=$key_child?>';" id="add_btn" value="Add Grade"/>
 		</div>
 	</form>
   </div>

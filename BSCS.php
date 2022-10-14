@@ -24,20 +24,20 @@
 		<label>Year Level and Semester:</label>
 			<select id="yearlevel" onchange="npup.doSelect(this);">
 				<option>-- Year and Semester --</option>
-				<option value="0">1st Year, 1st Sem</option>
-      			<option value="1">1st Year, 2nd Sem</option>
-      			<option value="2">2nd Year, 1st Sem</option>
-	  			<option value="3">2nd Year, 2nd Sem</option>
-	  			<option value="4">3rd Year, 1st Sem</option>
-	  			<option value="5">3rd Year, 2nd Sem</option>
-	  			<option value="6">4th Year, 1st Sem</option>
-	  			<option value="7">4th Year, 2nd Sem</option>
+				<option value="0">1st Year, First Sem</option>
+      			<option value="1">1st Year, Second Sem</option>
+      			<option value="2">2nd Year, First Sem</option>
+	  			<option value="3">2nd Year, Second Sem</option>
+	  			<option value="4">3rd Year, First Sem</option>
+	  			<option value="5">3rd Year, Second Sem</option>
+	  			<option value="6">4th Year, First Sem</option>
+	  			<option value="7">4th Year, Second Sem</option>
 			</select>		   
 <center>
 	<div id="mySpecialElements">
     <!--  these have ids that end with and index  for easy retrieval in "findeElement" function  below-->
     <div id="npup0" class="hidden">
-    <h3>BSCS 1st Year, 1st Sem</h3> 
+    <h3>BSCS 1st Year, First Sem</h3> 
     <form name="form1" method="post" action="code.php"  style="height:550px;">
 		<p name="courses[]" id="courses">Course: BSCS</p>
 <center>
@@ -51,7 +51,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Science in Computer Science/First Year/1st Sem";
+				$ref_table = "course_curriculum/bscs/first_year/first_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -60,10 +60,10 @@
 					{
 			?>
 		<tr>
-			<td><?=$row['Course_Code']; ?></td>
-			<td><?=$row['Desc_title']; ?></td>
-			<td><?=$row['Unit']; ?></td>
-			<td><?=$row['Pre-Req']; ?></td>
+			<td><?=$row['code']; ?></td>
+			<td><?=$row['descriptive_title']; ?></td>
+			<td><?=$row['units']; ?></td>
+			<td><?=$row['pre_req']; ?></td>
 		</tr>
 			<?php
 				}
@@ -84,7 +84,7 @@
 	</form>
     </div>
     <div id="npup1" class="hidden">
-      <h3>BSCS 1st Year, 2nd Sem</h3>
+      <h3>BSCS 1st Year, Second Sem</h3>
       <form name="form1" method="post" action="code.php"  style="height:550px;">
 		<p name="courses[]" id="courses">Course: BSCS</p>		   
 <center>
@@ -98,7 +98,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Science in Computer Science/First Year/2nd Sem";
+				$ref_table = "course_curriculum/bscs/first_year/second_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -107,10 +107,10 @@
 					{
 			?>
 		<tr>
-			<td><?=$row['Course_Code']; ?></td>
-			<td><?=$row['Desc_title']; ?></td>
-			<td><?=$row['Unit']; ?></td>
-			<td><?=$row['Pre-Req']; ?></td>
+			<td><?=$row['code']; ?></td>
+			<td><?=$row['descriptive_title']; ?></td>
+			<td><?=$row['units']; ?></td>
+			<td><?=$row['pre_req']; ?></td>
 		</tr>
 			<?php
 				}
@@ -133,7 +133,7 @@
 
 
     <div id="npup2" class="hidden">
-      <h3>BSCS 2nd Year, 1st Sem</h3>
+      <h3>BSCS 2nd Year, First Sem</h3>
       <form name="form1" method="post" action="code.php"  style="height:550px;">
 		<p name="courses[]" id="courses">Course: BSCS</p>		   
 <center>
@@ -147,7 +147,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Science in Computer Science/Second Year/1st Sem";
+				$ref_table = "course_curriculum/bscs/second_year/first_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -156,10 +156,10 @@
 					{
 			?>
 		<tr>
-			<td><?=$row['Course_Code']; ?></td>
-			<td><?=$row['Desc_title']; ?></td>
-			<td><?=$row['Unit']; ?></td>
-			<td><?=$row['Pre-Req']; ?></td>
+			<td><?=$row['code']; ?></td>
+			<td><?=$row['descriptive_title']; ?></td>
+			<td><?=$row['units']; ?></td>
+			<td><?=$row['pre_req']; ?></td>
 		</tr>
 			<?php
 				}
@@ -180,7 +180,7 @@
     </div>
 
 	<div id="npup3" class="hidden">
-      <h3>BSCS 2nd Year, 2nd Sem</h3>
+      <h3>BSCS 2nd Year, Second Sem</h3>
       <form name="form1" method="post" action="code.php"  style="height:550px;">
 		<p name="courses[]" id="courses">Course: BSCS</p>		   
 <center>
@@ -194,7 +194,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Science in Computer Science/Second Year/2nd Sem";
+				$ref_table = "course_curriculum/bscs/second_year/second_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -203,10 +203,10 @@
 					{
 			?>
 		<tr>
-			<td><?=$row['Course_Code']; ?></td>
-			<td><?=$row['Desc_title']; ?></td>
-			<td><?=$row['Unit']; ?></td>
-			<td><?=$row['Pre-Req']; ?></td>
+			<td><?=$row['code']; ?></td>
+			<td><?=$row['descriptive_title']; ?></td>
+			<td><?=$row['units']; ?></td>
+			<td><?=$row['pre_req']; ?></td>
 		</tr>
 			<?php
 				}
@@ -226,7 +226,7 @@
 	</center>
     </div>
 	<div id="npup4" class="hidden">
-      <h3>BSCS 3rd Year, 1st Sem</h3>
+      <h3>BSCS 3rd Year, First Sem</h3>
       <form name="form1" method="post" action="code.php"  style="height:550px;">
 		<p name="courses[]" id="courses">Course: BSCS</p>		   
 <center>
@@ -240,7 +240,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Science in Computer Science/Third Year/1st Sem";
+				$ref_table = "course_curriculum/bscs/third_year/first_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -249,10 +249,10 @@
 					{
 			?>
 		<tr>
-			<td><?=$row['Course_Code']; ?></td>
-			<td><?=$row['Desc_title']; ?></td>
-			<td><?=$row['Unit']; ?></td>
-			<td><?=$row['Pre-Req']; ?></td>
+			<td><?=$row['code']; ?></td>
+			<td><?=$row['descriptive_title']; ?></td>
+			<td><?=$row['units']; ?></td>
+			<td><?=$row['pre_req']; ?></td>
 		</tr>
 			<?php
 				}
@@ -273,7 +273,7 @@
     </div>
 
 	<div id="npup5" class="hidden">
-      <h3>BSCS 3rd Year, 2nd Sem</h3>
+      <h3>BSCS 3rd Year, Second Sem</h3>
       <form name="form1" method="post" action="code.php"  style="height:550px;">
 		<p name="courses[]" id="courses">Course: BSCS</p>		   
 <center>
@@ -287,7 +287,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Science in Computer Science/Third Year/2nd Sem";
+				$ref_table = "course_curriculum/bscs/third_year/second_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -296,10 +296,10 @@
 					{
 			?>
 		<tr>
-			<td><?=$row['Course_Code']; ?></td>
-			<td><?=$row['Desc_title']; ?></td>
-			<td><?=$row['Unit']; ?></td>
-			<td><?=$row['Pre-Req']; ?></td>
+			<td><?=$row['code']; ?></td>
+			<td><?=$row['descriptive_title']; ?></td>
+			<td><?=$row['units']; ?></td>
+			<td><?=$row['pre_req']; ?></td>
 		</tr>
 			<?php
 				}
@@ -320,7 +320,7 @@
     </div>
 
 	<div id="npup6" class="hidden">
-      <h3>BSCS 4th Year, 1st Sem</h3>
+      <h3>BSCS 4th Year, First Sem</h3>
       <form name="form1" method="post" action="code.php"  style="height:550px;">
 		<p name="courses[]" id="courses">Course: BSCS</p>		   
 <center>
@@ -334,7 +334,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Science in Computer Science/Fourth Year/1st Sem";
+				$ref_table = "course_curriculum/bscs/Fourth Year/first_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -343,10 +343,10 @@
 					{
 			?>
 		<tr>
-			<td><?=$row['Course_Code']; ?></td>
-			<td><?=$row['Desc_title']; ?></td>
-			<td><?=$row['Unit']; ?></td>
-			<td><?=$row['Pre-Req']; ?></td>
+			<td><?=$row['code']; ?></td>
+			<td><?=$row['descriptive_title']; ?></td>
+			<td><?=$row['units']; ?></td>
+			<td><?=$row['pre_req']; ?></td>
 		</tr>
 			<?php
 				}
@@ -367,7 +367,7 @@
     </div>
 
 	<div id="npup7" class="hidden">
-      <h3>BSCS 4th Year, 2nd Sem</h3>
+      <h3>BSCS 4th Year, Second Sem</h3>
       <form name="form1" method="post" action="code.php"  style="height:550px;">
 		<p name="courses[]" id="courses">Course: BSCS</p>		   
 <center>
@@ -381,7 +381,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Science in Computer Science/Fourth Year/2nd Sem";
+				$ref_table = "course_curriculum/bscs/Fourth Year/second_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -390,10 +390,10 @@
 					{
 			?>
 		<tr>
-			<td><?=$row['Course_Code']; ?></td>
-			<td><?=$row['Desc_title']; ?></td>
-			<td><?=$row['Unit']; ?></td>
-			<td><?=$row['Pre-Req']; ?></td>
+			<td><?=$row['code']; ?></td>
+			<td><?=$row['descriptive_title']; ?></td>
+			<td><?=$row['units']; ?></td>
+			<td><?=$row['pre_req']; ?></td>
 		</tr>
 			<?php
 				}

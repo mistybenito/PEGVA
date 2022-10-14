@@ -70,7 +70,7 @@
                 <td> <?= $row['Email'];?> </td>
                 <td> <?= $row['Course'];?> </td>
                 <td>
-                <a href="profile.php? id=<?=$key?>" class = "btn btn btn-primary" style="color=black;"> View </a>
+                <a href="profile.php?id=<?=$key;?>" class = "btn btn btn-primary" style="color=black;"> View </a>
                 </td>
             </tr>
             <?php

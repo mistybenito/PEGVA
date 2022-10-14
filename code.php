@@ -1,6 +1,45 @@
 <?php
 session_start();
 include('dbcon.php');
+// update student profile code
+
+if(isset($_POST['update_contact']))
+{
+    $key = $_POST['id'];
+    $name = $_POST['Name'];
+    $address = $_POST['Address'];
+    $phone = $_POST['Contact_Number'];
+    $bday = $_POST['Birthday'];
+    $mother = $_POST['Mother'];
+    $mothernum = $_POST['Mother_number'];
+    $father = $_POST['Father'];
+    $fathernum = $_POST['Father_Number'];
+    
+
+    $updateData = [
+        'Name'=>$name,
+        'Address'=>$address,
+        'Contact_Number'=>$phone,
+        'Birthday'=>$bday,
+        'Mother' =>$mother,
+        'Mother_number' =>$mothernum,
+        'Father' => $father,
+        'Father_number' => $fathernum,
+    ];
+    $ref_table = 'User/'.$key;
+    $updatequery_result = $database->getReference($ref_table)->update($updateData);
+
+    if($updatequery_result)
+    {
+        $_SESSION['status'] = "Contact Updated Successfully";
+        header('Location: students.php');
+    }
+    else
+    {
+        $_SESSION['status'] = "Contact Not Updated Successfully";
+        header('Location: students.php');
+    }
+}
 // TEST CODE 2
 if (isset($_POST['TEST']))
 

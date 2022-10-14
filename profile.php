@@ -30,45 +30,45 @@
 	?>
         <form name="form1" method="post" action="code.php"  style="height:500px;">
 		<table>
-		<input type="hidden" name = "key" value = "<?=$key_child;?>">
+		<input type="hidden" name = "id" value = "<?=$key_child;?>">
         <tr> 
 			<td>Fullname:</td>
-			<td><input type="text" id="name" name="Name" value = "<?=$getdata['Name']; ?>" ></td>
+			<td><input type="text" id="name" name="Name" value = "<?=$getdata['Name']; ?>" class="form-control"></td>
 		</tr>
         <tr> 
 			<td>Address:</td>
-			<td><input type="text" id="address" name="Address" value = "<?=$getdata['Address']; ?>" ></td>
+			<td><input type="text" id="address" name="Address" value = "<?=$getdata['Address']; ?> "class="form-control" ></td>
 		</tr>
 		<tr> 
 			<td>Phone No.:</td>
-			<td><input type="text" id="num" name="Contact_Number" value = "<?=$getdata['Contact_Number']; ?>" >
+			<td><input type="text" id="num" name="Contact_Number" value = "<?=$getdata['Contact_Number']; ?>" class="form-control">
 			&emsp;
 			Birthdate:
-				<input type="date" name="Birthday" value = "<?=$getdata['Birthday'];?>" >
+				<input type="date" name="Birthday" value = "<?=$getdata['Birthday'];?>" class="form-control">
 			</td>
 		</tr>
 		<tr> 
 			<td>Mother's Fullname:</td>
-			<td><input type="text" id="mother" name="Mother" value = "<?=$getdata['Mother']; ?>" >
+			<td><input type="text" id="mother" name="Mother" value = "<?=$getdata['Mother']; ?>" class="form-control">
 			&emsp;
 			Phone no. of Mother:
-				<input type="text" id="num" name="Mother_number" value = "<?=$getdata['Mother_number']; ?>" >
+				<input type="text" id="num" name="Mother_number" value = "<?=$getdata['Mother_number']; ?>" class="form-control">
 			</td>
 		</tr>
 		<tr> 
 			<td>Father's Fullname:</td>
-			<td><input type="text" id="father" name="Father" value = "<?=$getdata['Father']; ?>" >
+			<td><input type="text" id="father" name="Father" value = "<?=$getdata['Father']; ?>" class="form-control">
 			&emsp;
 			Phone no. of Father:
-				<input type="text" id="num" name="Father_number" value = "<?=$getdata['Father_number']; ?>" >
+				<input type="text" id="num" name="Father_number" value = "<?=$getdata['Father_number']; ?>" class="form-control">
 			</td>
 		</tr>
 		</table>
 		<center>
 		<div id="btns">
-			<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update </button>
-			<input type="button" onclick="window.location.href='view_grades.php?';" id="view_btn" value="View Grades"/>
-			<input type="button" onclick="window.location.href='add_grades.php?';" id="add_grade_btn" value="Add Remarks"/>
+			<button type="submit" name="update_contact" id = "view_btn" class="btn btn-primary"> Update </button>
+			<input type="button" onclick="window.location.href='view_grades.php?id=<?=$key_child;?>'" id="view_btn" value="View Grades"/>
+			<input type="button" onclick="window.location.href='add_grades.php?id=<?=$key_child;?>'" id="add_grade_btn" value="Add Grades"/>
 		</div>
 		</center>
 	</form>
