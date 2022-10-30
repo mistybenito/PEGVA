@@ -1,39 +1,17 @@
 <?php
-include_once("config.php");
+include_once("dbcon.php");
     session_start();
-
-    
-    if($mysqli===false)
-    {
-        echo "error";
-    }
-    if($_SERVER["REQUEST_METHOD"]=="POST")
-	{
-		$username = $_POST["username"];
-		$password = $_POST["password"];
-
-        $sql = "select * from users where username = '".$username."' AND password = '".$password."'";
-		$result = mysqli_query($mysqli, $sql);
-        
-        $row = mysqli_fetch_array($result);
-
-        if($row['usertype'] == 'registrar') 
+    if(isset($_SESSION['verified_user_id']))
         {
-            $_SESSION['username'] = $row['id'];
-            header('location: reg.php');
+            $_SESSION['status'] = "You are already logged in.";
+            header('Location: reg.php');
+            exit();
         }
-        elseif($row['usertype'] == 'mis') 
-        {
-            $_SESSION['username'] = $row['id'];
-            header('location: mis.php');
-        }
-    
-}
 ?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Login Page</title>
+        <title>Login</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
@@ -158,23 +136,23 @@ img.avatar
 <center>
     <div class="div2">
     
-        <form class="container"  action="#" method="POST">
+        <form class="container"  action="logincode.php" method="POST">
             <div class="imgcontainer">                        
              <img src="images/admin.png" alt="Admin" class="avatar">
                 <h3>Hello Admin! Welcome!</h3>
             </div>
         <div class="login-form">
-            <label>Username:</label>
-            <input type="text" name="username" required>
+            <label>Email:</label>
+            <input type="text" name="email" class = "form-control">
             </br>
             <label>Password:</label>
-            <input type="password" name="password" required>
+            <input type="password" name="password" class = "form-control">
             <br>
             <input type="checkbox"id="rememberMe"><label for="rememberMe">Remember me</label>
             
             
             <div style="padding: 10px; text-align: center;">
-                <input type="submit" value="Login" class="button">
+                <input type="submit" name = "login_btn" value="Login" class="button">
                 <br><br>
                 <a href="#" class="forgot">Forgot password?</a>
             </div>   

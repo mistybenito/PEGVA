@@ -2,6 +2,34 @@
 session_start();
 include('dbcon.php');
 // update student profile code
+if(isset($_POST['update_curriculum']))
+{
+    $key = $_POST['id'];
+    $code = $_POST['code'];
+    $desc = $_POST['descriptive_title'];
+    $unit = $_POST['units'];
+    
+
+    $updateData = [
+        'code'=> $code,
+        'descriptive_title'=> $desc,
+        'units'=> $unit,
+    ];
+    $ref_table = 'course_curriculum/bscs/first_year/first_sem/'.$key;
+    $updatequery_result = $database->getReference($ref_table)->update($updateData);
+
+    if($updatequery_result)
+    {
+        $_SESSION['status'] = "Contact Updated Successfully";
+        header('Location: BSCS.php');
+    }
+    else
+    {
+        $_SESSION['status'] = "Contact Not Updated Successfully";
+        header('Location: BSCS.php');
+    }
+}
+// asdjwqiokdasdasd
 
 if(isset($_POST['update_contact']))
 {

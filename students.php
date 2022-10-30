@@ -1,6 +1,6 @@
 <?php
-    include_once("dbcon.php");
-    session_start();
+    include("authentication.php");
+    include("navbar.php");
 ?>
 <!DOCTYPE html>
 <html>

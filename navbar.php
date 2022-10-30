@@ -28,6 +28,20 @@
                 </ul>
                 </li>
                 <li><a href="reg.php">Home</a></li>
-                <li><a href="logout.php">Logout</a></li>
+                <?php if(!isset($_SESSION['verified_user_id'])) : ?>
+                    <li>
+                    <a href="register.php">Register</a>
+                    </li>
+
+                    <li>
+                    <a href="index1.php">Login</a>
+                    </li>
+
+                    <?php else :
+                    ?>
+                    <li>
+                    <a href="logout.php">Logout</a>
+                    </li>
+                    <?php endif; ?>
             </ul>
     </nav>

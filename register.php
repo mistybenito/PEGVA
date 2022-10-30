@@ -1,34 +1,12 @@
 <?php
-include_once("config.php");
+include_once("dbcon.php");
     session_start();
-
-    
-    if($mysqli===false)
-    {
-        echo "error";
-    }
-    if($_SERVER["REQUEST_METHOD"]=="POST")
-	{
-		$username = $_POST["username"];
-		$password = $_POST["password"];
-
-        $sql = "select * from users where username = '".$username."' AND password = '".$password."'";
-		$result = mysqli_query($mysqli, $sql);
-        
-        $row = mysqli_fetch_array($result);
-
-        if($row['usertype'] == 'registrar') 
+    if(isset($_SESSION['verified_user_id']))
         {
-            $_SESSION['username'] = $row['id'];
-            header('location: reg.php');
+            $_SESSION['status'] = "You are already logged in.";
+            header('Location: reg.php');
+            exit();
         }
-        elseif($row['usertype'] == 'mis') 
-        {
-            $_SESSION['username'] = $row['id'];
-            header('location: mis.php');
-        }
-    
-}
 ?>
 <!DOCTYPE html>
 <html>
@@ -229,27 +207,26 @@ img.avatar
         <i class="fa fa-arrow-left"></i>
     </button>
 </a>
-        <form class="container"  action="#" method="POST">                       
+        <form class="container"  action="logincode.php" method="POST">                       
         
         <h3>Register</h3>
           
         <div class="login-form">
-            <label>Full Name:</label>
-            <input type="text" name="fullname" required>
+            <label for ="">Full Name:</label>
+            <input type="text" name="full_name" class = "form-control">
             <br>
-            <label>Phone Number:</label>
-            <input type="text" name="phone" required>
+            <label for ="">Phone Number:</label>
+            <input type="text" name="phone" class = "form-control">
             <br>
-            <label>Email:</label>
-            <input type="text" name="email" required>
+            <label for ="">Email Address:</label>
+            <input type="text" name="email" class = "form-control">
             <br>
-            <label>Password:</label>
-            <input type="password" name="password" required>
+            <label for ="">Password:</label>
+            <input type="password" name="password" class = "form-control">
             <br>
             
             <div style="padding: 10px; text-align: center;">
-                <input type="submit" value="Register" class="button">
-
+            <button type="submit" name="register_btn" class="btn btn-primary"> Register </button>
             </div>   
         </div>
         </form>

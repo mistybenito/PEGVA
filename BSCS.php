@@ -1,7 +1,6 @@
 <?php
-    include_once("dbcon.php");
+    include("authentication.php");
 	include("navbar.php");
-    session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -46,7 +45,7 @@
 			<th>Course Code</th>
 			<th>Discriptive Title</th>
 			<th>Unit</th>
-			<th>Pre-Requisite</th>
+			<th>Edit</th>
 		</tr>
 			<?php
 			include('dbcon.php');
@@ -63,7 +62,9 @@
 			<td><?=$row['code']; ?></td>
 			<td><?=$row['descriptive_title']; ?></td>
 			<td><?=$row['units']; ?></td>
-			<td><?=$row['pre_req']; ?></td>
+			<td>
+                <a href="editcurric.php?id=<?=$key;?>" class = "btn btn btn-primary" style="color=black;"> View </a>
+            </td>
 		</tr>
 			<?php
 				}
@@ -93,7 +94,7 @@
 			<th>Course Code</th>
 			<th>Discriptive Title</th>
 			<th>Unit</th>
-			<th>Pre-Requisite</th>
+			<th>Edit</th>
 		</tr>
 			<?php
 			include('dbcon.php');
@@ -110,7 +111,9 @@
 			<td><?=$row['code']; ?></td>
 			<td><?=$row['descriptive_title']; ?></td>
 			<td><?=$row['units']; ?></td>
-			<td><?=$row['pre_req']; ?></td>
+			<td>
+                <a href="editcurric.php?id=<?=$key;?>" class = "btn btn btn-primary" style="color=black;"> View </a>
+            </td>
 		</tr>
 			<?php
 				}
@@ -142,7 +145,7 @@
 			<th>Course Code</th>
 			<th>Discriptive Title</th>
 			<th>Unit</th>
-			<th>Pre-Requisite</th>
+			<th>Edit</th>
 		</tr>
 			<?php
 			include('dbcon.php');
@@ -189,7 +192,7 @@
 			<th>Course Code</th>
 			<th>Discriptive Title</th>
 			<th>Unit</th>
-			<th>Pre-Requisite</th>
+			<th>Edit</th>
 		</tr>
 			<?php
 			include('dbcon.php');
@@ -235,7 +238,7 @@
 			<th>Course Code</th>
 			<th>Discriptive Title</th>
 			<th>Unit</th>
-			<th>Pre-Requisite</th>
+			<th>Edit</th>
 		</tr>
 			<?php
 			include('dbcon.php');
@@ -282,7 +285,7 @@
 			<th>Course Code</th>
 			<th>Discriptive Title</th>
 			<th>Unit</th>
-			<th>Pre-Requisite</th>
+			<th>Edit</th>
 		</tr>
 			<?php
 			include('dbcon.php');
@@ -329,7 +332,7 @@
 			<th>Course Code</th>
 			<th>Discriptive Title</th>
 			<th>Unit</th>
-			<th>Pre-Requisite</th>
+			<th>Edit</th>
 		</tr>
 			<?php
 			include('dbcon.php');
@@ -376,7 +379,7 @@
 			<th>Course Code</th>
 			<th>Discriptive Title</th>
 			<th>Unit</th>
-			<th>Pre-Requisite</th>
+			<th>Edit</th>
 		</tr>
 			<?php
 			include('dbcon.php');
