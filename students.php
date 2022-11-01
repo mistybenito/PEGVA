@@ -13,30 +13,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-    <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="chckbtn">
-            <i class="fa fa-bars"></i>
-            </label>
-            <label class="title">Cainta Catholic College</label>
-            <ul class="main-navigation">
-                <li><a href="students.php">Student List</a></li>
-                <li><a href="#">Curriculum</a>
-                <ul class="course">
-                    <li><a href="ABREED.php">ABREED</a></li>
-                    <li><a href="#">BEED</a></li>
-                    <li><a href="#">BSED-ENG</a></li>
-                    <li><a href="#">BSED-MATH</a></li>
-                    <li><a href="#">BSED-SCI</a></li>
-                    <li><a href="#">BSBA</a></li>
-                    <li><a href="BSCS.php">BSCS</a></li>
-                    <li><a href="#">BSOA</a></li>
-                </ul>
-                </li>
-                <li><a href="reg.php">Home</a></li>
-                <li><a href="logout.php">Logout</a></li>
-            </ul>
-    </nav>
         <h1>Student List</h1>
         <div id="div1">  
             <input type="text" placeholder="Search.." class="text-search" >
@@ -52,7 +28,8 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Course</th>
-                    <th style="border-radius: 0 25px 0 0;">Files</th>
+                    <th style="border-radius: 0 25px 0 0;">Profile</th>
+                    <th> Grades </th>
                 </tr>
             <?php
                 include('dbcon.php');
@@ -69,8 +46,11 @@
                 <td> <?= $row['Name'];?> </td>
                 <td> <?= $row['Email'];?> </td>
                 <td> <?= $row['Course'];?> </td>
-                <td>
-                <a href="profile.php?id=<?=$key;?>" class = "btn btn btn-primary" style="color=black;"> View </a>
+                <td> 
+                <a href="profile.php?id=<?=$key;?>" class = "btn btn btn-primary" style="color=black"> View </a>
+                </td>
+                <td> 
+                <a href="view_grades.php?id=<?=$key;?>" class = "btn btn btn-primary" style="color=black"> View </a>
                 </td>
             </tr>
             <?php

@@ -23,7 +23,7 @@ if(isset($_POST['register_btn']))
     if($createdUser)
     {
         $_SESSION['status'] = "User created successfully.";
-        header('Location: reg.php');
+        header('Location: index1.php');
         exit();
     }
 
@@ -61,7 +61,7 @@ if(isset($_POST['login_btn']))
             $_SESSION['idTokenString'] = $idTokenString;
 
             $_SESSION['status'] = "Logged in successfully.";
-            header('Location: reg.php');
+            header('Location: registrar.php');
             exit();
 
         }
@@ -94,7 +94,7 @@ if(isset($_POST['login_btn']))
 else
 {
     $_SESSION = "Not allowed";
-    header('Location: login.php');
+    header('Location: index1.php');
     exit();
 }
 

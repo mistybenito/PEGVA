@@ -7,6 +7,7 @@ include_once("dbcon.php");
             header('Location: reg.php');
             exit();
         }
+        include("navbar.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -130,9 +131,6 @@ img.avatar
     </head>
 
  <body>
-    <div class="nav">
-        <p style="color: #ffffff; text-align: center; font-weight: bold; letter-spacing:5px;" >Cainta Catholic College</p>
-    </div>
 <center>
     <div class="div2">
     
