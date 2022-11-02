@@ -23,7 +23,7 @@ if(isset($_POST['register_btn']))
     if($createdUser)
     {
         $_SESSION['status'] = "User created successfully.";
-        header('Location: index1.php');
+        header('Location: login.php');
         exit();
     }
 
@@ -78,14 +78,14 @@ if(isset($_POST['login_btn']))
     catch(Exception $e)
     {
         $_SESSION['status'] = "Wrong Password";
-        header('Location: index1.php');
+        header('Location: login.php');
         exit();
     }
 }
     catch (\Kreait\Firebase\Exception\Auth\UserNotFound $e) {
         // echo $e->getMessage();
         $_SESSION['status'] = "Invalid Email Address";
-        header('Location: index1.php');
+        header('Location: login.php');
         exit();
     }
 }
@@ -94,7 +94,7 @@ if(isset($_POST['login_btn']))
 else
 {
     $_SESSION = "Not allowed";
-    header('Location: index1.php');
+    header('Location: login.php');
     exit();
 }
 

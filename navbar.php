@@ -34,7 +34,7 @@
                     </li>
 
                     <li>
-                    <a href="index1.php">Login</a>
+                    <a href="login.php">Login</a>
                     </li>
 
                     <?php else :

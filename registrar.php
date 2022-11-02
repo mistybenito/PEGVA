@@ -1,7 +1,6 @@
 <?php
-    include_once("dbcon.php");
+    include("authentication.php");
 	include("navbar.php");
-    session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,20 +12,6 @@
     </head>
 
 <body>
-    <div class="nav">
-        
-        <ul>
-        <a href="logout.php?" style="float: left; margin-left: 50px; color: white;">
-            <li>Logout</li>
-        </a>
-        <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">
-            <li>Student List</li>
-        </a>
-        <a onclick="document.getElementById('id02').style.display='block'" style="width:auto;">
-            <li>Curriculum </li>
-         </a>
-        </ul>	
-    </div>
     <center>
     <div class="div1">
         <img src="images/logo.png" id="logo">

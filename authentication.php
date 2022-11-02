@@ -24,7 +24,7 @@ if(isset($_SESSION['verified_user_id']))
 else
 {
     $_SESSION['status'] = "Login to access.";
-    header('Location: index1.php');
+    header('Location: login.php');
     exit();
 }
 
