@@ -56,10 +56,86 @@ if(isset($_POST['login_btn']))
         try {
             $verifiedIdToken = $auth -> verifyIdToken($idTokenString);
             $uid = $verifiedIdToken->claims()->get('sub');
+            $claims = $auth->getUser($uid)->customClaims;
 
-            $_SESSION['verified_user_id'] = $uid;
-            $_SESSION['idTokenString'] = $idTokenString;
+            if(isset($claims['bscs']) == true)
+                {
+                    $_SESSION['verified_bscs'] = true;
+                    $_SESSION['verified_user_id'] = $uid;
+                    $_SESSION['idTokenString'] = $idTokenString;
 
+                }
+            elseif(isset($claims['abreed']) == true)
+                {
+                    $_SESSION['verified_abreed'] = true;
+                    $_SESSION['verified_user_id'] = $uid;
+                    $_SESSION['idTokenString'] = $idTokenString;
+
+                }
+            elseif(isset($claims['beed']) == true)
+                {
+                    $_SESSION['verified_beed'] = true;
+                    $_SESSION['verified_user_id'] = $uid;
+                    $_SESSION['idTokenString'] = $idTokenString;
+
+                }   
+            elseif(isset($claims['bsoa']) == true)
+                {
+                    $_SESSION['verified_bsoa'] = true;
+                    $_SESSION['verified_user_id'] = $uid;
+                    $_SESSION['idTokenString'] = $idTokenString;
+
+                }
+            elseif(isset($claims['bsba']) == true)
+                {
+                    $_SESSION['verified_bsba'] = true;
+                    $_SESSION['verified_user_id'] = $uid;
+                    $_SESSION['idTokenString'] = $idTokenString;
+
+                }
+            elseif(isset($claims['ed_eng']) == true)
+                {
+                    $_SESSION['verified_ed_eng'] = true;
+                    $_SESSION['verified_user_id'] = $uid;
+                    $_SESSION['idTokenString'] = $idTokenString;
+
+                }
+            elseif(isset($claims['ed_sci']) == true)
+                {
+                    $_SESSION['verified_ed_sci'] = true;
+                    $_SESSION['verified_user_id'] = $uid;
+                    $_SESSION['idTokenString'] = $idTokenString;
+
+                }
+            elseif(isset($claims['ed_math']) == true)
+                {
+                    $_SESSION['verified_ed_math'] = true;
+                    $_SESSION['verified_user_id'] = $uid;
+                    $_SESSION['idTokenString'] = $idTokenString;
+
+                }
+            elseif(isset($claims['registrar']) == true)
+                {
+                    $_SESSION['verified_registrar'] = true;
+                    $_SESSION['verified_bscs'] = true;
+                    $_SESSION['verified_abreed'] = true;
+                    $_SESSION['verified_beed'] = true;
+                    $_SESSION['verified_bsoa'] = true;
+                    $_SESSION['verified_bsba'] = true;
+                    $_SESSION['verified_ed_eng'] = true;
+                    $_SESSION['verified_ed_sci'] = true;
+                    $_SESSION['verified_ed_math'] = true;
+                    $_SESSION['verified_user_id'] = $uid;
+                    $_SESSION['idTokenString'] = $idTokenString;
+
+                }
+            elseif($claims == null)
+                {
+                    $_SESSION['verified_user_id'] = $uid;
+                    $_SESSION['idTokenString'] = $idTokenString;
+
+                }
+      
             $_SESSION['status'] = "Logged in successfully.";
             header('Location: registrar.php');
             exit();

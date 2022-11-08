@@ -1,6 +1,8 @@
 <?php
 session_start();
 include('dbcon.php');
+
+
 // update student profile code
 if(isset($_POST['update_curriculum']))
 {

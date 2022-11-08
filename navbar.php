@@ -14,7 +14,25 @@
             </label>
             <label class="title">Cainta Catholic College</label>
             <ul class="main-navigation">
+                <li><a href="#">Course Student List</a>
+                <ul class="course">
+					<li><a href="student_ABREED.php">ABREED</a></li>
+                    <li><a href="student_BEED.php">BEED</a></li>
+                    <li><a href="student_BSED-ENG.php">BSED-ENG</a></li>
+                    <li><a href="student_BSED-MATH.php">BSED-MATH</a></li>
+                    <li><a href="student_BSED-SCI.php">BSED-SCI</a></li>
+                    <li><a href="student_BSBA.php">BSBA</a></li>
+                    <li><a href="student_BSCS.php">BSCS</a></li>
+                    <li><a href="student_BSOA.php">BSOA</a></li>
+                </ul>
+    
+            </li>
                 <li><a href="students.php">Student List</a></li>
+                <li><a href="user-list.php">User List</a></li>
+
+            
+
+
                 <li><a href="#">Curriculum</a>
                 <ul class="course">
 					<li><a href="ABREED.php">ABREED</a></li>

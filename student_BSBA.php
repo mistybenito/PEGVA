@@ -1,11 +1,11 @@
 <?php
-    include("authentication.php");
+    include("auth/bsba_auth.php");
     include("navbar.php");
 ?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Student List</title>
+        <title>BSBA Student List</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="students.css" rel="stylesheet" type="text/css">
@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <h1>Student List</h1>
+        <h1>BSBA Student List</h1>
         <div id="div1">  
             <input type="text" placeholder="Search.." class="text-search" >
             <label for="search" type="submit" class="searchbtn">

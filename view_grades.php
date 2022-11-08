@@ -4,7 +4,7 @@
 ?>
 <!DOCTYPE html>
 <html>
-<title>Bachelor of Science in Computer Science: Form 137 </title>
+<title> Remarks </title>
 <head>
 <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
