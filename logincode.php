@@ -63,6 +63,9 @@ if(isset($_POST['login_btn']))
                     $_SESSION['verified_bscs'] = true;
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['idTokenString'] = $idTokenString;
+                    $_SESSION['status'] = "Logged in successfully as BSCS Teacher";
+                    header('Location: registrar.php');
+                    exit();
 
                 }
             elseif(isset($claims['abreed']) == true)
@@ -70,6 +73,9 @@ if(isset($_POST['login_btn']))
                     $_SESSION['verified_abreed'] = true;
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['idTokenString'] = $idTokenString;
+                    $_SESSION['status'] = "Logged in successfully as ABREED Teacher";
+                    header('Location: registrar.php');
+                    exit();
 
                 }
             elseif(isset($claims['beed']) == true)
@@ -77,6 +83,9 @@ if(isset($_POST['login_btn']))
                     $_SESSION['verified_beed'] = true;
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['idTokenString'] = $idTokenString;
+                    $_SESSION['status'] = "Logged in successfully as BEED Teacher";
+                    header('Location: registrar.php');
+                    exit();
 
                 }   
             elseif(isset($claims['bsoa']) == true)
@@ -84,6 +93,9 @@ if(isset($_POST['login_btn']))
                     $_SESSION['verified_bsoa'] = true;
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['idTokenString'] = $idTokenString;
+                    $_SESSION['status'] = "Logged in successfully as BSOA Teacher";
+                    header('Location: registrar.php');
+                    exit();
 
                 }
             elseif(isset($claims['bsba']) == true)
@@ -91,6 +103,9 @@ if(isset($_POST['login_btn']))
                     $_SESSION['verified_bsba'] = true;
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['idTokenString'] = $idTokenString;
+                    $_SESSION['status'] = "Logged in successfully as BSBA Teacher";
+                    header('Location: registrar.php');
+                    exit();
 
                 }
             elseif(isset($claims['ed_eng']) == true)
@@ -98,6 +113,9 @@ if(isset($_POST['login_btn']))
                     $_SESSION['verified_ed_eng'] = true;
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['idTokenString'] = $idTokenString;
+                    $_SESSION['status'] = "Logged in successfully as BSED-ENG Teacher";
+                    header('Location: registrar.php');
+                    exit();
 
                 }
             elseif(isset($claims['ed_sci']) == true)
@@ -105,6 +123,9 @@ if(isset($_POST['login_btn']))
                     $_SESSION['verified_ed_sci'] = true;
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['idTokenString'] = $idTokenString;
+                    $_SESSION['status'] = "Logged in successfully as BSED-SCI Teacher";
+                    header('Location: registrar.php');
+                    exit();
 
                 }
             elseif(isset($claims['ed_math']) == true)
@@ -112,6 +133,9 @@ if(isset($_POST['login_btn']))
                     $_SESSION['verified_ed_math'] = true;
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['idTokenString'] = $idTokenString;
+                    $_SESSION['status'] = "Logged in successfully as BSED-MATH Teacher";
+                    header('Location: registrar.php');
+                    exit();
 
                 }
             elseif(isset($claims['registrar']) == true)
@@ -127,19 +151,21 @@ if(isset($_POST['login_btn']))
                     $_SESSION['verified_ed_math'] = true;
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['idTokenString'] = $idTokenString;
+                    $_SESSION['status'] = "Logged in successfully as Registrar.";
+                    header('Location: registrar.php');
+                    exit();
 
                 }
             elseif($claims == null)
                 {
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['idTokenString'] = $idTokenString;
-
+                    $_SESSION['status'] = "Logged in successfully.";
+                    header('Location: registrar.php');
+                    exit();
                 }
-      
-            $_SESSION['status'] = "Logged in successfully.";
-            header('Location: registrar.php');
-            exit();
 
+        
         }
         catch (InvalidToken $e)
         {

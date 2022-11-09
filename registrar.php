@@ -10,6 +10,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="reg.css" rel="stylesheet" type="text/css">
     </head>
+    <?php
+                if(isset($_SESSION['status']))
+                {
+                    echo "<h5 class= 'alert alert-success'>".$_SESSION['status']."</h5>";
+                    unset($_SESSION['status']);
+                }
+
+                ?>
 
 <body>
     <center>

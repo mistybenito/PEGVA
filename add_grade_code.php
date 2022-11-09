@@ -25,7 +25,7 @@ if (isset($_POST['1y1s']))
     ];
 
 
-    $addData_result = $database->getReference('User/'.$key.'/Grades/1st Year/1st Sem')->push($addData);
+    $addData_result = $database->getReference('User/'.$key.'/Grades/first_year/first_sem')->push($addData);
 
     if($addData_result)
     {
@@ -63,7 +63,7 @@ if (isset($_POST['1y2s']))
     ];
 
 
-    $addData_result = $database->getReference('User/'.$key.'/Grades/1st Year/2nd Sem')->push($addData);
+    $addData_result = $database->getReference('User/'.$key.'/Grades/first_year/second_sem')->push($addData);
 
     if($addData_result)
     {
@@ -100,7 +100,7 @@ if (isset($_POST['2y1s']))
     ];
 
 
-    $addData_result = $database->getReference('User/'.$key.'/Grades/2nd Year/1st Sem')->push($addData);
+    $addData_result = $database->getReference('User/'.$key.'/Grades/second_year/first_sem')->push($addData);
 
     if($addData_result)
     {
@@ -137,7 +137,7 @@ if (isset($_POST['2y2s']))
     ];
 
 
-    $addData_result = $database->getReference('User/'.$key.'/Grades/2nd Year/2nd Sem')->push($addData);
+    $addData_result = $database->getReference('User/'.$key.'/Grades/second_year/second_sem')->push($addData);
 
     if($addData_result)
     {
@@ -178,7 +178,7 @@ if (isset($_POST['3y1s']))
     ];
 
 
-    $addData_result = $database->getReference('User/'.$key.'/Grades/3rd Year/1st Sem')->push($addData);
+    $addData_result = $database->getReference('User/'.$key.'/Grades/third_year/first_sem')->push($addData);
 
     if($addData_result)
     {
@@ -216,7 +216,7 @@ if (isset($_POST['3y2s']))
     ];
 
 
-    $addData_result = $database->getReference('User/'.$key.'/Grades/3rd Year/2nd Sem')->push($addData);
+    $addData_result = $database->getReference('User/'.$key.'/Grades/third_year/second_sem')->push($addData);
 
     if($addData_result)
     {
@@ -258,7 +258,7 @@ if (isset($_POST['4y1s']))
     ];
 
 
-    $addData_result = $database->getReference('User/'.$key.'/Grades/4th Year/1st Sem')->push($addData);
+    $addData_result = $database->getReference('User/'.$key.'/Grades/fourth_year/first_sem')->push($addData);
 
     if($addData_result)
     {
@@ -298,7 +298,7 @@ if (isset($_POST['4y2s']))
     ];
 
 
-    $addData_result = $database->getReference('User/'.$key.'/Grades/4th Year/2nd Sem')->push($addData);
+    $addData_result = $database->getReference('User/'.$key.'/Grades/fourth_year/second_sem')->push($addData);
 
     if($addData_result)
     {

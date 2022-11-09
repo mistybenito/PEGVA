@@ -133,6 +133,14 @@ img.avatar
  <body>
 <center>
     <div class="div2">
+    <?php
+                if(isset($_SESSION['status']))
+                {
+                    echo "<h5 class= 'alert alert-success'>".$_SESSION['status']."</h5>";
+                    unset($_SESSION['status']);
+                }
+
+                ?>
     
         <form class="container"  action="logincode.php" method="POST">
             <div class="imgcontainer">                        

@@ -1,35 +1,37 @@
 <?php
-include('authentication.php');
-include('navbar.php');
+    include("authentication.php");
+    include("navbar.php");
 ?>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-
-                <?php
-                if(isset($_SESSION['status'])) 
-                {
-                    echo "<h5 class= 'alert alert-success'>".$_SESSION['status']."</h5>";
-                    unset($_SESSION['status']);
-                }
-
-                ?>
-                <div class="card">
-                    <div class="card-body">
-                        <table class="table table-bordered table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Sl. No</th>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student List</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="students.css" rel="stylesheet" type="text/css">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <h1>Student List</h1>
+        <div id="div1">  
+            <input type="text" placeholder="Search.." class="text-search" >
+            <label for="search" type="submit" class="searchbtn">
+                <i class="fa fa-search"></i>
+            </label>
+        </div>
+        <div id="div2">
+            <tbody>
+            <table class="student-list-content" width="80%" border="0">
+                <tr>
                                     <th>Display</th>
                                     <th>Phone Number</th>
                                     <th>Email ID</th>
                                     <th>Role</th>
                                     <th>Edit</th>
                                     <th>Delete</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            <?php
+                </tr>
+                <?php
                             include('dbcon.php');
 
                             $users = $auth->listUsers();
@@ -37,8 +39,7 @@ include('navbar.php');
                             foreach ($users as $user) 
                             {
                                 ?>
-                                <tr>
-                                    <td><?=$i++;?></td>
+                                <tr>    
                                     <td><?=$user->displayName?></td>
                                     <td><?=$user->phoneNumber?></td>
                                     <td><?=$user->email?></td>
@@ -100,14 +101,14 @@ include('navbar.php');
                                 <?php
                             }
                             ?>
-                            </tbody>
-                        </table>
-
-                    </div>
-                </div>
+            <tr>
+                <td > No Record Found </td>
+            </tr>
+         </tbody>
+            </table>
             </div>
+        <div  id="footer">
+        <p>All content copyright © 2022, PEGVA.</p>
         </div>
-    </div>
-
-
- 
+    </body>
+</html>

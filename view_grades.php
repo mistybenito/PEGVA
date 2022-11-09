@@ -50,7 +50,6 @@
 				<th>Unit</th>
 				<th>Pre-Requisite</th>
 				<th>Grade</th>
-				<th>Delete</th>
 			</tr>
 			<?php
 			include('dbcon.php');
@@ -58,7 +57,7 @@
 				if(isset($_GET['id']))
 					{
 						$key_child = $_GET['id'];
-						$ref_table = 'User/'.$key_child.'/Grades/1st Year/1st Sem';
+						$ref_table = 'User/'.$key_child.'/Grades/first_year/first_sem';
 						$fetchdata = $database->getReference($ref_table)->getValue();
 							if($fetchdata > 0)
 							{
@@ -129,7 +128,7 @@
 				if(isset($_GET['id']))
 					{
 						$key_child = $_GET['id'];
-						$ref_table = 'User/'.$key_child.'/Grades/1st Year/2nd Sem';
+						$ref_table = 'User/'.$key_child.'/Grades/first_year/second_sem';
 						$fetchdata = $database->getReference($ref_table)->getValue();
 							if($fetchdata > 0)
 							{
@@ -192,7 +191,7 @@
 				if(isset($_GET['id']))
 					{
 						$key_child = $_GET['id'];
-						$ref_table = 'User/'.$key_child.'/Grades/2nd Year/1st Sem';
+						$ref_table = 'User/'.$key_child.'/Grades/second_year/first_sem';
 						$fetchdata = $database->getReference($ref_table)->getValue();
 							if($fetchdata > 0)
 							{
@@ -260,7 +259,7 @@
 				if(isset($_GET['id']))
 					{
 						$key_child = $_GET['id'];
-						$ref_table = 'User/'.$key_child.'/Grades/2nd Year/2nd Sem';
+						$ref_table = 'User/'.$key_child.'/Grades/second_year/second_sem';
 						$fetchdata = $database->getReference($ref_table)->getValue();
 							if($fetchdata > 0)
 							{
@@ -334,7 +333,7 @@
 				if(isset($_GET['id']))
 					{
 						$key_child = $_GET['id'];
-						$ref_table = 'User/'.$key_child.'/Grades/3rd Year/1st Sem';
+						$ref_table = 'User/'.$key_child.'/Grades/third_year/first_sem';
 						$fetchdata = $database->getReference($ref_table)->getValue();
 							if($fetchdata > 0)
 							{
@@ -403,7 +402,7 @@
 				if(isset($_GET['id']))
 					{
 						$key_child = $_GET['id'];
-						$ref_table = 'User/'.$key_child.'/Grades/3rd Year/2nd Sem';
+						$ref_table = 'User/'.$key_child.'/Grades/third_year/second_sem';
 						$fetchdata = $database->getReference($ref_table)->getValue();
 							if($fetchdata > 0)
 							{
@@ -469,7 +468,7 @@
 				if(isset($_GET['id']))
 					{
 						$key_child = $_GET['id'];
-						$ref_table = 'User/'.$key_child.'/Grades/4th Year/1st Sem';
+						$ref_table = 'User/'.$key_child.'/Grades/fourth_year/first_sem';
 						$fetchdata = $database->getReference($ref_table)->getValue();
 							if($fetchdata > 0)
 							{
@@ -536,7 +535,7 @@
 				if(isset($_GET['id']))
 					{
 						$key_child = $_GET['id'];
-						$ref_table = 'User/'.$key_child.'/Grades/4th Year/2nd Sem';
+						$ref_table = 'User/'.$key_child.'/Grades/fourth_year/second_sem';
 						$fetchdata = $database->getReference($ref_table)->getValue();
 							if($fetchdata > 0)
 							{

@@ -138,7 +138,7 @@ img.avatar
 <center>
     <div class="div2">
     
-        <form class="container"  action="#" method="POST">
+        <form class="container"  action="logincode.php" method="POST">
             <div class="imgcontainer">                        
              <img src="images/admin.png" alt="Admin" class="avatar">
                 <h3>Hello Admin! Welcome!</h3>
