@@ -43,7 +43,11 @@
                     <li><a href="BSOA.php">BSOA</a></li>
                 </ul>
                 </li>
-                <li><a href="reg.php">Home</a></li>
+                <li><a href="reg.php">Home</a>
+                <ul class ="course">
+                    <li><a href="sched.php">Schedule</a></li>
+            </ul>
+                </li>
                 <?php if(!isset($_SESSION['verified_user_id'])) : ?>
                     <li>
                     <a href="register.php">Register</a>
