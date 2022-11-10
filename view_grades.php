@@ -96,10 +96,7 @@
 
 			?>
 		</table>
-		<div id="btns">
-			<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update </button>
-			<input type="button" onclick="window.location.href='add_grades.php?id=<?=$key_child?>';" id="add_btn" value="Add Grade"/>
-		</div>
+		   
 	</form>
   </div>
  </center>
@@ -164,10 +161,7 @@
 			}
 			?>
 		</table> 
-		<div id="btns">
-			<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update </button>
-			<input type="button" onclick="window.location.href='add_grades.php?';" id="add_btn" value="Add Grade"/>
-		</div>
+		   
 	</form>
     </div>
 	</center>
@@ -230,10 +224,7 @@
 
 			?>
 		</table> 
-		<div id="btns">
-			<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update </button>
-			<input type="button" onclick="window.location.href='add_grades.php?';" id="add_btn" value="Add Grade"/>
-		</div>
+		   
 		</form>
     </div>
 	
@@ -298,10 +289,7 @@
 
 			?>
 		</table> 
-		<div id="btns">
-			<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update </button>
-			<input type="button" onclick="window.location.href='add_grades.php?';" id="add_btn" value="Add Grade"/>
-		</div>
+		   
 		</form>
     </div>
 	
@@ -372,10 +360,7 @@
 
 			?>
 		</table> 
-		<div id="btns">
-			<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update </button>
-			<input type="button" onclick="window.location.href='add_grades.php?';" id="add_btn" value="Add Grade"/>
-		</div>
+		   
 		</form>
     </div>
 
@@ -438,10 +423,7 @@
 			}
 			?>
 		</table> 
-		<div id="btns">
-			<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update </button>
-			<input type="button" onclick="window.location.href='add_grades.php?';" id="add_btn" value="Add Grade"/>
-		</div>
+		   
 		</form>
     </div>
 </center>
@@ -507,10 +489,7 @@
 
 			?>
 		</table> 
-		<div id="btns">
-			<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update </button>
-			<input type="button" onclick="window.location.href='add_grades.php?';" id="add_btn" value="Add Grade"/>
-		</div>
+		   
 		</form>
     </div>
 	</center>
@@ -574,10 +553,7 @@
 
 			?>
 		</table> 
-		<div id="btns">
-			<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update </button>
-			<input type="button" onclick="window.location.href='add_grades.php?';" id="add_btn" value="Add Grade"/>
-		</div>
+		   
 		</form>
     </div>
 

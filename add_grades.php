@@ -8,8 +8,10 @@
     <title> Subject and Grades </title>
     <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="grades.css" rel="stylesheet" type="text/css">
-		<link href="curriculum-style.css" rel="stylesheet" type="text/css">
+        <link href="profile1.css" rel="stylesheet" type="text/css">
+	
+
+		
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -39,9 +41,11 @@
     <div id="npup0" class="hidden">
      
     <div>
-        
+    <center>    
 <div id="div1">
+	
 	<form name="form1" method="post" action="add_grade_code.php"  style="height:550px;">
+	<center>
 <fieldset>
     <legend>Subject Description</legend>
     <center>1st Year, 2nd Sem</center>
@@ -98,21 +102,13 @@
 			exit();
 		}
 	?>
+
 	<center><button type="submit" name="1y1s" id="update"  value = "1y1s"> Add Subject and Grade </button></center></div>
 </fieldset>
+</center>
 </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
+	</center>
 
 
 
@@ -124,7 +120,7 @@
     <div>
     <div id="div1">
 	<form name="form1" method="post" action="add_grade_code.php"  style="height:400px;">
-	
+		<center>
 <fieldset>
 <legend>Subject Description</legend>
 <center>1st Year, 2nd Sem</center>
@@ -140,7 +136,7 @@
 			?>
 			<input type="hidden" name = "key" value = "<?=$key_child;?>">
 		<tr> 
-			<td>Course</td>
+			<td>Course(Acronym)</td>
 			<td><input type="text" name = "Course" ></td>
 		</tr>
 		<tr> 
@@ -183,6 +179,7 @@
 	?>
 	<center><button type="submit" name="1y2s" id="update"  value = "1y2s"> Add Subject and Grade </button></center></div>
     </fieldset>
+	</center>
 </div>
     </div>
 
@@ -212,7 +209,7 @@
         
         <div id="div1">
 	<form name="form1" method="post" action="add_grade_code.php"  style="height:400px;">
-	
+	<center>
 <fieldset>
 <legend>Subject Description</legend>
     <center>2nd Year, 1st Sem</center>
@@ -271,6 +268,7 @@
 	?>
 	<center><button type="submit" name="2y1s" id="update"  value = "2y1s"> Add Subject and Grade </button></center></div>
     </fieldset>
+	</center>
 </div> <? //TO HERE ?>
       
     </div>
@@ -291,7 +289,7 @@
        
         <div id="div1">
 	<form name="form1" method="post" action="add_grade_code.php"  style="height:400px;">
-	
+	<center>
 <fieldset>
 <legend>Subject Description</legend>
     <center>2nd Year, 2nd Sem</center>
@@ -350,6 +348,7 @@
 	?>
 	<center><button type="submit" name="2y2s" id="update"  value = "2y2s"> Add Subject and Grade </button></center></div>
     </fieldset>
+	</center>
 </div> <? //TO HERE ?>
     </div>
 
@@ -368,7 +367,7 @@
       
         <div id="div1">
 	<form name="form1" method="post" action="add_grade_code.php"  style="height:400px;">
-	
+	<center>
 <fieldset>
 	<legend>Subject Description</legend>
     <center>3rd Year, 1st Sem</center>
@@ -427,6 +426,7 @@
 	?>
 	<center><button type="submit" name="3y1s" id="update"  value = "3y1s"> Add Subject and Grade </button></center></div>
     </fieldset>
+	</center>
 </div> <? //TO HERE ?>
     </div>
 
@@ -449,7 +449,7 @@
        
         <div id="div1">
 	<form name="form1" method="post" action="add_grade_code.php"  style="height:400px;">
-	
+	<center>
 <fieldset>
 <legend>Subject Description</legend>
     <center>3rd Year, 2nd Sem</center>
@@ -508,6 +508,7 @@
 	?>
 	<center><button type="submit" name="3y2s" id="update"  value = "3y2s"> Add Subject and Grade </button></center></div>
     </fieldset>
+	</center>
 </div> <? //TO HERE ?>
     </div>
 
@@ -527,7 +528,7 @@
       <div> <? // FROM HERE ?>
         <div id="div1">
 	<form name="form1" method="post" action="add_grade_code.php"  style="height:400px;">
-	
+	<center>
 <fieldset>
 <legend>Subject Description</legend>
     <center>4th Year, 1st Sem</center>
@@ -586,6 +587,7 @@
 	?>
 	<center><button type="submit" name="4y1s" id="update"  value = "4y1s"> Add Subject and Grade </button></center></div>
     </fieldset>
+	</center>
 </div> <? //TO HERE ?>
     </div>
 
@@ -606,7 +608,7 @@
         
         <div id="div1">
 	<form name="form1" method="post" action="add_grade_code.php"  style="height:400px;">
-	
+	<center>
 <fieldset>
 <legend>Subject Description</legend>
     <center>4th Year, 2nd Sem</center>
@@ -665,6 +667,7 @@
 	?>
 	<center><button type="submit" name="4y2s" id="update"  value = "4y2s"> Add Subject and Grade </button></center></div>
     </fieldset>
+	</center>
 </div> <? //TO HERE ?>
     </div>
 
@@ -748,4 +751,6 @@ window.npup = (function (containerId, baseId) {
     <p>All content copyright © 2022, PEGVA.</p>
 </div>
 </body>
+
+
 </html>

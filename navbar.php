@@ -14,7 +14,7 @@
             </label>
             <label class="title">Cainta Catholic College</label>
             <ul class="main-navigation">
-                <li><a href="#">Course Student List</a>
+                <li><a href="#">Student List</a>
                 <ul class="course">
 					<li><a href="student_ABREED.php">ABREED</a></li>
                     <li><a href="student_BEED.php">BEED</a></li>

@@ -30,12 +30,12 @@ if (isset($_POST['1y1s']))
     if($addData_result)
     {
         $_SESSION['status'] = "Subject Added Successfully";
-        header('Location: view_grades.php?=id'.$key);
+        header("Location: view_grades.php?id=".$key);
     }
     else
     {
         $_SESSION['status'] = "Subject not addded";
-        header('Location: view_grades.php'.$key);
+        header("Location: profile.php?id=".$key);
     }
 }
 

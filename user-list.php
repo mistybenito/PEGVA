@@ -29,7 +29,6 @@
                                     <th>Email ID</th>
                                     <th>Role</th>
                                     <th>Edit</th>
-                                    <th>Delete</th>
                 </tr>
                 <?php
                             include('dbcon.php');
@@ -94,9 +93,6 @@
                                     </td>
                                     <td>
                                         <a href="user-edit.php?id=<?=$user->uid;?>" class = "btn btn-primary btn-sm">Edit</a>
-                                    </td>
-                                    <td>
-                                        <a href="user-delete.php" class = "btn btn-danger btn-sm">Delete</a>
                                     </td>
                                 <?php
                             }
