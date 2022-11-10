@@ -77,10 +77,7 @@
 			}
 			?>
 		</table> 
-		<div id="btns">
-		<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update</button>
-		<input type="button" onclick="window.location.href='BSCS_add_subjects.php';" id="add_btn" value="Add Subjects"/>
-		</div>
+		   0
 	</center>
 	</form>
     </div>
@@ -126,10 +123,6 @@
 			}
 			?>
 		</table> 
-		<div id="btns">
-		<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update</button>
-		<input type="button" onclick="window.location.href='BSCS_add_subjects.php';" id="add_btn" value="Add Subjects"/>
-		</div>
 	</center>
 	</form>
     </div>
@@ -175,10 +168,6 @@
 			}
 			?>
 		</table> 
-		<div id="btns">
-		<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update</button>
-		<input type="button" onclick="window.location.href='BSCS_add_subjects.php';" id="add_btn" value="Add Subjects"/>
-		</div>
 	</center>
     </div>
 
@@ -222,10 +211,6 @@
 			}
 			?>
 		</table> 
-		<div id="btns">
-		<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update</button>
-		<input type="button" onclick="window.location.href='BSCS_add_subjects.php';" id="add_btn" value="Add Subjects"/>
-		</div>
 	</center>
     </div>
 	<div id="npup4" class="hidden">
@@ -268,10 +253,6 @@
 			}
 			?>
 		</table> 
-		<div id="btns">
-		<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update</button>
-		<input type="button" onclick="window.location.href='BSCS_add_subjects.php';" id="add_btn" value="Add Subjects"/>
-		</div>
 	</center>
     </div>
 
@@ -315,10 +296,6 @@
 			}
 			?>
 		</table> 
-		<div id="btns">
-		<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update</button>
-		<input type="button" onclick="window.location.href='BSCS_add_subjects.php';" id="add_btn" value="Add Subjects"/>
-		</div>
 	</center>
     </div>
 
@@ -362,10 +339,6 @@
 			}
 			?>
 		</table> 
-		<div id="btns">
-		<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update</button>
-		<input type="button" onclick="window.location.href='BSCS_add_subjects.php';" id="add_btn" value="Add Subjects"/>
-		</div>
 	</center>
     </div>
 
@@ -409,14 +382,6 @@
 			}
 			?>
 		</table> 
-		<div id="btns">
-		<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update</button>
-		<input type="button" onclick="window.location.href='subjects.php';" id="add_btn" value="Add Subjects"/>
-		</div>
-		<div id="btns">
-		<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update</button>
-		<input type="button" onclick="window.location.href='BSCS_add_subjects.php';" id="add_btn" value="Add Subjects"/>
-		</div>
 	</center>
     </div>
 
