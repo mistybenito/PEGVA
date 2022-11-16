@@ -26,6 +26,7 @@ if (isset($_POST['1y1s']))
 
 
     $addData_result = $database->getReference('User/'.$key.'/Grades/first_year/first_sem')->push($addData);
+    $addData_result = $database->getReference('Grades/'.$key.'/Grades/first_year/first_sem')->push($addData);
 
     if($addData_result)
     {

@@ -14,7 +14,7 @@
             </label>
             <label class="title">Cainta Catholic College</label>
             <ul class="main-navigation">
-                <li><a href="#">Student List</a>
+                <li><a href="students.php">Student List</a>
                 <ul class="course">
 					<li><a href="student_ABREED.php">ABREED</a></li>
                     <li><a href="student_BEED.php">BEED</a></li>
@@ -47,7 +47,8 @@
                 <li><a href="reg.php">Home</a>
                 <ul class ="course">
                     <li><a href="sched.php">Schedule</a></li>
-            </ul>
+                    <li><a href="TEST_CS111.php">TEST subject</a></li>
+                </ul>
                 </li>
                 <?php if(!isset($_SESSION['verified_user_id'])) : ?>
                     <li>

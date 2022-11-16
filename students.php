@@ -29,6 +29,7 @@
                     <th>Email</th>
                     <th>Course</th>
                     <th>Profile</th>
+                    <th>Subject</th>
                 </tr>
             <?php
                 include('dbcon.php');
@@ -47,6 +48,10 @@
                 <td> <?= $row['Course'];?> </td>
                 <td> 
                 <a href="profile.php?id=<?=$key;?>" class = "btn btn btn-primary" style="color=black"> View </a>
+                </td>
+
+                <td> 
+                <a href="TEST_add_to_sub.php?id=<?=$key;?>" class = "btn btn btn-primary" style="color=black"> TEST add to sub </a>
                 </td>
             </tr>
             <?php

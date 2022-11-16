@@ -48,7 +48,6 @@
 				<th>Course Code</th>
 				<th>Discriptive Title</th>
 				<th>Unit</th>
-				<th>Pre-Requisite</th>
 				<th>Grade</th>
 			</tr>
 			<?php
@@ -68,10 +67,10 @@
 						<input type="hidden" name = "id" value = "<?=$key_child;?>">
 						<tr>
 							<td> <?= $row['Course'];?> </td>
-							<td> <?= $row['Course_Code'];?> </td>
+							<td> <?= $row['Subject_code'];?> </td>
 							<td> <?= $row['Desc_title'];?> </td>
 							<td> <?= $row['Unit'];?> </td>
-							<td> <?= $row['Pre-Req'];?> </td>
+							
 							<td> <?= $row['Grade'];?> </td>
 							</td>
 						</tr>
@@ -139,7 +138,7 @@
 							<td> <?= $row['Course_Code'];?> </td>
 							<td> <?= $row['Desc_title'];?> </td>
 							<td> <?= $row['Unit'];?> </td>
-							<td> <?= $row['Pre-Req'];?> </td>
+							 
 							<td> <?= $row['Grade'];?> </td>
 							</td>
 						</tr>
@@ -199,7 +198,7 @@
 							<td> <?= $row['Course_Code'];?> </td>
 							<td> <?= $row['Desc_title'];?> </td>
 							<td> <?= $row['Unit'];?> </td>
-							<td> <?= $row['Pre-Req'];?> </td>
+							 
 							<td> <?= $row['Grade'];?> </td>
 							</td>
 						</tr>
@@ -264,7 +263,7 @@
 							<td> <?= $row['Course_Code'];?> </td>
 							<td> <?= $row['Desc_title'];?> </td>
 							<td> <?= $row['Unit'];?> </td>
-							<td> <?= $row['Pre-Req'];?> </td>
+							 
 							<td> <?= $row['Grade'];?> </td>
 							</td>
 						</tr>
@@ -335,7 +334,7 @@
 							<td> <?= $row['Course_Code'];?> </td>
 							<td> <?= $row['Desc_title'];?> </td>
 							<td> <?= $row['Unit'];?> </td>
-							<td> <?= $row['Pre-Req'];?> </td>
+							 
 							<td> <?= $row['Grade'];?> </td>
 							</td>
 						</tr>
@@ -401,7 +400,7 @@
 							<td> <?= $row['Course_Code'];?> </td>
 							<td> <?= $row['Desc_title'];?> </td>
 							<td> <?= $row['Unit'];?> </td>
-							<td> <?= $row['Pre-Req'];?> </td>
+							 
 							<td> <?= $row['Grade'];?> </td>
 							</td>
 						</tr>
@@ -464,7 +463,7 @@
 							<td> <?= $row['Course_Code'];?> </td>
 							<td> <?= $row['Desc_title'];?> </td>
 							<td> <?= $row['Unit'];?> </td>
-							<td> <?= $row['Pre-Req'];?> </td>
+							 
 							<td> <?= $row['Grade'];?> </td>
 							</td>
 						</tr>
@@ -528,7 +527,7 @@
 							<td> <?= $row['Course_Code'];?> </td>
 							<td> <?= $row['Desc_title'];?> </td>
 							<td> <?= $row['Unit'];?> </td>
-							<td> <?= $row['Pre-Req'];?> </td>
+							 
 							<td> <?= $row['Grade'];?> </td>
 							</td>
 						</tr>

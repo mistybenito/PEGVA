@@ -14,7 +14,7 @@
     </head>
     <body>
         <h1>BSCS Student List</h1>
-        <div id="div1">  
+        <div id="div1">     
             <input type="text" placeholder="Search.." class="text-search" >
             <label for="search" type="submit" class="searchbtn">
                 <i class="fa fa-search"></i>

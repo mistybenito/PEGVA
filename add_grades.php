@@ -112,10 +112,6 @@
 
 
 
-
-
-
-
     <div id="npup1" class="hidden">
     <div>
     <div id="div1">
@@ -224,6 +220,7 @@
 		{
 			?>
 			<input type="hidden" name = "key" value = "<?=$key_child;?>">
+		
 		<tr> 
 			<td>Course(Acronym)</td>
 			<td><input type="text" name = "Course" ></td>
