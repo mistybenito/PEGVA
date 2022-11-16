@@ -30,6 +30,7 @@
 
             <?php if(isset($_SESSION['verified_registrar'])) :?>
                 <li><a href="user-list.php">User List</a></li>
+                <li><a href="invalid_students.php">Verify Students</a></li>
                 <?php endif; ?>
                 <li><a href="#">Curriculum</a>
                 <ul class="course">

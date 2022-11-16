@@ -10,6 +10,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="reg.css" rel="stylesheet" type="text/css">
     </head>
+   
+
+<body>
+    <center>
+    <div class="div1">
     <?php
                 if(isset($_SESSION['status']))
                 {
@@ -18,10 +23,6 @@
                 }
 
                 ?>
-
-<body>
-    <center>
-    <div class="div1">
         <img src="images/logo.png" id="logo">
     </div>
     </center>
@@ -33,6 +34,7 @@
                
                 <img src="images/students.png" alt="Students" class="avatar">
                 <h2>Student List</h2>
+                
             </div>
         <div class="div3">  
             <input type="text" placeholder="Search.." class="text-search" >

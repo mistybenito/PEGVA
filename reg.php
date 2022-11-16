@@ -4,14 +4,7 @@
 ?>
 <!DOCTYPE html>
 <html>
-<?php
-                if(isset($_SESSION['status']))
-                {
-                    echo "<h5 class= 'alert alert-success'>".$_SESSION['status']."</h5>";
-                    unset($_SESSION['status']);
-                }
 
-                ?>
     <head>
         <title>Registrar</title>
         <meta charset="UTF-8">
@@ -20,6 +13,14 @@
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
+    <?php
+                if(isset($_SESSION['status']))
+                {
+                    echo "<h5 class= 'alert alert-success'>".$_SESSION['status']."</h5>";
+                    unset($_SESSION['status']);
+                }
+
+                ?>
     <body>
         <center>
         <div>
