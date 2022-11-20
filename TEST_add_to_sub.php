@@ -37,17 +37,23 @@ include('includes/header.php');
 
                             
                        <form action="TEST_code_addsub.php" method="POST">
-
                             <input type="hidden" name= "key" value="<?=$key_child;?>">
                             <input type="text" name="Student_number" value="<?=$getdata['Student_number']?>" class="form-control">
                             <input type="text" name="Name" value="<?=$getdata['Name']?>" class="form-control">
                             <input type="text" name="Course" value="<?=$getdata['Course']?>"class="form-control">
-                            <input type="email" name="Email" value="<?=$getdata['Email']?>"class="form-control">
-                            <input type="number" name="Contact_Number" value="<?=$getdata['Contact_Number']?>" class="form-control">
+                            <input type="hidden" name="Email" value="<?=$getdata['Email']?>"class="form-control">
+                            <input type="hidden" name="Contact_Number" value="<?=$getdata['Contact_Number']?>" class="form-control">
 
                             <div class="form-group mb-3">
-                            <button type="submit" name="add_sub_cs111" class="btn btn-primary"> Add to CS111 </button>
-                            <button type="submit" name="add_sub_cs112" class="btn btn-primary"> Add to CS112 </button>
+                            <input type="checkbox" name="add_sub_cs111" value = "CS111"> 
+                                <label for="cs111" id ="cs111">Add to CS111 </label>
+                            </input>
+
+                            <input type="checkbox" name="add_sub_cs112" value = "CS112">
+                                <label for="cs112">Add to CS112</label>
+                            </input>
+
+                            <input type="submit" value="Submit">
  
 
 

@@ -49,18 +49,18 @@ if(isset($_POST['add_sub_cs111']))
     if(isset($_POST['add_sub_cs112']))
 {
     $key = $_POST['key'];
-    $student_code = $_POST['scode'];
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
 
     $updateData = [
-        'scode'=>$student_code,
-        'fname'=>$first_name,
-        'lname'=>$last_name,
-        'email'=>$email,
-        'phone'=>$phone,
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
     ];
 
     $ref_table = 'Subjects/bscs/1ST YEAR/1ST SEM/CS112/'.$key;
@@ -71,12 +71,12 @@ if(isset($_POST['add_sub_cs111']))
         {
 
             $_SESSION['status'] = "Contact Verified Successfully to BSCS/1STYEAR/1STSEM/CS112";
-            header('Location: CS112.php');
+            header('Location: reg.php');
         }
         else
         {
             $_SESSION['status'] = "Contact Not Verified";
-            header('Location: index.php');
+            header('Location: reg.php');
         }
 
 
