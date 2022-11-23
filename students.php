@@ -8,7 +8,7 @@
         <title>Student List</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="students.css" rel="stylesheet" type="text/css">
+        <link href="style.css" rel="stylesheet" type="text/css">
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -22,9 +22,9 @@
         </div>
         <div id="div2">
             <tbody>
-            <table class="student-list-content" width="80%" border="0">
+            <table class="student-list-content">
                 <tr>
-                    <th style="border-radius: 25px 0 0 0;">Student #</th>
+                    <th>Student #</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Course</th>
@@ -47,11 +47,11 @@
                 <td> <?= $row['Email'];?> </td>
                 <td> <?= $row['Course'];?> </td>
                 <td> 
-                <a href="profile.php?id=<?=$key;?>" class = "btn btn btn-primary" style="color=black"> View </a>
+                <a href="profile.php?id=<?=$key;?>" class = "btn btn btn-primary" id="btnView" style="color=black"> View </a>
                 </td>
 
                 <td> 
-                <a href="addsub_BSCS.php?id=<?=$key;?>" class = "btn btn btn-primary" style="color=black"> TEST add to sub </a>
+                <a href="addsub_BSCS.php?id=<?=$key;?>" class = "btn btn btn-primary" id="btnAdd"style="color=black"> TEST add to sub </a>
                 </td>
             </tr>
             <?php
@@ -69,8 +69,8 @@
          </tbody>
             </table>
             </div>
-        <div  id="footer">
+           
         <p>All content copyright © 2022, PEGVA.</p>
-        </div>
+      
     </body>
 </html>
