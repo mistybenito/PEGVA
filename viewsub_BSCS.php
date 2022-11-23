@@ -89,7 +89,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="addgrades_BSCS/CS_addgrades_CS111.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/11_addgrades_CS111.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                     </td>
                                                 </tr>
@@ -136,7 +136,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_CS112.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/11_addgrades_CS112.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -181,7 +181,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_GE100.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/11_addgrades_GE100.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -226,7 +226,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_GE101.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/11_addgrades_GE101.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -269,8 +269,8 @@
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
-                                                    td> 
-                                                        <a href="CS_addgrades_GE102.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/11_addgrades_GE102.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -314,7 +314,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_GE103.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/11_addgrades_GE103.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -359,7 +359,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_FIL111.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/11_addgrades_FIL111.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -403,7 +403,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_REED111.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/11_addgrades_REED111.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -447,7 +447,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_PE111.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/11_addgrades_PE111.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -492,7 +492,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_NSTP1.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/11_addgrades_NSTP1.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -640,7 +640,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_CS111.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS111.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                     </td>
                                                 </tr>
@@ -688,7 +688,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_CS112.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS112.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -735,7 +735,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_GE100.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_GE100.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -781,7 +781,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_GE105.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_GE105.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -826,7 +826,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_GE106.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_GE106.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -871,7 +871,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_GE107.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_GE107.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -916,7 +916,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_FIL121.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_FIL121.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -961,7 +961,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_REED121.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_REED121.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -1006,7 +1006,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_PE121.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_PE121.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -1052,7 +1052,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_NSTP2.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_NSTP2.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -1161,7 +1161,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_CS211.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS211.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                     </td>
                                                 </tr>
@@ -1209,7 +1209,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_CS212.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS212.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -1256,7 +1256,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_CS213.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS213.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -1302,7 +1302,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_CS214.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS214.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -1346,7 +1346,7 @@
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td>
-                                                        <a href="CS_addgrades_GE108.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_GE108.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -1391,7 +1391,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td>
-                                                        <a href="CS_addgrades_GE109.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_GE109.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -1436,7 +1436,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td>
-                                                        <a href="CS_addgrades_FIL211.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_FIL211.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -1481,7 +1481,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td>
-                                                        <a href="CS_addgrades_EL211.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_EL211.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -1526,7 +1526,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td>
-                                                        <a href="CS_addgrades_REED211.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_REED211.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -1572,7 +1572,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td>
-                                                        <a href="CS_addgrades_PE211.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_PE211.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -1646,7 +1646,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_CS221.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS221.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                     </td>
                                                 </tr>
@@ -1694,7 +1694,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_CS222.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS222.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -1742,7 +1742,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_CS223.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS223.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -1788,7 +1788,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_CS224.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS224.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -1832,7 +1832,7 @@
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td>
-                                                        <a href="CS_addgrades_GE110.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_GE110.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -1877,7 +1877,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td>
-                                                        <a href="CS_addgrades_GE111.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_GE111.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -1922,7 +1922,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_EL221.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_EL221.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -1967,7 +1967,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td>
-                                                        <a href="CS_addgrades_EL222.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_EL222.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -2012,7 +2012,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td>
-                                                        <a href="CS_addgrades_REED221.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_REED221.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -2058,7 +2058,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td>
-                                                        <a href="CS_addgrades_PE221.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_PE221.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -2132,7 +2132,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_CS311.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS311.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                     </td>
                                                 </tr>
@@ -2180,7 +2180,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_CS312.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS312.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -2228,7 +2228,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_CS313.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS313.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -2274,7 +2274,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_CS314.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS314.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -2318,7 +2318,7 @@
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td>
-                                                        <a href="CS_addgrades_CS315.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS315.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -2363,7 +2363,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td>
-                                                        <a href="CS_addgrades_EL311.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_EL311.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -2408,7 +2408,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_EL312.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_EL312.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -2477,7 +2477,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_CS321.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS321.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                     </td>
                                                 </tr>
@@ -2525,7 +2525,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_CS322.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS322.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -2573,7 +2573,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_CS323.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS323.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -2619,7 +2619,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_CS324.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS324.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -2663,7 +2663,7 @@
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td>
-                                                        <a href="CS_addgrades_CS325.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS325.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -2708,7 +2708,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td>
-                                                        <a href="CS_addgrades_CS326.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS326.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -2753,7 +2753,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_CS327.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS327.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -2823,7 +2823,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_CS411.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS411.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                     </td>
                                                 </tr>
@@ -2871,7 +2871,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_CS412.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS412.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -2919,7 +2919,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_CS413.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS413.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -2965,7 +2965,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_CS414.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS414.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -3009,7 +3009,7 @@
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td>
-                                                        <a href="CS_addgrades_CS415.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS415.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                 </tr>
                                                     <?php
@@ -3071,7 +3071,7 @@
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <td> 
-                                                        <a href="CS_addgrades_CS421.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS421.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </td>
                                                     </td>
                                                 </tr>
