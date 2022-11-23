@@ -47,7 +47,7 @@
                 <li><a href="reg.php">Home</a>
                 <ul class ="course">
                     <li><a href="sched.php">Schedule</a></li>
-                    <li><a href="TEST_CS111.php">TEST subject</a></li>
+                    <li><a href="viewsub_BSCS.php">TEST subject</a></li>
                 </ul>
                 </li>
                 <?php if(!isset($_SESSION['verified_user_id'])) : ?>

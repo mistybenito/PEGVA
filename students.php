@@ -51,7 +51,7 @@
                 </td>
 
                 <td> 
-                <a href="TEST_add_to_sub.php?id=<?=$key;?>" class = "btn btn btn-primary" style="color=black"> TEST add to sub </a>
+                <a href="addsub_BSCS.php?id=<?=$key;?>" class = "btn btn btn-primary" style="color=black"> TEST add to sub </a>
                 </td>
             </tr>
             <?php

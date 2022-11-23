@@ -43,7 +43,7 @@
 			<th>Course Code</th>
 			<th>Discriptive Title</th>
 			<th>Unit</th>
-			<th>Section - Add</th>
+			<th>Add</th>
 		</tr>
 			<?php
 			include('dbcon.php');
@@ -61,8 +61,7 @@
                     <input type="text" name="Course" value="<?=$getdata['Course']?>"class="form-control">
                     <input type="hidden" name="Email" value="<?=$getdata['Email']?>"class="form-control">
                     <input type="hidden" name="Contact_Number" value="<?=$getdata['Contact_Number']?>" class="form-control">
-
-
+					<input type="hidden" name="Grade" value="0" class="form-control">
 
 		<tr class ="cs111">
 			<td>CS111</td>
@@ -70,10 +69,7 @@
 			<td>3</td>
 			<td>
 			<input type="checkbox" name="add_sub_cs111_a"> 
-            	<label for="cs111" id ="cs111-b">A</label>
-            </input>
-			<input type="checkbox" name="add_sub_cs111_b"> 
-                <label for="cs111" id ="cs111-b">B</label>
+            	<label for="cs111" id ="cs111-b"></label>
             </input>
             </td>
 		</tr>
@@ -84,10 +80,7 @@
 			<td>3</td>
 			<td>
 			<input type="checkbox" name="add_sub_cs112_a"> 
-            	<label for="cs112" id ="cs112-a">A</label>
-            </input>
-			<input type="checkbox" name="add_sub_cs112_b"> 
-                <label for="cs112" id ="cs112-b">B</label>
+            	<label for="cs112" id ="cs112-a"></label>
             </input>
             </td>
 		</tr>
@@ -98,10 +91,7 @@
 			<td>3</td>
 			<td>
 				<input type="checkbox" name="add_sub_ge100_a"> 
-					<label for="ge100" id ="ge100-a">A</label>
-				</input>
-				<input type="checkbox" name="add_sub_ge100_b"> 
-					<label for="ge100" id ="ge100-b">B</label>
+					<label for="ge100" id ="ge100-a"></label>
 				</input>
 			</td>
 		</tr>
@@ -112,11 +102,8 @@
 			<td>3</td>
 			<td>
 			<input type="checkbox" name="add_sub_ge101_a"> 
-				<label for="ge101" id ="ge100-a">A</label>
-			</input>
-			<input type="checkbox" name="add_sub_ge101_b"> 
-					<label for="ge101" id ="ge101-b">B</label>
-				</input>		
+				<label for="ge101" id ="ge100-a"></label>
+			</input>		
             </td>
 		</tr>
 
@@ -126,10 +113,7 @@
 			<td>3</td>
 			<td>
 			<input type="checkbox" name="add_sub_ge102_a"> 
-					<label for="ge102" id ="ge102-a">A</label>
-				</input>
-				<input type="checkbox" name="add_sub_ge102_b"> 
-					<label for="ge102" id ="ge102-b">B</label>
+					<label for="ge102" id ="ge102-a"></label>
 				</input>
 			</td>
 		</tr>
@@ -140,10 +124,7 @@
 			<td>3</td>
 			<td>
 			<input type="checkbox" name="add_sub_ge103_a"> 
-					<label for="ge103" id ="ge103-a">A</label>
-				</input>
-				<input type="checkbox" name="add_sub_ge102_b"> 
-					<label for="ge103" id ="ge103-b">B</label>
+					<label for="ge103" id ="ge103-a"></label>
 				</input>
             </td>
 		</tr>
@@ -154,10 +135,7 @@
 			<td>3</td>
 			<td>
 			<input type="checkbox" name="add_sub_ge104_a"> 
-					<label for="ge104" id ="ge102-a">A</label>
-			</input>
-			<input type="checkbox" name="add_sub_ge104_b"> 
-					<label for="ge104" id ="ge104-b">B</label>
+					<label for="ge104" id ="ge104-a"></label>
 			</input>
 			</td>
 		</tr>
@@ -168,10 +146,7 @@
 			<td>3</td>
 			<td>
 			<input type="checkbox" name="add_sub_fil111_a"> 
-					<label for="fil111" id ="fil111-a">A</label>
-			</input>
-				<input type="checkbox" name="add_sub_fil111_b"> 
-					<label for="fil111" id ="fil111-b">B</label>
+					<label for="fil111" id ="fil111-a"></label>
 			</input>
 			</td>
 		</tr>
@@ -182,10 +157,7 @@
 			<td>3</td>
 			<td>
 			<input type="checkbox" name="add_sub_reed111_a"> 
-					<label for="reed111" id ="fil111-a">A</label>
-			</input>
-				<input type="checkbox" name="add_sub_reed111_b"> 
-					<label for="reed111" id ="reed111-b">B</label>
+					<label for="reed111" id ="fil111-a"></label>
 			</input>
             </td>
 		</tr>
@@ -196,10 +168,7 @@
 			<td>3</td>
 			<td>
 			<input type="checkbox" name="add_sub_pe111_a"> 
-					<label for="pe111" id ="fil111-a">A</label>
-			</input>
-			<input type="checkbox" name="add_sub_pe111_b"> 
-					<label for="pe111" id ="pe111-b">B</label>
+					<label for="pe111" id ="fil111-a"></label>
 			</input>
             </td>
 		</tr>
@@ -210,10 +179,7 @@
 			<td>3</td>
 			<td>
 			<input type="checkbox" name="add_sub_nstp1_a"> 
-					<label for="nstp1" id ="fil111-a">A</label>
-			</input>
-				<input type="checkbox" name="add_sub_nstp1_b"> 
-					<label for="nstp1" id ="nstp1-b">B</label>
+					<label for="nstp1" id ="fil111-a"></label>
 			</input>
             </td>
 		</tr>
@@ -248,49 +214,159 @@
 
     <div id="npup1" class="hidden">
       <h3>BSCS 1st Year, Second Sem</h3>
-      <form name="form1" method="post" action="code.php"  style="height:550px;">
-		<p name="courses[]" id="courses">Course: BSCS</p>		   
-<center>
+      <form name="form1" method="post" action="code_addsub_BSCS.php"  style="height:550px;">		   
+<center><!-- COPY HERE -->
 	<table>
 			<tr> 
 			<th>Course Code</th>
 			<th>Discriptive Title</th>
 			<th>Unit</th>
-			<th>Edit</th>
+			<th>Add</th>
 		</tr>
 			<?php
 			include('dbcon.php');
-				
-				$ref_table = "course_curriculum/bscs/first_year/second_sem";
-				$fetchdata = $database->getReference($ref_table)->getValue();
-					if($fetchdata > 0 )
+            if(isset($_GET['id']))
+            {
+				$key_child = $_GET['id'];
+				$ref_table = "User";
+				$getdata = $database->getReference($ref_table)->getChild($key_child)->getValue();
+					if($getdata > 0 )
 					{
-						$i = 0;
-					foreach($fetchdata as $key => $row)
-					{
-			?>
-		<tr>
-			<td><?=$row['code']; ?></td>
-			<td><?=$row['descriptive_title']; ?></td>
-			<td><?=$row['units']; ?></td>
+                        ?>
+                    <input type="hidden" name= "key" value="<?=$key_child;?>">
+                    <input type="text" name="Student_number" value="<?=$getdata['Student_number']?>" class="form-control">
+                    <input type="text" name="Name" value="<?=$getdata['Name']?>" class="form-control">
+                    <input type="text" name="Course" value="<?=$getdata['Course']?>"class="form-control">
+                    <input type="hidden" name="Email" value="<?=$getdata['Email']?>"class="form-control">
+                    <input type="hidden" name="Contact_Number" value="<?=$getdata['Contact_Number']?>" class="form-control">
+					<input type="hidden" name="Grade" value="0" class="form-control">
+					
+		<tr class ="cs121">
+			<td>CS121</td>
+			<td>Software Applications</td>
+			<td>3</td>
 			<td>
-                <a href="editcurric.php?id=<?=$key;?>" class = "btn btn btn-primary" style="color=black;"> View </a>
+			<input type="checkbox" name="add_sub_cs121_a"> 
+            	<label for="cs121" id ="cs121-a"></label>
+            </input>
             </td>
 		</tr>
+
+        <tr class ="cs122">
+			<td>CS122</td>
+			<td>Computer Programming 2</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_cs122_a"> 
+            	<label for="cs122" id ="cs122-a"></label>
+            </input>
+            </td>
+		</tr>
+
+        <tr class ="ge104">
+			<td>GE104</td>
+			<td>Purposive Communication</td>
+			<td>3</td>
+			<td>
+				<input type="checkbox" name="add_sub_ge104_a"> 
+					<label for="ge104" id ="ge104-a"></label>
+				</input>
+			</td>
+		</tr>
+
+        <tr class ="ge105">
+			<td>GE105</td>
+			<td>Ethics and Logic</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_ge105_a"> 
+				<label for="ge105" id ="ge105-a"></label>
+			</input>		
+            </td>
+		</tr>
+
+        <tr class ="ge106">
+			<td>GE106</td>
+			<td>Science, Technology, and Society</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_ge106_a"> 
+					<label for="ge106" id ="ge106-a"></label>
+				</input>
+			</td>
+		</tr>
+
+        <tr class ="ge107">
+			<td>GE107</td>
+			<td>Arts Appreciation</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_ge107_a"> 
+					<label for="ge107" id ="ge107-a"></label>
+				</input>
+            </td>
+		</tr>
+
+        <tr class ="fil121">
+			<td>FIL121</td>
+			<td>Masining na Pagpapahayag</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_fil121_a"> 
+					<label for="fil121" id ="fil121-a"></label>
+			</input>
+			</td>
+		</tr>
+
+        <tr class ="reed121">
+			<td>REED121</td>
+			<td>Church and Sacraments</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_reed121_a"> 
+					<label for="reed121" id ="fil121-a"></label>
+			</input>
+            </td>
+		</tr>
+
+        <tr class ="pe121">
+			<td>PE121</td>
+			<td>Rhytmic Activities</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_pe121_a"> 
+					<label for="pe1121" id ="pe121-a"></label>
+			</input>
+            </td>
+		</tr>
+
+        <tr class ="nstp21">
+			<td>NSTP2</td>
+			<td>National Service Training Program 2</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_nstp2_a"> 
+					<label for="nstp2" id ="nstp2-a"></label>
+			</input>
+            </td>
+		</tr>
+
+		<input type="submit" value="Submit" class = "btn btn-primary">
 			<?php
 				}
-			}
 					else
 					{
 			?>
 			<td colspan = "4"> No Record found </td> 
 			<?php
 			}
+        }
 			?>
-		</table> 
-	</center>
-	</form>
-    </div>
+		</table>
+	</center><!-- TO HERE -->
+
+</form>
+</div>
 
 
 
@@ -302,88 +378,327 @@
 
     <div id="npup2" class="hidden">
       <h3>BSCS 2nd Year, First Sem</h3>
-      <form name="form1" method="post" action="code.php"  style="height:550px;">
+      <form name="form1" method="post" action="code_addsub_BSCS.php"  style="height:550px;">
 		<p name="courses[]" id="courses">Course: BSCS</p>		   
-<center>
+		<center><!-- COPY HERE -->
 	<table>
 			<tr> 
 			<th>Course Code</th>
 			<th>Discriptive Title</th>
 			<th>Unit</th>
-			<th>Edit</th>
+			<th>Add</th>
 		</tr>
 			<?php
 			include('dbcon.php');
-				
-				$ref_table = "course_curriculum/bscs/second_year/first_sem";
-				$fetchdata = $database->getReference($ref_table)->getValue();
-					if($fetchdata > 0 )
+            if(isset($_GET['id']))
+            {
+				$key_child = $_GET['id'];
+				$ref_table = "User";
+				$getdata = $database->getReference($ref_table)->getChild($key_child)->getValue();
+					if($getdata > 0 )
 					{
-						$i = 0;
-					foreach($fetchdata as $key => $row)
-					{
-			?>
-		<tr>
-			<td><?=$row['code']; ?></td>
-			<td><?=$row['descriptive_title']; ?></td>
-			<td><?=$row['units']; ?></td>
-			<td><?=$row['pre_req']; ?></td>
+                        ?>
+                    <input type="hidden" name= "key" value="<?=$key_child;?>">
+                    <input type="text" name="Student_number" value="<?=$getdata['Student_number']?>" class="form-control">
+                    <input type="text" name="Name" value="<?=$getdata['Name']?>" class="form-control">
+                    <input type="text" name="Course" value="<?=$getdata['Course']?>"class="form-control">
+                    <input type="hidden" name="Email" value="<?=$getdata['Email']?>"class="form-control">
+                    <input type="hidden" name="Contact_Number" value="<?=$getdata['Contact_Number']?>" class="form-control">
+					<input type="hidden" name="Grade" value="0" class="form-control">
+					
+		<tr class ="cs211">
+			<td>CS211</td>
+			<td>Object-oriented Programming 1</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_cs211_a"> 
+            	<label for="cs211" id ="cs211-b"></label>
+            </input>
+            </td>
 		</tr>
+
+        <tr class ="cs212">
+			<td>CS212</td>
+			<td>Information Management 1</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_cs212_a"> 
+            	<label for="cs212" id ="cs212-a"></label>
+            </input>
+            </td>
+		</tr>
+
+        <tr class ="cs213">
+			<td>CS213</td>
+			<td>Data Structures</td>
+			<td>3</td>
+			<td>
+				<input type="checkbox" name="add_sub_cs213_a"> 
+					<label for="cs213" id ="cs213-a"></label>
+				</input>
+			</td>
+		</tr>
+
+        <tr class ="cs214">
+			<td>CS214</td>
+			<td>Discrete Structures</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_cs214_a"> 
+				<label for="cs214" id ="cs214-a"></label>
+			</input>		
+            </td>
+		</tr>
+
+        <tr class ="ge108">
+			<td>GE108</td>
+			<td>Rizal's Life and Works</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_ge108_a"> 
+					<label for="ge108" id ="ge108-a"></label>
+				</input>
+            </td>
+		</tr>
+
+		<tr class ="ge109">
+			<td>GE109</td>
+			<td>General Psychology</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_ge109_a"> 
+					<label for="ge109" id ="ge109-a"></label>
+				</input>
+            </td>
+		</tr>
+
+        <tr class ="fil211">
+			<td>FIL211</td>
+			<td>Panitikan Filipino</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_fil211_a"> 
+					<label for="fil211" id ="fil211-a"></label>
+			</input>
+			</td>
+		</tr>
+
+		<tr class ="el211">
+			<td>EL211</td>
+			<td>General Elective(Differential Calculus)</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_el211_a"> 
+					<label for="el211" id ="el211-a"></label>
+			</input>
+            </td>
+		</tr>
+
+        <tr class ="reed211">
+			<td>REED211</td>
+			<td>Morality</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_reed211_a"> 
+					<label for="reed211" id ="reed211-a"></label>
+			</input>
+            </td>
+		</tr>
+
+        <tr class ="pe211">
+			<td>PE211</td>
+			<td>Sports and Games</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_pe211_a"> 
+					<label for="pe211" id ="pe211-a"></label>
+			</input>
+            </td>
+		</tr>
+
+        
+
+		<input type="submit" value="Submit" class = "btn btn-primary">
+
+
 			<?php
 				}
-			}
 					else
 					{
 			?>
 			<td colspan = "4"> No Record found </td> 
 			<?php
 			}
+        }
 			?>
-		</table> 
+		</table>
 	</center>
+	</form><!-- TO HERE -->
     </div>
+
+
+
+
+	<!-- 2nd year 2nd sem -->
 
 	<div id="npup3" class="hidden">
       <h3>BSCS 2nd Year, Second Sem</h3>
-      <form name="form1" method="post" action="code.php"  style="height:550px;">
+      <form name="form1" method="post" action="code_addsub_BSCS.php"  style="height:550px;">
 		<p name="courses[]" id="courses">Course: BSCS</p>		   
-<center>
+		<center><!-- COPY HERE -->
 	<table>
 			<tr> 
 			<th>Course Code</th>
 			<th>Discriptive Title</th>
 			<th>Unit</th>
-			<th>Edit</th>
+			<th>Add</th>
 		</tr>
 			<?php
 			include('dbcon.php');
-				
-				$ref_table = "course_curriculum/bscs/second_year/second_sem";
-				$fetchdata = $database->getReference($ref_table)->getValue();
-					if($fetchdata > 0 )
+            if(isset($_GET['id']))
+            {
+				$key_child = $_GET['id'];
+				$ref_table = "User";
+				$getdata = $database->getReference($ref_table)->getChild($key_child)->getValue();
+					if($getdata > 0 )
 					{
-						$i = 0;
-					foreach($fetchdata as $key => $row)
-					{
-			?>
-		<tr>
-			<td><?=$row['code']; ?></td>
-			<td><?=$row['descriptive_title']; ?></td>
-			<td><?=$row['units']; ?></td>
-			<td><?=$row['pre_req']; ?></td>
+                        ?>
+                    <input type="hidden" name= "key" value="<?=$key_child;?>">
+                    <input type="text" name="Student_number" value="<?=$getdata['Student_number']?>" class="form-control">
+                    <input type="text" name="Name" value="<?=$getdata['Name']?>" class="form-control">
+                    <input type="text" name="Course" value="<?=$getdata['Course']?>"class="form-control">
+                    <input type="hidden" name="Email" value="<?=$getdata['Email']?>"class="form-control">
+                    <input type="hidden" name="Contact_Number" value="<?=$getdata['Contact_Number']?>" class="form-control">
+					<input type="hidden" name="Grade" value="0" class="form-control">
+					
+		<tr class ="cs221">
+			<td>CS221</td>
+			<td>Object-oriented Programming 2</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_cs221_a"> 
+            	<label for="cs221" id ="cs221-b"></label>
+            </input>
+            </td>
 		</tr>
+
+        <tr class ="cs222">
+			<td>CS222</td>
+			<td>Information Management 2</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_cs222_a"> 
+            	<label for="cs22" id ="cs222-a"></label>
+            </input>
+            </td>
+		</tr>
+
+        <tr class ="cs213">
+			<td>CS223</td>
+			<td>Web Design and Programming 1</td>
+			<td>3</td>
+			<td>
+				<input type="checkbox" name="add_sub_cs213_a"> 
+					<label for="cs213" id ="cs213-a"></label>
+				</input>
+			</td>
+		</tr>
+
+        <tr class ="cs224">
+			<td>CS224</td>
+			<td>Design and Analysis of Algorithms</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_cs224_a"> 
+				<label for="cs224" id ="cs224-a"></label>
+			</input>		
+            </td>
+		</tr>
+
+        <tr class ="ge110">
+			<td>GE110</td>
+			<td>Social Science and Philosophy</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_ge110_a"> 
+					<label for="ge110" id ="ge110-a"></label>
+				</input>
+			</td>
+		</tr>
+
+        <tr class ="ge111">
+			<td>GE111</td>
+			<td>Math, Science, and Technology</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_ge111_a"> 
+					<label for="ge111" id ="ge111-a"></label>
+				</input>
+            </td>
+		</tr>
+
+		<tr class ="el221">
+			<td>EL221</td>
+			<td>GE Elective(Integral Calculus)</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_el221_a"> 
+					<label for="el221" id ="el221-a"></label>
+				</input>
+            </td>
+		</tr>
+
+        <tr class ="el222">
+			<td>EL222</td>
+			<td>Panitikan Filipino</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_el222_a"> 
+					<label for="el222" id ="el222-a"></label>
+			</input>
+			</td>
+		</tr>
+
+        <tr class ="reed221">
+			<td>REED221</td>
+			<td>Christology</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_reed221_a"> 
+					<label for="reed221" id ="reed221-a"></label>
+			</input>
+            </td>
+		</tr>
+
+        <tr class ="pe221">
+			<td>PE221</td>
+			<td>Recreational Activities</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_pe221_a"> 
+					<label for="pe221" id ="pe221-a"></label>
+			</input>
+            </td>
+		</tr>
+
+        
+
+		<input type="submit" value="Submit" class = "btn btn-primary">
+
+
 			<?php
 				}
-			}
 					else
 					{
 			?>
 			<td colspan = "4"> No Record found </td> 
 			<?php
 			}
+        }
 			?>
-		</table> 
+		</table>
 	</center>
+	</form><!-- TO HERE -->
     </div>
 
 
@@ -398,88 +713,259 @@
 
 	<div id="npup4" class="hidden">
       <h3>BSCS 3rd Year, First Sem</h3>
-      <form name="form1" method="post" action="code.php"  style="height:550px;">
+      <form name="form1" method="post" action="code_addsub_BSCS.php"  style="height:550px;">
 		<p name="courses[]" id="courses">Course: BSCS</p>		   
-<center>
+		<center><!-- COPY HERE -->
 	<table>
 			<tr> 
 			<th>Course Code</th>
 			<th>Discriptive Title</th>
 			<th>Unit</th>
-			<th>Edit</th>
+			<th>Add</th>
 		</tr>
 			<?php
 			include('dbcon.php');
-				
-				$ref_table = "course_curriculum/bscs/third_year/first_sem";
-				$fetchdata = $database->getReference($ref_table)->getValue();
-					if($fetchdata > 0 )
+            if(isset($_GET['id']))
+            {
+				$key_child = $_GET['id'];
+				$ref_table = "User";
+				$getdata = $database->getReference($ref_table)->getChild($key_child)->getValue();
+					if($getdata > 0 )
 					{
-						$i = 0;
-					foreach($fetchdata as $key => $row)
-					{
-			?>
-		<tr>
-			<td><?=$row['code']; ?></td>
-			<td><?=$row['descriptive_title']; ?></td>
-			<td><?=$row['units']; ?></td>
-			<td><?=$row['pre_req']; ?></td>
+                        ?>
+                    <input type="hidden" name= "key" value="<?=$key_child;?>">
+                    <input type="text" name="Student_number" value="<?=$getdata['Student_number']?>" class="form-control">
+                    <input type="text" name="Name" value="<?=$getdata['Name']?>" class="form-control">
+                    <input type="text" name="Course" value="<?=$getdata['Course']?>"class="form-control">
+                    <input type="hidden" name="Email" value="<?=$getdata['Email']?>"class="form-control">
+                    <input type="hidden" name="Contact_Number" value="<?=$getdata['Contact_Number']?>" class="form-control">
+					<input type="hidden" name="Grade" value="0" class="form-control">
+					
+		<tr class ="cs311">
+			<td>CS311</td>
+			<td>Web Design and Programming 2</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_cs311_a"> 
+            	<label for="cs311" id ="cs311-a"></label>
+            </input>
+            </td>
 		</tr>
+
+        <tr class ="cs312">
+			<td>CS312</td>
+			<td>CS Elective(System Analysis and Design)</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_cs312_a"> 
+            	<label for="cs312" id ="cs312-a"></label>
+            </input>
+            </td>
+		</tr>
+
+        <tr class ="cs313">
+			<td>CS313</td>
+			<td>Free Elective(Management Information Systems)</td>
+			<td>3</td>
+			<td>
+				<input type="checkbox" name="add_sub_cs313_a"> 
+					<label for="cs313" id ="cs313-a"></label>
+				</input>
+			</td>
+		</tr>
+
+        <tr class ="cs314">
+			<td>CS314</td>
+			<td>Applications Development Technology</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_cs314_a"> 
+				<label for="cs314" id ="cs314-a"></label>
+			</input>		
+            </td>
+		</tr>
+
+        <tr class ="cs315">
+			<td>CS315</td>
+			<td>Human Computer Interaction</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_cs315_a"> 
+					<label for="cs315" id ="cs315-a"></label>
+				</input>
+			</td>
+		</tr>
+
+        <tr class ="el311">
+			<td>EL311</td>
+			<td>GE Elective(Writing in Discipline</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_el311_a"> 
+					<label for="el311" id ="gel311-a"></label>
+				</input>
+            </td>
+		</tr>
+
+		<tr class ="el312">
+			<td>EL312</td>
+			<td>GE Elective(Probability and Statistics)</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_el312_a"> 
+					<label for="el312" id ="el312-a"></label>
+				</input>
+            </td>
+		</tr>
+        
+
+		<input type="submit" value="Submit" class = "btn btn-primary">
+
+
 			<?php
 				}
-			}
 					else
 					{
 			?>
 			<td colspan = "4"> No Record found </td> 
 			<?php
 			}
+        }
 			?>
-		</table> 
+		</table>
 	</center>
+	</form><!-- TO HERE -->
     </div>
+
+
+
+
+
 
 	<div id="npup5" class="hidden">
       <h3>BSCS 3rd Year, Second Sem</h3>
-      <form name="form1" method="post" action="code.php"  style="height:550px;">
+      <form name="form1" method="post" action="code_addsub_BSCS.php"  style="height:550px;">
 		<p name="courses[]" id="courses">Course: BSCS</p>		   
-<center>
+		<center><!-- COPY HERE -->
 	<table>
 			<tr> 
 			<th>Course Code</th>
 			<th>Discriptive Title</th>
 			<th>Unit</th>
-			<th>Edit</th>
+			<th>Add</th>
 		</tr>
 			<?php
 			include('dbcon.php');
-				
-				$ref_table = "course_curriculum/bscs/third_year/second_sem";
-				$fetchdata = $database->getReference($ref_table)->getValue();
-					if($fetchdata > 0 )
+            if(isset($_GET['id']))
+            {
+				$key_child = $_GET['id'];
+				$ref_table = "User";
+				$getdata = $database->getReference($ref_table)->getChild($key_child)->getValue();
+					if($getdata > 0 )
 					{
-						$i = 0;
-					foreach($fetchdata as $key => $row)
-					{
-			?>
-		<tr>
-			<td><?=$row['code']; ?></td>
-			<td><?=$row['descriptive_title']; ?></td>
-			<td><?=$row['units']; ?></td>
-			<td><?=$row['pre_req']; ?></td>
+                        ?>
+                    <input type="hidden" name= "key" value="<?=$key_child;?>">
+                    <input type="text" name="Student_number" value="<?=$getdata['Student_number']?>" class="form-control">
+                    <input type="text" name="Name" value="<?=$getdata['Name']?>" class="form-control">
+                    <input type="text" name="Course" value="<?=$getdata['Course']?>"class="form-control">
+                    <input type="hidden" name="Email" value="<?=$getdata['Email']?>"class="form-control">
+                    <input type="hidden" name="Contact_Number" value="<?=$getdata['Contact_Number']?>" class="form-control">
+					<input type="hidden" name="Grade" value="0" class="form-control">
+					
+		<tr class ="cs321">
+			<td>CS321</td>
+			<td>Thesis 1</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_cs321_a"> 
+            	<label for="cs321" id ="cs321-a"></label>
+            </input>
+            </td>
 		</tr>
+
+        <tr class ="cs322">
+			<td>CS322</td>
+			<td>Software Engineering</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_cs322_a"> 
+            	<label for="cs322" id ="cs322-a"></label>
+            </input>
+            </td>
+		</tr>
+
+        <tr class ="cs323">
+			<td>CS323</td>
+			<td>Programming Languages</td>
+			<td>3</td>
+			<td>
+				<input type="checkbox" name="add_sub_cs323_a"> 
+					<label for="cs323" id ="cs323-a"></label>
+				</input>
+			</td>
+		</tr>
+
+        <tr class ="cs324">
+			<td>CS324</td>
+			<td>CS Elective 2(Project Management)</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_cs324_a"> 
+				<label for="cs324" id ="cs324-a"></label>
+			</input>		
+            </td>
+		</tr>
+
+        <tr class ="cs325">
+			<td>CS325</td>
+			<td>Free Elective 2(PC Troubleshooting)</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_cs325_a"> 
+					<label for="cs325" id ="cs325-a"></label>
+				</input>
+			</td>
+		</tr>
+
+        <tr class ="cs326">
+			<td>CS236</td>
+			<td>Intelligent Systems</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_cs326_a"> 
+					<label for="cs326" id ="cs326-a"></label>
+				</input>
+            </td>
+		</tr>
+
+		<tr class ="cs327">
+			<td>CS327</td>
+			<td>Computer Architecture + Organization</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_cs327_a"> 
+					<label for="cs327" id ="cs327-a"></label>
+				</input>
+            </td>
+		</tr>
+        
+
+		<input type="submit" value="Submit" class = "btn btn-primary">
+
+
 			<?php
 				}
-			}
 					else
 					{
 			?>
 			<td colspan = "4"> No Record found </td> 
 			<?php
 			}
+        }
 			?>
-		</table> 
+		</table>
 	</center>
+	</form><!-- TO HERE -->
     </div>
 
 
@@ -494,88 +980,166 @@
 
 	<div id="npup6" class="hidden">
       <h3>BSCS 4th Year, First Sem</h3>
-      <form name="form1" method="post" action="code.php"  style="height:550px;">
+      <form name="form1" method="post" action="code_addsub_BSCS.php"  style="height:550px;">
 		<p name="courses[]" id="courses">Course: BSCS</p>		   
-<center>
+		<center><!-- COPY HERE -->
 	<table>
 			<tr> 
 			<th>Course Code</th>
 			<th>Discriptive Title</th>
 			<th>Unit</th>
-			<th>Edit</th>
+			<th>Add</th>
 		</tr>
 			<?php
 			include('dbcon.php');
-				
-				$ref_table = "course_curriculum/bscs/Fourth Year/first_sem";
-				$fetchdata = $database->getReference($ref_table)->getValue();
-					if($fetchdata > 0 )
+            if(isset($_GET['id']))
+            {
+				$key_child = $_GET['id'];
+				$ref_table = "User";
+				$getdata = $database->getReference($ref_table)->getChild($key_child)->getValue();
+					if($getdata > 0 )
 					{
-						$i = 0;
-					foreach($fetchdata as $key => $row)
-					{
-			?>
-		<tr>
-			<td><?=$row['code']; ?></td>
-			<td><?=$row['descriptive_title']; ?></td>
-			<td><?=$row['units']; ?></td>
-			<td><?=$row['pre_req']; ?></td>
+                        ?>
+                    <input type="hidden" name= "key" value="<?=$key_child;?>">
+                    <input type="text" name="Student_number" value="<?=$getdata['Student_number']?>" class="form-control">
+                    <input type="text" name="Name" value="<?=$getdata['Name']?>" class="form-control">
+                    <input type="text" name="Course" value="<?=$getdata['Course']?>"class="form-control">
+                    <input type="hidden" name="Email" value="<?=$getdata['Email']?>"class="form-control">
+                    <input type="hidden" name="Contact_Number" value="<?=$getdata['Contact_Number']?>" class="form-control">
+					<input type="hidden" name="Grade" value="0" class="form-control">
+					
+		<tr class ="cs411">
+			<td>CS411</td>
+			<td>Thesis 2</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_cs411_a"> 
+            	<label for="cs411" id ="cs411-a"></label>
+            </input>
+            </td>
 		</tr>
+
+        <tr class ="cs412">
+			<td>CS412</td>
+			<td>Automata and Language Theory</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_cs412_a"> 
+            	<label for="cs412" id ="cs412-a"></label>
+            </input>
+            </td>
+		</tr>
+
+        <tr class ="cs413">
+			<td>CS413</td>
+			<td>Operating Systems</td>
+			<td>3</td>
+			<td>
+				<input type="checkbox" name="add_sub_cs413_a"> 
+					<label for="cs413" id ="cs413-a"></label>
+				</input>
+			</td>
+		</tr>
+
+        <tr class ="cs414">
+			<td>CS414</td>
+			<td>Information Security</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_cs414_a"> 
+				<label for="cs414" id ="cs414-a"></label>
+			</input>		
+            </td>
+		</tr>
+
+        <tr class ="cs415">
+			<td>CS415</td>
+			<td>Network and Communications</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_cs45_a"> 
+					<label for="cs45" id ="cs415-a"></label>
+				</input>
+			</td>
+		</tr>
+        
+
+		<input type="submit" value="Submit" class = "btn btn-primary">
+
+
 			<?php
 				}
-			}
 					else
 					{
 			?>
 			<td colspan = "4"> No Record found </td> 
 			<?php
 			}
+        }
 			?>
-		</table> 
+		</table>
 	</center>
+	</form><!-- TO HERE -->
     </div>
 
 	<div id="npup7" class="hidden">
       <h3>BSCS 4th Year, Second Sem</h3>
-      <form name="form1" method="post" action="code.php"  style="height:550px;">
+      <form name="form1" method="post" action="code_addsub_BSCS.php"  style="height:550px;">
 		<p name="courses[]" id="courses">Course: BSCS</p>		   
-<center>
+		<center><!-- COPY HERE -->
 	<table>
 			<tr> 
 			<th>Course Code</th>
 			<th>Discriptive Title</th>
 			<th>Unit</th>
-			<th>Edit</th>
+			<th>Add</th>
 		</tr>
 			<?php
 			include('dbcon.php');
-				
-				$ref_table = "course_curriculum/bscs/Fourth Year/second_sem";
-				$fetchdata = $database->getReference($ref_table)->getValue();
-					if($fetchdata > 0 )
+            if(isset($_GET['id']))
+            {
+				$key_child = $_GET['id'];
+				$ref_table = "User";
+				$getdata = $database->getReference($ref_table)->getChild($key_child)->getValue();
+					if($getdata > 0 )
 					{
-						$i = 0;
-					foreach($fetchdata as $key => $row)
-					{
-			?>
-		<tr>
-			<td><?=$row['code']; ?></td>
-			<td><?=$row['descriptive_title']; ?></td>
-			<td><?=$row['units']; ?></td>
-			<td><?=$row['pre_req']; ?></td>
+                        ?>
+                    <input type="hidden" name= "key" value="<?=$key_child;?>">
+                    <input type="text" name="Student_number" value="<?=$getdata['Student_number']?>" class="form-control">
+                    <input type="text" name="Name" value="<?=$getdata['Name']?>" class="form-control">
+                    <input type="text" name="Course" value="<?=$getdata['Course']?>"class="form-control">
+                    <input type="hidden" name="Email" value="<?=$getdata['Email']?>"class="form-control">
+                    <input type="hidden" name="Contact_Number" value="<?=$getdata['Contact_Number']?>" class="form-control">
+					<input type="hidden" name="Grade" value="0" class="form-control">
+					
+		<tr class ="cs321">
+			<td>CS421</td>
+			<td>OJT/Internship/Practicum(300 Hours)</td>
+			<td>3</td>
+			<td>
+			<input type="checkbox" name="add_sub_cs321_a"> 
+            	<label for="cs321" id ="cs321-a"></label>
+            </input>
+            </td>
 		</tr>
+        
+
+		<input type="submit" value="Submit" class = "btn btn-primary">
+
+
 			<?php
 				}
-			}
 					else
 					{
 			?>
 			<td colspan = "4"> No Record found </td> 
 			<?php
 			}
+        }
 			?>
-		</table> 
+		</table>
 	</center>
+	</form><!-- TO HERE -->
     </div>
 
 

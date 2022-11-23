@@ -15,7 +15,7 @@ if(isset($_POST['register_btn']))
         'email' => $email,
         'emailVerified' => false,
         'phoneNumber' => '+63'.$phone,
-        'password' => $password,
+        'password' => $password,   
         'displayName' => $fullname,
     ];
     $createdUser = $auth->createUser($userProperties);
