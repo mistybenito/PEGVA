@@ -47,7 +47,7 @@
 		</tr>
         <tr> 
 			<td>Grade</td>
-			<td><input type="text" name =  "grade8"></td>
+			<td><input type="text" name =  "grade10"></td>
 		</tr>
 		
 		</table> 
