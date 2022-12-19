@@ -44,7 +44,6 @@
 
 	 <table>
 			<tr> 
-				<th>Course</th>
 				<th>Course Code</th>
 				<th>Discriptive Title</th>
 				<th>Unit</th>
@@ -56,26 +55,94 @@
 				if(isset($_GET['id']))
 					{
 						$key_child = $_GET['id'];
-						$ref_table = 'User/'.$key_child.'/Grades/first_year/first_sem';
+						$ref_table = 'User/'.$key_child.'/grades/first_year/first_sem';
 						$fetchdata = $database->getReference($ref_table)->getValue();
 							if($fetchdata > 0)
 							{
-							$i = 0;
-							foreach($fetchdata as $key_child => $row)
-							{
+
 						?>
-						<input type="hidden" name = "id" value = "<?=$key_child;?>">
+						<!-- 1 -->
 						<tr>
-							<td> <?= $row['Course'];?> </td>
-							<td> <?= $row['Subject_code'];?> </td>
-							<td> <?= $row['Desc_title'];?> </td>
-							<td> <?= $row['Unit'];?> </td>
-							
-							<td> <?= $row['Grade'];?> </td>
-							</td>
+						<td> <?= $fetchdata['sc1'];?> </td>
+						<td> <?= $fetchdata['des1'];?> </td>
+						<td> <?= $fetchdata['unit1'];?> </td>
+						<td> <?= $fetchdata['grade1'];?> </td>
+						</tr>
+
+						<!-- 2 -->
+						<tr>
+						<td> <?= $fetchdata['sc2'];?> </td>
+						<td> <?= $fetchdata['des2'];?> </td>
+						<td> <?= $fetchdata['unit2'];?> </td>
+						<td> <?= $fetchdata['grade2'];?> </td>
+						</tr>
+
+
+
+						<!-- 3 -->
+						<tr>
+						<td> <?= $fetchdata['sc3'];?> </td>
+						<td> <?= $fetchdata['des3'];?> </td>
+						<td> <?= $fetchdata['unit3'];?> </td>
+						<td> <?= $fetchdata['grade3'];?> </td>
+						</tr>
+
+						<!-- 4 -->
+						<tr>
+						<td> <?= $fetchdata['sc4'];?> </td>
+						<td> <?= $fetchdata['des4'];?> </td>
+						<td> <?= $fetchdata['unit4'];?> </td>
+						<td> <?= $fetchdata['grade4'];?> </td>
+						</tr>
+
+						<!-- 5 -->
+						<tr>
+						<td> <?= $fetchdata['sc5'];?> </td>
+						<td> <?= $fetchdata['des5'];?> </td>
+						<td> <?= $fetchdata['unit5'];?> </td>
+						<td> <?= $fetchdata['grade5'];?> </td>
+						</tr>
+
+						<!-- 6 -->
+						<tr>
+						<td> <?= $fetchdata['sc6'];?> </td>
+						<td> <?= $fetchdata['des6'];?> </td>
+						<td> <?= $fetchdata['unit6'];?> </td>
+						<td> <?= $fetchdata['grade6'];?> </td>
+						</tr>
+
+						<!-- 7 -->
+						<tr>
+						<td> <?= $fetchdata['sc7'];?> </td>
+						<td> <?= $fetchdata['des7'];?> </td>
+						<td> <?= $fetchdata['unit7'];?> </td>
+						<td> <?= $fetchdata['grade7'];?> </td>
+						</tr>
+
+						<!-- 8 -->
+						<tr>
+						<td> <?= $fetchdata['sc8'];?> </td>
+						<td> <?= $fetchdata['des8'];?> </td>
+						<td> <?= $fetchdata['unit8'];?> </td>
+						<td> <?= $fetchdata['grade8'];?> </td>
+						</tr>
+
+						<!-- 9 -->
+						<tr>
+						<td> <?= $fetchdata['sc9'];?> </td>
+						<td> <?= $fetchdata['des9'];?> </td>
+						<td> <?= $fetchdata['unit9'];?> </td>
+						<td> <?= $fetchdata['grade9'];?> </td>
+						</tr>
+
+						<!-- 10 -->
+						<tr>
+						<td> <?= $fetchdata['sc10'];?> </td>
+						<td> <?= $fetchdata['des10'];?> </td>
+						<td> <?= $fetchdata['unit10'];?> </td>
+						<td> <?= $fetchdata['grade10'];?> </td>
 						</tr>
 							<?php
-				}
 			}
 			else
 			{
@@ -128,22 +195,90 @@
 						$fetchdata = $database->getReference($ref_table)->getValue();
 							if($fetchdata > 0)
 							{
-							$i = 0;
-							foreach($fetchdata as $key_child => $row)
-							{
+							
 						?>
-						<input type="hidden" name = "id" value = "<?=$key_child;?>">
+						<!-- 1 -->
 						<tr>
-							<td> <?= $row['Course'];?> </td>
-							<td> <?= $row['Course_Code'];?> </td>
-							<td> <?= $row['Desc_title'];?> </td>
-							<td> <?= $row['Unit'];?> </td>
-							 
-							<td> <?= $row['Grade'];?> </td>
-							</td>
+						<td> <?= $fetchdata['sc1'];?> </td>
+						<td> <?= $fetchdata['des1'];?> </td>
+						<td> <?= $fetchdata['unit1'];?> </td>
+						<td> <?= $fetchdata['grade1'];?> </td>
+						</tr>
+
+						<!-- 2 -->
+						<tr>
+						<td> <?= $fetchdata['sc2'];?> </td>
+						<td> <?= $fetchdata['des2'];?> </td>
+						<td> <?= $fetchdata['unit2'];?> </td>
+						<td> <?= $fetchdata['grade2'];?> </td>
+						</tr>
+
+
+
+						<!-- 3 -->
+						<tr>
+						<td> <?= $fetchdata['sc3'];?> </td>
+						<td> <?= $fetchdata['des3'];?> </td>
+						<td> <?= $fetchdata['unit3'];?> </td>
+						<td> <?= $fetchdata['grade3'];?> </td>
+						</tr>
+
+						<!-- 4 -->
+						<tr>
+						<td> <?= $fetchdata['sc4'];?> </td>
+						<td> <?= $fetchdata['des4'];?> </td>
+						<td> <?= $fetchdata['unit4'];?> </td>
+						<td> <?= $fetchdata['grade4'];?> </td>
+						</tr>
+
+						<!-- 5 -->
+						<tr>
+						<td> <?= $fetchdata['sc5'];?> </td>
+						<td> <?= $fetchdata['des5'];?> </td>
+						<td> <?= $fetchdata['unit5'];?> </td>
+						<td> <?= $fetchdata['grade5'];?> </td>
+						</tr>
+
+						<!-- 6 -->
+						<tr>
+						<td> <?= $fetchdata['sc6'];?> </td>
+						<td> <?= $fetchdata['des6'];?> </td>
+						<td> <?= $fetchdata['unit6'];?> </td>
+						<td> <?= $fetchdata['grade6'];?> </td>
+						</tr>
+
+						<!-- 7 -->
+						<tr>
+						<td> <?= $fetchdata['sc7'];?> </td>
+						<td> <?= $fetchdata['des7'];?> </td>
+						<td> <?= $fetchdata['unit7'];?> </td>
+						<td> <?= $fetchdata['grade7'];?> </td>
+						</tr>
+
+						<!-- 8 -->
+						<tr>
+						<td> <?= $fetchdata['sc8'];?> </td>
+						<td> <?= $fetchdata['des8'];?> </td>
+						<td> <?= $fetchdata['unit8'];?> </td>
+						<td> <?= $fetchdata['grade8'];?> </td>
+						</tr>
+
+						<!-- 9 -->
+						<tr>
+						<td> <?= $fetchdata['sc9'];?> </td>
+						<td> <?= $fetchdata['des9'];?> </td>
+						<td> <?= $fetchdata['unit9'];?> </td>
+						<td> <?= $fetchdata['grade9'];?> </td>
+						</tr>
+
+						<!-- 10 -->
+						<tr>
+						<td> <?= $fetchdata['sc10'];?> </td>
+						<td> <?= $fetchdata['des10'];?> </td>
+						<td> <?= $fetchdata['unit10'];?> </td>
+						<td> <?= $fetchdata['grade10'];?> </td>
 						</tr>
 							<?php
-				}
 			}
 			else
 			{
@@ -188,22 +323,90 @@
 						$fetchdata = $database->getReference($ref_table)->getValue();
 							if($fetchdata > 0)
 							{
-							$i = 0;
-							foreach($fetchdata as $key_child => $row)
-							{
+							
 						?>
-						<input type="hidden" name = "id" value = "<?=$key_child;?>">
+						<!-- 1 -->
 						<tr>
-							<td> <?= $row['Course'];?> </td>
-							<td> <?= $row['Course_Code'];?> </td>
-							<td> <?= $row['Desc_title'];?> </td>
-							<td> <?= $row['Unit'];?> </td>
-							 
-							<td> <?= $row['Grade'];?> </td>
-							</td>
+						<td> <?= $fetchdata['sc1'];?> </td>
+						<td> <?= $fetchdata['des1'];?> </td>
+						<td> <?= $fetchdata['unit1'];?> </td>
+						<td> <?= $fetchdata['grade1'];?> </td>
+						</tr>
+
+						<!-- 2 -->
+						<tr>
+						<td> <?= $fetchdata['sc2'];?> </td>
+						<td> <?= $fetchdata['des2'];?> </td>
+						<td> <?= $fetchdata['unit2'];?> </td>
+						<td> <?= $fetchdata['grade2'];?> </td>
+						</tr>
+
+
+
+						<!-- 3 -->
+						<tr>
+						<td> <?= $fetchdata['sc3'];?> </td>
+						<td> <?= $fetchdata['des3'];?> </td>
+						<td> <?= $fetchdata['unit3'];?> </td>
+						<td> <?= $fetchdata['grade3'];?> </td>
+						</tr>
+
+						<!-- 4 -->
+						<tr>
+						<td> <?= $fetchdata['sc4'];?> </td>
+						<td> <?= $fetchdata['des4'];?> </td>
+						<td> <?= $fetchdata['unit4'];?> </td>
+						<td> <?= $fetchdata['grade4'];?> </td>
+						</tr>
+
+						<!-- 5 -->
+						<tr>
+						<td> <?= $fetchdata['sc5'];?> </td>
+						<td> <?= $fetchdata['des5'];?> </td>
+						<td> <?= $fetchdata['unit5'];?> </td>
+						<td> <?= $fetchdata['grade5'];?> </td>
+						</tr>
+
+						<!-- 6 -->
+						<tr>
+						<td> <?= $fetchdata['sc6'];?> </td>
+						<td> <?= $fetchdata['des6'];?> </td>
+						<td> <?= $fetchdata['unit6'];?> </td>
+						<td> <?= $fetchdata['grade6'];?> </td>
+						</tr>
+
+						<!-- 7 -->
+						<tr>
+						<td> <?= $fetchdata['sc7'];?> </td>
+						<td> <?= $fetchdata['des7'];?> </td>
+						<td> <?= $fetchdata['unit7'];?> </td>
+						<td> <?= $fetchdata['grade7'];?> </td>
+						</tr>
+
+						<!-- 8 -->
+						<tr>
+						<td> <?= $fetchdata['sc8'];?> </td>
+						<td> <?= $fetchdata['des8'];?> </td>
+						<td> <?= $fetchdata['unit8'];?> </td>
+						<td> <?= $fetchdata['grade8'];?> </td>
+						</tr>
+
+						<!-- 9 -->
+						<tr>
+						<td> <?= $fetchdata['sc9'];?> </td>
+						<td> <?= $fetchdata['des9'];?> </td>
+						<td> <?= $fetchdata['unit9'];?> </td>
+						<td> <?= $fetchdata['grade9'];?> </td>
+						</tr>
+
+						<!-- 10 -->
+						<tr>
+						<td> <?= $fetchdata['sc10'];?> </td>
+						<td> <?= $fetchdata['des10'];?> </td>
+						<td> <?= $fetchdata['unit10'];?> </td>
+						<td> <?= $fetchdata['grade10'];?> </td>
 						</tr>
 							<?php
-				}
 			}
 			else
 			{
@@ -253,22 +456,90 @@
 						$fetchdata = $database->getReference($ref_table)->getValue();
 							if($fetchdata > 0)
 							{
-							$i = 0;
-							foreach($fetchdata as $key_child => $row)
-							{
+							
 						?>
-						<input type="hidden" name = "id" value = "<?=$key_child;?>">
+						<!-- 1 -->
 						<tr>
-							<td> <?= $row['Course'];?> </td>
-							<td> <?= $row['Course_Code'];?> </td>
-							<td> <?= $row['Desc_title'];?> </td>
-							<td> <?= $row['Unit'];?> </td>
-							 
-							<td> <?= $row['Grade'];?> </td>
-							</td>
+						<td> <?= $fetchdata['sc1'];?> </td>
+						<td> <?= $fetchdata['des1'];?> </td>
+						<td> <?= $fetchdata['unit1'];?> </td>
+						<td> <?= $fetchdata['grade1'];?> </td>
+						</tr>
+
+						<!-- 2 -->
+						<tr>
+						<td> <?= $fetchdata['sc2'];?> </td>
+						<td> <?= $fetchdata['des2'];?> </td>
+						<td> <?= $fetchdata['unit2'];?> </td>
+						<td> <?= $fetchdata['grade2'];?> </td>
+						</tr>
+
+
+
+						<!-- 3 -->
+						<tr>
+						<td> <?= $fetchdata['sc3'];?> </td>
+						<td> <?= $fetchdata['des3'];?> </td>
+						<td> <?= $fetchdata['unit3'];?> </td>
+						<td> <?= $fetchdata['grade3'];?> </td>
+						</tr>
+
+						<!-- 4 -->
+						<tr>
+						<td> <?= $fetchdata['sc4'];?> </td>
+						<td> <?= $fetchdata['des4'];?> </td>
+						<td> <?= $fetchdata['unit4'];?> </td>
+						<td> <?= $fetchdata['grade4'];?> </td>
+						</tr>
+
+						<!-- 5 -->
+						<tr>
+						<td> <?= $fetchdata['sc5'];?> </td>
+						<td> <?= $fetchdata['des5'];?> </td>
+						<td> <?= $fetchdata['unit5'];?> </td>
+						<td> <?= $fetchdata['grade5'];?> </td>
+						</tr>
+
+						<!-- 6 -->
+						<tr>
+						<td> <?= $fetchdata['sc6'];?> </td>
+						<td> <?= $fetchdata['des6'];?> </td>
+						<td> <?= $fetchdata['unit6'];?> </td>
+						<td> <?= $fetchdata['grade6'];?> </td>
+						</tr>
+
+						<!-- 7 -->
+						<tr>
+						<td> <?= $fetchdata['sc7'];?> </td>
+						<td> <?= $fetchdata['des7'];?> </td>
+						<td> <?= $fetchdata['unit7'];?> </td>
+						<td> <?= $fetchdata['grade7'];?> </td>
+						</tr>
+
+						<!-- 8 -->
+						<tr>
+						<td> <?= $fetchdata['sc8'];?> </td>
+						<td> <?= $fetchdata['des8'];?> </td>
+						<td> <?= $fetchdata['unit8'];?> </td>
+						<td> <?= $fetchdata['grade8'];?> </td>
+						</tr>
+
+						<!-- 9 -->
+						<tr>
+						<td> <?= $fetchdata['sc9'];?> </td>
+						<td> <?= $fetchdata['des9'];?> </td>
+						<td> <?= $fetchdata['unit9'];?> </td>
+						<td> <?= $fetchdata['grade9'];?> </td>
+						</tr>
+
+						<!-- 10 -->
+						<tr>
+						<td> <?= $fetchdata['sc10'];?> </td>
+						<td> <?= $fetchdata['des10'];?> </td>
+						<td> <?= $fetchdata['unit10'];?> </td>
+						<td> <?= $fetchdata['grade10'];?> </td>
 						</tr>
 							<?php
-				}
 			}
 			else
 			{
@@ -324,22 +595,90 @@
 						$fetchdata = $database->getReference($ref_table)->getValue();
 							if($fetchdata > 0)
 							{
-							$i = 0;
-							foreach($fetchdata as $key_child => $row)
-							{
+							
 						?>
-						<input type="hidden" name = "id" value = "<?=$key_child;?>">
+						<!-- 1 -->
 						<tr>
-							<td> <?= $row['Course'];?> </td>
-							<td> <?= $row['Course_Code'];?> </td>
-							<td> <?= $row['Desc_title'];?> </td>
-							<td> <?= $row['Unit'];?> </td>
-							 
-							<td> <?= $row['Grade'];?> </td>
-							</td>
+						<td> <?= $fetchdata['sc1'];?> </td>
+						<td> <?= $fetchdata['des1'];?> </td>
+						<td> <?= $fetchdata['unit1'];?> </td>
+						<td> <?= $fetchdata['grade1'];?> </td>
+						</tr>
+
+						<!-- 2 -->
+						<tr>
+						<td> <?= $fetchdata['sc2'];?> </td>
+						<td> <?= $fetchdata['des2'];?> </td>
+						<td> <?= $fetchdata['unit2'];?> </td>
+						<td> <?= $fetchdata['grade2'];?> </td>
+						</tr>
+
+
+
+						<!-- 3 -->
+						<tr>
+						<td> <?= $fetchdata['sc3'];?> </td>
+						<td> <?= $fetchdata['des3'];?> </td>
+						<td> <?= $fetchdata['unit3'];?> </td>
+						<td> <?= $fetchdata['grade3'];?> </td>
+						</tr>
+
+						<!-- 4 -->
+						<tr>
+						<td> <?= $fetchdata['sc4'];?> </td>
+						<td> <?= $fetchdata['des4'];?> </td>
+						<td> <?= $fetchdata['unit4'];?> </td>
+						<td> <?= $fetchdata['grade4'];?> </td>
+						</tr>
+
+						<!-- 5 -->
+						<tr>
+						<td> <?= $fetchdata['sc5'];?> </td>
+						<td> <?= $fetchdata['des5'];?> </td>
+						<td> <?= $fetchdata['unit5'];?> </td>
+						<td> <?= $fetchdata['grade5'];?> </td>
+						</tr>
+
+						<!-- 6 -->
+						<tr>
+						<td> <?= $fetchdata['sc6'];?> </td>
+						<td> <?= $fetchdata['des6'];?> </td>
+						<td> <?= $fetchdata['unit6'];?> </td>
+						<td> <?= $fetchdata['grade6'];?> </td>
+						</tr>
+
+						<!-- 7 -->
+						<tr>
+						<td> <?= $fetchdata['sc7'];?> </td>
+						<td> <?= $fetchdata['des7'];?> </td>
+						<td> <?= $fetchdata['unit7'];?> </td>
+						<td> <?= $fetchdata['grade7'];?> </td>
+						</tr>
+
+						<!-- 8 -->
+						<tr>
+						<td> <?= $fetchdata['sc8'];?> </td>
+						<td> <?= $fetchdata['des8'];?> </td>
+						<td> <?= $fetchdata['unit8'];?> </td>
+						<td> <?= $fetchdata['grade8'];?> </td>
+						</tr>
+
+						<!-- 9 -->
+						<tr>
+						<td> <?= $fetchdata['sc9'];?> </td>
+						<td> <?= $fetchdata['des9'];?> </td>
+						<td> <?= $fetchdata['unit9'];?> </td>
+						<td> <?= $fetchdata['grade9'];?> </td>
+						</tr>
+
+						<!-- 10 -->
+						<tr>
+						<td> <?= $fetchdata['sc10'];?> </td>
+						<td> <?= $fetchdata['des10'];?> </td>
+						<td> <?= $fetchdata['unit10'];?> </td>
+						<td> <?= $fetchdata['grade10'];?> </td>
 						</tr>
 							<?php
-				}
 			}
 			else
 			{
@@ -390,22 +729,90 @@
 						$fetchdata = $database->getReference($ref_table)->getValue();
 							if($fetchdata > 0)
 							{
-							$i = 0;
-							foreach($fetchdata as $key_child => $row)
-							{
+							
 						?>
-						<input type="hidden" name = "id" value = "<?=$key_child;?>">
+						<!-- 1 -->
 						<tr>
-							<td> <?= $row['Course'];?> </td>
-							<td> <?= $row['Course_Code'];?> </td>
-							<td> <?= $row['Desc_title'];?> </td>
-							<td> <?= $row['Unit'];?> </td>
-							 
-							<td> <?= $row['Grade'];?> </td>
-							</td>
+						<td> <?= $fetchdata['sc1'];?> </td>
+						<td> <?= $fetchdata['des1'];?> </td>
+						<td> <?= $fetchdata['unit1'];?> </td>
+						<td> <?= $fetchdata['grade1'];?> </td>
+						</tr>
+
+						<!-- 2 -->
+						<tr>
+						<td> <?= $fetchdata['sc2'];?> </td>
+						<td> <?= $fetchdata['des2'];?> </td>
+						<td> <?= $fetchdata['unit2'];?> </td>
+						<td> <?= $fetchdata['grade2'];?> </td>
+						</tr>
+
+
+
+						<!-- 3 -->
+						<tr>
+						<td> <?= $fetchdata['sc3'];?> </td>
+						<td> <?= $fetchdata['des3'];?> </td>
+						<td> <?= $fetchdata['unit3'];?> </td>
+						<td> <?= $fetchdata['grade3'];?> </td>
+						</tr>
+
+						<!-- 4 -->
+						<tr>
+						<td> <?= $fetchdata['sc4'];?> </td>
+						<td> <?= $fetchdata['des4'];?> </td>
+						<td> <?= $fetchdata['unit4'];?> </td>
+						<td> <?= $fetchdata['grade4'];?> </td>
+						</tr>
+
+						<!-- 5 -->
+						<tr>
+						<td> <?= $fetchdata['sc5'];?> </td>
+						<td> <?= $fetchdata['des5'];?> </td>
+						<td> <?= $fetchdata['unit5'];?> </td>
+						<td> <?= $fetchdata['grade5'];?> </td>
+						</tr>
+
+						<!-- 6 -->
+						<tr>
+						<td> <?= $fetchdata['sc6'];?> </td>
+						<td> <?= $fetchdata['des6'];?> </td>
+						<td> <?= $fetchdata['unit6'];?> </td>
+						<td> <?= $fetchdata['grade6'];?> </td>
+						</tr>
+
+						<!-- 7 -->
+						<tr>
+						<td> <?= $fetchdata['sc7'];?> </td>
+						<td> <?= $fetchdata['des7'];?> </td>
+						<td> <?= $fetchdata['unit7'];?> </td>
+						<td> <?= $fetchdata['grade7'];?> </td>
+						</tr>
+
+						<!-- 8 -->
+						<tr>
+						<td> <?= $fetchdata['sc8'];?> </td>
+						<td> <?= $fetchdata['des8'];?> </td>
+						<td> <?= $fetchdata['unit8'];?> </td>
+						<td> <?= $fetchdata['grade8'];?> </td>
+						</tr>
+
+						<!-- 9 -->
+						<tr>
+						<td> <?= $fetchdata['sc9'];?> </td>
+						<td> <?= $fetchdata['des9'];?> </td>
+						<td> <?= $fetchdata['unit9'];?> </td>
+						<td> <?= $fetchdata['grade9'];?> </td>
+						</tr>
+
+						<!-- 10 -->
+						<tr>
+						<td> <?= $fetchdata['sc10'];?> </td>
+						<td> <?= $fetchdata['des10'];?> </td>
+						<td> <?= $fetchdata['unit10'];?> </td>
+						<td> <?= $fetchdata['grade10'];?> </td>
 						</tr>
 							<?php
-				}
 			}
 			else
 			{
@@ -453,22 +860,90 @@
 						$fetchdata = $database->getReference($ref_table)->getValue();
 							if($fetchdata > 0)
 							{
-							$i = 0;
-							foreach($fetchdata as $key_child => $row)
-							{
+							
 						?>
-						<input type="hidden" name = "id" value = "<?=$key_child;?>">
+						<!-- 1 -->
 						<tr>
-							<td> <?= $row['Course'];?> </td>
-							<td> <?= $row['Course_Code'];?> </td>
-							<td> <?= $row['Desc_title'];?> </td>
-							<td> <?= $row['Unit'];?> </td>
-							 
-							<td> <?= $row['Grade'];?> </td>
-							</td>
+						<td> <?= $fetchdata['sc1'];?> </td>
+						<td> <?= $fetchdata['des1'];?> </td>
+						<td> <?= $fetchdata['unit1'];?> </td>
+						<td> <?= $fetchdata['grade1'];?> </td>
+						</tr>
+
+						<!-- 2 -->
+						<tr>
+						<td> <?= $fetchdata['sc2'];?> </td>
+						<td> <?= $fetchdata['des2'];?> </td>
+						<td> <?= $fetchdata['unit2'];?> </td>
+						<td> <?= $fetchdata['grade2'];?> </td>
+						</tr>
+
+
+
+						<!-- 3 -->
+						<tr>
+						<td> <?= $fetchdata['sc3'];?> </td>
+						<td> <?= $fetchdata['des3'];?> </td>
+						<td> <?= $fetchdata['unit3'];?> </td>
+						<td> <?= $fetchdata['grade3'];?> </td>
+						</tr>
+
+						<!-- 4 -->
+						<tr>
+						<td> <?= $fetchdata['sc4'];?> </td>
+						<td> <?= $fetchdata['des4'];?> </td>
+						<td> <?= $fetchdata['unit4'];?> </td>
+						<td> <?= $fetchdata['grade4'];?> </td>
+						</tr>
+
+						<!-- 5 -->
+						<tr>
+						<td> <?= $fetchdata['sc5'];?> </td>
+						<td> <?= $fetchdata['des5'];?> </td>
+						<td> <?= $fetchdata['unit5'];?> </td>
+						<td> <?= $fetchdata['grade5'];?> </td>
+						</tr>
+
+						<!-- 6 -->
+						<tr>
+						<td> <?= $fetchdata['sc6'];?> </td>
+						<td> <?= $fetchdata['des6'];?> </td>
+						<td> <?= $fetchdata['unit6'];?> </td>
+						<td> <?= $fetchdata['grade6'];?> </td>
+						</tr>
+
+						<!-- 7 -->
+						<tr>
+						<td> <?= $fetchdata['sc7'];?> </td>
+						<td> <?= $fetchdata['des7'];?> </td>
+						<td> <?= $fetchdata['unit7'];?> </td>
+						<td> <?= $fetchdata['grade7'];?> </td>
+						</tr>
+
+						<!-- 8 -->
+						<tr>
+						<td> <?= $fetchdata['sc8'];?> </td>
+						<td> <?= $fetchdata['des8'];?> </td>
+						<td> <?= $fetchdata['unit8'];?> </td>
+						<td> <?= $fetchdata['grade8'];?> </td>
+						</tr>
+
+						<!-- 9 -->
+						<tr>
+						<td> <?= $fetchdata['sc9'];?> </td>
+						<td> <?= $fetchdata['des9'];?> </td>
+						<td> <?= $fetchdata['unit9'];?> </td>
+						<td> <?= $fetchdata['grade9'];?> </td>
+						</tr>
+
+						<!-- 10 -->
+						<tr>
+						<td> <?= $fetchdata['sc10'];?> </td>
+						<td> <?= $fetchdata['des10'];?> </td>
+						<td> <?= $fetchdata['unit10'];?> </td>
+						<td> <?= $fetchdata['grade10'];?> </td>
 						</tr>
 							<?php
-				}
 			}
 			else
 			{
@@ -517,22 +992,90 @@
 						$fetchdata = $database->getReference($ref_table)->getValue();
 							if($fetchdata > 0)
 							{
-							$i = 0;
-							foreach($fetchdata as $key_child => $row)
-							{
+							
 						?>
-						<input type="hidden" name = "id" value = "<?=$key_child;?>">
+						<!-- 1 -->
 						<tr>
-							<td> <?= $row['Course'];?> </td>
-							<td> <?= $row['Course_Code'];?> </td>
-							<td> <?= $row['Desc_title'];?> </td>
-							<td> <?= $row['Unit'];?> </td>
-							 
-							<td> <?= $row['Grade'];?> </td>
-							</td>
+						<td> <?= $fetchdata['sc1'];?> </td>
+						<td> <?= $fetchdata['des1'];?> </td>
+						<td> <?= $fetchdata['unit1'];?> </td>
+						<td> <?= $fetchdata['grade1'];?> </td>
+						</tr>
+
+						<!-- 2 -->
+						<tr>
+						<td> <?= $fetchdata['sc2'];?> </td>
+						<td> <?= $fetchdata['des2'];?> </td>
+						<td> <?= $fetchdata['unit2'];?> </td>
+						<td> <?= $fetchdata['grade2'];?> </td>
+						</tr>
+
+
+
+						<!-- 3 -->
+						<tr>
+						<td> <?= $fetchdata['sc3'];?> </td>
+						<td> <?= $fetchdata['des3'];?> </td>
+						<td> <?= $fetchdata['unit3'];?> </td>
+						<td> <?= $fetchdata['grade3'];?> </td>
+						</tr>
+
+						<!-- 4 -->
+						<tr>
+						<td> <?= $fetchdata['sc4'];?> </td>
+						<td> <?= $fetchdata['des4'];?> </td>
+						<td> <?= $fetchdata['unit4'];?> </td>
+						<td> <?= $fetchdata['grade4'];?> </td>
+						</tr>
+
+						<!-- 5 -->
+						<tr>
+						<td> <?= $fetchdata['sc5'];?> </td>
+						<td> <?= $fetchdata['des5'];?> </td>
+						<td> <?= $fetchdata['unit5'];?> </td>
+						<td> <?= $fetchdata['grade5'];?> </td>
+						</tr>
+
+						<!-- 6 -->
+						<tr>
+						<td> <?= $fetchdata['sc6'];?> </td>
+						<td> <?= $fetchdata['des6'];?> </td>
+						<td> <?= $fetchdata['unit6'];?> </td>
+						<td> <?= $fetchdata['grade6'];?> </td>
+						</tr>
+
+						<!-- 7 -->
+						<tr>
+						<td> <?= $fetchdata['sc7'];?> </td>
+						<td> <?= $fetchdata['des7'];?> </td>
+						<td> <?= $fetchdata['unit7'];?> </td>
+						<td> <?= $fetchdata['grade7'];?> </td>
+						</tr>
+
+						<!-- 8 -->
+						<tr>
+						<td> <?= $fetchdata['sc8'];?> </td>
+						<td> <?= $fetchdata['des8'];?> </td>
+						<td> <?= $fetchdata['unit8'];?> </td>
+						<td> <?= $fetchdata['grade8'];?> </td>
+						</tr>
+
+						<!-- 9 -->
+						<tr>
+						<td> <?= $fetchdata['sc9'];?> </td>
+						<td> <?= $fetchdata['des9'];?> </td>
+						<td> <?= $fetchdata['unit9'];?> </td>
+						<td> <?= $fetchdata['grade9'];?> </td>
+						</tr>
+
+						<!-- 10 -->
+						<tr>
+						<td> <?= $fetchdata['sc10'];?> </td>
+						<td> <?= $fetchdata['des10'];?> </td>
+						<td> <?= $fetchdata['unit10'];?> </td>
+						<td> <?= $fetchdata['grade10'];?> </td>
 						</tr>
 							<?php
-				}
 			}
 			else
 			{

@@ -56,12 +56,12 @@
 					{
                         ?>
                     <input type="hidden" name= "key" value="<?=$key_child;?>">
-                    <input type="text" name="Student_number" value="<?=$getdata['Student_number']?>" class="form-control">
-                    <input type="text" name="Name" value="<?=$getdata['Name']?>" class="form-control">
-                    <input type="text" name="Course" value="<?=$getdata['Course']?>"class="form-control">
-                    <input type="hidden" name="Email" value="<?=$getdata['Email']?>"class="form-control">
-                    <input type="hidden" name="Contact_Number" value="<?=$getdata['Contact_Number']?>" class="form-control">
-					<input type="hidden" name="Grade" value="0" class="form-control">
+                    <input type="text" name="Student_number" value="<?=$getdata['Student_number']?>" class="form-control"></input>
+                    <input type="text" name="Name" value="<?=$getdata['Name']?>" class="form-control"></input>
+                    <input type="text" name="Course" value="<?=$getdata['Course']?>"class="form-control"></input>
+                    <input type="hidden" name="Email" value="<?=$getdata['Email']?>"class="form-control"></input>
+                    <input type="hidden" name="Contact_Number" value="<?=$getdata['Contact_Number']?>" class="form-control"></input>
+					<input type="hidden" name="Grade" value= "0" class= "form-control"></input>
 
 		<tr class ="cs111">
 			<td>CS111</td>

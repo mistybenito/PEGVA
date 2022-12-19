@@ -14,7 +14,6 @@ include('includes/header.php');
                             ?>
                 <div class="card">
                     <div class="card-header">
-                    
                         <h4>
                             Add Grades
                         </h4>

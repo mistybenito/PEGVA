@@ -41,15 +41,20 @@
                 {
             ?>
             <tr>
-                <td> <?= $row['Student_number'];?> </td>
-                <td> <?= $row['Name'];?> </td>
-                <td> <?= $row['Email'];?> </td>
-                <td> <?= $row['Course'];?> </td>
-                <td> 
-                <a href="profile.php?id=<?=$key;?>" class = "btn btn btn-primary" style="color=black"> View </a>
-                </td>
-            </tr>
+                <?php
+                    if ($row['Course'] == "Bachelor of Science in Computer Science")
+                     {
+                ?>
+                    <td> <?= $row['Student_number']; ?> </td>
+                    <td> <?= $row['Name']; ?> </td>
+                    <td> <?= $row['Email']; ?> </td>
+                    <td> <?= $row['Course']; ?> </td>
+                    <td> 
+                    <a href="profile.php?id=<?= $key; ?>" class = "btn btn btn-primary" style="color=black"> View </a>
+                    </td>
+                </tr>                
             <?php
+                    }
                 }
                 }
                 else

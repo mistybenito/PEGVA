@@ -16,7 +16,7 @@
 <div id="subject_info">
 	<form name="form1" method="post" action="code_addgrades_BSCS.php" >
 
-    <legend>Subject Description</legend>
+    <center><legend>Subject Description</legend></center>
 
 	<table>
 	<?php
@@ -29,6 +29,7 @@
 		{
 			?>
 			<input type="hidden" name = "id" value = "<?=$key_child;?>">
+			<input type="hidden" name = "Grade" value = "1">
 		<tr> 
 			<td>Course</td>
 			<td><input type="text" name = "Course" value ="Bachelor of Science in Computer Science"></td>
@@ -47,11 +48,11 @@
 		</tr>
         <tr> 
 			<td>Grade</td>
-			<td><input type="text" name =  "Grade"></td>
+			<td><input type="text" name =  "grade1"> </td>
 		</tr>
 		
 		</table> 
-		<center><button type="submit" name = " add_grades_cs111"id="update"> Save </button></center>
+		<center><button type="submit" name = "add_grades_cs111" id="update"> Save </button></center>
 	</form>
 	<?php
 						}

@@ -16,30 +16,31 @@
 <div id="subject_info">
 	<form name="form1" method="post" action="code_addgrades_BSCS.php" >
 
-    <legend>Subject Description</legend>
+    <center><legend>Subject Description</legend></center>
 
 	<table>
 	<?php
 	if(isset($_GET['id']))
 	{
 		$key_child = $_GET['id'];
-		$ref_table = 'Subjects/BSCS/first_year/first_sem/NSTP1';
+		$ref_table = 'Subjects/BSCS/first_year/second_sem/CS121';
 		$getdata = $database->getReference($ref_table)->getChild($key_child)->getValue();
 		if($getdata > 0)
 		{
 			?>
 			<input type="hidden" name = "id" value = "<?=$key_child;?>">
+			<input type="hidden" name = "Grade" value = "1">
 		<tr> 
 			<td>Course</td>
 			<td><input type="text" name = "Course" value ="Bachelor of Science in Computer Science"></td>
 		</tr>
 		<tr> 
 			<td>Subject Code</td>
-			<td><input type="text" name = "Subject_code" value = "NSTP1"></td>
+			<td><input type="text" name = "Subject_code" value = "CS121"></td>
 		</tr>
 		<tr> 
 			<td>Descriptive Title</td>
-			<td><input type="text" name = "Desc_title" value ="National Service Training Program 1" ></td>
+			<td><input type="text" name = "Desc_title" value ="Introduction to Computing" ></td>
 		</tr>
         <tr> 
 			<td>Unit</td>
@@ -47,11 +48,11 @@
 		</tr>
         <tr> 
 			<td>Grade</td>
-			<td><input type="text" name =  "grade8"></td>
+			<td><input type="text" name =  "grade1"> </td>
 		</tr>
 		
 		</table> 
-		<center><button type="submit" name = " add_grades_nstp1" id="update"> Save </button></center>
+		<center><button type="submit" name = "add_grades_cs121" id="update"> Save </button></center>
 	</form>
 	<?php
 						}

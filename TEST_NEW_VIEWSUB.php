@@ -41,12 +41,11 @@
         <h3>1st Year, 1st Sem</h3> 
         <?//FIRST YEAR FIRST SEM GRADES?>
             <center>    
-    <form name="form1" method="post" action="code.php"  style="height:550px;">
+    <form name="form1" method="post" action="addgrades_BSCS/code_addgrades_BSCS.php"  style="height:550px;">
             <?// CONTENT SELECTION FOR GRADES?>
             <div class="content-selection">
             <select id="mySelect" onchange="oneone.doSelect(this);">
                 <option value="">Subject Code</option>
-                <!-- the option values are suffixes for the elements to show -->
                 <option value="0">CS111</option>
                 <option value="1">CS112</option>
                 <option value="2">GE100</option>
@@ -59,6 +58,7 @@
                 <option value="9">NSTP1</option>
             </select>
             </div>
+            
             <?// CONTENT SELECTION FOR GRADES?>
             <div id ="one-one">
                         <div id ="oneone0" class = "hidden">
@@ -66,58 +66,66 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
-                                        <th>Remark</th>
-                                        <th>Add</th>
+                                        <th>Remarks </th>
+                                        <th>Option</th>
                                     </tr>
-                                    <?php
-                                    include('dbcon.php');
+                                    <?php       
                                                 $ref_table = 'Subjects/BSCS/first_year/first_sem/CS111';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
-                                    if ($fetchdata > 0) {
-                                        $i = 0;
-                                        foreach ($fetchdata as $key_child => $row) {
-                                    ?>
+                                                    if($fetchdata > 0)
+                                                    {   
+                                                    $i = 0;
+                                                    foreach($fetchdata as $key_child => $row)
+                                                    {
+                                                ?>
                                     
                                                 <tr>
-                                                    <td> <?= $row['Student_number']; ?> </td>
-                                                    <td> <?= $row['Course']; ?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <input type="hidden" value = "<?=$key_child;?>" name = "id">
+                                                    <td> <?= $row['Student_number'];?> </td>
+                                                    <td> <?= $row['Course'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
                                                     <?php
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
+                                                    if($row['Grade'] == '0')
+                                                    {
+                                                        ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_CS111.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSCS/11_addgrades_CS111.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                        <td> <?= $row['grade1']; ?></td>
-                                                        <?php
-                                                if ($row['grade1'] >= "75") 
-                                                {
+                                                    }
+                                                    else
+                                                    {
                                                         ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade1'] < "75") 
-                                                {
+                                                        <td> <?=$row['Grade'];?></td>
+                                                        <?php
+                                                        if($row['Grade'] > "75")
+                                                        {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td> Passed </th>
                                                             <?php
-                                                }
+                                                        }
+                                                        elseif($row['Grade'] < "75")
+                                                        {
                                                             ?>
+                                                            <td> Fail </th>
+                                                            <?php
+                                                        }
+                                                        ?>
                                                         <td> Edit </td>
                                                         <?php
-                                            }
-                                        }
-                                    }
+                                                    }
+                                                    ?>
+                                                    </tr>
+                                                    <?php
+                                                     }
+                                                    }      
                                     else
                                     {
                                             ?>
@@ -136,12 +144,12 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
-                                    <?php 
+                                    <?php
                                     include('dbcon.php');
                                                 $ref_table = 'Subjects/BSCS/first_year/first_sem/CS112';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
@@ -152,49 +160,39 @@
                                                     {
                                                 ?>
                                                 <tr>
+                                                    <input type="hidden" name = "id" value = "<?=$key_child;?>">
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_CS112.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
+                                                    <?php
+                                                    if($row['Grade'] == '0')
+                                                    {
+                                                        ?>
+                                                        <td> <input type= "text" name = "Grade" > </td>
+                                                        <td> <button type= "submit" name = "add_grades_cs112" id="update"> Save </button></td>
                                                     </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                        <td> <?= $row['grade2']; ?></td>
-                                                        <?php
-                                                if ($row['grade2'] > "75") 
-                                                {
+                                                    }
+                                                    else
+                                                    {
                                                         ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade2'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
+                                                        <td> <?=$row['Grade'];?></td>
+                                                        <td> <button type="submit" name = "add_grades_cs112" id="update"> Edit </button> </td>
                                                         <?php
-                                            }
+                                                    }
+                                                    ?>
+                                                    </tr>
+                                                    <?php
                                         }
                                     }
                                     else
                                     {
-                                            ?>
-                                                <td colspan = "7"> No Record found </td> 
-                                            <?php
+                                        ?>
+                                        <td colspan = "7"> Nothing Found </td>
+                                    <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                         </div>
 
@@ -204,8 +202,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -220,50 +218,40 @@
                                                     {
                                                 ?>
                                     
-                                                <tr>
+                                    <tr>
+                                                    <input type="hidden" name = "id" value = "<?=$key_child;?>">
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_GE100.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
+                                                    <?php
+                                                    if($row['Grade'] == "0")
+                                                    {
+                                                        ?>
+                                                        <td> <input type= "text" name = "Grade" > </td>
+                                                        <td> <button type= "submit" name = "add_grades_ge100" id="update"> Save </button></td>
                                                     </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                        <td> <?= $row['grade3']; ?></td>
-                                                        <?php
-                                                if ($row['grade3'] > "75") 
-                                                {
+                                                    }
+                                                    else
+                                                    {
                                                         ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade3'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
+                                                        <td> <?=$row['Grade'];?></td>
+                                                        <td> <button type="submit" name = "add_grades_ge100" id="update"> Edit </button> </td>
                                                         <?php
-                                            }
+                                                    }
+                                                    ?>
+                                                    </tr>
+                                                    <?php
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                         </div>
                         
@@ -273,8 +261,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -289,50 +277,40 @@
                                                     {
                                                 ?>
                                     
-                                                <tr>
+                                    <tr>
+                                                    <input type="hidden" name = "id" value = "<?=$key_child;?>">
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_GE101.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
+                                                    <?php
+                                                    if($row['Grade'] == "0")
+                                                    {
+                                                        ?>
+                                                        <td> <input type= "text" name = "Grade" > </td>
+                                                        <td> <button type= "submit" name = "add_grades_ge101" id="update"> Save </button></td>
                                                     </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                        <td> <?= $row['grade4']; ?></td>
-                                                        <?php
-                                                if ($row['grade4'] > "75") 
-                                                {
+                                                    }
+                                                    else
+                                                    {
                                                         ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade4'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
+                                                        <td> <?=$row['Grade'];?></td>
+                                                        <td> <button type="submit" name = "add_grades_ge101" id="update"> Edit </button> </td>
                                                         <?php
-                                            }
+                                                    }
+                                                    ?>
+                                                    </tr>
+                                                    <?php
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                         </div>
                         
@@ -342,8 +320,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -358,49 +336,39 @@
                                                     {
                                                 ?>
                                                 <tr>
+                                                    <input type="hidden" name = "id" value = "<?=$key_child;?>">
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_GE102.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
+                                                    <?php
+                                                    if($row['Grade'] == "0")
+                                                    {
+                                                        ?>
+                                                        <td> <input type= "text" name = "Grade" > </td>
+                                                        <td> <button type= "submit" name = "add_grades_ge102" id="update"> Save </button></td>
                                                     </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                        <td> <?= $row['grade5']; ?></td>
-                                                        <?php
-                                                if ($row['grade5'] > "75") 
-                                                {
+                                                    }
+                                                    else
+                                                    {
                                                         ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade5'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
+                                                        <td> <?=$row['Grade'];?></td>
+                                                        <td> <button type="submit" name = "add_grades_ge102" id="update"> Edit </button> </td>
                                                         <?php
-                                            }
+                                                    }
+                                                    ?>
+                                                    </tr>
+                                                    <?php
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                         </div>
 
@@ -410,8 +378,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -426,49 +394,38 @@
                                                     {
                                                 ?>
                                                 <tr>
+                                                    <input type="hidden" name = "id" value = "<?=$key_child;?>">
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
+                                                    <?php
+                                                    if($row['Grade'] == "0")
+                                                    {
+                                                        ?>
+                                                        <td> <input type= "text" name = "Grade" > </td>
+                                                        <td> <button type= "submit" name = "add_grades_ge103
+                                                    <?php
+                                                    }
+                                                    else
+                                                    {
+                                                        ?>
+                                                        <td> <?=$row['Grade'];?></td>
+                                                        <td> <button type="submit" name = "add_grades_ge103" id="update"> Edit </button> </td>
+                                                        <?php
+                                                    }
                                                     ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_GE103.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
                                                     </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                        <td> <?= $row['grade6']; ?></td>
-                                                        <?php
-                                                if ($row['grade6'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade6'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
 
                         </div>
@@ -479,8 +436,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -495,49 +452,39 @@
                                                     {
                                                 ?>
                                                 <tr>
+                                                    <input type="hidden" name = "id" value = "<?=$key_child;?>">
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_FIL111.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
+                                                    <?php
+                                                    if($row['Grade'] == "0")
+                                                    {
+                                                        ?>
+                                                        <td> <input type= "text" name = "Grade" > </td>
+                                                        <td> <button type= "submit" name = "add_grades_fil111" id="update"> Save </button></td>
                                                     </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                        <td> <?= $row['grade7']; ?></td>
-                                                        <?php
-                                                if ($row['grade7'] > "75") 
-                                                {
+                                                    }
+                                                    else
+                                                    {
                                                         ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade7'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
+                                                        <td> <?=$row['Grade'];?></td>
+                                                        <td> <button type="submit" name = "add_grades_fil111" id="update"> Edit </button> </td>
                                                         <?php
-                                            }
+                                                    }
+                                                    ?>
+                                                    </tr>
+                                                    <?php
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                         </div>
 
@@ -547,8 +494,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -563,49 +510,39 @@
                                                     {
                                                 ?>
                                                 <tr>
+                                                    <input type="hidden" name = "id" value = "<?=$key_child;?>">
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_REED111.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
+                                                    <?php
+                                                    if($row['Grade'] == "0")
+                                                    {
+                                                        ?>
+                                                        <td> <input type= "text" name = "Grade" > </td>
+                                                        <td> <button type= "submit" name = "add_grades_reed111" id="update"> Save </button></td>
                                                     </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                        <td> <?= $row['grade8']; ?></td>
-                                                        <?php
-                                                if ($row['grade8'] > "75") 
-                                                {
+                                                    }
+                                                    else
+                                                    {
                                                         ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade8'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
+                                                        <td> <?=$row['Grade'];?></td>
+                                                        <td> <button type="submit" name = "add_grades_reed111" id="update"> Edit </button> </td>
                                                         <?php
-                                            }
+                                                    }
+                                                    ?>
+                                                    </tr>
+                                                    <?php
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                         </div>
 
@@ -615,8 +552,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -631,49 +568,39 @@
                                                     {
                                                 ?>
                                                 <tr>
+                                                    <input type="hidden" name = "id" value = "<?=$key_child;?>">
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_PE111.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
+                                                    <?php
+                                                    if($row['Grade'] == "0")
+                                                    {
+                                                        ?>
+                                                        <td> <input type= "text" name = "Grade" > </td>
+                                                        <td> <button type= "submit" name = "add_grades_pe111" id="update"> Save </button></td>
                                                     </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                        <td> <?= $row['grade9']; ?></td>
-                                                        <?php
-                                                if ($row['grade9'] > "75") 
-                                                {
+                                                    }
+                                                    else
+                                                    {
                                                         ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade9'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
+                                                        <td> <?=$row['Grade'];?></td>
+                                                        <td> <button type="submit" name = "add_grades_pe111" id="update"> Edit </button> </td>
                                                         <?php
-                                            }
+                                                    }
+                                                    ?>
+                                                    </tr>
+                                                    <?php
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                         </div>
 
@@ -684,8 +611,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -700,49 +627,39 @@
                                                     {
                                                 ?>
                                                 <tr>
+                                                    <input type="hidden" name = "id" value = "<?=$key_child;?>">
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>              
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_NSTP1.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <?php
+                                                    if($row['Grade'] == "0")
+                                                    {
+                                                        ?>
+                                                        <td> <input type= "text" name = "Grade" > </td>
+                                                        <td> <button type= "submit" name = "add_grades_nstp1" id="update"> Save </button></td>
                                                     </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                        <td> <?= $row['grade10']; ?></td>
-                                                        <?php
-                                                if ($row['grade10'] > "75") 
-                                                {
+                                                    }
+                                                    else
+                                                    {
                                                         ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade10'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
+                                                        <td> <?=$row['Grade'];?></td>
+                                                        <td> <button type="submit" name = "add_grades_nstp1" id="update"> Edit </button> </td>
                                                         <?php
-                                            }
+                                                    }
+                                                    ?>
+                                                    </tr>
+                                                    <?php
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                           
                         </div>
@@ -855,8 +772,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -876,37 +793,14 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_CS121.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS111.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                        <td> <?= $row['grade1']; ?></td>
-                                                        <?php
-                                                if ($row['grade1'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade1'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
-                                        }
+                                                    }      
                                     }
                                     else
                                     {
@@ -914,7 +808,7 @@
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -927,8 +821,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -947,45 +841,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_CS122.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS112.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                        <td> <?= $row['grade2']; ?></td>
-                                                        <?php
-                                                if ($row['grade2'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade2'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
                                     {
-                                            ?>
-                                                <td colspan = "7"> No Record found </td> 
-                                            <?php
+                                        ?>
+                                        <td colspan = "7"> Nothing Found </td>
+                                    <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                                 
                             </form>
@@ -997,8 +867,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -1018,45 +888,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_GE104.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_GE100.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                        <td> <?= $row['grade3']; ?></td>
-                                                        <?php
-                                                if ($row['grade3'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade3'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -1067,8 +913,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -1088,45 +934,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_GE105.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_GE105.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                        <td> <?= $row['grade4']; ?></td>
-                                                        <?php
-                                                if ($row['grade4'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade4'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -1137,8 +959,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -1157,45 +979,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_GE106.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_GE106.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                        <td> <?= $row['grade5']; ?></td>
-                                                        <?php
-                                                if ($row['grade5'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade5'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -1206,8 +1004,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -1226,45 +1024,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_GE107.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_GE107.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                        <td> <?= $row['grade6']; ?></td>
-                                                        <?php
-                                                if ($row['grade6'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade6'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -1275,8 +1049,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -1295,45 +1069,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_FIL121.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_FIL121.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                        <td> <?= $row['grade7']; ?></td>
-                                                        <?php
-                                                if ($row['grade7'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade7'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -1344,8 +1094,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -1364,45 +1114,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_REED121.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_REED121.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                        <td> <?= $row['grade8']; ?></td>
-                                                        <?php
-                                                if ($row['grade8'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade8'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -1413,8 +1139,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -1433,45 +1159,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_PE121.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_PE121.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                        <td> <?= $row['grade9']; ?></td>
-                                                        <?php
-                                                if ($row['grade9'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade9'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -1483,8 +1185,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -1503,45 +1205,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_NSTP2.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_NSTP2.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                        <td> <?= $row['grade10']; ?></td>
-                                                        <?php
-                                                if ($row['grade10'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade10'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -1615,8 +1293,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -1636,40 +1314,14 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') 
-                                            {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_CS211.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS211.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            }
-                                             else 
-                                             {
-                                                    ?>
-                                                       <td> <?= $row['grade1']; ?></td>
-                                                        <?php
-                                                if ($row['grade1'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade1'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
-                                        }
+                                                    }      
                                     }
                                     else
                                     {
@@ -1677,7 +1329,7 @@
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -1690,8 +1342,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -1710,45 +1362,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_CS212.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS212.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade2']; ?></td>
-                                                        <?php
-                                                if ($row['grade2'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade2'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
                                     {
-                                            ?>
-                                                <td colspan = "7"> No Record found </td> 
-                                            <?php
+                                        ?>
+                                        <td colspan = "7"> Nothing Found </td>
+                                    <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                                 
                             </form>
@@ -1760,8 +1388,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -1781,45 +1409,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_CS213.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS213.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade3']; ?></td>
-                                                        <?php
-                                                if ($row['grade3'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade3'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -1830,8 +1434,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -1851,45 +1455,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_CS214.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS214.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade4']; ?></td>
-                                                        <?php
-                                                if ($row['grade4'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade4'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -1900,8 +1480,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -1920,45 +1500,20 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_GE108.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td>
+                                                        <a href="addgrades_BSCS/CS_addgrades_GE108.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade5']; ?></td>
-                                                        <?php
-                                                if ($row['grade5'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade5'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -1969,8 +1524,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -1989,45 +1544,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    < <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_GE109.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td>
+                                                        <a href="addgrades_BSCS/CS_addgrades_GE109.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade6']; ?></td>
-                                                        <?php
-                                                if ($row['grade6'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade6'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -2038,8 +1569,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -2058,45 +1589,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_FIL211.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td>
+                                                        <a href="addgrades_BSCS/CS_addgrades_FIL211.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade7']; ?></td>
-                                                        <?php
-                                                if ($row['grade7'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade7'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -2107,8 +1614,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -2127,45 +1634,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_EL211.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td>
+                                                        <a href="addgrades_BSCS/CS_addgrades_EL211.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade8']; ?></td>
-                                                        <?php
-                                                if ($row['grade8'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade8'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -2176,8 +1659,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -2196,45 +1679,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_REED211.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td>
+                                                        <a href="addgrades_BSCS/CS_addgrades_REED211.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade9']; ?></td>
-                                                        <?php
-                                                if ($row['grade9'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade9'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -2246,8 +1705,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -2266,45 +1725,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_PE211.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td>
+                                                        <a href="addgrades_BSCS/CS_addgrades_PE211.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade10']; ?></td>
-                                                        <?php
-                                                if ($row['grade10'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade10'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -2343,8 +1778,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -2365,37 +1800,13 @@
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_CS221.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS221.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade1']; ?></td>
-                                                        <?php
-                                                if ($row['grade1'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade1'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
-                                        }
+                                                    }      
                                     }
                                     else
                                     {
@@ -2403,7 +1814,7 @@
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -2416,8 +1827,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -2436,45 +1847,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_CS222.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS222.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade2']; ?></td>
-                                                        <?php
-                                                if ($row['grade2'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade2'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
                                     {
-                                            ?>
-                                                <td colspan = "7"> No Record found </td> 
-                                            <?php
+                                        ?>
+                                        <td colspan = "7"> Nothing Found </td>
+                                    <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                                 
                             </form>
@@ -2486,8 +1873,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                         
@@ -2508,45 +1895,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_CS223.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS223.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade3']; ?></td>
-                                                        <?php
-                                                if ($row['grade3'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade3'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -2557,8 +1920,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -2578,45 +1941,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_CS224.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS224.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade4']; ?></td>
-                                                        <?php
-                                                if ($row['grade4'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade4'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -2627,8 +1966,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -2647,45 +1986,20 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_GE110.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td>
+                                                        <a href="addgrades_BSCS/CS_addgrades_GE110.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade5']; ?></td>
-                                                        <?php
-                                                if ($row['grade5'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade5'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -2696,8 +2010,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -2716,45 +2030,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_GE111.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td>
+                                                        <a href="addgrades_BSCS/CS_addgrades_GE111.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade6']; ?></td>
-                                                        <?php
-                                                if ($row['grade6'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade6'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -2765,8 +2055,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -2785,45 +2075,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_EL221.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_EL221.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade7']; ?></td>
-                                                        <?php
-                                                if ($row['grade7'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade7'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -2834,8 +2100,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -2854,45 +2120,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_EL222.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td>
+                                                        <a href="addgrades_BSCS/CS_addgrades_EL222.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade8']; ?></td>
-                                                        <?php
-                                                if ($row['grade8'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade8'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -2903,8 +2145,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -2923,45 +2165,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_REED221.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td>
+                                                        <a href="addgrades_BSCS/CS_addgrades_REED221.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade9']; ?></td>
-                                                        <?php
-                                                if ($row['grade9'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade9'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -2973,8 +2191,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -2993,45 +2211,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_PE221.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td>
+                                                        <a href="addgrades_BSCS/CS_addgrades_PE221.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade10']; ?></td>
-                                                        <?php
-                                                if ($row['grade10'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade10'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -3070,8 +2264,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -3091,37 +2285,14 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/31_addgrades_CS311.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS311.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade1']; ?></td>
-                                                        <?php
-                                                if ($row['grade1'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade1'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
-                                        }
+                                                    }      
                                     }
                                     else
                                     {
@@ -3129,7 +2300,7 @@
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -3142,8 +2313,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -3162,45 +2333,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/31_addgrades_CS312.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS312.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade2']; ?></td>
-                                                        <?php
-                                                if ($row['grade2'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade2'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
                                     {
-                                            ?>
-                                                <td colspan = "7"> No Record found </td> 
-                                            <?php
+                                        ?>
+                                        <td colspan = "7"> Nothing Found </td>
+                                    <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                                 
                             </form>
@@ -3212,8 +2359,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                         
@@ -3234,45 +2381,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/31_addgrades_CS313.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS313.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade3']; ?></td>
-                                                        <?php
-                                                if ($row['grade3'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade3'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -3283,8 +2406,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -3304,45 +2427,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <<?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/31_addgrades_CS314.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS314.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade4']; ?></td>
-                                                        <?php
-                                                if ($row['grade4'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade4'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -3353,8 +2452,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -3373,45 +2472,20 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/31_addgrades_CS315.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS315.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade5']; ?></td>
-                                                        <?php
-                                                if ($row['grade5'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade5'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -3422,8 +2496,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -3442,45 +2516,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/31_addgrades_EL311.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td>
+                                                        <a href="addgrades_BSCS/CS_addgrades_EL311.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade6']; ?></td>
-                                                        <?php
-                                                if ($row['grade6'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade6'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -3491,8 +2541,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -3512,45 +2562,20 @@
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/31_addgrades_CS312.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_EL312.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade7']; ?></td>
-                                                        <?php
-                                                if ($row['grade7'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade7'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -3584,8 +2609,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -3605,37 +2630,14 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/32_addgrades_CS321.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS321.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade1']; ?></td>
-                                                        <?php
-                                                if ($row['grade1'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade1'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
-                                        }
+                                                    }      
                                     }
                                     else
                                     {
@@ -3643,7 +2645,7 @@
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -3656,8 +2658,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -3676,45 +2678,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/32_addgrades_CS322.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS322.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade2']; ?></td>
-                                                        <?php
-                                                if ($row['grade2'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade2'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
                                     {
-                                            ?>
-                                                <td colspan = "7"> No Record found </td> 
-                                            <?php
+                                        ?>
+                                        <td colspan = "7"> Nothing Found </td>
+                                    <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                                 
                             </form>
@@ -3726,8 +2704,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                         
@@ -3748,45 +2726,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/32_addgrades_CS323.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS323.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade3']; ?></td>
-                                                        <?php
-                                                if ($row['grade3'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade3'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -3797,8 +2751,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -3818,45 +2772,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/32_addgrades_CS324.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS324.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade4']; ?></td>
-                                                        <?php
-                                                if ($row['grade4'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade4'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -3867,8 +2797,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -3887,45 +2817,20 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/32_addgrades_CS325.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS325.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade5']; ?></td>
-                                                        <?php
-                                                if ($row['grade5'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade5'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -3936,8 +2841,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -3956,45 +2861,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/32_addgrades_CS326.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS326.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade6']; ?></td>
-                                                        <?php
-                                                if ($row['grade6'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade6'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -4005,8 +2886,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -4025,45 +2906,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/32_addgrades_CS327.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS327.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade7']; ?></td>
-                                                        <?php
-                                                if ($row['grade7'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade7'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -4098,8 +2955,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -4119,37 +2976,14 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/41_addgrades_CS411.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS411.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade1']; ?></td>
-                                                        <?php
-                                                if ($row['grade1'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade1'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
-                                        }
+                                                    }      
                                     }
                                     else
                                     {
@@ -4157,7 +2991,7 @@
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -4170,8 +3004,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -4190,45 +3024,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/41_addgrades_CS412.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS412.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade2']; ?></td>
-                                                        <?php
-                                                if ($row['grade2'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade2'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
                                     {
-                                            ?>
-                                                <td colspan = "7"> No Record found </td> 
-                                            <?php
+                                        ?>
+                                        <td colspan = "7"> Nothing Found </td>
+                                    <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                                 
                             </form>
@@ -4240,8 +3050,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                         
@@ -4262,45 +3072,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/41_addgrades_CS413.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS413.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade3']; ?></td>
-                                                        <?php
-                                                if ($row['grade3'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade3'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -4311,8 +3097,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -4332,45 +3118,21 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/41_addgrades_CS414.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS414.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade4']; ?></td>
-                                                        <?php
-                                                if ($row['grade4'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade4'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -4381,8 +3143,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -4401,45 +3163,20 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/41_addgrades_CS415.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td>
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS415.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade5']; ?></td>
-                                                        <?php
-                                                if ($row['grade5'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade5'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
                                         }
                                     }
                                     else
-                                    {
+                                            {
                                             ?>
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>
@@ -4466,8 +3203,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -4487,37 +3224,14 @@
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/42_addgrades_CS421.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> 
+                                                        <a href="addgrades_BSCS/CS_addgrades_CS421.php?id=<?=$key_child;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                    </td>
+                                                    </td>
+                                                </tr>
                                                     <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade1']; ?></td>
-                                                        <?php
-                                                if ($row['grade1'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade1'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
-                                        }
+                                                    }      
                                     }
                                     else
                                     {
@@ -4525,7 +3239,7 @@
                                                 <td colspan = "7"> No Record found </td> 
                                             <?php
                                     }
-                                    ?> <!-- to here -->
+                                    ?>
                                 </table>
                             </form>
                         </div>

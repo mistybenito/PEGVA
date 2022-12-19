@@ -12,6 +12,7 @@ if(isset($_POST['add_sub_cs111_a']))
     $course = $_POST['Course'];
     $email = $_POST['Email'];
     $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
     $updateData = [
         'Student_number'=>$student_code,
@@ -19,6 +20,7 @@ if(isset($_POST['add_sub_cs111_a']))
         'Course'=>$course,
         'Email'=>$email,
         'Contact_number'=>$phone,
+        'Grade' =>$grade,
     ];
 
     $ref_table = 'Subjects/BSCS/first_year/first_sem/CS111/'.$key;
@@ -31,7 +33,7 @@ if(isset($_POST['add_sub_cs111_a']))
         {
 
             $_SESSION['status'] = "Student added successfully to CS111";
-            header('Location: addsub_bscs.php/'.$key);
+            header('Location: addsub_bscs.php?id='.$key);
         }
         else
         {
@@ -39,6 +41,7 @@ if(isset($_POST['add_sub_cs111_a']))
             header('Location: addsub_BSCS.php?id='.$key);
         }
     }
+
 
     // cs112
 if(isset($_POST['add_sub_cs112_a']))
@@ -49,6 +52,7 @@ if(isset($_POST['add_sub_cs112_a']))
     $course = $_POST['Course'];
     $email = $_POST['Email'];
     $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
     $updateData = [
         'Student_number'=>$student_code,
@@ -56,8 +60,8 @@ if(isset($_POST['add_sub_cs112_a']))
         'Course'=>$course,
         'Email'=>$email,
         'Contact_number'=>$phone,
+        'Grade' =>$grade,
     ];
-
 
     $ref_table = 'Subjects/BSCS/first_year/first_sem/CS112/'.$key;
 
@@ -81,19 +85,21 @@ if(isset($_POST['add_sub_cs112_a']))
 if(isset($_POST['add_sub_ge100_a']))
     {
         $key = $_POST['key'];
-        $student_code = $_POST['Student_number'];
-        $name = $_POST['Name'];
-        $course = $_POST['Course'];
-        $email = $_POST['Email'];
-        $phone = $_POST['Contact_number'];
-    
-        $updateData = [
-            'Student_number'=>$student_code,
-            'Name'=>$name,
-            'Course'=>$course,
-            'Email'=>$email,
-            'Contact_number'=>$phone,
-        ];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
+
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
     
         $ref_table = 'Subjects/BSCS/first_year/first_sem/GE100/'.$key;
     
@@ -120,19 +126,21 @@ if(isset($_POST['add_sub_ge100_a']))
 if(isset($_POST['add_sub_ge101_a']))
     {
         $key = $_POST['key'];
-        $student_code = $_POST['Student_number'];
-        $name = $_POST['Name'];
-        $course = $_POST['Course'];
-        $email = $_POST['Email'];
-        $phone = $_POST['Contact_number'];
-    
-        $updateData = [
-            'Student_number'=>$student_code,
-            'Name'=>$name,
-            'Course'=>$course,
-            'Email'=>$email,
-            'Contact_number'=>$phone,
-        ];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
+
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
     
         $ref_table = 'Subjects/BSCS/first_year/first_sem/GE101/'.$key;
     
@@ -159,19 +167,21 @@ if(isset($_POST['add_sub_ge101_a']))
 if(isset($_POST['add_sub_ge102_a']))
     {
         $key = $_POST['key'];
-        $student_code = $_POST['Student_number'];
-        $name = $_POST['Name'];
-        $course = $_POST['Course'];
-        $email = $_POST['Email'];
-        $phone = $_POST['Contact_number'];
-    
-        $updateData = [
-            'Student_number'=>$student_code,
-            'Name'=>$name,
-            'Course'=>$course,
-            'Email'=>$email,
-            'Contact_number'=>$phone,
-        ];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
+
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
     
         $ref_table = 'Subjects/BSCS/first_year/first_sem/GE102/'.$key;
     
@@ -197,19 +207,21 @@ if(isset($_POST['add_sub_ge102_a']))
 if(isset($_POST['add_sub_ge103_a']))
     {
         $key = $_POST['key'];
-        $student_code = $_POST['Student_number'];
-        $name = $_POST['Name'];
-        $course = $_POST['Course'];
-        $email = $_POST['Email'];
-        $phone = $_POST['Contact_number'];
-    
-        $updateData = [
-            'Student_number'=>$student_code,
-            'Name'=>$name,
-            'Course'=>$course,
-            'Email'=>$email,
-            'Contact_number'=>$phone,
-        ];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
+
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
     
         $ref_table = 'Subjects/BSCS/first_year/first_sem/GE103/'.$key;
     
@@ -234,19 +246,21 @@ if(isset($_POST['add_sub_ge103_a']))
 if(isset($_POST['add_sub_ge104_a']))
     {
         $key = $_POST['key'];
-        $student_code = $_POST['Student_number'];
-        $name = $_POST['Name'];
-        $course = $_POST['Course'];
-        $email = $_POST['Email'];
-        $phone = $_POST['Contact_number'];
-    
-        $updateData = [
-            'Student_number'=>$student_code,
-            'Name'=>$name,
-            'Course'=>$course,
-            'Email'=>$email,
-            'Contact_number'=>$phone,
-        ];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
+
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
     
         $ref_table = 'Subjects/BSCS/first_year/first_sem/GE104/'.$key;
     
@@ -269,19 +283,21 @@ if(isset($_POST['add_sub_ge104_a']))
 if(isset($_POST['add_sub_fil111_a']))
     {
         $key = $_POST['key'];
-        $student_code = $_POST['Student_number'];
-        $name = $_POST['Name'];
-        $course = $_POST['Course'];
-        $email = $_POST['Email'];
-        $phone = $_POST['Contact_number'];
-    
-        $updateData = [
-            'Student_number'=>$student_code,
-            'Name'=>$name,
-            'Course'=>$course,
-            'Email'=>$email,
-            'Contact_number'=>$phone,
-        ];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
+
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
     
         $ref_table = 'Subjects/BSCS/first_year/first_sem/FIL111/'.$key;
     
@@ -308,19 +324,21 @@ if(isset($_POST['add_sub_fil111_a']))
 if(isset($_POST['add_sub_reed111_a']))
     {
         $key = $_POST['key'];
-        $student_code = $_POST['Student_number'];
-        $name = $_POST['Name'];
-        $course = $_POST['Course'];
-        $email = $_POST['Email'];
-        $phone = $_POST['Contact_number'];
-    
-        $updateData = [
-            'Student_number'=>$student_code,
-            'Name'=>$name,
-            'Course'=>$course,
-            'Email'=>$email,
-            'Contact_number'=>$phone,
-        ];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
+
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
     
         $ref_table = 'Subjects/BSCS/first_year/first_sem/REED111/'.$key;
     
@@ -346,19 +364,21 @@ if(isset($_POST['add_sub_reed111_a']))
 if(isset($_POST['add_sub_pe111_a']))
     {
         $key = $_POST['key'];
-        $student_code = $_POST['Student_number'];
-        $name = $_POST['Name'];
-        $course = $_POST['Course'];
-        $email = $_POST['Email'];
-        $phone = $_POST['Contact_number'];
-    
-        $updateData = [
-            'Student_number'=>$student_code,
-            'Name'=>$name,
-            'Course'=>$course,
-            'Email'=>$email,
-            'Contact_number'=>$phone,
-        ];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
+
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
     
         $ref_table = 'Subjects/BSCS/first_year/first_sem/PE111/'.$key;
     
@@ -384,19 +404,21 @@ if(isset($_POST['add_sub_pe111_a']))
 if(isset($_POST['add_sub_nstp1_a']))
     {
         $key = $_POST['key'];
-        $student_code = $_POST['Student_number'];
-        $name = $_POST['Name'];
-        $course = $_POST['Course'];
-        $email = $_POST['Email'];
-        $phone = $_POST['Contact_number'];
-    
-        $updateData = [
-            'Student_number'=>$student_code,
-            'Name'=>$name,
-            'Course'=>$course,
-            'Email'=>$email,
-            'Contact_number'=>$phone,
-        ];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
+
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
     
         $ref_table = 'Subjects/BSCS/first_year/first_sem/NSTP1/'.$key;
     
@@ -801,19 +823,21 @@ if(isset($_POST['add_sub_nstp2_a']))
 if(isset($_POST['add_sub_cs211_a']))
     {
         $key = $_POST['key'];
-        $student_code = $_POST['Student_number'];
-        $name = $_POST['Name'];
-        $course = $_POST['Course'];
-        $email = $_POST['Email'];
-        $phone = $_POST['Contact_number'];
-    
-        $updateData = [
-            'Student_number'=>$student_code,
-            'Name'=>$name,
-            'Course'=>$course,
-            'Email'=>$email,
-            'Contact_number'=>$phone,
-        ];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
+
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
     
         $ref_table = 'Subjects/BSCS/second_year/first_sem/CS211/'.$key;
     
@@ -835,19 +859,21 @@ if(isset($_POST['add_sub_cs211_a']))
 if(isset($_POST['add_sub_cs212_a']))
     {
         $key = $_POST['key'];
-        $student_code = $_POST['Student_number'];
-        $name = $_POST['Name'];
-        $course = $_POST['Course'];
-        $email = $_POST['Email'];
-        $phone = $_POST['Contact_number'];
-    
-        $updateData = [
-            'Student_number'=>$student_code,
-            'Name'=>$name,
-            'Course'=>$course,
-            'Email'=>$email,
-            'Contact_number'=>$phone,
-        ];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
+
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
     
         $ref_table = 'Subjects/BSCS/second_year/first_sem/CS212/'.$key;
     
@@ -875,6 +901,7 @@ if(isset($_POST['add_sub_cs213_a']))
     $course = $_POST['Course'];
     $email = $_POST['Email'];
     $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
     $updateData = [
         'Student_number'=>$student_code,
@@ -882,8 +909,8 @@ if(isset($_POST['add_sub_cs213_a']))
         'Course'=>$course,
         'Email'=>$email,
         'Contact_number'=>$phone,
+        'Grade' =>$grade,
     ];
-
     $ref_table = 'Subjects/BSCS/second_year/first_sem/CS213/'.$key;
 
     $updatequery_result = $database->getReference($ref_table)->update($updateData);
@@ -910,6 +937,7 @@ if(isset($_POST['add_sub_cs214_a']))
     $course = $_POST['Course'];
     $email = $_POST['Email'];
     $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
     $updateData = [
         'Student_number'=>$student_code,
@@ -917,8 +945,8 @@ if(isset($_POST['add_sub_cs214_a']))
         'Course'=>$course,
         'Email'=>$email,
         'Contact_number'=>$phone,
+        'Grade' =>$grade,
     ];
-
     $ref_table = 'Subjects/BSCS/second_year/first_sem/CS214/'.$key;
 
     $updatequery_result = $database->getReference($ref_table)->update($updateData);
@@ -945,6 +973,7 @@ if(isset($_POST['add_sub_ge108_a']))
     $course = $_POST['Course'];
     $email = $_POST['Email'];
     $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
     $updateData = [
         'Student_number'=>$student_code,
@@ -952,8 +981,8 @@ if(isset($_POST['add_sub_ge108_a']))
         'Course'=>$course,
         'Email'=>$email,
         'Contact_number'=>$phone,
+        'Grade' =>$grade,
     ];
-
     $ref_table = 'Subjects/BSCS/second_year/first_sem/GE108/'.$key;
 
     $updatequery_result = $database->getReference($ref_table)->update($updateData);
@@ -980,6 +1009,7 @@ if(isset($_POST['add_sub_ge108_a']))
     $course = $_POST['Course'];
     $email = $_POST['Email'];
     $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
     $updateData = [
         'Student_number'=>$student_code,
@@ -987,8 +1017,8 @@ if(isset($_POST['add_sub_ge108_a']))
         'Course'=>$course,
         'Email'=>$email,
         'Contact_number'=>$phone,
+        'Grade' =>$grade,
     ];
-
     $ref_table = 'Subjects/BSCS/second_year/first_sem/GE109/'.$key;
 
     $updatequery_result = $database->getReference($ref_table)->update($updateData);
@@ -1017,6 +1047,7 @@ if(isset($_POST['add_sub_ge108_a']))
     $course = $_POST['Course'];
     $email = $_POST['Email'];
     $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
     $updateData = [
         'Student_number'=>$student_code,
@@ -1024,8 +1055,8 @@ if(isset($_POST['add_sub_ge108_a']))
         'Course'=>$course,
         'Email'=>$email,
         'Contact_number'=>$phone,
+        'Grade' =>$grade,
     ];
-
     $ref_table = 'Subjects/BSCS/second_year/first_sem/FIL211/'.$key;
 
     $updatequery_result = $database->getReference($ref_table)->update($updateData);
@@ -1053,6 +1084,7 @@ if(isset($_POST['add_sub_ge108_a']))
     $course = $_POST['Course'];
     $email = $_POST['Email'];
     $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
     $updateData = [
         'Student_number'=>$student_code,
@@ -1060,8 +1092,8 @@ if(isset($_POST['add_sub_ge108_a']))
         'Course'=>$course,
         'Email'=>$email,
         'Contact_number'=>$phone,
+        'Grade' =>$grade,
     ];
-
     $ref_table = 'Subjects/BSCS/second_year/first_sem/EL211/'.$key;
 
     $updatequery_result = $database->getReference($ref_table)->update($updateData);
@@ -1089,6 +1121,7 @@ if(isset($_POST['add_sub_ge108_a']))
     $course = $_POST['Course'];
     $email = $_POST['Email'];
     $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
     $updateData = [
         'Student_number'=>$student_code,
@@ -1096,8 +1129,8 @@ if(isset($_POST['add_sub_ge108_a']))
         'Course'=>$course,
         'Email'=>$email,
         'Contact_number'=>$phone,
+        'Grade' =>$grade,
     ];
-
     $ref_table = 'Subjects/BSCS/second_year/first_sem/REED211/'.$key;
 
     $updatequery_result = $database->getReference($ref_table)->update($updateData);
@@ -1126,6 +1159,7 @@ if(isset($_POST['add_sub_ge108_a']))
     $course = $_POST['Course'];
     $email = $_POST['Email'];
     $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
     $updateData = [
         'Student_number'=>$student_code,
@@ -1133,8 +1167,8 @@ if(isset($_POST['add_sub_ge108_a']))
         'Course'=>$course,
         'Email'=>$email,
         'Contact_number'=>$phone,
+        'Grade' =>$grade,
     ];
-
     $ref_table = 'Subjects/BSCS/second_year/first_sem/PE211/'.$key;
 
     $updatequery_result = $database->getReference($ref_table)->update($updateData);
@@ -1164,6 +1198,7 @@ if(isset($_POST['add_sub_cs221_a']))
     $course = $_POST['Course'];
     $email = $_POST['Email'];
     $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
     $updateData = [
         'Student_number'=>$student_code,
@@ -1171,8 +1206,8 @@ if(isset($_POST['add_sub_cs221_a']))
         'Course'=>$course,
         'Email'=>$email,
         'Contact_number'=>$phone,
+        'Grade' =>$grade,
     ];
-
     $ref_table = 'Subjects/BSCS/second_year/second_sem/CS221/'.$key;
 
     $updatequery_result = $database->getReference($ref_table)->update($updateData);
@@ -1198,6 +1233,7 @@ if(isset($_POST['add_sub_cs222_a']))
     $course = $_POST['Course'];
     $email = $_POST['Email'];
     $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
     $updateData = [
         'Student_number'=>$student_code,
@@ -1205,8 +1241,8 @@ if(isset($_POST['add_sub_cs222_a']))
         'Course'=>$course,
         'Email'=>$email,
         'Contact_number'=>$phone,
+        'Grade' =>$grade,
     ];
-
     $ref_table = 'Subjects/BSCS/second_year/second_sem/CS222/'.$key;
 
     $updatequery_result = $database->getReference($ref_table)->update($updateData);
@@ -1228,19 +1264,21 @@ if(isset($_POST['add_sub_cs222_a']))
 if(isset($_POST['add_sub_cs223_a']))
 {
 $key = $_POST['key'];
-$student_code = $_POST['Student_number'];
-$name = $_POST['Name'];
-$course = $_POST['Course'];
-$email = $_POST['Email'];
-$phone = $_POST['Contact_number'];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
-$updateData = [
-    'Student_number'=>$student_code,
-    'Name'=>$name,
-    'Course'=>$course,
-    'Email'=>$email,
-    'Contact_number'=>$phone,
-];
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
 
 $ref_table = 'Subjects/BSCS/second_year/second_sem/CS223/'.$key;
 
@@ -1262,21 +1300,22 @@ $updatequery_result = $database->getReference($ref_table)->update($updateData);
 //CS224
 if(isset($_POST['add_sub_cs224_a']))
 {
-$key = $_POST['key'];
-$student_code = $_POST['Student_number'];
-$name = $_POST['Name'];
-$course = $_POST['Course'];
-$email = $_POST['Email'];
-$phone = $_POST['Contact_number'];
+    $key = $_POST['key'];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
-$updateData = [
-    'Student_number'=>$student_code,
-    'Name'=>$name,
-    'Course'=>$course,
-    'Email'=>$email,
-    'Contact_number'=>$phone,
-];
-
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
 $ref_table = 'Subjects/BSCS/second_year/second_sem/CS224/'.$key;
 
 $updatequery_result = $database->getReference($ref_table)->update($updateData);
@@ -1298,19 +1337,21 @@ $updatequery_result = $database->getReference($ref_table)->update($updateData);
 if(isset($_POST['add_sub_ge110_a']))
 {
 $key = $_POST['key'];
-$student_code = $_POST['Student_number'];
-$name = $_POST['Name'];
-$course = $_POST['Course'];
-$email = $_POST['Email'];
-$phone = $_POST['Contact_number'];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
-$updateData = [
-    'Student_number'=>$student_code,
-    'Name'=>$name,
-    'Course'=>$course,
-    'Email'=>$email,
-    'Contact_number'=>$phone,
-];
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
 
 $ref_table = 'Subjects/BSCS/second_year/second_sem/GE110/'.$key;
 
@@ -1333,19 +1374,21 @@ $updatequery_result = $database->getReference($ref_table)->update($updateData);
 if(isset($_POST['add_sub_ge111_a']))
 {
 $key = $_POST['key'];
-$student_code = $_POST['Student_number'];
-$name = $_POST['Name'];
-$course = $_POST['Course'];
-$email = $_POST['Email'];
-$phone = $_POST['Contact_number'];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
-$updateData = [
-    'Student_number'=>$student_code,
-    'Name'=>$name,
-    'Course'=>$course,
-    'Email'=>$email,
-    'Contact_number'=>$phone,
-];
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
 
 $ref_table = 'Subjects/BSCS/second_year/second_sem/GE111/'.$key;
 
@@ -1370,19 +1413,21 @@ $updatequery_result = $database->getReference($ref_table)->update($updateData);
 if(isset($_POST['add_sub_el221_a']))
 {
 $key = $_POST['key'];
-$student_code = $_POST['Student_number'];
-$name = $_POST['Name'];
-$course = $_POST['Course'];
-$email = $_POST['Email'];
-$phone = $_POST['Contact_number'];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
-$updateData = [
-    'Student_number'=>$student_code,
-    'Name'=>$name,
-    'Course'=>$course,
-    'Email'=>$email,
-    'Contact_number'=>$phone,
-];
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
 
 $ref_table = 'Subjects/BSCS/second_year/second_sem/EL221/'.$key;
 
@@ -1406,19 +1451,21 @@ $updatequery_result = $database->getReference($ref_table)->update($updateData);
 if(isset($_POST['add_sub_el222_a']))
 {
 $key = $_POST['key'];
-$student_code = $_POST['Student_number'];
-$name = $_POST['Name'];
-$course = $_POST['Course'];
-$email = $_POST['Email'];
-$phone = $_POST['Contact_number'];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
-$updateData = [
-    'Student_number'=>$student_code,
-    'Name'=>$name,
-    'Course'=>$course,
-    'Email'=>$email,
-    'Contact_number'=>$phone,
-];
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
 
 $ref_table = 'Subjects/BSCS/second_year/second_sem/EL222/'.$key;
 
@@ -1442,19 +1489,21 @@ $updatequery_result = $database->getReference($ref_table)->update($updateData);
 if(isset($_POST['add_sub_reed211_a']))
 {
 $key = $_POST['key'];
-$student_code = $_POST['Student_number'];
-$name = $_POST['Name'];
-$course = $_POST['Course'];
-$email = $_POST['Email'];
-$phone = $_POST['Contact_number'];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
-$updateData = [
-    'Student_number'=>$student_code,
-    'Name'=>$name,
-    'Course'=>$course,
-    'Email'=>$email,
-    'Contact_number'=>$phone,
-];
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
 
 $ref_table = 'Subjects/BSCS/second_year/second_sem/REED211/'.$key;
 
@@ -1478,19 +1527,21 @@ $updatequery_result = $database->getReference($ref_table)->update($updateData);
 if(isset($_POST['add_sub_pe211_a']))
 {
 $key = $_POST['key'];
-$student_code = $_POST['Student_number'];
-$name = $_POST['Name'];
-$course = $_POST['Course'];
-$email = $_POST['Email'];
-$phone = $_POST['Contact_number'];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
-$updateData = [
-    'Student_number'=>$student_code,
-    'Name'=>$name,
-    'Course'=>$course,
-    'Email'=>$email,
-    'Contact_number'=>$phone,
-];
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
 
 $ref_table = 'Subjects/BSCS/second_year/second_sem/PE211/'.$key;
 
@@ -1520,19 +1571,21 @@ $updatequery_result = $database->getReference($ref_table)->update($updateData);
 if(isset($_POST['add_sub_cs311_a']))
 {
 $key = $_POST['key'];
-$student_code = $_POST['Student_number'];
-$name = $_POST['Name'];
-$course = $_POST['Course'];
-$email = $_POST['Email'];
-$phone = $_POST['Contact_number'];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
-$updateData = [
-    'Student_number'=>$student_code,
-    'Name'=>$name,
-    'Course'=>$course,
-    'Email'=>$email,
-    'Contact_number'=>$phone,
-];
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
 
 $ref_table = 'Subjects/BSCS/third_year/first_sem/CS311/'.$key;
 
@@ -1555,19 +1608,21 @@ $updatequery_result = $database->getReference($ref_table)->update($updateData);
 if(isset($_POST['add_sub_cs312_a']))
 {
 $key = $_POST['key'];
-$student_code = $_POST['Student_number'];
-$name = $_POST['Name'];
-$course = $_POST['Course'];
-$email = $_POST['Email'];
-$phone = $_POST['Contact_number'];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
-$updateData = [
-    'Student_number'=>$student_code,
-    'Name'=>$name,
-    'Course'=>$course,
-    'Email'=>$email,
-    'Contact_number'=>$phone,
-];
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
 
 $ref_table = 'Subjects/BSCS/third_year/first_sem/CS312/'.$key;
 
@@ -1591,19 +1646,21 @@ $updatequery_result = $database->getReference($ref_table)->update($updateData);
 if(isset($_POST['add_sub_cs313_a']))
 {
 $key = $_POST['key'];
-$student_code = $_POST['Student_number'];
-$name = $_POST['Name'];
-$course = $_POST['Course'];
-$email = $_POST['Email'];
-$phone = $_POST['Contact_number'];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
-$updateData = [
-    'Student_number'=>$student_code,
-    'Name'=>$name,
-    'Course'=>$course,
-    'Email'=>$email,
-    'Contact_number'=>$phone,
-];
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
 
 $ref_table = 'Subjects/BSCS/third_year/first_sem/CS313/'.$key;
 
@@ -1627,19 +1684,21 @@ $updatequery_result = $database->getReference($ref_table)->update($updateData);
 if(isset($_POST['add_sub_cs314_a']))
 {
 $key = $_POST['key'];
-$student_code = $_POST['Student_number'];
-$name = $_POST['Name'];
-$course = $_POST['Course'];
-$email = $_POST['Email'];
-$phone = $_POST['Contact_number'];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
-$updateData = [
-    'Student_number'=>$student_code,
-    'Name'=>$name,
-    'Course'=>$course,
-    'Email'=>$email,
-    'Contact_number'=>$phone,
-];
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
 
 $ref_table = 'Subjects/BSCS/third_year/first_sem/CS314/'.$key;
 
@@ -1664,19 +1723,21 @@ $updatequery_result = $database->getReference($ref_table)->update($updateData);
 if(isset($_POST['add_sub_cs315_a']))
 {
 $key = $_POST['key'];
-$student_code = $_POST['Student_number'];
-$name = $_POST['Name'];
-$course = $_POST['Course'];
-$email = $_POST['Email'];
-$phone = $_POST['Contact_number'];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
-$updateData = [
-    'Student_number'=>$student_code,
-    'Name'=>$name,
-    'Course'=>$course,
-    'Email'=>$email,
-    'Contact_number'=>$phone,
-];
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
 
 $ref_table = 'Subjects/BSCS/third_year/first_sem/CS315/'.$key;
 
@@ -1699,19 +1760,21 @@ $updatequery_result = $database->getReference($ref_table)->update($updateData);
 if(isset($_POST['add_sub_el311_a']))
 {
 $key = $_POST['key'];
-$student_code = $_POST['Student_number'];
-$name = $_POST['Name'];
-$course = $_POST['Course'];
-$email = $_POST['Email'];
-$phone = $_POST['Contact_number'];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
-$updateData = [
-    'Student_number'=>$student_code,
-    'Name'=>$name,
-    'Course'=>$course,
-    'Email'=>$email,
-    'Contact_number'=>$phone,
-];
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
 
 $ref_table = 'Subjects/BSCS/third_year/first_sem/EL311/'.$key;
 
@@ -1735,19 +1798,21 @@ $updatequery_result = $database->getReference($ref_table)->update($updateData);
 if(isset($_POST['add_sub_el312_a']))
 {
 $key = $_POST['key'];
-$student_code = $_POST['Student_number'];
-$name = $_POST['Name'];
-$course = $_POST['Course'];
-$email = $_POST['Email'];
-$phone = $_POST['Contact_number'];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
-$updateData = [
-    'Student_number'=>$student_code,
-    'Name'=>$name,
-    'Course'=>$course,
-    'Email'=>$email,
-    'Contact_number'=>$phone,
-];
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
 
 $ref_table = 'Subjects/BSCS/third_year/first_sem/EL312/'.$key;
 
@@ -1774,19 +1839,21 @@ $updatequery_result = $database->getReference($ref_table)->update($updateData);
 if(isset($_POST['add_sub_cs321_a']))
 {
 $key = $_POST['key'];
-$student_code = $_POST['Student_number'];
-$name = $_POST['Name'];
-$course = $_POST['Course'];
-$email = $_POST['Email'];
-$phone = $_POST['Contact_number'];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
-$updateData = [
-    'Student_number'=>$student_code,
-    'Name'=>$name,
-    'Course'=>$course,
-    'Email'=>$email,
-    'Contact_number'=>$phone,
-];
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
 
 $ref_table = 'Subjects/BSCS/third_year/second_sem/CS321/'.$key;
 
@@ -1809,19 +1876,21 @@ $updatequery_result = $database->getReference($ref_table)->update($updateData);
 if(isset($_POST['add_sub_cs322_a']))
 {
 $key = $_POST['key'];
-$student_code = $_POST['Student_number'];
-$name = $_POST['Name'];
-$course = $_POST['Course'];
-$email = $_POST['Email'];
-$phone = $_POST['Contact_number'];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
-$updateData = [
-    'Student_number'=>$student_code,
-    'Name'=>$name,
-    'Course'=>$course,
-    'Email'=>$email,
-    'Contact_number'=>$phone,
-];
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
 
 $ref_table = 'Subjects/BSCS/third_year/second_sem/CS322/'.$key;
 
@@ -1844,19 +1913,21 @@ $updatequery_result = $database->getReference($ref_table)->update($updateData);
 if(isset($_POST['add_sub_cs323_a']))
 {
 $key = $_POST['key'];
-$student_code = $_POST['Student_number'];
-$name = $_POST['Name'];
-$course = $_POST['Course'];
-$email = $_POST['Email'];
-$phone = $_POST['Contact_number'];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
-$updateData = [
-    'Student_number'=>$student_code,
-    'Name'=>$name,
-    'Course'=>$course,
-    'Email'=>$email,
-    'Contact_number'=>$phone,
-];
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
 
 $ref_table = 'Subjects/BSCS/third_year/second_sem/CS323/'.$key;
 
@@ -1879,19 +1950,21 @@ $updatequery_result = $database->getReference($ref_table)->update($updateData);
 if(isset($_POST['add_sub_cs324_a']))
 {
 $key = $_POST['key'];
-$student_code = $_POST['Student_number'];
-$name = $_POST['Name'];
-$course = $_POST['Course'];
-$email = $_POST['Email'];
-$phone = $_POST['Contact_number'];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
-$updateData = [
-    'Student_number'=>$student_code,
-    'Name'=>$name,
-    'Course'=>$course,
-    'Email'=>$email,
-    'Contact_number'=>$phone,
-];
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
 
 $ref_table = 'Subjects/BSCS/third_year/second_sem/CS324/'.$key;
 
@@ -1914,19 +1987,21 @@ $updatequery_result = $database->getReference($ref_table)->update($updateData);
 if(isset($_POST['add_sub_cs325_a']))
 {
 $key = $_POST['key'];
-$student_code = $_POST['Student_number'];
-$name = $_POST['Name'];
-$course = $_POST['Course'];
-$email = $_POST['Email'];
-$phone = $_POST['Contact_number'];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
-$updateData = [
-    'Student_number'=>$student_code,
-    'Name'=>$name,
-    'Course'=>$course,
-    'Email'=>$email,
-    'Contact_number'=>$phone,
-];
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
 
 $ref_table = 'Subjects/BSCS/third_year/second_sem/CS325/'.$key;
 
@@ -1950,19 +2025,21 @@ $updatequery_result = $database->getReference($ref_table)->update($updateData);
 if(isset($_POST['add_sub_cs326_a']))
 {
 $key = $_POST['key'];
-$student_code = $_POST['Student_number'];
-$name = $_POST['Name'];
-$course = $_POST['Course'];
-$email = $_POST['Email'];
-$phone = $_POST['Contact_number'];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
-$updateData = [
-    'Student_number'=>$student_code,
-    'Name'=>$name,
-    'Course'=>$course,
-    'Email'=>$email,
-    'Contact_number'=>$phone,
-];
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
 
 $ref_table = 'Subjects/BSCS/third_year/second_sem/CS326/'.$key;
 
@@ -1986,19 +2063,21 @@ $updatequery_result = $database->getReference($ref_table)->update($updateData);
 if(isset($_POST['add_sub_cs327_a']))
 {
 $key = $_POST['key'];
-$student_code = $_POST['Student_number'];
-$name = $_POST['Name'];
-$course = $_POST['Course'];
-$email = $_POST['Email'];
-$phone = $_POST['Contact_number'];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
-$updateData = [
-    'Student_number'=>$student_code,
-    'Name'=>$name,
-    'Course'=>$course,
-    'Email'=>$email,
-    'Contact_number'=>$phone,
-];
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
 
 $ref_table = 'Subjects/BSCS/third_year/second_sem/CS327/'.$key;
 
@@ -2025,19 +2104,21 @@ $updatequery_result = $database->getReference($ref_table)->update($updateData);
 if(isset($_POST['add_sub_cs412_a']))
 {
 $key = $_POST['key'];
-$student_code = $_POST['Student_number'];
-$name = $_POST['Name'];
-$course = $_POST['Course'];
-$email = $_POST['Email'];
-$phone = $_POST['Contact_number'];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
-$updateData = [
-    'Student_number'=>$student_code,
-    'Name'=>$name,
-    'Course'=>$course,
-    'Email'=>$email,
-    'Contact_number'=>$phone,
-];
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
 
 $ref_table = 'Subjects/BSCS/fourth_year/first_sem/CS412/'.$key;
 
@@ -2060,19 +2141,21 @@ $updatequery_result = $database->getReference($ref_table)->update($updateData);
 if(isset($_POST['add_sub_cs413_a']))
 {
 $key = $_POST['key'];
-$student_code = $_POST['Student_number'];
-$name = $_POST['Name'];
-$course = $_POST['Course'];
-$email = $_POST['Email'];
-$phone = $_POST['Contact_number'];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
-$updateData = [
-    'Student_number'=>$student_code,
-    'Name'=>$name,
-    'Course'=>$course,
-    'Email'=>$email,
-    'Contact_number'=>$phone,
-];
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
 
 $ref_table = 'Subjects/BSCS/fourth_year/first_sem/CS413/'.$key;
 
@@ -2096,19 +2179,21 @@ $updatequery_result = $database->getReference($ref_table)->update($updateData);
 if(isset($_POST['add_sub_cs414_a']))
 {
 $key = $_POST['key'];
-$student_code = $_POST['Student_number'];
-$name = $_POST['Name'];
-$course = $_POST['Course'];
-$email = $_POST['Email'];
-$phone = $_POST['Contact_number'];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
-$updateData = [
-    'Student_number'=>$student_code,
-    'Name'=>$name,
-    'Course'=>$course,
-    'Email'=>$email,
-    'Contact_number'=>$phone,
-];
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
 
 $ref_table = 'Subjects/BSCS/fourth_year/first_sem/CS414/'.$key;
 
@@ -2132,19 +2217,21 @@ $updatequery_result = $database->getReference($ref_table)->update($updateData);
 if(isset($_POST['add_sub_cs415_a']))
 {
 $key = $_POST['key'];
-$student_code = $_POST['Student_number'];
-$name = $_POST['Name'];
-$course = $_POST['Course'];
-$email = $_POST['Email'];
-$phone = $_POST['Contact_number'];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
-$updateData = [
-    'Student_number'=>$student_code,
-    'Name'=>$name,
-    'Course'=>$course,
-    'Email'=>$email,
-    'Contact_number'=>$phone,
-];
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
 
 $ref_table = 'Subjects/BSCS/fourth_year/first_sem/CS415/'.$key;
 
@@ -2170,19 +2257,21 @@ $updatequery_result = $database->getReference($ref_table)->update($updateData);
 if(isset($_POST['add_sub_cs421_a']))
 {
 $key = $_POST['key'];
-$student_code = $_POST['Student_number'];
-$name = $_POST['Name'];
-$course = $_POST['Course'];
-$email = $_POST['Email'];
-$phone = $_POST['Contact_number'];
+    $student_code = $_POST['Student_number'];
+    $name = $_POST['Name'];
+    $course = $_POST['Course'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Contact_number'];
+    $grade = $_POST['Grade'];
 
-$updateData = [
-    'Student_number'=>$student_code,
-    'Name'=>$name,
-    'Course'=>$course,
-    'Email'=>$email,
-    'Contact_number'=>$phone,
-];
+    $updateData = [
+        'Student_number'=>$student_code,
+        'Name'=>$name,
+        'Course'=>$course,
+        'Email'=>$email,
+        'Contact_number'=>$phone,
+        'Grade' =>$grade,
+    ];
 
 $ref_table = 'Subjects/BSCS/fourth_year/second_sem/CS421/'.$key;
 

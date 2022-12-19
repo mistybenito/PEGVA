@@ -25,17 +25,16 @@ include('includes/header.php');
                                 <tr>
                                     <th>St. No</th>
                                     <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Email Address</th>
-                                    <th>Phone Number</th>
-                                    <th>Edit</th>
+                                    <th>Course</th>
+                                    <th>Email</th>
+                                    <th>Grade</th>
                                     <th>Delete</th>
                                 </tr>
                             </thead>
                             <tbody>
                             <?php
                                         include('dbcon.php');
-                                        $ref_table = 'Subjects/bscs/1ST YEAR/1ST SEM/CS111';
+                                        $ref_table = 'Subjects/BSCS/first_year/first_sem/CS111';
                                         $fetchdata = $database->getReference($ref_table)->getValue();
                                         if($fetchdata > 0)
                                         {
@@ -48,6 +47,7 @@ include('includes/header.php');
                                                     <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $row['Grade'];?> </td>
                                                     <td>
                                                         <a href="TEST_add_grades.php?id=<?=$key?>" class = "btn btn-primary btn-sm"> Add Grade </a>
                                                     </td>
