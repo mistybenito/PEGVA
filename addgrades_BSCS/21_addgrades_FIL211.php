@@ -23,7 +23,7 @@
 	if(isset($_GET['id']))
 	{
 		$key_child = $_GET['id'];
-		$ref_table = 'Subjects/BSCS/first_year/second_sem/PE121';
+		$ref_table = 'Subjects/BSCS/second_year/first_sem/FIL211';
 		$getdata = $database->getReference($ref_table)->getChild($key_child)->getValue();
 		if($getdata > 0)
 		{
@@ -36,11 +36,11 @@
 		</tr>
 		<tr> 
 			<td>Subject Code</td>
-			<td><input type="text" name = "Subject_code" value = "PE121"></td>
+			<td><input type="text" name = "Subject_code" value = "FIL211"></td>
 		</tr>
 		<tr> 
 			<td>Descriptive Title</td>
-			<td><input type="text" name = "Desc_title" value ="Rhythmic Activities" ></td>
+			<td><input type="text" name = "Desc_title" value ="Panitikan Filipino" ></td>
 		</tr>
         <tr> 
 			<td>Unit</td>
@@ -48,11 +48,11 @@
 		</tr>
         <tr> 
 			<td>Grade</td>
-			<td><input type="text" name =  "grade9"> </td>
+			<td><input type="text" name =  "grade7"> </td>
 		</tr>
 		
 		</table> 
-		<center><button type="submit" name = "add_grades_pe121" id="update"> Save </button></center>
+		<center><button type="submit" name = "add_grades_fil211" id="update"> Save </button></center>
 	</form>
 	<?php
 						}

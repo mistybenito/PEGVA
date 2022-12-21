@@ -40,7 +40,7 @@
 		</tr>
 		<tr> 
 			<td>Descriptive Title</td>
-			<td><input type="text" name = "Desc_title" value ="Introduction to Computing" ></td>
+			<td><input type="text" name = "Desc_title" value ="Software Applications" ></td>
 		</tr>
         <tr> 
 			<td>Unit</td>
