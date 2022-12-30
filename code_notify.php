@@ -10,8 +10,7 @@ if(isset($_POST['open']))
     $open_status = $_POST['open_status'];
 
     $updateData = [
-        'status'=>$open_status,
-        
+        'status'=>$open_status, 
     ];
 
     $ref_table = 'pre_enrollment';

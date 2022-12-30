@@ -45,29 +45,20 @@
             <?// CONTENT SELECTION FOR GRADES?>
             <div class="content-selection">
             <select id="mySelect" onchange="oneone.doSelect(this);">
-                <option value="">Subject Code</option><!-- here -->
-                <?php
-                include('dbcon.php');
-                $ref_table = 'course_curriculum/bscs/first_year/first_sem';
-                $fetchdata = $database->getReference($ref_table)->getValue();
-                if ($fetchdata > 0) {
-                    $i = 0;
-                    foreach ($fetchdata as $key_child => $row) {
-                ?>
-                <option value="<?= $i++; ?>"><?= $row['code'] ?></option>
-                <?php
-                    }
-                }
-                ?>
-            </select><!-- to here here -->
+                <option value="">Subject Code</option>
+                <!-- the option values are suffixes for the elements to show -->
+                <option value="0">CS111</option>
+                <option value="1">CS112</option>
+                <option value="2">GE100</option>
+                <option value="3">GE101</option>
+                <option value="4">GE102</option>
+                <option value="5">GE103</option>
+                <option value="6">FIL111</option>
+                <option value="7">REED111</option>
+                <option value="8">PE111</option>
+                <option value="9">NSTP1</option>
+            </select>
             </div>
-
-
-
-
-
-
-
             <?// CONTENT SELECTION FOR GRADES?>
             <div id ="one-one">
                         <div id ="oneone0" class = "hidden">
@@ -83,7 +74,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/first_year/first_sem/CS111';
+                                                $ref_table = 'Subjects/BSED-ENG/first_year/first_sem/CS111';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                     if ($fetchdata > 0) {
                                         $i = 0;
@@ -101,7 +92,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_CS111.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/11_addgrades_CS111.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -152,7 +143,7 @@
                                     </tr>
                                     <?php 
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/first_year/first_sem/CS112';
+                                                $ref_table = 'Subjects/BSED-ENG/first_year/first_sem/CS112';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -171,7 +162,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_CS112.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/11_addgrades_CS112.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -220,7 +211,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/first_year/first_sem/GE100';
+                                                $ref_table = 'Subjects/BSED-ENG/first_year/first_sem/GE100';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -240,7 +231,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_GE100.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/11_addgrades_GE100.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -289,7 +280,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/first_year/first_sem/GE101';
+                                                $ref_table = 'Subjects/BSED-ENG/first_year/first_sem/GE101';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -309,7 +300,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_GE101.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/11_addgrades_GE101.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -358,7 +349,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/first_year/first_sem/GE102';
+                                                $ref_table = 'Subjects/BSED-ENG/first_year/first_sem/GE102';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -377,7 +368,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_GE102.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/11_addgrades_GE102.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -426,7 +417,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/first_year/first_sem/GE103';
+                                                $ref_table = 'Subjects/BSED-ENG/first_year/first_sem/GE103';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -445,7 +436,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_GE103.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/11_addgrades_GE103.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -495,7 +486,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/first_year/first_sem/FIL111';
+                                                $ref_table = 'Subjects/BSED-ENG/first_year/first_sem/FIL111';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -514,7 +505,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_FIL111.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/11_addgrades_FIL111.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -563,7 +554,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/first_year/first_sem/REED111';
+                                                $ref_table = 'Subjects/BSED-ENG/first_year/first_sem/REED111';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -582,7 +573,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_REED111.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/11_addgrades_REED111.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -631,7 +622,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/first_year/first_sem/PE111';
+                                                $ref_table = 'Subjects/BSED-ENG/first_year/first_sem/PE111';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -650,7 +641,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_PE111.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/11_addgrades_PE111.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -700,7 +691,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/first_year/first_sem/NSTP1';
+                                                $ref_table = 'Subjects/BSED-ENG/first_year/first_sem/NSTP1';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -719,7 +710,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_NSTP1.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/11_addgrades_NSTP1.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -843,21 +834,19 @@
             <?// CONTENT SELECTION FOR GRADES?>
             <div class="content-selection">
             <select id="mySelect" onchange="onetwo.doSelect(this);">
-                <option value="">Subject Code</option><!-- here -->
-                <?php
-                include('dbcon.php');
-                $ref_table = 'course_curriculum/bscs/first_year/second_sem';
-                $fetchdata = $database->getReference($ref_table)->getValue();
-                if ($fetchdata > 0) {
-                    $i = 0;
-                    foreach ($fetchdata as $key_child => $row) {
-                ?>
-                <option value="<?= $i++; ?>"><?= $row['code'] ?></option>
-                <?php
-                    }
-                }
-                ?>
-            </select><!-- to here -->
+                <option value="">Subject Code</option>
+                <!-- the option values are suffixes for the elements to show -->
+                <option value="0">CS121</option>
+                <option value="1">CS122</option>
+                <option value="2">GE104</option>
+                <option value="3">GE105</option>
+                <option value="4">GE106</option>
+                <option value="5">GE107</option>
+                <option value="6">FIL121</option>
+                <option value="7">REED121</option>
+                <option value="8">PE121</option>
+                <option value="9">NSTP2</option>
+            </select>
             </div>
             <?// CONTENT SELECTION FOR GRADES?>
             <div id ="one-two">
@@ -873,7 +862,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/CS121';
+                                                $ref_table = 'Subjects/BSED-ENG/first_year/second_sem/CS121';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -893,7 +882,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_CS121.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/12_addgrades_CS121.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -945,7 +934,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/CS122';
+                                                $ref_table = 'Subjects/BSED-ENG/first_year/second_sem/CS122';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -964,7 +953,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_CS122.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/12_addgrades_CS122.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1015,7 +1004,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/GE104';
+                                                $ref_table = 'Subjects/BSED-ENG/first_year/second_sem/GE104';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1035,7 +1024,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_GE104.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/12_addgrades_GE104.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1085,7 +1074,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/GE105';
+                                                $ref_table = 'Subjects/BSED-ENG/first_year/second_sem/GE105';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1105,7 +1094,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_GE105.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/12_addgrades_GE105.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1155,7 +1144,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/GE106';
+                                                $ref_table = 'Subjects/BSED-ENG/first_year/second_sem/GE106';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1174,7 +1163,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_GE106.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/12_addgrades_GE106.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1224,7 +1213,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/GE107';
+                                                $ref_table = 'Subjects/BSED-ENG/first_year/second_sem/GE107';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1243,7 +1232,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_GE107.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/12_addgrades_GE107.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1293,7 +1282,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/FIL121';
+                                                $ref_table = 'Subjects/BSED-ENG/first_year/second_sem/FIL121';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1312,7 +1301,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_FIL121.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/12_addgrades_FIL121.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1362,7 +1351,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/REED121';
+                                                $ref_table = 'Subjects/BSED-ENG/first_year/second_sem/REED121';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1381,7 +1370,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_REED121.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/12_addgrades_REED121.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1431,7 +1420,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/PE121';
+                                                $ref_table = 'Subjects/BSED-ENG/first_year/second_sem/PE121';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1450,7 +1439,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_PE121.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/12_addgrades_PE121.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1501,7 +1490,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/NSTP2';
+                                                $ref_table = 'Subjects/BSED-ENG/first_year/second_sem/NSTP2';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1520,7 +1509,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_NSTP2.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/12_addgrades_NSTP2.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1605,21 +1594,19 @@
             <?// CONTENT SELECTION FOR GRADES?>
             <div class="content-selection">
             <select id="mySelect" onchange="twoone.doSelect(this);">
-            <option value="">Subject Code</option><!-- here -->
-                <?php
-                include('dbcon.php');
-                $ref_table = 'course_curriculum/bscs/second_year/first_sem';
-                $fetchdata = $database->getReference($ref_table)->getValue();
-                if ($fetchdata > 0) {
-                    $i = 0;
-                    foreach ($fetchdata as $key_child => $row) {
-                ?>
-                <option value="<?= $i++; ?>"><?= $row['code'] ?></option>
-                <?php
-                    }
-                }
-                ?>
-            </select><!-- to here -->
+                <option value="">Subject Code</option>
+                <!-- the option values are suffixes for the elements to show -->
+                <option value="0">CS211</option>
+                <option value="1">CS212</option>
+                <option value="2">CS213</option>
+                <option value="3">CS214</option>
+                <option value="4">GE108</option>
+                <option value="5">GE109</option>
+                <option value="6">FIL211</option>
+                <option value="7">EL211</option>
+                <option value="8">REED211</option>
+                <option value="9">PE211</option>
+            </select>
             </div>
             <?// CONTENT SELECTION FOR GRADES?>
             <div id ="two-one">
@@ -1635,7 +1622,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/CS211';
+                                                $ref_table = 'Subjects/BSED-ENG/second_year/first_sem/CS211';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1656,7 +1643,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_CS211.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/21_addgrades_CS211.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1710,7 +1697,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/CS212';
+                                                $ref_table = 'Subjects/BSED-ENG/second_year/first_sem/CS212';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1729,7 +1716,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_CS212.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/21_addgrades_CS212.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1780,7 +1767,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/CS213';
+                                                $ref_table = 'Subjects/BSED-ENG/second_year/first_sem/CS213';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1800,7 +1787,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_CS213.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/21_addgrades_CS213.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1850,7 +1837,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/CS214';
+                                                $ref_table = 'Subjects/BSED-ENG/second_year/first_sem/CS214';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1870,7 +1857,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_CS214.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/21_addgrades_CS214.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1920,7 +1907,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/GE108';
+                                                $ref_table = 'Subjects/BSED-ENG/second_year/first_sem/GE108';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1939,7 +1926,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_GE108.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/21_addgrades_GE108.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1989,7 +1976,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/GE109';
+                                                $ref_table = 'Subjects/BSED-ENG/second_year/first_sem/GE109';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2008,7 +1995,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_GE109.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/21_addgrades_GE109.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2058,7 +2045,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/FIL211';
+                                                $ref_table = 'Subjects/BSED-ENG/second_year/first_sem/FIL211';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2077,7 +2064,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_FIL211.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/21_addgrades_FIL211.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2127,7 +2114,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/EL211';
+                                                $ref_table = 'Subjects/BSED-ENG/second_year/first_sem/EL211';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2146,7 +2133,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_EL211.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/21_addgrades_EL211.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2196,7 +2183,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/REED211';
+                                                $ref_table = 'Subjects/BSED-ENG/second_year/first_sem/REED211';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2215,7 +2202,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_REED211.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/21_addgrades_REED211.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2266,7 +2253,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/PE211';
+                                                $ref_table = 'Subjects/BSED-ENG/second_year/first_sem/PE211';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2285,7 +2272,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_PE211.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/21_addgrades_PE211.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2335,21 +2322,19 @@
             <?// CONTENT SELECTION FOR GRADES?>
             <div class="content-selection">
             <select id="mySelect" onchange="twotwo.doSelect(this);">
-            <option value="">Subject Code</option><!-- here -->
-                <?php
-                include('dbcon.php');
-                $ref_table = 'course_curriculum/bscs/second_year/second_sem';
-                $fetchdata = $database->getReference($ref_table)->getValue();
-                if ($fetchdata > 0) {
-                    $i = 0;
-                    foreach ($fetchdata as $key_child => $row) {
-                ?>
-                <option value="<?= $i++; ?>"><?= $row['code'] ?></option>
-                <?php
-                    }
-                }
-                ?>
-            </select><!-- to here -->
+                <option value="">Subject Code</option>
+                <!-- the option values are suffixes for the elements to show -->
+                <option value="0">CS221</option>
+                <option value="1">CS222</option>
+                <option value="2">CS223</option>
+                <option value="3">CS224</option>
+                <option value="4">GE110</option>
+                <option value="5">GE111</option>
+                <option value="6">EL221</option>
+                <option value="7">EL222</option>
+                <option value="8">REED221</option>
+                <option value="9">PE221</option>
+            </select>
             </div>
             <?// CONTENT SELECTION FOR GRADES?>
             <div id ="two-two">
@@ -2365,7 +2350,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/second_year/second_sem/CS221';
+                                                $ref_table = 'Subjects/BSED-ENG/second_year/second_sem/CS221';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2386,7 +2371,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_CS221.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/22_addgrades_CS221.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2438,7 +2423,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/second_year/second_sem/CS222';
+                                                $ref_table = 'Subjects/BSED-ENG/second_year/second_sem/CS222';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2457,7 +2442,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_CS222.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/22_addgrades_CS222.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2509,7 +2494,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/second_year/second_sem/CS223';
+                                                $ref_table = 'Subjects/BSED-ENG/second_year/second_sem/CS223';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2529,7 +2514,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_CS223.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/22_addgrades_CS223.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2579,7 +2564,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/second_year/second_sem/CS224';
+                                                $ref_table = 'Subjects/BSED-ENG/second_year/second_sem/CS224';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2599,7 +2584,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_CS224.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/22_addgrades_CS224.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2649,7 +2634,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/second_year/second_sem/GE110';
+                                                $ref_table = 'Subjects/BSED-ENG/second_year/second_sem/GE110';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2668,7 +2653,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_GE110.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/22_addgrades_GE110.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2718,7 +2703,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/second_year/second_sem/GE111';
+                                                $ref_table = 'Subjects/BSED-ENG/second_year/second_sem/GE111';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2737,7 +2722,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_GE111.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/22_addgrades_GE111.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2787,7 +2772,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/second_year/second_sem/EL221';
+                                                $ref_table = 'Subjects/BSED-ENG/second_year/second_sem/EL221';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2806,7 +2791,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_EL221.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/22_addgrades_EL221.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2856,7 +2841,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/second_year/second_sem/EL222';
+                                                $ref_table = 'Subjects/BSED-ENG/second_year/second_sem/EL222';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2875,7 +2860,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_EL222.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/22_addgrades_EL222.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2925,7 +2910,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/second_year/second_sem/REED221';
+                                                $ref_table = 'Subjects/BSED-ENG/second_year/second_sem/REED221';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2944,7 +2929,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_REED221.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/22_addgrades_REED221.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2995,7 +2980,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/second_year/second_sem/PE221';
+                                                $ref_table = 'Subjects/BSED-ENG/second_year/second_sem/PE221';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3014,7 +2999,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_PE221.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/22_addgrades_PE221.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3066,21 +3051,17 @@
             <?// CONTENT SELECTION FOR GRADES?>
             <div class="content-selection">
             <select id="mySelect" onchange="threeone.doSelect(this);">
-            <option value="">Subject Code</option><!-- here -->
-                <?php
-                include('dbcon.php');
-                $ref_table = 'course_curriculum/bscs/third_year/first_sem';
-                $fetchdata = $database->getReference($ref_table)->getValue();
-                if ($fetchdata > 0) {
-                    $i = 0;
-                    foreach ($fetchdata as $key_child => $row) {
-                ?>
-                <option value="<?= $i++; ?>"><?= $row['code'] ?></option>
-                <?php
-                    }
-                }
-                ?>
-            </select><!-- to here -->
+                <option value="">Subject Code</option>
+                <!-- the option values are suffixes for the elements to show -->
+                <option value="0">CS311</option>
+                <option value="1">CS312</option>
+                <option value="2">CS313</option>
+                <option value="3">CS314</option>
+                <option value="4">CS315</option>
+                <option value="5">EL311</option>
+                <option value="6">EL312</option>
+
+            </select>
             </div>
             <?// CONTENT SELECTION FOR GRADES?>
             <div id ="three-one">
@@ -3096,7 +3077,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/third_year/first_sem/CS311';
+                                                $ref_table = 'Subjects/BSED-ENG/third_year/first_sem/CS311';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3116,7 +3097,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/31_addgrades_CS311.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/31_addgrades_CS311.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3168,7 +3149,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/third_year/first_sem/CS312';
+                                                $ref_table = 'Subjects/BSED-ENG/third_year/first_sem/CS312';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3187,7 +3168,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/31_addgrades_CS312.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/31_addgrades_CS312.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3239,7 +3220,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/third_year/first_sem/CS313';
+                                                $ref_table = 'Subjects/BSED-ENG/third_year/first_sem/CS313';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3259,7 +3240,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/31_addgrades_CS313.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/31_addgrades_CS313.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3309,7 +3290,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/third_year/first_sem/CS314';
+                                                $ref_table = 'Subjects/BSED-ENG/third_year/first_sem/CS314';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3329,7 +3310,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/31_addgrades_CS314.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/31_addgrades_CS314.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3379,7 +3360,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/third_year/first_sem/CS315';
+                                                $ref_table = 'Subjects/BSED-ENG/third_year/first_sem/CS315';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3398,7 +3379,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/31_addgrades_CS315.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/31_addgrades_CS315.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3448,7 +3429,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/third_year/first_sem/EL311';
+                                                $ref_table = 'Subjects/BSED-ENG/third_year/first_sem/EL311';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3467,7 +3448,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/31_addgrades_EL311.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/31_addgrades_EL311.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3517,7 +3498,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/third_year/first_sem/EL312';
+                                                $ref_table = 'Subjects/BSED-ENG/third_year/first_sem/EL312';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3537,7 +3518,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/31_addgrades_CS312.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/31_addgrades_CS312.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3585,21 +3566,16 @@
             <?// CONTENT SELECTION FOR GRADES?>
             <div class="content-selection">
             <select id="mySelect" onchange="threetwo.doSelect(this);">
-            <option value="">Subject Code</option><!-- here -->
-                <?php
-                include('dbcon.php');
-                $ref_table = 'course_curriculum/bscs/third_year/second_sem';
-                $fetchdata = $database->getReference($ref_table)->getValue();
-                if ($fetchdata > 0) {
-                    $i = 0;
-                    foreach ($fetchdata as $key_child => $row) {
-                ?>
-                <option value="<?= $i++; ?>"><?= $row['code'] ?></option>
-                <?php
-                    }
-                }
-                ?>
-            </select><!-- to here -->
+                <option value="">Subject Code</option>
+                <!-- the option values are suffixes for the elements to show -->
+                <option value="0">CS321</option>
+                <option value="1">CS322</option>
+                <option value="2">CS323</option>
+                <option value="3">CS324</option>
+                <option value="4">CS325</option>
+                <option value="5">CS326</option>
+                <option value="6">CS327</option>
+            </select>
             </div>
             <?// CONTENT SELECTION FOR GRADES?>
             <div id ="three-two">
@@ -3615,7 +3591,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/third_year/second_sem/CS321';
+                                                $ref_table = 'Subjects/BSED-ENG/third_year/second_sem/CS321';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3635,7 +3611,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/32_addgrades_CS321.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/32_addgrades_CS321.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3687,7 +3663,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/third_year/second_sem/CS322';
+                                                $ref_table = 'Subjects/BSED-ENG/third_year/second_sem/CS322';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3706,7 +3682,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/32_addgrades_CS322.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/32_addgrades_CS322.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3758,7 +3734,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/third_year/second_sem/CS323';
+                                                $ref_table = 'Subjects/BSED-ENG/third_year/second_sem/CS323';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3778,7 +3754,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/32_addgrades_CS323.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/32_addgrades_CS323.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3828,7 +3804,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/third_year/second_sem/CS324';
+                                                $ref_table = 'Subjects/BSED-ENG/third_year/second_sem/CS324';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3848,7 +3824,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/32_addgrades_CS324.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/32_addgrades_CS324.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3898,7 +3874,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/third_year/second_sem/CS325';
+                                                $ref_table = 'Subjects/BSED-ENG/third_year/second_sem/CS325';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3917,7 +3893,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/32_addgrades_CS325.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/32_addgrades_CS325.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3967,7 +3943,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/third_year/second_sem/CS326';
+                                                $ref_table = 'Subjects/BSED-ENG/third_year/second_sem/CS326';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3986,7 +3962,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/32_addgrades_CS326.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/32_addgrades_CS326.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -4036,7 +4012,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/third_year/second_sem/CS327';
+                                                $ref_table = 'Subjects/BSED-ENG/third_year/second_sem/CS327';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -4055,7 +4031,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/32_addgrades_CS327.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/32_addgrades_CS327.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -4106,21 +4082,14 @@
             <?// CONTENT SELECTION FOR GRADES?>
             <div class="content-selection">
             <select id="mySelect" onchange="fourone.doSelect(this);">
-            <option value="">Subject Code</option><!-- here -->
-                <?php
-                include('dbcon.php');
-                $ref_table = 'course_curriculum/bscs/fourth_year/first_sem';
-                $fetchdata = $database->getReference($ref_table)->getValue();
-                if ($fetchdata > 0) {
-                    $i = 0;
-                    foreach ($fetchdata as $key_child => $row) {
-                ?>
-                <option value="<?= $i++; ?>"><?= $row['code'] ?></option>
-                <?php
-                    }
-                }
-                ?>
-            </select><!-- to here -->
+                <option value="">Subject Code</option>
+                <!-- the option values are suffixes for the elements to show -->
+                <option value="0">CS411</option>
+                <option value="1">CS412</option>
+                <option value="2">CS413</option>
+                <option value="3">CS414</option>
+                <option value="4">CS415</option>
+            </select>
             </div>
             <?// CONTENT SELECTION FOR GRADES?>
             <div id ="four-one">
@@ -4136,7 +4105,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/fourth_year/first_sem/CS411';
+                                                $ref_table = 'Subjects/BSED-ENG/fourth_year/first_sem/CS411';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -4156,7 +4125,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/41_addgrades_CS411.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/41_addgrades_CS411.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -4208,7 +4177,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/fourth_year/first_sem/CS412';
+                                                $ref_table = 'Subjects/BSED-ENG/fourth_year/first_sem/CS412';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -4227,7 +4196,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/41_addgrades_CS412.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/41_addgrades_CS412.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -4279,7 +4248,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/fourth_year/first_sem/CS413';
+                                                $ref_table = 'Subjects/BSED-ENG/fourth_year/first_sem/CS413';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -4299,7 +4268,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/41_addgrades_CS413.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/41_addgrades_CS413.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -4349,7 +4318,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/fourth_year/first_sem/CS414';
+                                                $ref_table = 'Subjects/BSED-ENG/fourth_year/first_sem/CS414';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -4369,7 +4338,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/41_addgrades_CS414.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/41_addgrades_CS414.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -4419,7 +4388,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/fourth_year/first_sem/CS415';
+                                                $ref_table = 'Subjects/BSED-ENG/fourth_year/first_sem/CS415';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -4438,7 +4407,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/41_addgrades_CS415.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/41_addgrades_CS415.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -4484,21 +4453,11 @@
             <?// CONTENT SELECTION FOR GRADES?>
             <div class="content-selection">
             <select id="mySelect" onchange="fourtwo.doSelect(this);">
-            <option value="">Subject Code</option><!-- here -->
-                <?php
-                include('dbcon.php');
-                $ref_table = 'course_curriculum/bscs/fourth_year/second_sem';
-                $fetchdata = $database->getReference($ref_table)->getValue();
-                if ($fetchdata > 0) {
-                    $i = 0;
-                    foreach ($fetchdata as $key_child => $row) {
-                ?>
-                <option value="<?= $i++; ?>"><?= $row['code'] ?></option>
-                <?php
-                    }
-                }
-                ?>
-            </select><!-- to here -->
+                <option value="">Subject Code</option>
+                <!-- the option values are suffixes for the elements to show -->
+                <option value="0">CS421</option>
+
+            </select>
             </div>
             <?// CONTENT SELECTION FOR GRADES?>
             <div id ="four-two">
@@ -4514,7 +4473,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/fourth_year/second_sem/CS421';
+                                                $ref_table = 'Subjects/BSED-ENG/fourth_year/second_sem/CS421';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -4534,7 +4493,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/42_addgrades_CS421.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades_BSED-ENG/42_addgrades_CS421.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
