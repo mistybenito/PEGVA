@@ -298,8 +298,538 @@
 				}
 
 
+				// 2ND YEAR 1ST SEM 2ND YEAR 1ST SEM 2ND YEAR 1ST SEM 2ND YEAR 1ST SEM 2ND YEAR 1ST SEM 2ND YEAR 1ST SEM 2ND YEAR 1ST SEM 2ND YEAR 1ST SEM 
+			elseif($scode == "CS211")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade1"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+			elseif($scode == "CS212")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade2"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+			elseif($scode == "CS213")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade3"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+			elseif($scode == "CS214")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade4"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+			elseif($scode == "GE108")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade5"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+			elseif($scode == "GE109")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade6"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+			elseif($scode == "FIL211")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade7"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+			elseif($scode == "EL211")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade8"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+			elseif($scode == "REED211")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade9"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+			elseif($scode == "PE211")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade10"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+			///// 2ND YEAR 2ND SEM2ND YEAR 2ND SEM2ND YEAR 2ND SEM2ND YEAR 2ND SEM2ND YEAR 2ND SEM2ND YEAR 2ND SEM2ND YEAR 2ND SEM2ND YEAR 2ND SEM2ND YEAR 2ND SEM
+			
+			elseif($scode == "CS221")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade1"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+			elseif($scode == "CS222")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade2"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+			elseif($scode == "CS223")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade3"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+			elseif($scode == "CS224")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade4"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+			elseif($scode == "GE110")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade5"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+			elseif($scode == "GE111")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade6"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+			elseif($scode == "EL221")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade7"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+			elseif($scode == "EL222")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade8"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+			elseif($scode == "REED221")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade9"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+			elseif($scode == "PE221")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade10"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+			/// 3RD YEAR 1ST SEM 3RD YEAR 1ST SEM 3RD YEAR 1ST SEM 3RD YEAR 1ST SEM 3RD YEAR 1ST SEM 3RD YEAR 1ST SEM 3RD YEAR 1ST SEM 
+
+			elseif($scode == "CS311")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade1"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+				elseif($scode == "CS312")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade2"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+				elseif($scode == "CS313")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade3"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+				elseif($scode == "CS314")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade4"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+				elseif($scode == "CS315")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade5"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+				elseif($scode == "EL311")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade6"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+				elseif($scode == "EL312")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade7"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+				// 3RD YEAR 2ND SEM
+
+				elseif($scode == "CS321")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade1"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
 
 
+				elseif($scode == "CS322")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade2"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+				elseif($scode == "CS323")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade3"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+
+				elseif($scode == "CS324")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade4"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+				elseif($scode == "CS325")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade5"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+				elseif($scode == "CS326")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade6"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+				elseif($scode == "CS327")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade7"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+
+				//FOURTH YEAR 1ST SEM 
+
+				elseif($scode == "CS411")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade1"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+				elseif($scode == "CS412")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade2"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+				elseif($scode == "CS413")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade3"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+
+				elseif($scode == "CS414")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade4"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+
+				elseif($scode == "CS415")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade5"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
+
+				// FOURTH YEAR 2ND SEM
+
+				elseif($scode == "CS421")
+				{
+					?>
+					<tr> 
+						<td>Grade</td>
+						<td><input type="text" name =  "grade1"> </td>
+					</tr>
+					</table> 
+					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
+				</form>
+				<?php
+				}
 
 
 
