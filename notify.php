@@ -104,7 +104,6 @@ elseif(isset($_POST['close']))
 
 <form method="post">
     <input type ="hidden" name = "open_status" value = "OPEN">
-
     <input type ="hidden" name = "close_status" value = "CLOSE">
     <input type="submit" name="open" value="OPEN"/></input>
     <input type="submit" name="close" value="CLOSE"/></input>

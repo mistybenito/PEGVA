@@ -28,7 +28,10 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Course</th>
+                    <th>Verification</th>
+                    <th>Verify</th>
                     <th>Profile</th>
+                    
                 </tr>
             <?php
                 include('dbcon.php');
@@ -49,8 +52,12 @@
                     <td> <?= $row['Name']; ?> </td>
                     <td> <?= $row['Email']; ?> </td>
                     <td> <?= $row['Course']; ?> </td>
-                    <td> 
-                    <a href="profile.php?id=<?= $key; ?>" class = "btn btn btn-primary" style="color=black"> View </a>
+                    <td> <?= $row['verify'];?></td>
+                    <td>    
+                    <a href="verify_page.php?id=<?= $key;?>" class = "btn btn btn-primary" style="color=black"> Verify </a>
+                    </td>
+                    <td>    
+                    <a href="profile.php?id=<?= $key;?>" class = "btn btn btn-primary" style="color=black"> View </a>
                     </td>
                 </tr>                
             <?php

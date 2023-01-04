@@ -22,7 +22,7 @@
 	if(isset($_GET['id']))
 	{
 			$key_child = $_GET['id'];
-			$ref_table = 'verify';
+			$ref_table = 'User';
 			$getdata = $database->getReference($ref_table)->getChild($key_child)->getValue();
 			if($getdata > 0)
 			{
@@ -30,6 +30,8 @@
         <form name="form1" method="post" action="verification_code.php"  style="height:500px;">
 		<table>
 		<input type="hidden" name = "id" value = "<?=$key_child;?>">
+		<input type ="hidden" name = "verify" value = "Verified">
+		<input type ="hidden" name = "not_verify" value = "Not Verified">
 
         <tr> 
 			<td>Student Number:</td>
@@ -78,9 +80,8 @@
 		</table>
 		<center>
 		<div id="btns">
-            <button type="submit" name="verify_contact" id = "view_btn" class="btn btn-primary"> Verify </button>
-			<input type="button" onclick="window.location.href='view_grades.php?id=<?=$key_child;?>'" id="view_btn" value="View Grades"/>
-			<input type="button" onclick="window.location.href='add_grades.php?id=<?=$key_child;?>'" id="add_grade_btn" value="Add Grades"/>
+            <button type="submit" name="yes_verify" id = "view_btn" class="btn btn-primary"> Verify </button>
+			<button type="submit" name="no_verify" id = "view_btn" class="btn btn-primary"> Not Verify </button>
 		</div>
 		</center>
 	</form>

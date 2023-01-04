@@ -75,8 +75,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Remark</th>
                                         <th>Add</th>
@@ -104,6 +104,7 @@
                                                     <td> <?= $row['Course']; ?> </td>
                                                     <td> <?= $row['Email']; ?> </td>
                                                     <td> <?= $row['Name']; ?> </td>
+                                                    
                                                     <?php
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -154,8 +155,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -181,8 +182,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -231,8 +232,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -259,8 +260,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -309,8 +310,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -337,8 +338,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -387,8 +388,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -414,8 +415,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -464,8 +465,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -491,8 +492,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -542,8 +543,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -569,8 +570,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -619,8 +620,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -646,8 +647,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -696,8 +697,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -723,8 +724,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -774,8 +775,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -801,8 +802,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>              
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>              
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -956,8 +957,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -984,8 +985,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -1037,8 +1038,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -1064,8 +1065,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -1116,8 +1117,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -1144,8 +1145,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -1195,8 +1196,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -1223,8 +1224,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -1274,8 +1275,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -1301,8 +1302,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -1352,8 +1353,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -1379,8 +1380,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -1430,8 +1431,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -1457,8 +1458,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -1508,8 +1509,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -1535,8 +1536,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -1586,8 +1587,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -1613,8 +1614,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -1665,8 +1666,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -1692,8 +1693,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -1808,8 +1809,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -1836,8 +1837,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') 
                                             {
@@ -1892,8 +1893,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -1919,8 +1920,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -1971,8 +1972,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -1999,8 +2000,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -2050,8 +2051,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -2078,8 +2079,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -2129,8 +2130,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -2156,8 +2157,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -2207,8 +2208,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -2234,8 +2235,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     < <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -2285,8 +2286,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -2312,8 +2313,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -2363,8 +2364,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -2390,8 +2391,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -2441,8 +2442,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -2468,8 +2469,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -2520,8 +2521,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -2547,8 +2548,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -2628,8 +2629,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -2656,8 +2657,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
@@ -2710,8 +2711,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -2737,8 +2738,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -2789,8 +2790,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                         
@@ -2818,8 +2819,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -2869,8 +2870,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -2897,8 +2898,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -2948,8 +2949,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -2975,8 +2976,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -3026,8 +3027,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -3053,8 +3054,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -3104,8 +3105,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -3131,8 +3132,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -3182,8 +3183,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -3209,8 +3210,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -3260,8 +3261,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -3287,8 +3288,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -3338,8 +3339,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -3365,8 +3366,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -3448,8 +3449,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -3476,8 +3477,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -3529,8 +3530,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -3556,8 +3557,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -3608,8 +3609,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                         
@@ -3637,8 +3638,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -3688,8 +3689,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -3716,8 +3717,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <<?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -3767,8 +3768,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -3794,8 +3795,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -3845,8 +3846,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -3872,8 +3873,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -3923,8 +3924,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -3950,8 +3951,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
@@ -4033,8 +4034,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -4061,8 +4062,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -4114,8 +4115,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -4141,8 +4142,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -4193,8 +4194,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                         
@@ -4222,8 +4223,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -4273,8 +4274,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -4301,8 +4302,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -4352,8 +4353,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -4379,8 +4380,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -4430,8 +4431,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -4457,8 +4458,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -4508,8 +4509,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -4535,8 +4536,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -4617,8 +4618,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -4645,8 +4646,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -4697,8 +4698,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -4724,8 +4725,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -4776,8 +4777,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                         
@@ -4805,8 +4806,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -4856,8 +4857,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -4884,8 +4885,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -4935,8 +4936,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -4962,8 +4963,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -5039,8 +5040,8 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
                                     </tr>
@@ -5067,8 +5068,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
