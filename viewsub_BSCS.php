@@ -83,13 +83,22 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BSCS/first_year/first_sem/CS111';
-                                                $fetchdata = $database->getReference($ref_table)->getValue();
+                                    $reference = 'course_curriculum/bscs/first_year/first_sem/subject1'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                    $ref_table = 'Subjects/BSCS/first_year/first_sem/CS111';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
                                     if ($fetchdata > 0) {
                                         $i = 0;
                                         foreach ($fetchdata as $key_child => $row) {
                                     ?>
-                                    
+                                            
                                                 <tr>
                                                     <td> <?= $row['Student_number']; ?> </td>
                                                     <td> <?= $row['Course']; ?> </td>
@@ -101,7 +110,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_CS111.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -152,6 +161,15 @@
                                     </tr>
                                     <?php 
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/first_year/first_sem/subject2'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/first_year/first_sem/CS112';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -171,7 +189,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_CS112.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -220,6 +238,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/first_year/first_sem/subject3'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/first_year/first_sem/GE100';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -240,7 +267,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_GE100.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -289,6 +316,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/first_year/first_sem/subject4'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/first_year/first_sem/GE101';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -309,7 +345,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_GE101.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -358,6 +394,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/first_year/first_sem/subject5'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/first_year/first_sem/GE102';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -377,7 +422,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_GE102.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -426,6 +471,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/first_year/first_sem/subject6'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/first_year/first_sem/GE103';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -445,7 +499,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_GE103.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -495,6 +549,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/first_year/first_sem/subject7'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/first_year/first_sem/FIL111';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -514,7 +577,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_FIL111.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -563,6 +626,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/first_year/first_sem/subject8'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/first_year/first_sem/REED111';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -582,7 +654,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_REED111.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -631,6 +703,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/first_year/first_sem/subject9'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/first_year/first_sem/PE111';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -650,7 +731,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_PE111.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -700,6 +781,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/first_year/first_sem/subject10'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/first_year/first_sem/NSTP1';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -719,7 +809,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/11_addgrades_NSTP1.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -873,6 +963,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/first_year/second_sem/subject1'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/first_year/second_sem/CS121';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -893,7 +992,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_CS121.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -945,6 +1044,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/first_year/second_sem/subject2'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/first_year/second_sem/CS122';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -964,7 +1072,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_CS122.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1015,6 +1123,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/first_year/second_sem/subject3'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/first_year/second_sem/GE104';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -1035,7 +1152,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_GE104.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1085,6 +1202,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/first_year/second_sem/subject4'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/first_year/second_sem/GE105';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -1105,7 +1231,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_GE105.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1155,6 +1281,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/first_year/second_sem/subject5'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/first_year/second_sem/GE106';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -1174,7 +1309,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_GE106.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1224,6 +1359,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/first_year/second_sem/subject6'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/first_year/second_sem/GE107';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -1243,7 +1387,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_GE107.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1293,6 +1437,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/first_year/second_sem/subject7'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/first_year/second_sem/FIL121';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -1312,7 +1465,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_FIL121.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1362,6 +1515,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/first_year/second_sem/subject8'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/first_year/second_sem/REED121';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -1381,7 +1543,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_REED121.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1431,6 +1593,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/first_year/second_sem/subject9'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/first_year/second_sem/PE121';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -1450,7 +1621,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_PE121.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1501,6 +1672,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/first_year/second_sem/subject10'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/first_year/second_sem/NSTP2';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -1520,7 +1700,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/12_addgrades_NSTP2.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1635,6 +1815,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/second_year/first_sem/subject1'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/second_year/first_sem/CS211';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -1656,7 +1845,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_CS211.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1710,6 +1899,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/second_year/first_sem/subject2'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/second_year/first_sem/CS212';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -1729,7 +1927,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_CS212.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1780,6 +1978,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/second_year/first_sem/subject3'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/second_year/first_sem/CS213';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -1800,7 +2007,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_CS213.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1850,6 +2057,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/second_year/first_sem/subject4'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/second_year/first_sem/CS214';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -1870,7 +2086,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_CS214.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1920,6 +2136,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/second_year/first_sem/subject5'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/second_year/first_sem/GE108';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -1939,7 +2164,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_GE108.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1989,6 +2214,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/second_year/first_sem/subject6'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/second_year/first_sem/GE109';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -2008,7 +2242,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_GE109.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2058,6 +2292,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/second_year/first_sem/subject7'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/second_year/first_sem/FIL211';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -2077,7 +2320,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_FIL211.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2127,6 +2370,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/second_year/first_sem/subject8'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/second_year/first_sem/EL211';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -2146,7 +2398,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_EL211.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2196,6 +2448,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/second_year/first_sem/subject9'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/second_year/first_sem/REED211';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -2215,7 +2476,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_REED211.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2266,6 +2527,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/second_year/first_sem/subject10'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/second_year/first_sem/PE211';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -2285,7 +2555,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/21_addgrades_PE211.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2365,6 +2635,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/second_year/second_sem/subject1'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/second_year/second_sem/CS221';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -2386,7 +2665,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_CS221.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2438,6 +2717,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/second_year/second_sem/subject2'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/second_year/second_sem/CS222';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -2457,7 +2745,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_CS222.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2509,6 +2797,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/second_year/second_sem/subject3'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/second_year/second_sem/CS223';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -2529,7 +2826,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_CS223.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2579,6 +2876,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/second_year/second_sem/subject4'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/second_year/second_sem/CS224';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -2599,7 +2905,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_CS224.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2649,6 +2955,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/second_year/second_sem/subject5'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/second_year/second_sem/GE110';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -2668,7 +2983,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_GE110.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2718,6 +3033,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/second_year/second_sem/subject6'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/second_year/second_sem/GE111';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -2737,7 +3061,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_GE111.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2787,6 +3111,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/second_year/second_sem/subject7'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/second_year/second_sem/EL221';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -2806,7 +3139,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_EL221.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2856,6 +3189,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/second_year/second_sem/subject8'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/second_year/second_sem/EL222';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -2875,7 +3217,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_EL222.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2925,6 +3267,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/second_year/second_sem/subject9'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/second_year/second_sem/REED221';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -2943,8 +3294,7 @@
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_REED221.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <td> <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a><a href="addgrades/22_addgrades_REED221.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2995,6 +3345,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/second_year/second_sem/subject10'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/second_year/second_sem/PE221';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -3014,7 +3373,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/22_addgrades_PE221.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3096,6 +3455,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/third_year/first_sem/subject1'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/third_year/first_sem/CS311';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -3116,7 +3484,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/31_addgrades_CS311.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3168,6 +3536,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/third_year/first_sem/subject2'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/third_year/first_sem/CS312';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -3187,7 +3564,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/31_addgrades_CS312.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3239,6 +3616,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/third_year/first_sem/subject3'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/third_year/first_sem/CS313';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -3259,7 +3645,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/31_addgrades_CS313.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3309,6 +3695,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/third_year/first_sem/subject4'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/third_year/first_sem/CS314';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -3329,7 +3724,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/31_addgrades_CS314.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3379,6 +3774,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/third_year/first_sem/subject5'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/third_year/first_sem/CS315';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -3398,7 +3802,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/31_addgrades_CS315.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3448,6 +3852,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/third_year/first_sem/subject6'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/third_year/first_sem/EL311';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -3467,7 +3880,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/31_addgrades_EL311.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3517,6 +3930,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/third_year/first_sem/subject7'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/third_year/first_sem/EL312';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -3537,7 +3959,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/31_addgrades_CS312.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3578,6 +4000,9 @@
     </div>
 
 
+
+<!-- asdsadjiowqdjasd boundaryboundaryboundaryboundaryboundaryboundaryboundaryboundaryboundaryboundaryboundaryboundaryboundary -->
+
 	<div id="npup5" class="hidden">
       <h3>3rd Year, 2nd Sem</h3>
       <center><!-- COPY FROM HERE -->    
@@ -3615,6 +4040,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/third_year/second_sem/subject1'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/third_year/second_sem/CS321';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -3635,7 +4069,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/32_addgrades_CS321.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3687,6 +4121,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/third_year/second_sem/subject2'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/third_year/second_sem/CS322';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -3706,7 +4149,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/32_addgrades_CS322.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3758,6 +4201,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/third_year/second_sem/subject3'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/third_year/second_sem/CS323';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -3778,7 +4230,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/32_addgrades_CS323.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3828,6 +4280,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/third_year/second_sem/subject4'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/third_year/second_sem/CS324';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -3848,7 +4309,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/32_addgrades_CS324.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3898,6 +4359,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/third_year/second_sem/subject5'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/third_year/second_sem/CS325';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -3917,7 +4387,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/32_addgrades_CS325.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3967,6 +4437,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/third_year/second_sem/subject6'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/third_year/second_sem/CS326';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -3986,7 +4465,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/32_addgrades_CS326.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -4036,6 +4515,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/third_year/second_sem/subject7'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/third_year/second_sem/CS327';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -4055,7 +4543,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/32_addgrades_CS327.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -4136,6 +4624,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/fourth_year/first_sem/subject1'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/fourth_year/first_sem/CS411';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -4156,8 +4653,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/41_addgrades_CS411.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </tr>
                                                     <?php
                                             } else {
@@ -4208,6 +4704,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/fourth_year/first_sem/subject2'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/fourth_year/first_sem/CS412';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -4227,7 +4732,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/41_addgrades_CS412.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -4279,6 +4784,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/fourth_year/first_sem/subject3'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/fourth_year/first_sem/CS413';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -4299,7 +4813,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/41_addgrades_CS413.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -4349,6 +4863,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/fourth_year/first_sem/subject4'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/fourth_year/first_sem/CS414';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -4369,7 +4892,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/41_addgrades_CS414.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -4419,6 +4942,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/fourth_year/first_sem/subject5'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/fourth_year/first_sem/CS415';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -4438,7 +4970,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/41_addgrades_CS415.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -4514,6 +5046,15 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
+                                    $reference = 'course_curriculum/bscs/fourth_year/second_sem/subject1'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
                                                 $ref_table = 'Subjects/BSCS/fourth_year/second_sem/CS421';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
@@ -4534,7 +5075,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BSCS/42_addgrades_CS421.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php

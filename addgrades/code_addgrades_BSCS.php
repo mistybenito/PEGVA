@@ -3,7 +3,7 @@ session_start();
 include('dbcon.php');
 //first year first sem
 //CS111
-if(isset($_POST['add_grades_cs111']))
+if(isset($_POST['add_grades_CS111']))
 {
     $key = $_POST['id'];
     $grade = $_POST['grade1'];
@@ -44,8 +44,8 @@ if(isset($_POST['add_grades_cs111']))
 
 }
 
-//cs112
-if(isset($_POST['add_grades_cs112']))
+//CS112
+if(isset($_POST['add_grades_CS112']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -88,9 +88,9 @@ if(isset($_POST['add_grades_cs112']))
 }
 
 
-//ge100
+//GE100
 
-if(isset($_POST['add_grades_ge100']))
+if(isset($_POST['add_grades_GE100']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -132,9 +132,9 @@ if(isset($_POST['add_grades_ge100']))
 }
 
 
-//ge101
+//GE101
 
-if(isset($_POST['add_grades_ge101']))
+if(isset($_POST['add_grades_GE101']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -177,9 +177,9 @@ if(isset($_POST['add_grades_ge101']))
     }
 }
 
-//ge102
+//GE102
 
-if(isset($_POST['add_grades_ge102']))
+if(isset($_POST['add_grades_GE102']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -221,9 +221,9 @@ if(isset($_POST['add_grades_ge102']))
     }
     }
 
-//ge103
+//GE103
 
-if(isset($_POST['add_grades_ge103']))
+if(isset($_POST['add_grades_GE103']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -314,7 +314,7 @@ if(isset($_POST['add_grades_fil111']))
 
     //reed111
 
-if(isset($_POST['add_grades_reed111']))
+if(isset($_POST['add_grades_REED111']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -359,7 +359,7 @@ if(isset($_POST['add_grades_reed111']))
 
         //pe111
 
-if(isset($_POST['add_grades_pe111']))
+if(isset($_POST['add_grades_PE111']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -405,7 +405,7 @@ if(isset($_POST['add_grades_pe111']))
 
       //NSTp1
 
-if(isset($_POST['add_grades_nstp1']))
+if(isset($_POST['add_grades_NSTP1']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -453,8 +453,8 @@ if(isset($_POST['add_grades_nstp1']))
 
 
 
-//cs121
-if(isset($_POST['add_grades_cs121']))
+//CS121
+if(isset($_POST['add_grades_CS121']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -497,8 +497,8 @@ if(isset($_POST['add_grades_cs121']))
     }
     }
 
-    //cs122
-if(isset($_POST['add_grades_cs122']))
+    //CS122
+if(isset($_POST['add_grades_CS122']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -541,8 +541,8 @@ if(isset($_POST['add_grades_cs122']))
     }
     }
 
-    //ge104
-if(isset($_POST['add_grades_ge104']))
+    //GE104
+if(isset($_POST['add_grades_GE104']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -587,8 +587,8 @@ if(isset($_POST['add_grades_ge104']))
 
 
 
-    //ge105
-if(isset($_POST['add_grades_ge105']))
+    //GE105
+if(isset($_POST['add_grades_GE105']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -632,8 +632,8 @@ if(isset($_POST['add_grades_ge105']))
     }
 
 
-//ge1046
-if(isset($_POST['add_grades_ge106']))
+//GE1046
+if(isset($_POST['add_grades_GE106']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -677,8 +677,8 @@ if(isset($_POST['add_grades_ge106']))
     }
 
 
-    //ge107
-if(isset($_POST['add_grades_ge107']))
+    //GE107
+if(isset($_POST['add_grades_GE107']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -769,7 +769,7 @@ if(isset($_POST['add_grades_fil121']))
 
 
      //REED121
-if(isset($_POST['add_grades_reed121']))
+if(isset($_POST['add_grades_REED121']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -816,7 +816,7 @@ if(isset($_POST['add_grades_reed121']))
 
 
  //pe121
- if(isset($_POST['add_grades_pe121']))
+ if(isset($_POST['add_grades_PE121']))
  {
      $key = $_POST['id'];
      $course = $_POST['Course'];
@@ -862,7 +862,7 @@ if(isset($_POST['add_grades_reed121']))
 
 
      //nstp2
- if(isset($_POST['add_grades_nstp2']))
+ if(isset($_POST['add_grades_NSTP2']))
  {
      $key = $_POST['id'];
      $course = $_POST['Course'];
@@ -911,7 +911,7 @@ if(isset($_POST['add_grades_reed121']))
      // second year 1st sem////////////////////////////////////
 
      //CS211
- if(isset($_POST['add_grades_cs211']))
+ if(isset($_POST['add_grades_CS211']))
  {
      $key = $_POST['id'];
      $course = $_POST['Course'];
@@ -955,7 +955,7 @@ if(isset($_POST['add_grades_reed121']))
      }
 
      //CS212
- if(isset($_POST['add_grades_cs212']))
+ if(isset($_POST['add_grades_CS212']))
  {
      $key = $_POST['id'];
      $course = $_POST['Course'];
@@ -999,7 +999,7 @@ if(isset($_POST['add_grades_reed121']))
      }
 
      //CS213
- if(isset($_POST['add_grades_cs213']))
+ if(isset($_POST['add_grades_CS213']))
  {
      $key = $_POST['id'];
      $course = $_POST['Course'];
@@ -1044,7 +1044,7 @@ if(isset($_POST['add_grades_reed121']))
 
 
      //CS214
- if(isset($_POST['add_grades_cs214']))
+ if(isset($_POST['add_grades_CS214']))
  {
      $key = $_POST['id'];
      $course = $_POST['Course'];
@@ -1088,8 +1088,8 @@ if(isset($_POST['add_grades_reed121']))
      }
 
 
-     //ge108
- if(isset($_POST['add_grades_ge108']))
+     //GE108
+ if(isset($_POST['add_grades_GE108']))
  {
      $key = $_POST['id'];
      $course = $_POST['Course'];
@@ -1134,8 +1134,8 @@ if(isset($_POST['add_grades_reed121']))
 
 
 
-     //ge109
- if(isset($_POST['add_grades_ge109']))
+     //GE109
+ if(isset($_POST['add_grades_GE109']))
  {
      $key = $_POST['id'];
      $course = $_POST['Course'];
@@ -1224,7 +1224,7 @@ if(isset($_POST['add_grades_reed121']))
      }
 
 //El211
- if(isset($_POST['add_grades_el211']))
+ if(isset($_POST['add_grades_EL211']))
  {
      $key = $_POST['id'];
      $course = $_POST['Course'];
@@ -1268,7 +1268,7 @@ if(isset($_POST['add_grades_reed121']))
      }
 
      //REED211
- if(isset($_POST['add_grades_reed211']))
+ if(isset($_POST['add_grades_REED211']))
  {
      $key = $_POST['id'];
      $course = $_POST['Course'];
@@ -1313,7 +1313,7 @@ if(isset($_POST['add_grades_reed121']))
 
 
      //pe211
- if(isset($_POST['add_grades_pe211']))
+ if(isset($_POST['add_grades_PE211']))
  {
      $key = $_POST['id'];
      $course = $_POST['Course'];
@@ -1360,8 +1360,8 @@ if(isset($_POST['add_grades_reed121']))
      // SECOND YEAR 2ND SEM/////////////////////////////////////////////////////
 
 
-      //cs221
- if(isset($_POST['add_grades_cs221']))
+      //CS221
+ if(isset($_POST['add_grades_CS221']))
  {
      $key = $_POST['id'];
      $course = $_POST['Course'];
@@ -1404,8 +1404,8 @@ if(isset($_POST['add_grades_reed121']))
      }
      }
 
-     //cs222
- if(isset($_POST['add_grades_cs222']))
+     //CS222
+ if(isset($_POST['add_grades_CS222']))
  {
      $key = $_POST['id'];
      $course = $_POST['Course'];
@@ -1449,8 +1449,8 @@ if(isset($_POST['add_grades_reed121']))
      }
 
 
-     //cs223
- if(isset($_POST['add_grades_cs223']))
+     //CS223
+ if(isset($_POST['add_grades_CS223']))
  {
      $key = $_POST['id'];
      $course = $_POST['Course'];
@@ -1493,8 +1493,8 @@ if(isset($_POST['add_grades_reed121']))
      }
      }
 
-//cs224
-if(isset($_POST['add_grades_cs224']))
+//CS224
+if(isset($_POST['add_grades_CS224']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -1538,8 +1538,8 @@ if(isset($_POST['add_grades_cs224']))
     }
 
 
-    //ge110
- if(isset($_POST['add_grades_ge110']))
+    //GE110
+ if(isset($_POST['add_grades_GE110']))
  {
      $key = $_POST['id'];
      $course = $_POST['Course'];
@@ -1584,8 +1584,8 @@ if(isset($_POST['add_grades_cs224']))
 
 
 
-     //ge111
- if(isset($_POST['add_grades_ge111']))
+     //GE111
+ if(isset($_POST['add_grades_GE111']))
  {
      $key = $_POST['id'];
      $course = $_POST['Course'];
@@ -1630,7 +1630,7 @@ if(isset($_POST['add_grades_cs224']))
 
 
      //EL221
- if(isset($_POST['add_grades_el221']))
+ if(isset($_POST['add_grades_EL221']))
  {
      $key = $_POST['id'];
      $course = $_POST['Course'];
@@ -1675,7 +1675,7 @@ if(isset($_POST['add_grades_cs224']))
 
 
      //EL222
- if(isset($_POST['add_grades_el222']))
+ if(isset($_POST['add_grades_EL222']))
  {
      $key = $_POST['id'];
      $course = $_POST['Course'];
@@ -1720,7 +1720,7 @@ if(isset($_POST['add_grades_cs224']))
 
 
      //REED221
- if(isset($_POST['add_grades_reed221']))
+ if(isset($_POST['add_grades_REED221']))
  {
      $key = $_POST['id'];
      $course = $_POST['Course'];
@@ -1764,7 +1764,7 @@ if(isset($_POST['add_grades_cs224']))
      }
 
      //pe221
- if(isset($_POST['add_grades_pe221']))
+ if(isset($_POST['add_grades_PE221']))
  {
      $key = $_POST['id'];
      $course = $_POST['Course'];
@@ -1810,7 +1810,7 @@ if(isset($_POST['add_grades_cs224']))
      // THIRD YEAR 1ST SEM
 
      //CS311
- if(isset($_POST['add_grades_cs311']))
+ if(isset($_POST['add_grades_CS311']))
  {
      $key = $_POST['id'];
      $course = $_POST['Course'];
@@ -1855,7 +1855,7 @@ if(isset($_POST['add_grades_cs224']))
 
 
      //CS312
- if(isset($_POST['add_grades_cs312']))
+ if(isset($_POST['add_grades_CS312']))
  {
      $key = $_POST['id'];
      $course = $_POST['Course'];
@@ -1900,7 +1900,7 @@ if(isset($_POST['add_grades_cs224']))
 
 
      //CS313
- if(isset($_POST['add_grades_cs313']))
+ if(isset($_POST['add_grades_CS313']))
  {
      $key = $_POST['id'];
      $course = $_POST['Course'];
@@ -1944,7 +1944,7 @@ if(isset($_POST['add_grades_cs224']))
      }
 
      //CS314
- if(isset($_POST['add_grades_cs314']))
+ if(isset($_POST['add_grades_CS314']))
  {
      $key = $_POST['id'];
      $course = $_POST['Course'];
@@ -1988,7 +1988,7 @@ if(isset($_POST['add_grades_cs224']))
      }
 
 //CS315
-if(isset($_POST['add_grades_cs315']))
+if(isset($_POST['add_grades_CS315']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -2033,7 +2033,7 @@ if(isset($_POST['add_grades_cs315']))
 
 
     //el311
-if(isset($_POST['add_grades_el311']))
+if(isset($_POST['add_grades_EL311']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -2077,7 +2077,7 @@ if(isset($_POST['add_grades_el311']))
     }
 
     //el312
-if(isset($_POST['add_grades_el312']))
+if(isset($_POST['add_grades_EL312']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -2124,8 +2124,8 @@ if(isset($_POST['add_grades_el312']))
 
 // THIRD YEAR SECOND SEM
 
-//cs321
-if(isset($_POST['add_grades_cs321']))
+//CS321
+if(isset($_POST['add_grades_CS321']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -2168,8 +2168,8 @@ if(isset($_POST['add_grades_cs321']))
     }
     }
 
-    //cs322
-if(isset($_POST['add_grades_cs322']))
+    //CS322
+if(isset($_POST['add_grades_CS322']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -2212,8 +2212,8 @@ if(isset($_POST['add_grades_cs322']))
     }
     }
 
-    //cs323
-if(isset($_POST['add_grades_cs323']))
+    //CS323
+if(isset($_POST['add_grades_CS323']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -2256,8 +2256,8 @@ if(isset($_POST['add_grades_cs323']))
     }
     }
 
-    //cs324
-if(isset($_POST['add_grades_cs324']))
+    //CS324
+if(isset($_POST['add_grades_CS324']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -2300,8 +2300,8 @@ if(isset($_POST['add_grades_cs324']))
     }
     }
 
-    //cs325
-if(isset($_POST['add_grades_cs325']))
+    //CS325
+if(isset($_POST['add_grades_CS325']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -2344,8 +2344,8 @@ if(isset($_POST['add_grades_cs325']))
     }
     }
 
-    //cs326
-if(isset($_POST['add_grades_cs326']))
+    //CS326
+if(isset($_POST['add_grades_CS326']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -2388,8 +2388,8 @@ if(isset($_POST['add_grades_cs326']))
     }
     }
 
-    //cs327
-if(isset($_POST['add_grades_cs327']))
+    //CS327
+if(isset($_POST['add_grades_CS327']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -2435,8 +2435,8 @@ if(isset($_POST['add_grades_cs327']))
 
     // fourth year first sem
 
-    //cs411
-if(isset($_POST['add_grades_cs411']))
+    //CS411
+if(isset($_POST['add_grades_CS411']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -2479,8 +2479,8 @@ if(isset($_POST['add_grades_cs411']))
     }
     }
 
-    //cs412
-if(isset($_POST['add_grades_cs412']))
+    //CS412
+if(isset($_POST['add_grades_CS412']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -2523,8 +2523,8 @@ if(isset($_POST['add_grades_cs412']))
     }
     }
 
-    //cs413
-if(isset($_POST['add_grades_cs413']))
+    //CS413
+if(isset($_POST['add_grades_CS413']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -2567,8 +2567,8 @@ if(isset($_POST['add_grades_cs413']))
     }
     }
 
-    //cs414
-if(isset($_POST['add_grades_cs414']))
+    //CS414
+if(isset($_POST['add_grades_CS414']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -2611,8 +2611,8 @@ if(isset($_POST['add_grades_cs414']))
     }
     }
 
-    //cs415
-if(isset($_POST['add_grades_cs415']))
+    //CS415
+if(isset($_POST['add_grades_CS415']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
@@ -2657,8 +2657,8 @@ if(isset($_POST['add_grades_cs415']))
 
     // fourt year second sem
 
-    //cs421
-if(isset($_POST['add_grades_cs421']))
+    //CS421
+if(isset($_POST['add_grades_CS421']))
 {
     $key = $_POST['id'];
     $course = $_POST['Course'];
