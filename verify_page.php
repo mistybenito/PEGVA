@@ -32,6 +32,7 @@
 		<input type="hidden" name = "id" value = "<?=$key_child;?>">
 		<input type ="hidden" name = "verify" value = "Verified">
 		<input type ="hidden" name = "not_verify" value = "Not Verified">
+		<input type ="hidden" name = "Grade" value = "0">
 
         <tr> 
 			<td>Student Number:</td>
@@ -77,6 +78,11 @@
 				<input type="text" id="num" name="Father_number" value = "<?=$getdata['Father_number']; ?>" class = "form-control">
 			</td>
 		</tr>
+
+		<td>Year(First Year, Second Year, Third Year, Fourth Year) </td>
+		<td><input type = "text" id = "year" name ="Year"></input></td>
+		<td>Semester(First, Second)</td>
+		<td><input type="text" id ="sem" name = "Semester"></input></td>
 		</table>
 		<center>
 		<div id="btns">
