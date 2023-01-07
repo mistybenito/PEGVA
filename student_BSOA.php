@@ -14,7 +14,7 @@
     </head>
     <body>
         <h1>BSOA Student List</h1>
-        <div id="div1">  
+        <div id="div1">     
             <input type="text" placeholder="Search.." class="text-search" >
             <label for="search" type="submit" class="searchbtn">
                 <i class="fa fa-search"></i>
@@ -28,7 +28,10 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Course</th>
+                    <th>Verification</th>
+                    <th>Verify</th>
                     <th>Profile</th>
+                    
                 </tr>
             <?php
                 include('dbcon.php');
@@ -41,15 +44,24 @@
                 {
             ?>
             <tr>
-                <td> <?= $row['Student_number'];?> </td>
-                <td> <?= $row['Name'];?> </td>
-                <td> <?= $row['Email'];?> </td>
-                <td> <?= $row['Course'];?> </td>
-                <td> 
-                <a href="profile.php?id=<?=$key;?>" class = "btn btn btn-primary" style="color=black"> View </a>
-                </td>
-            </tr>
+                <?php
+                    if ($row['Course'] == "Bachelor of Science in Office Administration")
+                     {
+                ?>
+                    <td> <?= $row['Student_number']; ?> </td>
+                    <td> <?= $row['Name']; ?> </td>
+                    <td> <?= $row['Email']; ?> </td>
+                    <td> <?= $row['Course']; ?> </td>
+                    <td> <?= $row['verify'];?></td>
+                    <td>    
+                    <a href="verify_page.php?id=<?= $key;?>" class = "btn btn btn-primary" style="color=black"> Verify </a>
+                    </td>
+                    <td>    
+                    <a href="profile.php?id=<?= $key;?>" class = "btn btn btn-primary" style="color=black"> View </a>
+                    </td>
+                </tr>                
             <?php
+                    }
                 }
                 }
                 else

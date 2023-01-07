@@ -42,7 +42,7 @@
             ?>
             <tr>
             <?php
-                    if ($row['Course'] == "Bachelor of Business and Accounting")
+                    if ($row['Course'] == "Bachelor of Science in Business Administration")
                      {
                 ?>
                     <td> <?= $row['Student_number']; ?> </td>
