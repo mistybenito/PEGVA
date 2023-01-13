@@ -42,6 +42,8 @@
 	<center><button type="submit" name="add_subject_bscs_1y_2s" id="update"  value = "add_subject"> Add Subject </button></center></div>
 </fieldset>
 </div>
-<p id="footer">All content copyright © 2022, PEGVA.</p>
+<div  id="footer">
+    <p>All content copyright © 2022, PEGVA.</p>
+</div>	
 </body>
 </html>

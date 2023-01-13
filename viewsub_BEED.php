@@ -45,7 +45,7 @@
             <?// CONTENT SELECTION FOR GRADES?>
             <div class="content-selection">
             <select id="mySelect" onchange="oneone.doSelect(this);">
-            <option value="">Subject Code</option><!-- here -->
+                <option value="">Subject Code</option><!-- here -->
                 <?php
                 include('dbcon.php');
                 $ref_table = 'course_curriculum/beed/first_year/first_sem';
@@ -61,6 +61,13 @@
                 ?>
             </select><!-- to here here -->
             </div>
+
+
+
+
+
+
+
             <?// CONTENT SELECTION FOR GRADES?>
             <div id ="one-one">
                         <div id ="oneone0" class = "hidden">
@@ -68,54 +75,70 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Remark</th>
-                                        <th>Add</th>
+                                        <th>Add/Edit</th>
+                                        <th>Delete</th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/first_year/first_sem/GE100';
-                                                $fetchdata = $database->getReference($ref_table)->getValue();
+                                    $reference = 'course_curriculum/beed/first_year/first_sem/subject1'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?= $scode = $fetch['code']; ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title']; ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units']; ?>">                              
+                                        <?php
+                                    }//to HERE
+                                    $ref_table = 'Subjects/BEED/first_year/first_sem/'.$scode;
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
                                     if ($fetchdata > 0) {
                                         $i = 0;
                                         foreach ($fetchdata as $key_child => $row) {
                                     ?>
-                                    
+                                            
                                                 <tr>
                                                     <td> <?= $row['Student_number']; ?> </td>
                                                     <td> <?= $row['Course']; ?> </td>
                                                     <td> <?= $row['Email']; ?> </td>
                                                     <td> <?= $row['Name']; ?> </td>
+                                                    
                                                     <?php
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/11_addgrades_GE100.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
+                                                        <td> N/A </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade1']; ?></td>
+                                                        <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade1'] >= "75") 
+                                                if ($row['grade01'] >= "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade1'] < "75") 
+                                                elseif ($row['grade01'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
+                                                        <td> Delete </td>
+                                                        
                                                         <?php
                                             }
                                         }
@@ -133,19 +156,29 @@
 
 <?//boundary/////////////////////////////////////////////////////////////////////////////////////////////////////////////?>
 
-                        <div id ="oneone1" class = "hidden"> <!--div class here-->
+                        <div id ="oneone1" class = "hidden">
                             <table>
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php 
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/first_year/first_sem/GE101';
+                                    $reference = 'course_curriculum/beed/first_year/first_sem/subject2'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/first_year/first_sem//'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -156,36 +189,40 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/11_addgrades_GE101.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade2']; ?></td>
+                                                        <td> <?= $row['grade02']; ?></td>
                                                         <?php
-                                                if ($row['grade2'] > "75") 
+                                                if ($row['grade02'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade2'] < "75") 
+                                                elseif ($row['grade02'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
+                                                        <td> Delete </td>
+                                                            
                                                         <?php
                                             }
                                         }
@@ -198,7 +235,7 @@
                                     }
                                     ?> <!-- to here -->
                                 </table>
-                        </div> <!--div class here-->
+                        </div>
 
                         <?//boundary?>
                         <div id ="oneone2" class = "hidden">
@@ -206,14 +243,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/first_year/first_sem/GE102';
+                                    $reference = 'course_curriculum/beed/first_year/first_sem/'.$scode; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/first_year/first_sem/GE100';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -225,36 +272,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/11_addgrades_GE102.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade3']; ?></td>
+                                                        <td> <?= $row['grade03']; ?></td>
                                                         <?php
-                                                if ($row['grade3'] > "75") 
+                                                if ($row['grade03'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade3'] < "75") 
+                                                elseif ($row['grade03'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -275,14 +324,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/first_year/first_sem/GE103';
+                                    $reference = 'course_curriculum/beed/first_year/first_sem/'.$scode; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/first_year/first_sem/GE101';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -294,36 +353,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/11_addgrades_GE103.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade4']; ?></td>
+                                                        <td> <?= $row['grade04']; ?></td>
                                                         <?php
-                                                if ($row['grade4'] > "75") 
+                                                if ($row['grade04'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade4'] < "75") 
+                                                elseif ($row['grade04'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -344,14 +405,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/first_year/first_sem/ENG111';
+                                    $reference = 'course_curriculum/beed/first_year/first_sem/'.$scode; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/first_year/first_sem/GE102';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -362,36 +433,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/11_addgrades_ENG111.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade5']; ?></td>
+                                                        <td> <?= $row['grade05']; ?></td>
                                                         <?php
-                                                if ($row['grade5'] > "75") 
+                                                if ($row['grade05'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade5'] < "75") 
+                                                elseif ($row['grade05'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -412,14 +485,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/first_year/first_sem/REED111';
+                                    $reference = 'course_curriculum/beed/first_year/first_sem/'.$scode; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/first_year/first_sem/GE103';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -430,36 +513,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/11_addgrades_REED111.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade6']; ?></td>
+                                                        <td> <?= $row['grade06']; ?></td>
                                                         <?php
-                                                if ($row['grade6'] > "75") 
+                                                if ($row['grade06'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade6'] < "75") 
+                                                elseif ($row['grade06'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -481,14 +566,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/first_year/first_sem/PE111';
+                                    $reference = 'course_curriculum/beed/first_year/first_sem/'.$scode; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/first_year/first_sem/FIL111';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -499,36 +594,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/11_addgrades_PE111.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade7']; ?></td>
+                                                        <td> <?= $row['grade07']; ?></td>
                                                         <?php
-                                                if ($row['grade7'] > "75") 
+                                                if ($row['grade07'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade7'] < "75") 
+                                                elseif ($row['grade07'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -541,7 +638,249 @@
                                     }
                                     ?> <!-- to here -->
                                 </table>
-                                </div>
+                        </div>
+
+                        <?//boundary for subject?>
+                        <div id ="oneone7" class = "hidden">
+                            <table>
+                                    <tr> 
+                                        <th>Student Number</th>
+                                        <th>Course</th>
+                                        <th>Email</th>
+                                        <th>Name</th>
+                                        <th>Grade</th>
+                                        <th>Add</th>
+                                        <th>Delete </th>
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $reference = 'course_curriculum/beed/first_year/first_sem/'.$scode; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/first_year/first_sem/REED111';
+                                                $fetchdata = $database->getReference($ref_table)->getValue();
+                                                    if($fetchdata > 0)
+                                                    {
+                                                    $i = 0;
+                                                    foreach($fetchdata as $key_child => $row)
+                                                    {
+                                                ?>
+                                                <tr>
+                                                    <td> <?= $row['Student_number'];?> </td>
+                                                    <td> <?= $row['Course'];?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
+                                                    <?php // here
+                                            if ($row['Grade'] == '0') {
+                                                    ?>
+                                                        <td> No Grades yet.</td>
+                                                        <td> N/A </td>
+                                                         <td> 
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        </td>
+                                                    </tr>
+                                                    <?php
+                                            } else {
+                                                    ?>
+                                                        <td> <?= $row['grade08']; ?></td>
+                                                        <?php
+                                                if ($row['grade08'] > "75") 
+                                                {
+                                                        ?>
+                                                            <td> Passed </td>
+                                                            <?php
+                                                } 
+                                                elseif ($row['grade08'] < "75") 
+                                                {
+                                                            ?>
+                                                            <td> Failed </td>
+                                                            <?php
+                                                }
+                                                            ?>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
+                                                        <?php
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "7"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?> <!-- to here -->
+                                </table>
+                        </div>
+
+                        <?//boundary for subject?>
+                        <div id ="oneone8" class = "hidden">
+                            <table>
+                                    <tr> 
+                                        <th>Student Number</th>
+                                        <th>Course</th>
+                                        <th>Email</th>
+                                        <th>Name</th>
+                                        <th>Grade</th>
+                                        <th>Add</th>
+                                        <th>Delete </th>
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $reference = 'course_curriculum/beed/first_year/first_sem/'.$scode; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/first_year/first_sem/PE111';
+                                                $fetchdata = $database->getReference($ref_table)->getValue();
+                                                    if($fetchdata > 0)
+                                                    {
+                                                    $i = 0;
+                                                    foreach($fetchdata as $key_child => $row)
+                                                    {
+                                                ?>
+                                                <tr>
+                                                    <td> <?= $row['Student_number'];?> </td>
+                                                    <td> <?= $row['Course'];?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
+                                                    <?php // here
+                                            if ($row['Grade'] == '0') {
+                                                    ?>
+                                                        <td> No Grades yet.</td>
+                                                        <td> N/A </td>
+                                                         <td> 
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        </td>
+                                                    </tr>
+                                                    <?php
+                                            } else {
+                                                    ?>
+                                                        <td> <?= $row['grade09']; ?></td>
+                                                        <?php
+                                                if ($row['grade09'] > "75") 
+                                                {
+                                                        ?>
+                                                            <td> Passed </td>
+                                                            <?php
+                                                } 
+                                                elseif ($row['grade09'] < "75") 
+                                                {
+                                                            ?>
+                                                            <td> Failed </td>
+                                                            <?php
+                                                }
+                                                            ?>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
+                                                        <?php
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "7"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?> <!-- to here -->
+                                </table>
+                        </div>
+
+
+                        <?//boundary for subject?>
+                        <div id ="oneone9" class = "hidden">
+                            <table>
+                                    <tr> 
+                                        <th>Student Number</th>
+                                        <th>Course</th>
+                                        <th>Email</th>
+                                        <th>Name</th>
+                                        <th>Grade</th>
+                                        <th>Add</th>
+                                        <th>Delete </th>
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $reference = 'course_curriculum/beed/first_year/first_sem/'.$scode; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/first_year/first_sem/NSTP1';
+                                                $fetchdata = $database->getReference($ref_table)->getValue();
+                                                    if($fetchdata > 0)
+                                                    {
+                                                    $i = 0;
+                                                    foreach($fetchdata as $key_child => $row)
+                                                    {
+                                                ?>
+                                                <tr>
+                                                    <td> <?= $row['Student_number'];?> </td>
+                                                    <td> <?= $row['Course'];?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>              
+                                                    <?php // here
+                                            if ($row['Grade'] == '0') {
+                                                    ?>
+                                                        <td> No Grades yet.</td>
+                                                        <td> N/A </td>
+                                                         <td> 
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        </td>
+                                                    </tr>
+                                                    <?php
+                                            } else {
+                                                    ?>
+                                                        <td> <?= $row['grade10']; ?></td>
+                                                        <?php
+                                                if ($row['grade10'] > "75") 
+                                                {
+                                                        ?>
+                                                            <td> Passed </td>
+                                                            <?php
+                                                } 
+                                                elseif ($row['grade10'] < "75") 
+                                                {
+                                                            ?>
+                                                            <td> Failed </td>
+                                                            <?php
+                                                }
+                                                            ?>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
+                                                        <?php
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "7"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?> <!-- to here -->
+                                </table>
+                          
+                        </div>
                 </form>
 
 
@@ -630,7 +969,7 @@
             <?// CONTENT SELECTION FOR GRADES?>
             <div class="content-selection">
             <select id="mySelect" onchange="onetwo.doSelect(this);">
-            <option value="">Subject Code</option><!-- here -->
+                <option value="">Subject Code</option><!-- here -->
                 <?php
                 include('dbcon.php');
                 $ref_table = 'course_curriculum/beed/first_year/second_sem';
@@ -644,7 +983,7 @@
                     }
                 }
                 ?>
-            </select><!-- to here here -->
+            </select><!-- to here -->
             </div>
             <?// CONTENT SELECTION FOR GRADES?>
             <div id ="one-two">
@@ -653,14 +992,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/first_year/second_sem/GE104';
+                                    $reference = 'course_curriculum/beed/first_year/second_sem/subject1'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/first_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -672,36 +1021,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/12_addgrades_GE104.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade1']; ?></td>
+                                                        <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade1'] > "75") 
+                                                if ($row['grade01'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade1'] < "75") 
+                                                elseif ($row['grade01'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -725,14 +1076,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/first_year/second_sem/GE105';
+                                    $reference = 'course_curriculum/beed/first_year/second_sem/subject2'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/first_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -743,36 +1104,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/12_addgrades_GE105.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade2']; ?></td>
+                                                        <td> <?= $row['grade02']; ?></td>
                                                         <?php
-                                                if ($row['grade2'] > "75") 
+                                                if ($row['grade02'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade2'] < "75") 
+                                                elseif ($row['grade02'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -795,14 +1158,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/first_year/second_sem/GE106';
+                                    $reference = 'course_curriculum/beed/first_year/second_sem/subject3'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/first_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -814,36 +1187,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/12_addgrades_GE106.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade3']; ?></td>
+                                                        <td> <?= $row['grade03']; ?></td>
                                                         <?php
-                                                if ($row['grade3'] > "75") 
+                                                if ($row['grade03'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade3'] < "75") 
+                                                elseif ($row['grade03'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -865,14 +1240,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/first_year/second_sem/GE107';
+                                    $reference = 'course_curriculum/beed/first_year/second_sem/subject4'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/first_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -884,36 +1269,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/12_addgrades_GE107.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade4']; ?></td>
+                                                        <td> <?= $row['grade04']; ?></td>
                                                         <?php
-                                                if ($row['grade4'] > "75") 
+                                                if ($row['grade04'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade4'] < "75") 
+                                                elseif ($row['grade04'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -935,14 +1322,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/first_year/second_sem/SSG211';
+                                    $reference = 'course_curriculum/beed/first_year/second_sem/subject5'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/first_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -953,36 +1350,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/12_addgrades_SSG211.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade5']; ?></td>
+                                                        <td> <?= $row['grade05']; ?></td>
                                                         <?php
-                                                if ($row['grade5'] > "75") 
+                                                if ($row['grade05'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade5'] < "75") 
+                                                elseif ($row['grade05'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -1004,14 +1403,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/first_year/second_sem/REED121';
+                                    $reference = 'course_curriculum/beed/first_year/second_sem/subject6'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/first_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1022,36 +1431,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/12_addgrades_REED121.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade6']; ?></td>
+                                                        <td> <?= $row['grade06']; ?></td>
                                                         <?php
-                                                if ($row['grade6'] > "75") 
+                                                if ($row['grade06'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade6'] < "75") 
+                                                elseif ($row['grade06'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -1073,14 +1484,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/first_year/second_sem/PE121';
+                                    $reference = 'course_curriculum/beed/first_year/second_sem/subject7'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/first_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1091,36 +1512,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/12_addgrades_PE121.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade7']; ?></td>
+                                                        <td> <?= $row['grade07']; ?></td>
                                                         <?php
-                                                if ($row['grade7'] > "75") 
+                                                if ($row['grade07'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade7'] < "75") 
+                                                elseif ($row['grade07'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -1142,14 +1565,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/first_year/second_sem/NSTP2';
+                                    $reference = 'course_curriculum/beed/first_year/second_sem/subject8'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/first_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1160,36 +1593,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/12_addgrades_NSTP2.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade8']; ?></td>
+                                                        <td> <?= $row['grade08']; ?></td>
                                                         <?php
-                                                if ($row['grade8'] > "75") 
+                                                if ($row['grade08'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade8'] < "75") 
+                                                elseif ($row['grade08'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -1211,14 +1646,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/first_year/second_sem/PEH121';
+                                    $reference = 'course_curriculum/beed/first_year/second_sem/subject9'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/first_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1229,36 +1674,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/12_addgrades_PEH121.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade9']; ?></td>
+                                                        <td> <?= $row['grade09']; ?></td>
                                                         <?php
-                                                if ($row['grade9'] > "75") 
+                                                if ($row['grade09'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade9'] < "75") 
+                                                elseif ($row['grade09'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -1274,6 +1721,87 @@
                             </form>
                         </div>
 
+
+                        <?//boundary for subject?>
+                        <div id ="onetwo9" class = "hidden">
+                            <table>
+                                    <tr> 
+                                        <th>Student Number</th>
+                                        <th>Course</th>
+                                        <th>Email</th>
+                                        <th>Name</th>
+                                        <th>Grade</th>
+                                        <th>Add</th>
+                                        <th>Delete </th>
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $reference = 'course_curriculum/beed/first_year/second_sem/subject10'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/first_year/second_sem/'.$scode;
+                                                $fetchdata = $database->getReference($ref_table)->getValue();
+                                                    if($fetchdata > 0)
+                                                    {
+                                                    $i = 0;
+                                                    foreach($fetchdata as $key_child => $row)
+                                                    {
+                                                ?>
+                                                <tr>
+                                                    <td> <?= $row['Student_number'];?> </td>
+                                                    <td> <?= $row['Course'];?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
+                                                    <?php // here
+                                            if ($row['Grade'] == '0') {
+                                                    ?>
+                                                        <td> No Grades yet.</td>
+                                                        <td> N/A </td>
+                                                         <td> 
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        </td>
+                                                    </tr>
+                                                    <?php
+                                            } else {
+                                                    ?>
+                                                        <td> <?= $row['grade10']; ?></td>
+                                                        <?php
+                                                if ($row['grade10'] > "75") 
+                                                {
+                                                        ?>
+                                                            <td> Passed </td>
+                                                            <?php
+                                                } 
+                                                elseif ($row['grade10'] < "75") 
+                                                {
+                                                            ?>
+                                                            <td> Failed </td>
+                                                            <?php
+                                                }
+                                                            ?>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
+                                                        <?php
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "7"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?> <!-- to here -->
+                                </table>
+                            </form>
+                        </div>
 
 
 
@@ -1337,7 +1865,7 @@
                     }
                 }
                 ?>
-            </select><!-- to here here -->
+            </select><!-- to here -->
             </div>
             <?// CONTENT SELECTION FOR GRADES?>
             <div id ="two-one">
@@ -1346,14 +1874,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/second_year/first_sem/GE108';
+                                    $reference = 'course_curriculum/beed/second_year/first_sem/subject1'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/second_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1365,8 +1903,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') 
                                             {
@@ -1374,7 +1912,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/21_addgrades_GE108.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1382,22 +1920,24 @@
                                              else 
                                              {
                                                     ?>
-                                                       <td> <?= $row['grade1']; ?></td>
+                                                       <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade1'] > "75") 
+                                                if ($row['grade01'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade1'] < "75") 
+                                                elseif ($row['grade01'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -1421,14 +1961,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/second_year/first_sem/GE109';
+                                    $reference = 'course_curriculum/beed/second_year/first_sem/subject2'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/second_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1439,36 +1989,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/21_addgrades_GE109.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade2']; ?></td>
+                                                       <td> <?= $row['grade02']; ?></td>
                                                         <?php
-                                                if ($row['grade2'] > "75") 
+                                                if ($row['grade02'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade2'] < "75") 
+                                                elseif ($row['grade02'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -1491,14 +2043,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/second_year/first_sem/EDU211';
+                                    $reference = 'course_curriculum/beed/second_year/first_sem/subject3'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/second_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1510,36 +2072,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/21_addgrades_EDU211.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade3']; ?></td>
+                                                       <td> <?= $row['grade03']; ?></td>
                                                         <?php
-                                                if ($row['grade3'] > "75") 
+                                                if ($row['grade03'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade3'] < "75") 
+                                                elseif ($row['grade03'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -1561,14 +2125,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/second_year/first_sem/EDU212';
+                                    $reference = 'course_curriculum/beed/second_year/first_sem/subject4'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/second_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1580,36 +2154,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/21_addgrades_EDU212.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade4']; ?></td>
+                                                       <td> <?= $row['grade04']; ?></td>
                                                         <?php
-                                                if ($row['grade4'] > "75") 
+                                                if ($row['grade04'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade4'] < "75") 
+                                                elseif ($row['grade04'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -1631,14 +2207,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/second_year/first_sem/MAT211';
+                                    $reference = 'course_curriculum/beed/second_year/first_sem/subject5'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/second_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1649,36 +2235,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/21_addgrades_MAT211.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade5']; ?></td>
+                                                       <td> <?= $row['grade05']; ?></td>
                                                         <?php
-                                                if ($row['grade5'] > "75") 
+                                                if ($row['grade05'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade5'] < "75") 
+                                                elseif ($row['grade05'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -1700,14 +2288,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/second_year/first_sem/FIL212';
+                                    $reference = 'course_curriculum/beed/second_year/first_sem/subject6'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/second_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1718,36 +2316,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     < <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/21_addgrades_FIL212.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade6']; ?></td>
+                                                       <td> <?= $row['grade06']; ?></td>
                                                         <?php
-                                                if ($row['grade6'] > "75") 
+                                                if ($row['grade06'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade6'] < "75") 
+                                                elseif ($row['grade06'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -1769,14 +2369,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/second_year/first_sem/SSC211';
+                                    $reference = 'course_curriculum/beed/second_year/first_sem/subject7'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/second_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1787,36 +2397,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/21_addgrades_GSG211.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade7']; ?></td>
+                                                       <td> <?= $row['grade07']; ?></td>
                                                         <?php
-                                                if ($row['grade7'] > "75") 
+                                                if ($row['grade07'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade7'] < "75") 
+                                                elseif ($row['grade07'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -1838,14 +2450,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/second_year/first_sem/REED211';
+                                    $reference = 'course_curriculum/beed/second_year/first_sem/subject8'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/second_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1856,36 +2478,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/21_addgrades_REED211.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade8']; ?></td>
+                                                       <td> <?= $row['grade08']; ?></td>
                                                         <?php
-                                                if ($row['grade8'] > "75") 
+                                                if ($row['grade08'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade8'] < "75") 
+                                                elseif ($row['grade08'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -1907,14 +2531,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/second_year/first_sem/PE211';
+                                    $reference = 'course_curriculum/beed/second_year/first_sem/subject9'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/second_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1925,36 +2559,120 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/21_addgrades_PE211.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade9']; ?></td>
+                                                       <td> <?= $row['grade09']; ?></td>
                                                         <?php
-                                                if ($row['grade9'] > "75") 
+                                                if ($row['grade09'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade9'] < "75") 
+                                                elseif ($row['grade09'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
+                                                        <?php
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "7"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?> <!-- to here -->
+                                </table>
+                            </form>
+                        </div>
+
+
+                        <?//boundary for subject?>
+                        <div id ="twoone9" class = "hidden">
+                            <table>
+                                    <tr> 
+                                        <th>Student Number</th>
+                                        <th>Course</th>
+                                        <th>Email</th>
+                                        <th>Name</th>
+                                        <th>Grade</th>
+                                        <th>Add</th>
+                                        <th>Delete </th>
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $reference = 'course_curriculum/beed/second_year/first_sem/subject10'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/second_year/first_sem/'.$scode;
+                                                $fetchdata = $database->getReference($ref_table)->getValue();
+                                                    if($fetchdata > 0)
+                                                    {
+                                                    $i = 0;
+                                                    foreach($fetchdata as $key_child => $row)
+                                                    {
+                                                ?>
+                                                <tr>
+                                                    <td> <?= $row['Student_number'];?> </td>
+                                                    <td> <?= $row['Course'];?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
+                                                    <?php // here
+                                            if ($row['Grade'] == '0') {
+                                                    ?>
+                                                        <td> No Grades yet.</td>
+                                                        <td> N/A </td>
+                                                         <td> 
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        </td>
+                                                    </tr>
+                                                    <?php
+                                            } else {
+                                                    ?>
+                                                       <td> <?= $row['grade10']; ?></td>
+                                                        <?php
+                                                if ($row['grade10'] > "75") 
+                                                {
+                                                        ?>
+                                                            <td> Passed </td>
+                                                            <?php
+                                                } 
+                                                elseif ($row['grade10'] < "75") 
+                                                {
+                                                            ?>
+                                                            <td> Failed </td>
+                                                            <?php
+                                                }
+                                                            ?>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -1997,7 +2715,7 @@
                     }
                 }
                 ?>
-            </select><!-- to here here -->
+            </select><!-- to here -->
             </div>
             <?// CONTENT SELECTION FOR GRADES?>
             <div id ="two-two">
@@ -2006,14 +2724,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/second_year/second_sem/GE110';
+                                    $reference = 'course_curriculum/beed/second_year/second_sem/subject1'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/second_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2025,8 +2753,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
@@ -2034,28 +2762,30 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/22_addgrades_GE110.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade1']; ?></td>
+                                                       <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade1'] > "75") 
+                                                if ($row['grade01'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade1'] < "75") 
+                                                elseif ($row['grade01'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -2079,14 +2809,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/second_year/second_sem/GE111';
+                                    $reference = 'course_curriculum/beed/second_year/second_sem/subject2'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/second_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2097,36 +2837,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/22_addgrades_GE111.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade2']; ?></td>
+                                                       <td> <?= $row['grade02']; ?></td>
                                                         <?php
-                                                if ($row['grade2'] > "75") 
+                                                if ($row['grade02'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade2'] < "75") 
+                                                elseif ($row['grade02'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -2149,15 +2891,25 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                         
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/second_year/second_sem/EDU221';
+                                    $reference = 'course_curriculum/beed/second_year/second_sem/subject3'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/second_year/second_sem/CS223';
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2169,36 +2921,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/22_addgrades_EDU221.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade3']; ?></td>
+                                                       <td> <?= $row['grade03']; ?></td>
                                                         <?php
-                                                if ($row['grade3'] > "75") 
+                                                if ($row['grade03'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade3'] < "75") 
+                                                elseif ($row['grade03'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -2220,14 +2974,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/second_year/second_sem/EDU222';
+                                    $reference = 'course_curriculum/beed/second_year/second_sem/subject4'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/second_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2239,36 +3003,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/22_addgrades_EDU222.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade4']; ?></td>
+                                                       <td> <?= $row['grade04']; ?></td>
                                                         <?php
-                                                if ($row['grade4'] > "75") 
+                                                if ($row['grade04'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade4'] < "75") 
+                                                elseif ($row['grade04'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -2290,14 +3056,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/second_year/second_sem/EDU223';
+                                    $reference = 'course_curriculum/beed/second_year/second_sem/subject5'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/second_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2308,36 +3084,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/22_addgrades_EDU223.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade5']; ?></td>
+                                                       <td> <?= $row['grade05']; ?></td>
                                                         <?php
-                                                if ($row['grade5'] > "75") 
+                                                if ($row['grade05'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade5'] < "75") 
+                                                elseif ($row['grade05'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -2359,14 +3137,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/second_year/second_sem/VED221';
+                                    $reference = 'course_curriculum/beed/second_year/second_sem/subject6'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/second_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2377,36 +3165,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/22_addgrades_VED221.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade6']; ?></td>
+                                                       <td> <?= $row['grade06']; ?></td>
                                                         <?php
-                                                if ($row['grade6'] > "75") 
+                                                if ($row['grade06'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade6'] < "75") 
+                                                elseif ($row['grade06'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -2428,14 +3218,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/second_year/second_sem/SCI221';
+                                    $reference = 'course_curriculum/beed/second_year/second_sem/subject7'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/second_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2446,36 +3246,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/22_addgrades_SCI221.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade7']; ?></td>
+                                                       <td> <?= $row['grade07']; ?></td>
                                                         <?php
-                                                if ($row['grade7'] > "75") 
+                                                if ($row['grade07'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade7'] < "75") 
+                                                elseif ($row['grade07'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -2497,14 +3299,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/second_year/second_sem/MTB';
+                                    $reference = 'course_curriculum/beed/second_year/second_sem/subject8'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/second_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2515,36 +3327,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/22_addgrades_MTB.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade8']; ?></td>
+                                                       <td> <?= $row['grade08']; ?></td>
                                                         <?php
-                                                if ($row['grade8'] > "75") 
+                                                if ($row['grade08'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade8'] < "75") 
+                                                elseif ($row['grade08'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -2566,14 +3380,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/second_year/second_sem/REED221';
+                                    $reference = 'course_curriculum/beed/second_year/second_sem/subject9'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/second_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2584,36 +3408,37 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BEED/22_addgrades_REED221.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <td> <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a><a href="addgrades/22_addgrades_REED221.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade9']; ?></td>
+                                                       <td> <?= $row['grade09']; ?></td>
                                                         <?php
-                                                if ($row['grade9'] > "75") 
+                                                if ($row['grade09'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade9'] < "75") 
+                                                elseif ($row['grade09'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -2636,14 +3461,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/second_year/second_sem/PE221';
+                                    $reference = 'course_curriculum/beed/second_year/second_sem/subject10'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/second_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2654,15 +3489,15 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/22_addgrades_PE221.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2683,7 +3518,9 @@
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -2728,7 +3565,7 @@
                     }
                 }
                 ?>
-            </select><!-- to here here -->
+            </select><!-- to here -->
             </div>
             <?// CONTENT SELECTION FOR GRADES?>
             <div id ="three-one">
@@ -2737,14 +3574,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/third_year/first_sem/ENG311';
+                                    $reference = 'course_curriculum/beed/third_year/first_sem/subject1'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/third_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2756,36 +3603,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/31_addgrades_ENG311.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade1']; ?></td>
+                                                       <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade1'] > "75") 
+                                                if ($row['grade01'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade1'] < "75") 
+                                                elseif ($row['grade01'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -2804,20 +3653,29 @@
 
 <?//boundary/////////////////////////////////////////////////////////////////////////////////////////////////////////////?>
 
-<?//boundary for subject?>
                         <div id ="threeone1" class = "hidden">
                             <table>
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/third_year/first_sem/RES1';
+                                    $reference = 'course_curriculum/beed/third_year/first_sem/subject2'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/third_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2828,106 +3686,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/31_addgrades_RES1.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade2']; ?></td>
+                                                       <td> <?= $row['grade02']; ?></td>
                                                         <?php
-                                                if ($row['grade2'] > "75") 
+                                                if ($row['grade02'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade2'] < "75") 
+                                                elseif ($row['grade02'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
-                                        }
-                                    }
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "7"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?> <!-- to here -->
-                                </table>
-                            </form>
-                        </div>
-
-                        <!-- SADSAJDIOWQJDIOASJDISAD -->
-                        <div id ="threeone2" class = "hidden">
-                            <table>
-                                    <tr> 
-                                        <th>Student Number</th>
-                                        <th>Course</th>
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Grade</th>
-                                        <th>Add</th>
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/third_year/first_sem/EDU311';
-                                                $fetchdata = $database->getReference($ref_table)->getValue();
-                                                    if($fetchdata > 0)
-                                                    {
-                                                    $i = 0;
-                                                    foreach($fetchdata as $key_child => $row)
-                                                    {
-                                                ?>
-                                                <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BEED/31_addgrades_EDU311.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
                                                         </td>
-                                                    </tr>
-                                                    <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade3']; ?></td>
-                                                        <?php
-                                                if ($row['grade3'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade3'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
                                                         <?php
                                             }
                                         }
@@ -2945,20 +3735,30 @@
                         </div>
 
                         <?//boundary?>
-                        <div id ="threeone3" class = "hidden">
+                        <div id ="threeone2" class = "hidden">
                             <table>
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                         
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/third_year/first_sem/EDU312';
+                                    $reference = 'course_curriculum/beed/third_year/first_sem/subject3'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/third_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2970,36 +3770,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/31_addgrades_EDU312.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade4']; ?></td>
+                                                       <td> <?= $row['grade03']; ?></td>
                                                         <?php
-                                                if ($row['grade4'] > "75") 
+                                                if ($row['grade03'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade4'] < "75") 
+                                                elseif ($row['grade03'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -3016,19 +3818,29 @@
                         </div>
                         
                         <?//boundary?>
-                        <div id ="threeone4" class = "hidden">
+                        <div id ="threeone3" class = "hidden">
                             <table>
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/third_year/first_sem/SSC321';
+                                    $reference = 'course_curriculum/beed/third_year/first_sem/subject4'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/third_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3040,36 +3852,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <<?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/31_addgrades_SSC321.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade5']; ?></td>
+                                                       <td> <?= $row['grade04']; ?></td>
                                                         <?php
-                                                if ($row['grade5'] > "75") 
+                                                if ($row['grade04'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade5'] < "75") 
+                                                elseif ($row['grade04'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -3086,19 +3900,29 @@
                         </div>
                         
                         <?//boundary for subject?>
-                        <div id ="threeone5" class = "hidden">
+                        <div id ="threeone4" class = "hidden">
                             <table>
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/third_year/first_sem/MUSIC311';
+                                    $reference = 'course_curriculum/beed/third_year/first_sem/subject5'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/third_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3109,36 +3933,119 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/31_addgrades_MUSIC311.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade6']; ?></td>
+                                                       <td> <?= $row['grade05']; ?></td>
                                                         <?php
-                                                if ($row['grade6'] > "75") 
+                                                if ($row['grade05'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade6'] < "75") 
+                                                elseif ($row['grade05'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
+                                                        <?php
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "7"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?> <!-- to here -->
+                                </table>
+                            </form>
+                        </div>
+
+                        <?//boundary for subject?>
+                        <div id ="threeone5" class = "hidden">
+                            <table>
+                                    <tr> 
+                                        <th>Student Number</th>
+                                        <th>Course</th>
+                                        <th>Email</th>
+                                        <th>Name</th>
+                                        <th>Grade</th>
+                                        <th>Add</th>
+                                        <th>Delete </th>
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $reference = 'course_curriculum/beed/third_year/first_sem/subject6'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/third_year/first_sem/'.$scode;
+                                                $fetchdata = $database->getReference($ref_table)->getValue();
+                                                    if($fetchdata > 0)
+                                                    {
+                                                    $i = 0;
+                                                    foreach($fetchdata as $key_child => $row)
+                                                    {
+                                                ?>
+                                                <tr>
+                                                    <td> <?= $row['Student_number'];?> </td>
+                                                    <td> <?= $row['Course'];?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
+                                                    <?php // here
+                                            if ($row['Grade'] == '0') {
+                                                    ?>
+                                                        <td> No Grades yet.</td>
+                                                        <td> N/A </td>
+                                                         <td> 
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        </td>
+                                                    </tr>
+                                                    <?php
+                                            } else {
+                                                    ?>
+                                                       <td> <?= $row['grade06']; ?></td>
+                                                        <?php
+                                                if ($row['grade06'] > "75") 
+                                                {
+                                                        ?>
+                                                            <td> Passed </td>
+                                                            <?php
+                                                } 
+                                                elseif ($row['grade06'] < "75") 
+                                                {
+                                                            ?>
+                                                            <td> Failed </td>
+                                                            <?php
+                                                }
+                                                            ?>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -3160,14 +4067,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/third_year/first_sem/ART311';
+                                    $reference = 'course_curriculum/beed/third_year/first_sem/subject7'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/third_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3178,77 +4095,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BEED/31_addgrades_ART311.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
-                                                    <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade7']; ?></td>
-                                                        <?php
-                                                if ($row['grade7'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade7'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
-                                        }
-                                    }
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "7"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?> <!-- to here -->
-                                </table>
-                            </form>
-                        </div>
-
-                        <?//boundary for subject?>
-                        <div id ="threeone7" class = "hidden">
-                            <table>
-                                    <tr> 
-                                        <th>Student Number</th>
-                                        <th>Course</th>
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Grade</th>
-                                        <th>Add</th>
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/third_year/first_sem/RES1';
-                                                $fetchdata = $database->getReference($ref_table)->getValue();
-                                                    if($fetchdata > 0)
-                                                    {
-                                                    $i = 0;
-                                                    foreach($fetchdata as $key_child => $row)
-                                                    {
-                                                ?>
-                                                <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
                                                     <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
@@ -3256,98 +4104,30 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/31_addgrades_RES1.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade8']; ?></td>
+                                                       <td> <?= $row['grade07']; ?></td>
                                                         <?php
-                                                if ($row['grade8'] > "75") 
+                                                if ($row['grade07'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade8'] < "75") 
+                                                elseif ($row['grade07'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
-                                        }
-                                    }
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "7"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?> <!-- to here -->
-                                </table>
-                            </form>
-                        </div>
-
-                        <?//boundary for subject?>
-                        <div id ="threeone8" class = "hidden">
-                            <table>
-                                    <tr> 
-                                        <th>Student Number</th>
-                                        <th>Course</th>
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Grade</th>
-                                        <th>Add</th>
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/third_year/first_sem/FIL311';
-                                                $fetchdata = $database->getReference($ref_table)->getValue();
-                                                    if($fetchdata > 0)
-                                                    {
-                                                    $i = 0;
-                                                    foreach($fetchdata as $key_child => $row)
-                                                    {
-                                                ?>
-                                                <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Grade'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BEED/31_addgrades_FIL311.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
                                                         </td>
-                                                    </tr>
-                                                    <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade9']; ?></td>
-                                                        <?php
-                                                if ($row['grade9'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade9'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
                                                         <?php
                                             }
                                         }
@@ -3366,6 +4146,9 @@
             </center><!-- TO HERE -->
     </div>
 
+
+
+<!-- asdsadjiowqdjasd boundaryboundaryboundaryboundaryboundaryboundaryboundaryboundaryboundaryboundaryboundaryboundaryboundary -->
 
 	<div id="npup5" class="hidden">
       <h3>3rd Year, 2nd Sem</h3>
@@ -3388,7 +4171,7 @@
                     }
                 }
                 ?>
-            </select><!-- to here here -->
+            </select><!-- to here -->
             </div>
             <?// CONTENT SELECTION FOR GRADES?>
             <div id ="three-two">
@@ -3397,14 +4180,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/third_year/second_sem/EL321';
+                                    $reference = 'course_curriculum/beed/third_year/second_sem/subject1'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/third_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3416,36 +4209,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/32_addgrades_EL321.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade1']; ?></td>
+                                                       <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade1'] > "75") 
+                                                if ($row['grade01'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade1'] < "75") 
+                                                elseif ($row['grade01'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -3469,14 +4264,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/third_year/second_sem/EDU321';
+                                    $reference = 'course_curriculum/beed/third_year/second_sem/subject2'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/third_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3487,36 +4292,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/32_addgrades_EDU321.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade2']; ?></td>
+                                                       <td> <?= $row['grade02']; ?></td>
                                                         <?php
-                                                if ($row['grade2'] > "75") 
+                                                if ($row['grade02'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade2'] < "75") 
+                                                elseif ($row['grade02'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -3539,15 +4346,25 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                         
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/third_year/second_sem/EDU322';
+                                    $reference = 'course_curriculum/beed/third_year/second_sem/subject3'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/third_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3559,36 +4376,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/32_addgrades_EDU322.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade3']; ?></td>
+                                                       <td> <?= $row['grade03']; ?></td>
                                                         <?php
-                                                if ($row['grade3'] > "75") 
+                                                if ($row['grade03'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade3'] < "75") 
+                                                elseif ($row['grade03'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -3610,14 +4429,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/third_year/second_sem/TLE2';
+                                    $reference = 'course_curriculum/beed/third_year/second_sem/subject4'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/third_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3629,36 +4458,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/32_addgrades_TLE2.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade4']; ?></td>
+                                                       <td> <?= $row['grade04']; ?></td>
                                                         <?php
-                                                if ($row['grade4'] > "75") 
+                                                if ($row['grade04'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade4'] < "75") 
+                                                elseif ($row['grade04'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -3680,14 +4511,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/third_year/second_sem/TTL';
+                                    $reference = 'course_curriculum/beed/third_year/second_sem/subject5'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/third_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3698,36 +4539,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/32_addgrades_TTL.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade5']; ?></td>
+                                                       <td> <?= $row['grade05']; ?></td>
                                                         <?php
-                                                if ($row['grade5'] > "75") 
+                                                if ($row['grade05'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade5'] < "75") 
+                                                elseif ($row['grade05'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -3749,14 +4592,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/third_year/second_sem/RES2';
+                                    $reference = 'course_curriculum/beed/third_year/second_sem/subject6'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/third_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3767,36 +4620,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/32_addgrades_RES2.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade6']; ?></td>
+                                                       <td> <?= $row['grade06']; ?></td>
                                                         <?php
-                                                if ($row['grade6'] > "75") 
+                                                if ($row['grade06'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade6'] < "75") 
+                                                elseif ($row['grade06'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -3818,14 +4673,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/third_year/second_sem/MAT321';
+                                    $reference = 'course_curriculum/beed/third_year/second_sem/subject7'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/third_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3836,175 +4701,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/32_addgrades_MAT321.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade7']; ?></td>
+                                                       <td> <?= $row['grade07']; ?></td>
                                                         <?php
-                                                if ($row['grade7'] > "75") 
+                                                if ($row['grade07'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade7'] < "75") 
+                                                elseif ($row['grade07'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
-                                        }
-                                    }
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "7"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?> <!-- to here -->
-                                </table>
-                            </form>
-                        </div>
-
-
-                        <?//boundary for subject?>
-                        <div id ="threetwo7" class = "hidden">
-                            <table>
-                                    <tr> 
-                                        <th>Student Number</th>
-                                        <th>Course</th>
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Grade</th>
-                                        <th>Add</th>
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/third_year/second_sem/ENG321';
-                                                $fetchdata = $database->getReference($ref_table)->getValue();
-                                                    if($fetchdata > 0)
-                                                    {
-                                                    $i = 0;
-                                                    foreach($fetchdata as $key_child => $row)
-                                                    {
-                                                ?>
-                                                <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BEED/32_addgrades_ENG321.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
                                                         </td>
-                                                    </tr>
-                                                    <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade8']; ?></td>
-                                                        <?php
-                                                if ($row['grade8'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade8'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
-                                                        <?php
-                                            }
-                                        }
-                                    }
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "7"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?> <!-- to here -->
-                                </table>
-                            </form>
-                        </div>
-
-                        <?//boundary for subject?>
-                        <div id ="threetwo8" class = "hidden">
-                            <table>
-                                    <tr> 
-                                        <th>Student Number</th>
-                                        <th>Course</th>
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Grade</th>
-                                        <th>Add</th>
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/third_year/second_sem/ENG322';
-                                                $fetchdata = $database->getReference($ref_table)->getValue();
-                                                    if($fetchdata > 0)
-                                                    {
-                                                    $i = 0;
-                                                    foreach($fetchdata as $key_child => $row)
-                                                    {
-                                                ?>
-                                                <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <?php // here
-                                            if ($row['Grade'] == '0') {
-                                                    ?>
-                                                        <td> No Grades yet.</td>
-                                                        <td> N/A </td>
-                                                         <td> 
-                                                        <a href="addgrades_BEED/32_addgrades_ENG322.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
-                                                    </tr>
-                                                    <?php
-                                            } else {
-                                                    ?>
-                                                       <td> <?= $row['grade9']; ?></td>
-                                                        <?php
-                                                if ($row['grade9'] > "75") 
-                                                {
-                                                        ?>
-                                                            <td> Passed </td>
-                                                            <?php
-                                                } 
-                                                elseif ($row['grade9'] < "75") 
-                                                {
-                                                            ?>
-                                                            <td> Failed </td>
-                                                            <?php
-                                                }
-                                                            ?>
-                                                        <td> Edit </td>
                                                         <?php
                                             }
                                         }
@@ -4048,7 +4776,7 @@
                     }
                 }
                 ?>
-            </select><!-- to here here -->
+            </select><!-- to here -->
             </div>
             <?// CONTENT SELECTION FOR GRADES?>
             <div id ="four-one">
@@ -4057,14 +4785,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/fourth_year/first_sem/FS1';
+                                    $reference = 'course_curriculum/beed/fourth_year/first_sem/subject1'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/fourth_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -4076,36 +4814,37 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/41_addgrades_FS1.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
-                                                        </td>
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade1']; ?></td>
+                                                       <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade1'] > "75") 
+                                                if ($row['grade01'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade1'] < "75") 
+                                                elseif ($row['grade01'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -4129,14 +4868,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/fourth_year/first_sem/FS2';
+                                    $reference = 'course_curriculum/beed/fourth_year/first_sem/subject2'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/fourth_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -4147,36 +4896,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/41_addgrades_FS2.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade2']; ?></td>
+                                                       <td> <?= $row['grade02']; ?></td>
                                                         <?php
-                                                if ($row['grade2'] > "75") 
+                                                if ($row['grade02'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade2'] < "75") 
+                                                elseif ($row['grade02'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -4199,15 +4950,25 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                         
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/fourth_year/first_sem/EDU414';
+                                    $reference = 'course_curriculum/beed/fourth_year/first_sem/subject3'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/fourth_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -4219,36 +4980,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/41_addgrades_EDU414.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade3']; ?></td>
+                                                       <td> <?= $row['grade03']; ?></td>
                                                         <?php
-                                                if ($row['grade3'] > "75") 
+                                                if ($row['grade03'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade3'] < "75") 
+                                                elseif ($row['grade03'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -4263,7 +5026,169 @@
                                 </table>
                             </form>
                         </div>
-
+                        
+                        <?//boundary?>
+                        <div id ="fourone3" class = "hidden">
+                            <table>
+                                    <tr> 
+                                        <th>Student Number</th>
+                                        <th>Course</th>
+                                        <th>Email</th>
+                                        <th>Name</th>
+                                        <th>Grade</th>
+                                        <th>Add</th>
+                                        <th>Delete </th>
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $reference = 'course_curriculum/beed/fourth_year/first_sem/subject4'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/fourth_year/first_sem/'.$scode;
+                                                $fetchdata = $database->getReference($ref_table)->getValue();
+                                                    if($fetchdata > 0)
+                                                    {
+                                                    $i = 0;
+                                                    foreach($fetchdata as $key_child => $row)
+                                                    {
+                                                ?>
+                                    
+                                                <tr>
+                                                    <td> <?= $row['Student_number'];?> </td>
+                                                    <td> <?= $row['Course'];?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
+                                                    <?php // here
+                                            if ($row['Grade'] == '0') {
+                                                    ?>
+                                                        <td> No Grades yet.</td>
+                                                        <td> N/A </td>
+                                                         <td> 
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        </td>
+                                                    </tr>
+                                                    <?php
+                                            } else {
+                                                    ?>
+                                                       <td> <?= $row['grade04']; ?></td>
+                                                        <?php
+                                                if ($row['grade04'] > "75") 
+                                                {
+                                                        ?>
+                                                            <td> Passed </td>
+                                                            <?php
+                                                } 
+                                                elseif ($row['grade04'] < "75") 
+                                                {
+                                                            ?>
+                                                            <td> Failed </td>
+                                                            <?php
+                                                }
+                                                            ?>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
+                                                        <?php
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "7"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?> <!-- to here -->
+                                </table>
+                            </form>
+                        </div>
+                        
+                        <?//boundary for subject?>
+                        <div id ="fourone4" class = "hidden">
+                            <table>
+                                    <tr> 
+                                        <th>Student Number</th>
+                                        <th>Course</th>
+                                        <th>Email</th>
+                                        <th>Name</th>
+                                        <th>Grade</th>
+                                        <th>Add</th>
+                                        <th>Delete </th>
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $reference = 'course_curriculum/beed/fourth_year/first_sem/subject5'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/fourth_year/first_sem/'.$scode;
+                                                $fetchdata = $database->getReference($ref_table)->getValue();
+                                                    if($fetchdata > 0)
+                                                    {
+                                                    $i = 0;
+                                                    foreach($fetchdata as $key_child => $row)
+                                                    {
+                                                ?>
+                                                <tr>
+                                                    <td> <?= $row['Student_number'];?> </td>
+                                                    <td> <?= $row['Course'];?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
+                                                    <?php // here
+                                            if ($row['Grade'] == '0') {
+                                                    ?>
+                                                        <td> No Grades yet.</td>
+                                                        <td> N/A </td>
+                                                         <td> 
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        </td>
+                                                    </tr>
+                                                    <?php
+                                            } else {
+                                                    ?>
+                                                       <td> <?= $row['grade05']; ?></td>
+                                                        <?php
+                                                if ($row['grade05'] > "75") 
+                                                {
+                                                        ?>
+                                                            <td> Passed </td>
+                                                            <?php
+                                                } 
+                                                elseif ($row['grade05'] < "75") 
+                                                {
+                                                            ?>
+                                                            <td> Failed </td>
+                                                            <?php
+                                                }
+                                                            ?>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
+                                                        <?php
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "7"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?> <!-- to here -->
+                                </table>
+                            </form>
+                        </div>
             </center>
         </div><!-- TO HERE -->
 
@@ -4277,7 +5202,7 @@
             <option value="">Subject Code</option><!-- here -->
                 <?php
                 include('dbcon.php');
-                $ref_table = 'course_curriculum/beed/fourth_year/fourth_sem';
+                $ref_table = 'course_curriculum/beed/fourth_year/second_sem';
                 $fetchdata = $database->getReference($ref_table)->getValue();
                 if ($fetchdata > 0) {
                     $i = 0;
@@ -4288,7 +5213,7 @@
                     }
                 }
                 ?>
-            </select><!-- to here here -->
+            </select><!-- to here -->
             </div>
             <?// CONTENT SELECTION FOR GRADES?>
             <div id ="four-two">
@@ -4297,14 +5222,24 @@
                                     <tr> 
                                         <th>Student Number</th>
                                         <th>Course</th>
-                                        <th>Name</th>
                                         <th>Email</th>
+                                        <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                                $ref_table = 'Subjects/BEED/fourth_year/second_sem/FS3';
+                                    $reference = 'course_curriculum/beed/fourth_year/second_sem/subject1'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                                $ref_table = 'Subjects/BEED/fourth_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -4316,36 +5251,38 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades_BEED/42_addgrades_FS3.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade1']; ?></td>
+                                                       <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade1'] > "75") 
+                                                if ($row['grade01'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade1'] < "75") 
+                                                elseif ($row['grade01'] < "75") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BEED_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }

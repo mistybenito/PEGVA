@@ -10,6 +10,7 @@ if(isset($_POST['register_btn']))
     $phone = $_POST['phone'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+    $role = $_POST['role_as'];
 
     $userProperties = [
         'email' => $email,
@@ -17,22 +18,29 @@ if(isset($_POST['register_btn']))
         'phoneNumber' => '+63'.$phone,
         'password' => $password,   
         'displayName' => $fullname,
+        'role_as' =>$role,
     ];
-    $createdUser = $auth->createUser($userProperties);
 
-    if($createdUser)
+    if($role == "registrar")
     {
-        $_SESSION['status'] = "User created successfully.";
-        header('Location: login.php');
-        exit();
+        $createdUser = $auth->createUser($userProperties);
+
+        if($createdUser)
+        {
+            $auth->setCustomUserClaims($key, ['registrar' => true]);
+            $_SESSION['status'] = "User created successfully.";
+            header('Location: login.php');
+            exit();
+        }
+    
+    
+        else
+        {
+            $_SESSION['status'] = "User creation failed.";
+            header('Location: register.php');
+            exit();
     }
-
-
-    else
-    {
-        $_SESSION['status'] = "User creation failed.";
-        header('Location: register.php');
-        exit();
+   
     }
 }
 

@@ -8,14 +8,21 @@
         <title>Student List</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="style.css" rel="stylesheet" type="text/css">
+        <link href="students.css" rel="stylesheet" type="text/css">
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-    
-        <div id="user-list">
-            <table class="user-list-content" style="width:100%;">
+        <h1>Student List</h1>
+        <div id="div1">  
+            <input type="text" placeholder="Search.." class="text-search" >
+            <label for="search" type="submit" class="searchbtn">
+                <i class="fa fa-search"></i>
+            </label>
+        </div>
+        <div id="div2">
+            <tbody>
+            <table class="student-list-content" width="80%" border="0">
                 <tr>
                                     <th>Display</th>
                                     <th>Phone Number</th>
@@ -32,6 +39,9 @@
                             {
                                 ?>
                                 <tr>    
+                                    <?php
+                                    if($user -> displayName == true)
+                                    ?>
                                     <td><?=$user->displayName?></td>
                                     <td><?=$user->phoneNumber?></td>
                                     <td><?=$user->email?></td>
@@ -85,7 +95,7 @@
 
                                     </td>
                                     <td>
-                                        <a href="user-edit.php?id=<?=$user->uid;?>" class = "btn btn-primary btn-sm" style="color:#0054c7">Edit</a>
+                                        <a href="user-edit.php?id=<?= $user->uid;?>" class = "btn btn-primary btn-sm">Edit</a>
                                     </td>
                                 <?php
                             }
@@ -93,10 +103,11 @@
             <tr>
                 <td > No Record Found </td>
             </tr>
-         
+         </tbody>
             </table>
             </div>
-
-            <p id="footer">All content copyright © 2022, PEGVA.</p>
+        <div  id="footer">
+        <p>All content copyright © 2022, PEGVA.</p>
+        </div>
     </body>
 </html>
