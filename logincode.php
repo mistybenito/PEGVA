@@ -2,50 +2,6 @@
 session_start();
 include('dbcon.php');
 
-// REGISTER CODE
-
-if(isset($_POST['register_btn']))
-{
-    $fullname = $_POST['full_name'];
-    $phone = $_POST['phone'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $role = $_POST['role_as'];
-
-    $userProperties = [
-        'email' => $email,
-        'emailVerified' => false,
-        'phoneNumber' => '+63'.$phone,
-        'password' => $password,   
-        'displayName' => $fullname,
-        'role_as' =>$role,
-    ];
-
-    if($role == "registrar")
-    {
-        $createdUser = $auth->createUser($userProperties);
-
-        if($createdUser)
-        {
-            $auth->setCustomUserClaims($key, ['registrar' => true]);
-            $_SESSION['status'] = "User created successfully.";
-            header('Location: login.php');
-            exit();
-        }
-    
-    
-        else
-        {
-            $_SESSION['status'] = "User creation failed.";
-            header('Location: register.php');
-            exit();
-    }
-   
-    }
-}
-
-
-
 
 // login code
 
