@@ -21,7 +21,7 @@
         </div>
         </center>
         
-        <p class="footer">All content copyright © 2022, PEGVA.</p>
+        <p id="footer">All content copyright © 2022, PEGVA.</p>
     </body>
    
 </body> 

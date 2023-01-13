@@ -4,10 +4,9 @@ include_once("dbcon.php");
     if(isset($_SESSION['verified_user_id']))
         {
             $_SESSION['status'] = "You are already logged in.";
-            header('Location: reg.php');
+            header('Location: registrar.php');
             exit();
         }
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,7 +18,6 @@ include_once("dbcon.php");
     </head>
 
  <body>
-
  <nav>
 <p class="title">Cainta Catholic College</p>    
 </nav>
@@ -41,10 +39,10 @@ include_once("dbcon.php");
             </div>
       
             <label>Email:</label>
-            <input type="text" name="email" class = "form-control">
+            <input type="text" name="email"  placeholder="Enter email" id="email">
             </br>
             <label>Password:</label>
-            <input type="password" name="password" class = "form-control">
+            <input type="password" name="password" placeholder="Enter password">
             
             
             <div style="padding: 10px; text-align: center;">
@@ -61,8 +59,8 @@ include_once("dbcon.php");
           
     </div>
 </center>
-<div  id="footer">
-    <p>All content copyright © 2022, PEGVA.</p>
-</div>  
+
+    <p id="footer">All content copyright © 2022, PEGVA.</p>
+ 
    </body>
 </html>

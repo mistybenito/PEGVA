@@ -8,11 +8,12 @@
 <head>
 <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="grades.css" rel="stylesheet" type="text/css">
+        <link href="style.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<h2>Student Remarks</h2>
+
+<p class="label">Student Remarks</p>
 
 <!-- Drop downn section and options -->
 <center>
@@ -38,15 +39,18 @@
 <div id="mySpecialElements">
     <!--  these have ids that end with and index  for easy retrieval in "findeElement" function  below-->
     <div id="npup0" class="hidden">
-    <h3>1st Year, 1st Sem</h3> 
- <center>    
-	<form name="form1" method="post" action="code.php"  style="height:550px;">
+	<p style="font-size: 18px; margin-left: 25%;">1st Year, 1st Sem</p>
+<center>	
+     
+	<form name="form1" method="post" action="code.php"   >
 
-	 <table>
+	<table class="view_grades">
 			<tr> 
+				<th>Course</th>
 				<th>Course Code</th>
-				<th>Discriptive Title</th>
 				<th>Unit</th>
+				<th>Discriptive Title</th>
+				<th>Pre-Requisite</th>
 				<th>Grade</th>
 			</tr>
 			<?php
@@ -172,16 +176,17 @@
 
 
     <div id="npup1" class="hidden">
-      <h3>1st Year, 2nd Sem</h3>
-<center>
- <form name="form1" method="post" action="code.php"  style="height:550px;">	   
+	<p style="font-size: 18px; margin-left: 25%;">1st Year, 2nd Sem</p>
+<center>	
+     
+	<form name="form1" method="post" action="code.php"   >
 
-	<table>
+	<table class="view_grades">
 			<tr> 
 				<th>Course</th>
 				<th>Course Code</th>
-				<th>Discriptive Title</th>
 				<th>Unit</th>
+				<th>Discriptive Title</th>
 				<th>Pre-Requisite</th>
 				<th>Grade</th>
 			</tr>
@@ -302,15 +307,17 @@
 
 
     <div id="npup2" class="hidden">
-      <h3>2nd Year, 1st Sem</h3>
-<center>
-	<form name="form1" method="post" action="code.php"  style="height:550px;">	   
-	<table>
+	<p style="font-size: 18px; margin-left: 25%;">2nd Year, 1st Sem</p>
+<center>	
+     
+	<form name="form1" method="post" action="code.php"   >
+
+	<table class="view_grades">
 			<tr> 
 				<th>Course</th>
 				<th>Course Code</th>
-				<th>Discriptive Title</th>
 				<th>Unit</th>
+				<th>Discriptive Title</th>
 				<th>Pre-Requisite</th>
 				<th>Grade</th>
 			</tr>
@@ -433,16 +440,17 @@
 </center>
 
 	<div id="npup3" class="hidden">
-      <h3>2nd Year, 2nd Sem</h3>
-<center>      
-	<form name="form1" method="post" action="code.php"  style="height:550px;">		   
+	<p style="font-size: 18px; margin-left: 25%;">2nd Year, 2nd Sem</p>
+<center>	
+     
+	<form name="form1" method="post" action="code.php"   >
 
-<table>
+	<table class="view_grades">
 			<tr> 
 				<th>Course</th>
 				<th>Course Code</th>
-				<th>Discriptive Title</th>
 				<th>Unit</th>
+				<th>Discriptive Title</th>
 				<th>Pre-Requisite</th>
 				<th>Grade</th>
 			</tr>
@@ -572,16 +580,17 @@
 
 
 	<div id="npup4" class="hidden">
-      <h3>3rd Year, 1st Sem</h3>
-<center>      
-	<form name="form1" method="post" action="code.php"  style="height:550px;">   
+	<p style="font-size: 18px; margin-left: 25%;">3rd Year, 1st Sem</p>
+<center>	
+     
+	<form name="form1" method="post" action="code.php"   >
 
-<table>
+	<table class="view_grades">
 			<tr> 
 				<th>Course</th>
 				<th>Course Code</th>
-				<th>Discriptive Title</th>
 				<th>Unit</th>
+				<th>Discriptive Title</th>
 				<th>Pre-Requisite</th>
 				<th>Grade</th>
 			</tr>
@@ -706,16 +715,17 @@
 
 
 	<div id="npup5" class="hidden">
-      <h3>3rd Year, 2nd Sem</h3>
-<center>      
-	<form name="form1" method="post" action="code.php"  style="height:550px;">	   
+	<p style="font-size: 18px; margin-left: 25%;">3rd Year, 2nd Sem</p>
+<center>	
+     
+	<form name="form1" method="post" action="code.php"   >
 
-<table>
+	<table class="view_grades">
 			<tr> 
 				<th>Course</th>
 				<th>Course Code</th>
-				<th>Discriptive Title</th>
 				<th>Unit</th>
+				<th>Discriptive Title</th>
 				<th>Pre-Requisite</th>
 				<th>Grade</th>
 			</tr>
@@ -837,16 +847,17 @@
 
 
 	<div id="npup6" class="hidden">
-      <h3>4th Year, 1st Sem</h3>
-<center>      
-	<form name="form1" method="post" action="code.php"  style="height:550px;">	   
+	<p style="font-size: 18px; margin-left: 25%;">4th Year, 1st Sem</p>
+<center>	
+     
+	<form name="form1" method="post" action="code.php"   >
 
-	<table>
+	<table class="view_grades">
 			<tr> 
 				<th>Course</th>
 				<th>Course Code</th>
-				<th>Discriptive Title</th>
 				<th>Unit</th>
+				<th>Discriptive Title</th>
 				<th>Pre-Requisite</th>
 				<th>Grade</th>
 			</tr>
@@ -969,16 +980,17 @@
 	</center>
 
 	<div id="npup7" class="hidden">
-      <h3>4th Year, 2nd Sem</h3>
-<center>      
-	<form name="form1" method="post" action="code.php"  style="height:550px;">	   
+      <<p style="font-size: 18px; margin-left: 25%;">4th Year, 2nd Sem</p>
+<center>	
+     
+	<form name="form1" method="post" action="code.php">
 
-<table>
+	<table class="view_grades">
 			<tr> 
 				<th>Course</th>
 				<th>Course Code</th>
-				<th>Discriptive Title</th>
 				<th>Unit</th>
+				<th>Discriptive Title</th>
 				<th>Pre-Requisite</th>
 				<th>Grade</th>
 			</tr>
@@ -1166,8 +1178,8 @@ window.npup = (function (containerId, baseId) {
 </script>
 
 
-<div  id="footer">
-    <p>All content copyright © 2022, PEGVA.</p>
-</div>
+ 
+    <p id="footer">All content copyright © 2022, PEGVA.</p>
+ 
 </body>
 </html>

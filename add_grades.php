@@ -1,5 +1,6 @@
 <?php
     include("authentication.php");
+	include("navbar.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -8,7 +9,7 @@
     <title> Subject and Grades </title>
     <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="profile1.css" rel="stylesheet" type="text/css">
+        <link href="style.css" rel="stylesheet" type="text/css">
 	
 
 		
@@ -17,7 +18,7 @@
 </head>
 
 <body>
-	<h2>Add Student Grades</h2>
+	<p class="label">Add Student Grades</p>
 <center>
 <!-- Drop downn section and options -->
 <div class="content-selection">
@@ -40,16 +41,16 @@
     <!--  these have ids that end with and index  for easy retrieval in "findeElement" function  below-->
     <div id="npup0" class="hidden">
      
-    <div>
+<div>
     <center>    
 <div id="div1">
 	
-	<form name="form1" method="post" action="add_grade_code.php"  style="height:550px;">
+	<form name="form1" method="post" action="add_grade_code.php"  style="height:600px;">
 	<center>
 <fieldset>
     <legend>Subject Description</legend>
-    <center>1st Year, 2nd Sem</center>
-	<table>
+    <p>1st Year, 2nd Sem</p>
+<table class="grades">
 	<?php
 	if(isset($_GET['id']))
 	{
@@ -115,11 +116,11 @@
     <div id="npup1" class="hidden">
     <div>
     <div id="div1">
-	<form name="form1" method="post" action="add_grade_code.php"  style="height:400px;">
-		<center>
-<fieldset>
-<legend>Subject Description</legend>
-<center>1st Year, 2nd Sem</center>
+	<form name="form1" method="post" action="add_grade_code.php"  style="height:600px;">
+	<center>
+<fieldset  style= "width: fit-content;">
+	<legend>Subject Description</legend>
+	<center>1st Year, 2nd Sem</center>
 	<table>
 	<?php
 	if(isset($_GET['id']))
@@ -744,9 +745,7 @@ window.npup = (function (containerId, baseId) {
     };
 })('mySpecialElements', 'npup'); // give the routine a container id of your special elements, and the base id of those elements
 </script>
-<div  id="footer">
-    <p>All content copyright © 2022, PEGVA.</p>
-</div>
+<p id="footer">All content copyright © 2022, PEGVA.</p>
 </body>
 
 

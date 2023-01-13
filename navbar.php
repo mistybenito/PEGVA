@@ -30,7 +30,7 @@
 
             <?php if(isset($_SESSION['verified_registrar'])) :?>
                 <li><a href="user-list.php">User List</a></li>
-                <li><a href="invalid_students.php">Verify Students</a></li>
+                
                 <?php endif; ?>
                 <li><a href="#">Curriculum</a>
                 <ul class="course">
@@ -44,7 +44,7 @@
                     <li><a href="BSOA.php">BSOA</a></li>
                 </ul>
                 </li>
-                <li><a href="reg.php">Home</a>
+                <li><a href="registrar.php">Home</a>
                 <ul class ="course">
                     <li><a href="sched.php">Schedule</a></li>
                     <li><a href="viewsub_BSCS.php">TEST subject</a></li>

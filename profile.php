@@ -8,15 +8,14 @@
         <title>Student List</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="profile1.css" rel="stylesheet" type="text/css">
+        <link href="style.css" rel="stylesheet" type="text/css">
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
 
-    <h2>Student Information</h2>
-
-    <div class="div1">
+    <div id="profile">
+	<p style="font-size: 18px; font-weight: bold; padding: 12px 0px 0px 10px;">Student Information</p>
     <?php
 	include('dbcon.php');
 	if(isset($_GET['id']))
@@ -27,41 +26,56 @@
 			if($getdata > 0)
 			{
 	?>
-        <form name="form1" method="post" action="code.php"  style="height:500px;">
-		<table>
+         <form name="form1" method="post" action="code.php"  >
+		<table id="student-info">
 		<input type="hidden" name = "id" value = "<?=$key_child;?>">
-        <tr> 
+        
+		<tr> 
 			<td>Fullname:</td>
 			<td><input type="text" id="name" name="Name" value = "<?=$getdata['Name']; ?>" class="form-control"></td>
 		</tr>
+		<tr> 
+			<td>Email:</td>
+			<td><input type="text" id="email" name="Email" value = "<?=$getdata['Email']; ?> "class="form-control" ></td>
+		</tr>
+		<tr> 
+			<td>Student Number:</td>
+			<td><input type="text" id="stud_num" name="Student_Number" value = "<?=$getdata['Student_number']; ?> "class="form-control" ></td>
+		</tr>
+		<tr> 
+			<td>Course:</td>
+			<td><input type="text" id="course" name="Course" value = "<?=$getdata['Course']; ?>" class="form-control"></td>
+		</tr>
+		
         <tr> 
 			<td>Address:</td>
 			<td><input type="text" id="address" name="Address" value = "<?=$getdata['Address']; ?> "class="form-control" ></td>
 		</tr>
+		<tr>
+			<td>Birthdate:</td>
+			<td><input type="date" name="Birthday" value = "<?=$getdata['Birthday'];?>" class="form-control"></td>
+		</tr>
 		<tr> 
-			<td>Phone No.:</td>
+			<td>Contact Number:</td>
 			<td><input type="text" id="num" name="Contact_Number" value = "<?=$getdata['Contact_Number']; ?>" class="form-control">
-			&emsp;
-			Birthdate:
-				<input type="date" name="Birthday" value = "<?=$getdata['Birthday'];?>" class="form-control">
-			</td>
 		</tr>
 		<tr> 
 			<td>Mother's Fullname:</td>
 			<td><input type="text" id="mother" name="Mother" value = "<?=$getdata['Mother']; ?>" class="form-control">
-			&emsp;
-			Phone no. of Mother:
-				<input type="text" id="num" name="Mother_number" value = "<?=$getdata['Mother_number']; ?>" class="form-control">
-			</td>
 		</tr>
 		<tr> 
 			<td>Father's Fullname:</td>
 			<td><input type="text" id="father" name="Father" value = "<?=$getdata['Father']; ?>" class="form-control">
-			&emsp;
-			Phone no. of Father:
-				<input type="text" id="num" name="Father_number" value = "<?=$getdata['Father_number']; ?>" class = "form-control">
-			</td>
 		</tr>
+		<tr> 
+			<td>Contact Person incase of emergency:</td>
+			<td><input type="text" id="emergency" name="Emergency" value = "<?=$getdata['Emergency_name']; ?>" class="form-control">
+		</tr>
+		<tr> 
+			<td>Contact number:</td>
+			<td><input type="text" id="emergency_num" name="Emergency_num" value = "<?=$getdata['Emergency_number']; ?>" class="form-control">
+		</tr>
+		
 		</table>
 		<center>
 		<div id="btns">
@@ -77,20 +91,18 @@
 		else
 		{
 			$_SESSION['status'] = "No record found.";
-			header('Location: reg.php');
+			header('Location: registrar.php');
 			exit();
 		}
 	}
 	else
 		{
 			$_SESSION['status'] = "Not found.";
-			header('Location: reg.php');
+			header('Location: registrar.php');
 			exit();
 		}
 	?>
 </div>
-<div  id="footer">
-    <p>All content copyright © 2022, PEGVA.</p>
-</div>
+<p id="footer">All content copyright © 2022, PEGVA.</p>
     </body>
 </html>

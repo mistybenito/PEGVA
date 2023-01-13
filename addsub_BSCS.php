@@ -1197,9 +1197,7 @@
 
 
 
-<div  id="footer">
-    <p>All content copyright © 2022, PEGVA.</p>
-</div>	
+	<p id="footer">All content copyright © 2022, PEGVA.</p>
 
 <script>
 window.npup = (function (containerId, baseId) {

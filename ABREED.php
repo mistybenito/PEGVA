@@ -460,9 +460,7 @@ window.npup = (function (containerId, baseId) {
 })('mySpecialElements', 'npup'); // give the routine a container id of your special elements, and the base id of those elements
 </script>
 
-<div  id="footer">
-    <p>All content copyright © 2022, PEGVA.</p>
-</div>
+<p id="footer">All content copyright © 2022, PEGVA.</p>
 
 </body>
 </html>

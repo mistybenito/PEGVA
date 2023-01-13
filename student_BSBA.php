@@ -8,27 +8,28 @@
         <title>BSBA Student List</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="students.css" rel="stylesheet" type="text/css">
+        <link href="style.css" rel="stylesheet" type="text/css">
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <h1>BSBA Student List</h1>
-        <div id="div1">  
-            <input type="text" placeholder="Search.." class="text-search" >
+    <div id="student-list">
+        <p class="course-student-list">BSBA Student List</p>
+        
+        <input type="text" placeholder="Search.." class="text-search" >
             <label for="search" type="submit" class="searchbtn">
                 <i class="fa fa-search"></i>
             </label>
-        </div>
-        <div id="div2">
-            <tbody>
-            <table class="student-list-content" width="80%" border="0">
+            <table class="student-list-content" style="width:100%;">
                 <tr>
-                    <th style="border-radius: 25px 0 0 0;">Student #</th>
+                    <th>Student #</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Course</th>
+                    <th>Verification</th>
+                    <th>Verify</th>
                     <th>Profile</th>
+                    
                 </tr>
             <?php
                 include('dbcon.php');
@@ -50,7 +51,10 @@
                     <td> <?= $row['Email']; ?> </td>
                     <td> <?= $row['Course']; ?> </td>
                     <td> 
-                    <a href="profile.php?id=<?= $key; ?>" class = "btn btn btn-primary" style="color=black"> View </a>
+                    <a href="verify_page.php?id=<?= $key;?>" class = "btn btn btn-primary" style="color:#0054c7"> Verify </a>
+                    </td>
+                    <td>    
+                    <a href="profile.php?id=<?= $key;?>" class = "btn btn btn-primary" style="color:#0054c7"> View </a>
                     </td>
                 </tr>                
             <?php
@@ -69,8 +73,6 @@
          </tbody>
             </table>
             </div>
-        <div  id="footer">
-        <p>All content copyright © 2022, PEGVA.</p>
-        </div>
+            <p id="footer">All content copyright © 2022, PEGVA.</p>
     </body>
 </html>
