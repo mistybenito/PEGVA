@@ -29,7 +29,7 @@
                     <th>Verification</th>
                     <th>Verify</th>
                     <th>Profile</th>
-                    
+                    <th>Delete</th>
                 </tr>
             <?php
                 include('dbcon.php');
@@ -56,6 +56,9 @@
                     </td>
                     <td>    
                     <a href="profile.php?id=<?= $key;?>" class = "btn btn btn-primary" style="color:#0054c7"> View </a>
+                    </td>
+                    <td>
+                    <button type="submit" name="delete_btn" id = "view_btn" class="btn btn-primary"> Delete </button>
                     </td>
                 </tr>                
             <?php

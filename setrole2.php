@@ -72,7 +72,7 @@
                     <div class="card-header">
                         <h4>Custom User Claims</h4>
                         <div class="card-body">
-                            <form action="claims_code.php" method = "POST">
+                            <form action="CODE_setrolereg.php" method = "POST">
                                 <?php
                                 if(isset($_GET['id']))
                                 {
