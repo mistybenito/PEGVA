@@ -22,7 +22,111 @@ if(isset($_POST['login_btn']))
             $uid = $verifiedIdToken->claims()->get('sub');
             $claims = $auth->getUser($uid)->customClaims;
 
-            if(isset($claims['bscs']) == true)
+            if(isset($claims['ch-bscs']) == true)
+            {
+                $_SESSION['verified_bscs'] = true;
+                $_SESSION['verified_ch-bscs'] = true;
+                $_SESSION['verified_user_id'] = $uid;
+                $_SESSION['idTokenString'] = $idTokenString;
+                $_SESSION['status'] = "Logged in successfully as BSCS Chairman";
+                header('Location: registrar.php');
+                exit();
+
+            }
+            elseif(isset($claims['ch-beed']) == true)
+                {
+                    $_SESSION['verified_beed'] = true;
+                    $_SESSION['verified_ch-beed'] = true;
+                    $_SESSION['verified_user_id'] = $uid;
+                    $_SESSION['idTokenString'] = $idTokenString;
+                    $_SESSION['status'] = "Logged in successfully as BEED Chairman";
+                    header('Location: registrar.php');
+                    exit();
+                }
+            elseif(isset($claims['ch-abreed']) == true)
+                {
+                    $_SESSION['verified_abreed'] = true;
+                    $_SESSION['verified_ch-abreed'] = true;
+                    $_SESSION['verified_user_id'] = $uid;
+                    $_SESSION['idTokenString'] = $idTokenString;
+                    $_SESSION['status'] = "Logged in successfully as ABREED Chairman";
+                    header('Location: registrar.php');
+                    exit();
+                }
+            elseif(isset($claims['ch-bsoa']) == true)
+                {
+                    $_SESSION['verified_bsoa'] = true;
+                    $_SESSION['verified_ch-bsoa'] = true;
+                    $_SESSION['verified_user_id'] = $uid;
+                    $_SESSION['idTokenString'] = $idTokenString;
+                    $_SESSION['status'] = "Logged in successfully as BSOA Chairman";
+                    header('Location: registrar.php');
+                    exit();
+                }
+                elseif(isset($claims['ch-bsba']) == true)
+                {
+                    $_SESSION['verified_bsba'] = true;
+                    $_SESSION['verified_ch-bsba'] = true;
+                    $_SESSION['verified_user_id'] = $uid;
+                    $_SESSION['idTokenString'] = $idTokenString;
+                    $_SESSION['status'] = "Logged in successfully as BSBA Chairman";
+                    header('Location: registrar.php');
+                    exit();
+                }
+                elseif(isset($claims['ch-bsoa']) == true)
+                {
+                    $_SESSION['verified_bsoa'] = true;
+                    $_SESSION['verified_ch-bsoa'] = true;
+                    $_SESSION['verified_user_id'] = $uid;
+                    $_SESSION['idTokenString'] = $idTokenString;
+                    $_SESSION['status'] = "Logged in successfully as BSOA Chairman";
+                    header('Location: registrar.php');
+                    exit();
+                }
+                elseif(isset($claims['ch-bsoa']) == true)
+                {
+                    $_SESSION['verified_bsoa'] = true;
+                    $_SESSION['verified_ch-bsoa'] = true;
+                    $_SESSION['verified_user_id'] = $uid;
+                    $_SESSION['idTokenString'] = $idTokenString;
+                    $_SESSION['status'] = "Logged in successfully as BSOA Chairman";
+                    header('Location: registrar.php');
+                    exit();
+                }
+            elseif(isset($claims['ch-ed_eng']) == true)
+                {
+                    $_SESSION['verified_ed_eng'] = true;
+                    $_SESSION['verified_ch-ed_eng'] = true;
+                    $_SESSION['verified_user_id'] = $uid;
+                    $_SESSION['idTokenString'] = $idTokenString;
+                    $_SESSION['status'] = "Logged in successfully as BSED-ENG Chairman";
+                    header('Location: registrar.php');
+                    exit();
+                }
+            elseif(isset($claims['ch-ed_sci']) == true)
+                {
+                    $_SESSION['verified_ed_sci'] = true;
+                    $_SESSION['verified_ch-ed_sci'] = true;
+                    $_SESSION['verified_user_id'] = $uid;
+                    $_SESSION['idTokenString'] = $idTokenString;
+                    $_SESSION['status'] = "Logged in successfully as BSED-SCI Chairman";
+                    header('Location: registrar.php');
+                    exit();
+                }
+
+            elseif(isset($claims['ch-ed_math']) == true)
+                {
+                    $_SESSION['verified_ed_math'] = true;
+                    $_SESSION['verified_ch-ed_math'] = true;
+                    $_SESSION['verified_user_id'] = $uid;
+                    $_SESSION['idTokenString'] = $idTokenString;
+                    $_SESSION['status'] = "Logged in successfully as BSED-MATH Chairman";
+                    header('Location: registrar.php');
+                    exit();
+                }
+
+                
+            elseif(isset($claims['bscs']) == true)
                 {
                     $_SESSION['verified_bscs'] = true;
                     $_SESSION['verified_user_id'] = $uid;
