@@ -41,7 +41,7 @@ include_once("dbcon.php");
             <label>Password:</label>
             <input type="password" name="password">
             <br>
-            
+
             <div style="padding: 10px; text-align: center;">
              <button type="submit" name="register_btn" class="register_btn"> Register </button>
              <br><br>

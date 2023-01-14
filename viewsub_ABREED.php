@@ -84,7 +84,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/first_year/first_sem/subject1'; //HERE
+                                    $reference = 'course_curriculum/abreed/first_year/first_sem/subject01'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -127,7 +127,7 @@
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade01'] < "75") 
+                                                elseif ($row['grade01'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -169,7 +169,7 @@
                                     </tr>
                                     <?php 
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/first_year/first_sem/subject2'; //HERE
+                                    $reference = 'course_curriculum/abreed/first_year/first_sem/subject02'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -205,13 +205,13 @@
                                                     ?>
                                                         <td> <?= $row['grade02']; ?></td>
                                                         <?php
-                                                if ($row['grade02'] > "75") 
+                                                if ($row['grade02'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade02'] < "75") 
+                                                elseif ($row['grade02'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -288,13 +288,13 @@
                                                     ?>
                                                         <td> <?= $row['grade03']; ?></td>
                                                         <?php
-                                                if ($row['grade03'] > "75") 
+                                                if ($row['grade03'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade03'] < "75") 
+                                                elseif ($row['grade03'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -369,13 +369,13 @@
                                                     ?>
                                                         <td> <?= $row['grade04']; ?></td>
                                                         <?php
-                                                if ($row['grade04'] > "75") 
+                                                if ($row['grade04'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade04'] < "75") 
+                                                elseif ($row['grade04'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -449,13 +449,13 @@
                                                     ?>
                                                         <td> <?= $row['grade05']; ?></td>
                                                         <?php
-                                                if ($row['grade05'] > "75") 
+                                                if ($row['grade05'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade05'] < "75") 
+                                                elseif ($row['grade05'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -529,13 +529,13 @@
                                                     ?>
                                                         <td> <?= $row['grade06']; ?></td>
                                                         <?php
-                                                if ($row['grade06'] > "75") 
+                                                if ($row['grade06'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade06'] < "75") 
+                                                elseif ($row['grade06'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -610,13 +610,13 @@
                                                     ?>
                                                         <td> <?= $row['grade07']; ?></td>
                                                         <?php
-                                                if ($row['grade07'] > "75") 
+                                                if ($row['grade07'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade07'] < "75") 
+                                                elseif ($row['grade07'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -690,13 +690,13 @@
                                                     ?>
                                                         <td> <?= $row['grade08']; ?></td>
                                                         <?php
-                                                if ($row['grade08'] > "75") 
+                                                if ($row['grade08'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade08'] < "75") 
+                                                elseif ($row['grade08'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -770,13 +770,13 @@
                                                     ?>
                                                         <td> <?= $row['grade09']; ?></td>
                                                         <?php
-                                                if ($row['grade09'] > "75") 
+                                                if ($row['grade09'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade09'] < "75") 
+                                                elseif ($row['grade09'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -851,13 +851,13 @@
                                                     ?>
                                                         <td> <?= $row['grade10']; ?></td>
                                                         <?php
-                                                if ($row['grade10'] > "75") 
+                                                if ($row['grade10'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade10'] < "75") 
+                                                elseif ($row['grade10'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -1000,7 +1000,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/first_year/second_sem/subject1'; //HERE
+                                    $reference = 'course_curriculum/abreed/first_year/second_sem/subject01'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1037,13 +1037,13 @@
                                                     ?>
                                                         <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade01'] > "75") 
+                                                if ($row['grade01'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade01'] < "75") 
+                                                elseif ($row['grade01'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -1084,7 +1084,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/first_year/second_sem/subject2'; //HERE
+                                    $reference = 'course_curriculum/abreed/first_year/second_sem/subject02'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1120,13 +1120,13 @@
                                                     ?>
                                                         <td> <?= $row['grade02']; ?></td>
                                                         <?php
-                                                if ($row['grade02'] > "75") 
+                                                if ($row['grade02'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade02'] < "75") 
+                                                elseif ($row['grade02'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -1166,7 +1166,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/first_year/second_sem/subject3'; //HERE
+                                    $reference = 'course_curriculum/abreed/first_year/second_sem/subject03'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1203,13 +1203,13 @@
                                                     ?>
                                                         <td> <?= $row['grade03']; ?></td>
                                                         <?php
-                                                if ($row['grade03'] > "75") 
+                                                if ($row['grade03'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade03'] < "75") 
+                                                elseif ($row['grade03'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -1248,7 +1248,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/first_year/second_sem/subject4'; //HERE
+                                    $reference = 'course_curriculum/abreed/first_year/second_sem/subject04'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1285,13 +1285,13 @@
                                                     ?>
                                                         <td> <?= $row['grade04']; ?></td>
                                                         <?php
-                                                if ($row['grade04'] > "75") 
+                                                if ($row['grade04'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade04'] < "75") 
+                                                elseif ($row['grade04'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -1330,7 +1330,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/first_year/second_sem/subject5'; //HERE
+                                    $reference = 'course_curriculum/abreed/first_year/second_sem/subject05'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1366,13 +1366,13 @@
                                                     ?>
                                                         <td> <?= $row['grade05']; ?></td>
                                                         <?php
-                                                if ($row['grade05'] > "75") 
+                                                if ($row['grade05'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade05'] < "75") 
+                                                elseif ($row['grade05'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -1411,7 +1411,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/first_year/second_sem/subject6'; //HERE
+                                    $reference = 'course_curriculum/abreed/first_year/second_sem/subject06'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1447,13 +1447,13 @@
                                                     ?>
                                                         <td> <?= $row['grade06']; ?></td>
                                                         <?php
-                                                if ($row['grade06'] > "75") 
+                                                if ($row['grade06'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade06'] < "75") 
+                                                elseif ($row['grade06'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -1492,7 +1492,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/first_year/second_sem/subject7'; //HERE
+                                    $reference = 'course_curriculum/abreed/first_year/second_sem/subject07'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1528,13 +1528,13 @@
                                                     ?>
                                                         <td> <?= $row['grade07']; ?></td>
                                                         <?php
-                                                if ($row['grade07'] > "75") 
+                                                if ($row['grade07'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade07'] < "75") 
+                                                elseif ($row['grade07'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -1573,7 +1573,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/first_year/second_sem/subject8'; //HERE
+                                    $reference = 'course_curriculum/abreed/first_year/second_sem/subject08'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1609,13 +1609,13 @@
                                                     ?>
                                                         <td> <?= $row['grade08']; ?></td>
                                                         <?php
-                                                if ($row['grade08'] > "75") 
+                                                if ($row['grade08'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade08'] < "75") 
+                                                elseif ($row['grade08'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -1654,7 +1654,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/first_year/second_sem/subject9'; //HERE
+                                    $reference = 'course_curriculum/abreed/first_year/second_sem/subject09'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1690,13 +1690,13 @@
                                                     ?>
                                                         <td> <?= $row['grade09']; ?></td>
                                                         <?php
-                                                if ($row['grade09'] > "75") 
+                                                if ($row['grade09'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade09'] < "75") 
+                                                elseif ($row['grade09'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -1772,13 +1772,13 @@
                                                     ?>
                                                         <td> <?= $row['grade10']; ?></td>
                                                         <?php
-                                                if ($row['grade10'] > "75") 
+                                                if ($row['grade10'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade10'] < "75") 
+                                                elseif ($row['grade10'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -1882,7 +1882,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/second_year/first_sem/subject1'; //HERE
+                                    $reference = 'course_curriculum/abreed/second_year/first_sem/subject01'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1922,13 +1922,13 @@
                                                     ?>
                                                        <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade01'] > "75") 
+                                                if ($row['grade01'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade01'] < "75") 
+                                                elseif ($row['grade01'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -1969,7 +1969,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/second_year/first_sem/subject2'; //HERE
+                                    $reference = 'course_curriculum/abreed/second_year/first_sem/subject02'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2005,13 +2005,13 @@
                                                     ?>
                                                        <td> <?= $row['grade02']; ?></td>
                                                         <?php
-                                                if ($row['grade02'] > "75") 
+                                                if ($row['grade02'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade02'] < "75") 
+                                                elseif ($row['grade02'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -2051,7 +2051,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/second_year/first_sem/subject3'; //HERE
+                                    $reference = 'course_curriculum/abreed/second_year/first_sem/subject03'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2088,13 +2088,13 @@
                                                     ?>
                                                        <td> <?= $row['grade03']; ?></td>
                                                         <?php
-                                                if ($row['grade03'] > "75") 
+                                                if ($row['grade03'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade03'] < "75") 
+                                                elseif ($row['grade03'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -2133,7 +2133,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/second_year/first_sem/subject4'; //HERE
+                                    $reference = 'course_curriculum/abreed/second_year/first_sem/subject04'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2170,13 +2170,13 @@
                                                     ?>
                                                        <td> <?= $row['grade04']; ?></td>
                                                         <?php
-                                                if ($row['grade04'] > "75") 
+                                                if ($row['grade04'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade04'] < "75") 
+                                                elseif ($row['grade04'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -2215,7 +2215,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/second_year/first_sem/subject5'; //HERE
+                                    $reference = 'course_curriculum/abreed/second_year/first_sem/subject05'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2251,13 +2251,13 @@
                                                     ?>
                                                        <td> <?= $row['grade05']; ?></td>
                                                         <?php
-                                                if ($row['grade05'] > "75") 
+                                                if ($row['grade05'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade05'] < "75") 
+                                                elseif ($row['grade05'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -2296,7 +2296,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/second_year/first_sem/subject6'; //HERE
+                                    $reference = 'course_curriculum/abreed/second_year/first_sem/subject06'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2332,13 +2332,13 @@
                                                     ?>
                                                        <td> <?= $row['grade06']; ?></td>
                                                         <?php
-                                                if ($row['grade06'] > "75") 
+                                                if ($row['grade06'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade06'] < "75") 
+                                                elseif ($row['grade06'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -2377,7 +2377,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/second_year/first_sem/subject7'; //HERE
+                                    $reference = 'course_curriculum/abreed/second_year/first_sem/subject07'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2413,13 +2413,13 @@
                                                     ?>
                                                        <td> <?= $row['grade07']; ?></td>
                                                         <?php
-                                                if ($row['grade07'] > "75") 
+                                                if ($row['grade07'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade07'] < "75") 
+                                                elseif ($row['grade07'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -2458,7 +2458,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/second_year/first_sem/subject8'; //HERE
+                                    $reference = 'course_curriculum/abreed/second_year/first_sem/subject08'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2494,13 +2494,13 @@
                                                     ?>
                                                        <td> <?= $row['grade08']; ?></td>
                                                         <?php
-                                                if ($row['grade08'] > "75") 
+                                                if ($row['grade08'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade08'] < "75") 
+                                                elseif ($row['grade08'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -2539,7 +2539,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/second_year/first_sem/subject9'; //HERE
+                                    $reference = 'course_curriculum/abreed/second_year/first_sem/subject09'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2575,13 +2575,13 @@
                                                     ?>
                                                        <td> <?= $row['grade09']; ?></td>
                                                         <?php
-                                                if ($row['grade09'] > "75") 
+                                                if ($row['grade09'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade09'] < "75") 
+                                                elseif ($row['grade09'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -2657,13 +2657,13 @@
                                                     ?>
                                                        <td> <?= $row['grade10']; ?></td>
                                                         <?php
-                                                if ($row['grade10'] > "75") 
+                                                if ($row['grade10'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade10'] < "75") 
+                                                elseif ($row['grade10'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -2732,7 +2732,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/second_year/second_sem/subject1'; //HERE
+                                    $reference = 'course_curriculum/abreed/second_year/second_sem/subject01'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2770,13 +2770,13 @@
                                                     ?>
                                                        <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade01'] > "75") 
+                                                if ($row['grade01'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade01'] < "75") 
+                                                elseif ($row['grade01'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -2817,7 +2817,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/second_year/second_sem/subject2'; //HERE
+                                    $reference = 'course_curriculum/abreed/second_year/second_sem/subject02'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2853,13 +2853,13 @@
                                                     ?>
                                                        <td> <?= $row['grade02']; ?></td>
                                                         <?php
-                                                if ($row['grade02'] > "75") 
+                                                if ($row['grade02'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade02'] < "75") 
+                                                elseif ($row['grade02'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -2900,7 +2900,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/second_year/second_sem/subject3'; //HERE
+                                    $reference = 'course_curriculum/abreed/second_year/second_sem/subject03'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2937,13 +2937,13 @@
                                                     ?>
                                                        <td> <?= $row['grade03']; ?></td>
                                                         <?php
-                                                if ($row['grade03'] > "75") 
+                                                if ($row['grade03'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade03'] < "75") 
+                                                elseif ($row['grade03'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -2982,7 +2982,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/second_year/second_sem/subject4'; //HERE
+                                    $reference = 'course_curriculum/abreed/second_year/second_sem/subject04'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3019,13 +3019,13 @@
                                                     ?>
                                                        <td> <?= $row['grade04']; ?></td>
                                                         <?php
-                                                if ($row['grade04'] > "75") 
+                                                if ($row['grade04'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade04'] < "75") 
+                                                elseif ($row['grade04'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -3064,7 +3064,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/second_year/second_sem/subject5'; //HERE
+                                    $reference = 'course_curriculum/abreed/second_year/second_sem/subject05'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3100,13 +3100,13 @@
                                                     ?>
                                                        <td> <?= $row['grade05']; ?></td>
                                                         <?php
-                                                if ($row['grade05'] > "75") 
+                                                if ($row['grade05'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade05'] < "75") 
+                                                elseif ($row['grade05'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -3145,7 +3145,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/second_year/second_sem/subject6'; //HERE
+                                    $reference = 'course_curriculum/abreed/second_year/second_sem/subject06'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3181,13 +3181,13 @@
                                                     ?>
                                                        <td> <?= $row['grade06']; ?></td>
                                                         <?php
-                                                if ($row['grade06'] > "75") 
+                                                if ($row['grade06'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade06'] < "75") 
+                                                elseif ($row['grade06'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -3226,7 +3226,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/second_year/second_sem/subject7'; //HERE
+                                    $reference = 'course_curriculum/abreed/second_year/second_sem/subject07'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3262,13 +3262,13 @@
                                                     ?>
                                                        <td> <?= $row['grade07']; ?></td>
                                                         <?php
-                                                if ($row['grade07'] > "75") 
+                                                if ($row['grade07'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade07'] < "75") 
+                                                elseif ($row['grade07'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -3307,7 +3307,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/second_year/second_sem/subject8'; //HERE
+                                    $reference = 'course_curriculum/abreed/second_year/second_sem/subject08'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3343,13 +3343,13 @@
                                                     ?>
                                                        <td> <?= $row['grade08']; ?></td>
                                                         <?php
-                                                if ($row['grade08'] > "75") 
+                                                if ($row['grade08'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade08'] < "75") 
+                                                elseif ($row['grade08'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -3388,7 +3388,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/second_year/second_sem/subject9'; //HERE
+                                    $reference = 'course_curriculum/abreed/second_year/second_sem/subject09'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3423,13 +3423,13 @@
                                                     ?>
                                                        <td> <?= $row['grade09']; ?></td>
                                                         <?php
-                                                if ($row['grade09'] > "75") 
+                                                if ($row['grade09'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade09'] < "75") 
+                                                elseif ($row['grade09'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -3505,13 +3505,13 @@
                                                     ?>
                                                        <td> <?= $row['grade10']; ?></td>
                                                         <?php
-                                                if ($row['grade10'] > "75") 
+                                                if ($row['grade10'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade10'] < "75") 
+                                                elseif ($row['grade10'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -3582,7 +3582,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/third_year/first_sem/subject1'; //HERE
+                                    $reference = 'course_curriculum/abreed/third_year/first_sem/subject01'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3619,13 +3619,13 @@
                                                     ?>
                                                        <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade01'] > "75") 
+                                                if ($row['grade01'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade01'] < "75") 
+                                                elseif ($row['grade01'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -3666,7 +3666,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/third_year/first_sem/subject2'; //HERE
+                                    $reference = 'course_curriculum/abreed/third_year/first_sem/subject02'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3702,13 +3702,13 @@
                                                     ?>
                                                        <td> <?= $row['grade02']; ?></td>
                                                         <?php
-                                                if ($row['grade02'] > "75") 
+                                                if ($row['grade02'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade02'] < "75") 
+                                                elseif ($row['grade02'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -3749,7 +3749,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/third_year/first_sem/subject3'; //HERE
+                                    $reference = 'course_curriculum/abreed/third_year/first_sem/subject03'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3786,13 +3786,13 @@
                                                     ?>
                                                        <td> <?= $row['grade03']; ?></td>
                                                         <?php
-                                                if ($row['grade03'] > "75") 
+                                                if ($row['grade03'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade03'] < "75") 
+                                                elseif ($row['grade03'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -3831,7 +3831,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/third_year/first_sem/subject4'; //HERE
+                                    $reference = 'course_curriculum/abreed/third_year/first_sem/subject04'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3868,13 +3868,13 @@
                                                     ?>
                                                        <td> <?= $row['grade04']; ?></td>
                                                         <?php
-                                                if ($row['grade04'] > "75") 
+                                                if ($row['grade04'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade04'] < "75") 
+                                                elseif ($row['grade04'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -3913,7 +3913,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/third_year/first_sem/subject5'; //HERE
+                                    $reference = 'course_curriculum/abreed/third_year/first_sem/subject05'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3949,13 +3949,13 @@
                                                     ?>
                                                        <td> <?= $row['grade05']; ?></td>
                                                         <?php
-                                                if ($row['grade05'] > "75") 
+                                                if ($row['grade05'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade05'] < "75") 
+                                                elseif ($row['grade05'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -3994,7 +3994,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/third_year/first_sem/subject6'; //HERE
+                                    $reference = 'course_curriculum/abreed/third_year/first_sem/subject06'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4030,13 +4030,13 @@
                                                     ?>
                                                        <td> <?= $row['grade06']; ?></td>
                                                         <?php
-                                                if ($row['grade06'] > "75") 
+                                                if ($row['grade06'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade06'] < "75") 
+                                                elseif ($row['grade06'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -4075,7 +4075,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/third_year/first_sem/subject7'; //HERE
+                                    $reference = 'course_curriculum/abreed/third_year/first_sem/subject07'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4112,13 +4112,13 @@
                                                     ?>
                                                        <td> <?= $row['grade07']; ?></td>
                                                         <?php
-                                                if ($row['grade07'] > "75") 
+                                                if ($row['grade07'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade07'] < "75") 
+                                                elseif ($row['grade07'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -4188,7 +4188,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/third_year/second_sem/subject1'; //HERE
+                                    $reference = 'course_curriculum/abreed/third_year/second_sem/subject01'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4225,13 +4225,13 @@
                                                     ?>
                                                        <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade01'] > "75") 
+                                                if ($row['grade01'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade01'] < "75") 
+                                                elseif ($row['grade01'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -4272,7 +4272,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/third_year/second_sem/subject2'; //HERE
+                                    $reference = 'course_curriculum/abreed/third_year/second_sem/subject02'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4308,13 +4308,13 @@
                                                     ?>
                                                        <td> <?= $row['grade02']; ?></td>
                                                         <?php
-                                                if ($row['grade02'] > "75") 
+                                                if ($row['grade02'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade02'] < "75") 
+                                                elseif ($row['grade02'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -4355,7 +4355,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/third_year/second_sem/subject3'; //HERE
+                                    $reference = 'course_curriculum/abreed/third_year/second_sem/subject03'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4392,13 +4392,13 @@
                                                     ?>
                                                        <td> <?= $row['grade03']; ?></td>
                                                         <?php
-                                                if ($row['grade03'] > "75") 
+                                                if ($row['grade03'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade03'] < "75") 
+                                                elseif ($row['grade03'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -4437,7 +4437,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/third_year/second_sem/subject4'; //HERE
+                                    $reference = 'course_curriculum/abreed/third_year/second_sem/subject04'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4474,13 +4474,13 @@
                                                     ?>
                                                        <td> <?= $row['grade04']; ?></td>
                                                         <?php
-                                                if ($row['grade04'] > "75") 
+                                                if ($row['grade04'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade04'] < "75") 
+                                                elseif ($row['grade04'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -4519,7 +4519,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/third_year/second_sem/subject5'; //HERE
+                                    $reference = 'course_curriculum/abreed/third_year/second_sem/subject05'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4555,13 +4555,13 @@
                                                     ?>
                                                        <td> <?= $row['grade05']; ?></td>
                                                         <?php
-                                                if ($row['grade05'] > "75") 
+                                                if ($row['grade05'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade05'] < "75") 
+                                                elseif ($row['grade05'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -4600,7 +4600,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/third_year/second_sem/subject6'; //HERE
+                                    $reference = 'course_curriculum/abreed/third_year/second_sem/subject06'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4636,13 +4636,13 @@
                                                     ?>
                                                        <td> <?= $row['grade06']; ?></td>
                                                         <?php
-                                                if ($row['grade06'] > "75") 
+                                                if ($row['grade06'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade06'] < "75") 
+                                                elseif ($row['grade06'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -4681,7 +4681,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/third_year/second_sem/subject7'; //HERE
+                                    $reference = 'course_curriculum/abreed/third_year/second_sem/subject07'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4717,13 +4717,13 @@
                                                     ?>
                                                        <td> <?= $row['grade07']; ?></td>
                                                         <?php
-                                                if ($row['grade07'] > "75") 
+                                                if ($row['grade07'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade07'] < "75") 
+                                                elseif ($row['grade07'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -4793,7 +4793,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/fourth_year/first_sem/subject1'; //HERE
+                                    $reference = 'course_curriculum/abreed/fourth_year/first_sem/subject01'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4829,13 +4829,13 @@
                                                     ?>
                                                        <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade01'] > "75") 
+                                                if ($row['grade01'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade01'] < "75") 
+                                                elseif ($row['grade01'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -4876,7 +4876,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/fourth_year/first_sem/subject2'; //HERE
+                                    $reference = 'course_curriculum/abreed/fourth_year/first_sem/subject02'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4912,13 +4912,13 @@
                                                     ?>
                                                        <td> <?= $row['grade02']; ?></td>
                                                         <?php
-                                                if ($row['grade02'] > "75") 
+                                                if ($row['grade02'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade02'] < "75") 
+                                                elseif ($row['grade02'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -4959,7 +4959,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/fourth_year/first_sem/subject3'; //HERE
+                                    $reference = 'course_curriculum/abreed/fourth_year/first_sem/subject03'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4996,13 +4996,13 @@
                                                     ?>
                                                        <td> <?= $row['grade03']; ?></td>
                                                         <?php
-                                                if ($row['grade03'] > "75") 
+                                                if ($row['grade03'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade03'] < "75") 
+                                                elseif ($row['grade03'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -5041,7 +5041,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/fourth_year/first_sem/subject4'; //HERE
+                                    $reference = 'course_curriculum/abreed/fourth_year/first_sem/subject04'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -5078,13 +5078,13 @@
                                                     ?>
                                                        <td> <?= $row['grade04']; ?></td>
                                                         <?php
-                                                if ($row['grade04'] > "75") 
+                                                if ($row['grade04'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade04'] < "75") 
+                                                elseif ($row['grade04'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -5123,7 +5123,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/fourth_year/first_sem/subject5'; //HERE
+                                    $reference = 'course_curriculum/abreed/fourth_year/first_sem/subject05'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -5159,13 +5159,13 @@
                                                     ?>
                                                        <td> <?= $row['grade05']; ?></td>
                                                         <?php
-                                                if ($row['grade05'] > "75") 
+                                                if ($row['grade05'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade05'] < "75") 
+                                                elseif ($row['grade05'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
@@ -5230,7 +5230,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/abreed/fourth_year/second_sem/subject1'; //HERE
+                                    $reference = 'course_curriculum/abreed/fourth_year/second_sem/subject01'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -5267,13 +5267,13 @@
                                                     ?>
                                                        <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade01'] > "75") 
+                                                if ($row['grade01'] >= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade01'] < "75") 
+                                                elseif ($row['grade01'] < "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>

@@ -84,7 +84,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/first_year/first_sem/subject1'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/first_year/first_sem/subject01'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -169,7 +169,7 @@
                                     </tr>
                                     <?php 
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/first_year/first_sem/subject2'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/first_year/first_sem/subject02'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1000,7 +1000,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/first_year/second_sem/subject1'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/first_year/second_sem/subject01'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1084,7 +1084,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/first_year/second_sem/subject2'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/first_year/second_sem/subject02'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1166,7 +1166,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/first_year/second_sem/subject3'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/first_year/second_sem/subject03'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1248,7 +1248,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/first_year/second_sem/subject4'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/first_year/second_sem/subject04'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1330,7 +1330,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/first_year/second_sem/subject5'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/first_year/second_sem/subject05'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1411,7 +1411,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/first_year/second_sem/subject6'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/first_year/second_sem/subject06'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1492,7 +1492,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/first_year/second_sem/subject7'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/first_year/second_sem/subject07'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1573,7 +1573,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/first_year/second_sem/subject8'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/first_year/second_sem/subject08'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1654,7 +1654,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/first_year/second_sem/subject9'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/first_year/second_sem/subject09'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1882,7 +1882,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/second_year/first_sem/subject1'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/second_year/first_sem/subject01'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1969,7 +1969,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/second_year/first_sem/subject2'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/second_year/first_sem/subject02'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2051,7 +2051,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/second_year/first_sem/subject3'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/second_year/first_sem/subject03'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2133,7 +2133,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/second_year/first_sem/subject4'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/second_year/first_sem/subject04'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2215,7 +2215,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/second_year/first_sem/subject5'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/second_year/first_sem/subject05'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2296,7 +2296,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/second_year/first_sem/subject6'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/second_year/first_sem/subject06'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2377,7 +2377,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/second_year/first_sem/subject7'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/second_year/first_sem/subject07'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2458,7 +2458,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/second_year/first_sem/subject8'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/second_year/first_sem/subject08'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2539,7 +2539,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/second_year/first_sem/subject9'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/second_year/first_sem/subject09'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2732,7 +2732,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/second_year/second_sem/subject1'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/second_year/second_sem/subject01'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2817,7 +2817,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/second_year/second_sem/subject2'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/second_year/second_sem/subject02'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2900,7 +2900,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/second_year/second_sem/subject3'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/second_year/second_sem/subject03'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2982,7 +2982,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/second_year/second_sem/subject4'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/second_year/second_sem/subject04'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3064,7 +3064,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/second_year/second_sem/subject5'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/second_year/second_sem/subject05'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3145,7 +3145,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/second_year/second_sem/subject6'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/second_year/second_sem/subject06'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3226,7 +3226,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/second_year/second_sem/subject7'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/second_year/second_sem/subject07'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3307,7 +3307,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/second_year/second_sem/subject8'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/second_year/second_sem/subject08'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3388,7 +3388,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/second_year/second_sem/subject9'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/second_year/second_sem/subject09'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3582,7 +3582,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/third_year/first_sem/subject1'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/third_year/first_sem/subject01'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3666,7 +3666,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/third_year/first_sem/subject2'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/third_year/first_sem/subject02'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3749,7 +3749,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/third_year/first_sem/subject3'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/third_year/first_sem/subject03'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3831,7 +3831,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/third_year/first_sem/subject4'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/third_year/first_sem/subject04'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3913,7 +3913,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/third_year/first_sem/subject5'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/third_year/first_sem/subject05'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3994,7 +3994,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/third_year/first_sem/subject6'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/third_year/first_sem/subject06'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4075,7 +4075,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/third_year/first_sem/subject7'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/third_year/first_sem/subject07'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4188,7 +4188,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/third_year/second_sem/subject1'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/third_year/second_sem/subject01'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4272,7 +4272,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/third_year/second_sem/subject2'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/third_year/second_sem/subject02'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4355,7 +4355,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/third_year/second_sem/subject3'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/third_year/second_sem/subject03'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4437,7 +4437,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/third_year/second_sem/subject4'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/third_year/second_sem/subject04'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4519,7 +4519,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/third_year/second_sem/subject5'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/third_year/second_sem/subject05'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4600,7 +4600,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/third_year/second_sem/subject6'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/third_year/second_sem/subject06'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4681,7 +4681,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/third_year/second_sem/subject7'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/third_year/second_sem/subject07'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4793,7 +4793,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/fourth_year/first_sem/subject1'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/fourth_year/first_sem/subject01'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4876,7 +4876,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/fourth_year/first_sem/subject2'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/fourth_year/first_sem/subject02'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4959,7 +4959,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/fourth_year/first_sem/subject3'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/fourth_year/first_sem/subject03'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -5041,7 +5041,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/fourth_year/first_sem/subject4'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/fourth_year/first_sem/subject04'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -5123,7 +5123,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/fourth_year/first_sem/subject5'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/fourth_year/first_sem/subject05'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -5230,7 +5230,7 @@
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bsed_m/fourth_year/second_sem/subject1'; //HERE
+                                    $reference = 'course_curriculum/bsed_m/fourth_year/second_sem/subject01'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>

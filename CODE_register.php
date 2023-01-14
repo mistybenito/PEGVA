@@ -20,21 +20,21 @@ if(isset($_POST['register_btn']))
         'displayName' => $fullname,
     ];
 
-        $createdUser = $auth->createUser($userProperties);
+            $createdUser = $auth->createUser($userProperties);
 
-        if($createdUser)
-        {
-            $_SESSION['status'] = "User created successfully.";
-            header("Location: setrole.php?name=$fullname");
-            exit();
+            if($createdUser)
+            {
+                $_SESSION['status'] = "User created successfully.";
+                header("Location: setrole.php?name=$fullname");
+                exit();
+            }
+        
+        
+            else
+            {
+                $_SESSION['status'] = "User creation failed.";
+                header('Location: register.php');
+                exit();
+            }
         }
-    
-    
-        else
-        {
-            $_SESSION['status'] = "User creation failed.";
-            header('Location: register.php');
-            exit();
-    }
-
-    }
+?>
