@@ -18,7 +18,7 @@
 <center>
 <div class="content-selection">
   <select id="mySelect" onchange="npup.doSelect(this);">
-      <option value="">Year and Semester</option>
+      <option value="">--Course--</option>
       <!-- the option values are suffixes for the elements to show -->
       <option value="0">BSCS</option>
       <option value="1">BSBA</option>

@@ -64,7 +64,7 @@ include('navbar.php');
                     <div class="user-claims">
                         <h4 style="margin-top: 15px;">Custom User Claims</h4>
                      
-                            <form action="claims_code.php" method = "POST">
+                            <form action="CODE_setrolereg.php" method = "POST">
                                 <?php
                                 if(isset($_GET['id']))
                                 {
@@ -73,15 +73,9 @@ include('navbar.php');
 
                              
                                 <input type="hidden" name = "claims_user_id" value = "<?=$uid?>">
-<<<<<<< Updated upstream
-                                <div class="form-group mb-3">
-                                <select name="role_as" id="" class = "form-control" required>
-                                        <option value="">--Select Roles--</option>
-=======
                               
                                     <select name="role_as" id="" required>
                                         <option value="">Select Roles</option>
->>>>>>> Stashed changes
                                         <option value="registrar">Registrar</option>
                                         <option value="">--Course Chairman--</option>
                                         <option value="ch-bscs">BSCS Chairman</option>
