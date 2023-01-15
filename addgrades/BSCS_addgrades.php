@@ -53,16 +53,8 @@
 				{
 				?>
 					<tr> 
-						<td><label for ="grade01">Grade:
-							<select name="grade01" id="grade01">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade1"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?=$scode;?> </button></center>
@@ -75,16 +67,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade02">Grade:
-							<select name="grade02" id="grade02">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade2"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -96,16 +80,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade03">Grade:
-							<select name="grade03" id="grade03">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade3"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -117,16 +93,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade04">Grade:
-							<select name="grade04" id="grade04">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade4"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -139,7 +107,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td> </td>
+						<td><input type="text" name =  "grade5"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save<?= $scode;?> </button></center>
@@ -151,16 +119,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade06">Grade:
-							<select name="grade06" id="grade06">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade6"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -172,16 +132,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade07">Grade:
-							<select name="grade07" id="grade07">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade7"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -193,16 +145,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade08">Grade:
-							<select name="grade08" id="grade08">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade8"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -214,16 +158,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade09">Grade:
-							<select name="grade09" id="grade09">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade9"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -235,16 +171,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade10">Grade:
-							<select name="grade09" id="grade10">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade10"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -258,16 +186,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade01">Grade:
-							<select name="grade01" id="grade01">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade1"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -279,16 +199,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade02">Grade:
-							<select name="grade02" id="grade02">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade2"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -300,16 +212,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade03">Grade:
-							<select name="grade03" id="grade03">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade3"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -320,16 +224,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade04">Grade:
-							<select name="grade04" id="grade04">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade4"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -340,16 +236,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade05">Grade:
-							<select name="grade05" id="grade05">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade5"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -361,16 +249,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade06">Grade:
-							<select name="grade06" id="grade06">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade6"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -382,16 +262,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade07">Grade:
-							<select name="grade07" id="grade07">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade7"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -403,16 +275,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade08">Grade:
-							<select name="grade08" id="grade08">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade8"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -424,16 +288,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade09">Grade:
-							<select name="grade09" id="grade09">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade9"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -447,16 +303,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade01">Grade:
-							<select name="grade01" id="grade01">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade1"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -468,16 +316,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade02">Grade:
-							<select name="grade02" id="grade02">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade2"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -488,16 +328,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade03">Grade:
-							<select name="grade03" id="grade03">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade3"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -509,16 +341,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade04">Grade:
-							<select name="grade04" id="grade04">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade4"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -530,16 +354,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade05">Grade:
-							<select name="grade05" id="grade05">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade5"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -550,16 +366,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade06">Grade:
-							<select name="grade06" id="grade06">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade6"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -571,16 +379,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade07">Grade:
-							<select name="grade07" id="grade07">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade7"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -592,16 +392,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade08">Grade:
-							<select name="grade08" id="grade08">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade8"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -613,16 +405,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade09">Grade:
-							<select name="grade09" id="grade09">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade9"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -634,16 +418,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade10">Grade:
-							<select name="grade09" id="grade10">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade10"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -656,16 +432,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade01">Grade:
-							<select name="grade01" id="grade01">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade1"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -677,16 +445,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade02">Grade:
-							<select name="grade02" id="grade02">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade2"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -698,16 +458,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade03">Grade:
-							<select name="grade03" id="grade03">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade3"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -719,16 +471,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade04">Grade:
-							<select name="grade04" id="grade04">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade4"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -740,16 +484,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade05">Grade:
-							<select name="grade05" id="grade05">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade5"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -761,16 +497,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade06">Grade:
-							<select name="grade06" id="grade06">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade6"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -782,16 +510,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade07">Grade:
-							<select name="grade07" id="grade07">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade7"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -803,16 +523,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade08">Grade:
-							<select name="grade08" id="grade08">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade8"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -824,16 +536,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade09">Grade:
-							<select name="grade09" id="grade09">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade9"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -845,16 +549,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade10">Grade:
-							<select name="grade09" id="grade10">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade10"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -868,16 +564,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade01">Grade:
-							<select name="grade01" id="grade01">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade1"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -889,16 +577,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade02">Grade:
-							<select name="grade02" id="grade02">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade2"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -910,16 +590,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade03">Grade:
-							<select name="grade03" id="grade03">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade3"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -931,16 +603,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade04">Grade:
-							<select name="grade04" id="grade04">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade4"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -952,16 +616,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade05">Grade:
-							<select name="grade05" id="grade05">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade5"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -973,16 +629,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade06">Grade:
-							<select name="grade06" id="grade06">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade6"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -994,16 +642,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade07">Grade:
-							<select name="grade07" id="grade07">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade7"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -1017,16 +657,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade01">Grade:
-							<select name="grade01" id="grade01">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade1"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -1039,16 +671,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade02">Grade:
-							<select name="grade02" id="grade02">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade2"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -1060,16 +684,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade03">Grade:
-							<select name="grade03" id="grade03">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade3"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -1082,16 +698,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade04">Grade:
-							<select name="grade04" id="grade04">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade4"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -1103,16 +711,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade05">Grade:
-							<select name="grade05" id="grade05">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade5"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -1124,16 +724,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade06">Grade:
-							<select name="grade06" id="grade06">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade6"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -1145,16 +737,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade07">Grade:
-							<select name="grade07" id="grade07">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade7"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -1169,16 +753,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade01">Grade:
-							<select name="grade01" id="grade01">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade1"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -1190,16 +766,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade02">Grade:
-							<select name="grade02" id="grade02">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade2"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -1211,16 +779,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade03">Grade:
-							<select name="grade03" id="grade03">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade3"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -1233,16 +793,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade04">Grade:
-							<select name="grade04" id="grade04">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade4"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -1255,16 +807,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade05">Grade:
-							<select name="grade05" id="grade05">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade5"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -1278,16 +822,8 @@
 				{
 					?>
 					<tr> 
-						<td><label for ="grade01">Grade:
-							<select name="grade01" id="grade01">
-							<option value="1.0">1.0</option>
-							<option value="1.5">1.5</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="5.0">5.0</option>
-							</select>
-						</td>
+						<td>Grade</td>
+						<td><input type="text" name =  "grade1"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>

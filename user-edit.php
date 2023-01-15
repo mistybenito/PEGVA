@@ -1,18 +1,19 @@
 <?php
 include('authentication.php');
-
+include('navbar.php');
 ?>
 
 <head>
 <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="profile1.css" rel="stylesheet" type="text/css">
+        <link href="style.css" rel="stylesheet" type="text/css">
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
+<body>
+    <div id="role">
+        
+       
                 <?php
                 if(isset($_SESSION['status']))
                 {
@@ -21,15 +22,12 @@ include('authentication.php');
                 }
 
                 ?>
-                <div class="card">
-                    <div class="card-header">
-                        <h4>
-                            Edit and Update User Data
-                            <a href="user-list.php" class="btn btn-danger float-end"> BACK </a>
-                        </h4>
-                    </div>
-                    <div class="card-body">
-                       <form action="code.php" method="POST">
+            
+                <a href="user-list.php" style="color:#0054c7; font-size:14px;"> BACK </a>
+            
+                        <h4 style="margin-top: 15px;">Edit and Update User Data</h4>
+                  
+                <form action="code.php" method="POST">
 
                        <?php
                        include('dbcon.php');
@@ -42,18 +40,15 @@ include('authentication.php');
                             ?>
 
                             <input type="hidden" name = "user_id" value  = "<?=$uid;?>">
-                        <div class="form-group mb-3">
+                     
                             <label for="">Display Name</label>
-                            <input type="text" name="display_name" value="<?=$user->displayName;?>" class="form-control">
-                            </div>
-
-                            <div class="form-group mb-3">
+                            <input type="text" name="display_name" value="<?=$user->displayName;?>"  id="role-name">
+                            <br>
                             <label for="">Phone Number</label>
-                            <input type="text" name="phone" value="<?=$user->phoneNumber;?>" class="form-control">
-                            </div>
-
-                            <div class="form-group mb-3">
-                            <button type="submit" name="update_user_btn" class="btn btn-primary"> Update </button>
+                            <input type="text" name="phone" value="<?=$user->phoneNumber;?>"  id="role-num">
+                    
+                        <div>
+                            <button type="submit" name="update_user_btn"  id="update_btn"> Update </button>
                         </div>
                             <?php
                         } catch (\Kreait\Firebase\Exception\Auth\UserNotFound $e) {
@@ -63,18 +58,12 @@ include('authentication.php');
                        
                        ?>
 
-                       
 
                        </form> 
                         
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h4>Custom User Claims</h4>
-                        <div class="card-body">
+                    <div class="user-claims">
+                        <h4 style="margin-top: 15px;">Custom User Claims</h4>
+                     
                             <form action="claims_code.php" method = "POST">
                                 <?php
                                 if(isset($_GET['id']))
@@ -84,9 +73,15 @@ include('authentication.php');
 
                              
                                 <input type="hidden" name = "claims_user_id" value = "<?=$uid?>">
+<<<<<<< Updated upstream
                                 <div class="form-group mb-3">
                                 <select name="role_as" id="" class = "form-control" required>
                                         <option value="">--Select Roles--</option>
+=======
+                              
+                                    <select name="role_as" id="" required>
+                                        <option value="">Select Roles</option>
+>>>>>>> Stashed changes
                                         <option value="registrar">Registrar</option>
                                         <option value="">--Course Chairman--</option>
                                         <option value="ch-bscs">BSCS Chairman</option>
@@ -109,8 +104,8 @@ include('authentication.php');
                                         <option value="">--Others--</option>
                                         <option value="norole">Remove Role</option>
                                     </select>
-                                </div>
-                                <label for="">Currently: user role is</label>
+                               <br>
+                                <label>Current Role:</label>
                                 <h4 class = "border bg-warning">
                                     <?php
                                     $claims = $auth->getUser($uid)->customClaims;
@@ -188,19 +183,18 @@ include('authentication.php');
                                 </h4>
 
 
-
-                                <div class="form-group mb-3">
-                                    <button type = "submit" name = "user_claims_btn" class ="btn btn-primary"> Submit </button>
-                                </div>
+                                    
+                                <div>
+                                    <button type = "submit" name = "user_claims_btn" class ="submit_btn"> Submit </button>
+                                </div
                                 <?php
                                 }
                                 ?>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                        </form>
+                
+        
     </div>
 
-    
+    <p id="footer">All content copyright © 2022, PEGVA.</p>
+    </body>
+</html>

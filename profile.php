@@ -79,9 +79,10 @@
 		</table>
 		<center>
 		<div id="btns">
-			<button type="submit" name="update_contact" id = "view_btn" class="btn btn-primary"> Update </button>
+			<button type="submit" name="update_contact" id = "update"> Update </button>
 			<input type="button" onclick="window.location.href='view_grades.php?id=<?=$key_child;?>'" id="view_btn" value="View Grades"/>
 			<input type="button" onclick="window.location.href='add_grades.php?id=<?=$key_child;?>'" id="add_grade_btn" value="Add Grades"/>
+			<button id="delete_btn">Delete</button>
 		</div>
 		</center>
 	</form>

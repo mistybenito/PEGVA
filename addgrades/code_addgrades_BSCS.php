@@ -6,19 +6,15 @@ include('dbcon.php');
 if(isset($_POST['add_grades_CS111']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade01'];
+    $grade = $_POST['grade1'];
     $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
-    $desc = $_POST['Desc_title'];
 
 
     $postGrade = [
-        'grade01' => $grade,
-        'sc1' => $scode,
-        'des1' => $desc,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -52,18 +48,17 @@ if(isset($_POST['add_grades_CS111']))
 if(isset($_POST['add_grades_CS112']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade02'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade02' => $grade,
-        'sc2' => $scode,
-        'des2' => $desc,
+        'grade2' => $grade,
     ];
     $postStatus = [
-        'grade02' =>$grade,
+        'grade2' =>$grade,
         'Grade' => $status,
     ];
 
@@ -98,18 +93,17 @@ if(isset($_POST['add_grades_CS112']))
 if(isset($_POST['add_grades_GE100']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade03'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade03' => $grade,
-        'sc3' => $scode,
-        'des3' => $desc,
+        'grade3' => $grade,
     ];
     $postStatus = [
-        'grade03' =>$grade,
+        'grade3' =>$grade,
         'Grade' => $status,
     ];
 
@@ -143,18 +137,17 @@ if(isset($_POST['add_grades_GE100']))
 if(isset($_POST['add_grades_GE101']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade04'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade04' => $grade,
-        'sc4' => $scode,
-        'des4' => $desc,
+        'grade4' => $grade,
     ];
     $postStatus = [
-        'grade04' =>$grade,
+        'grade4' =>$grade,
         'Grade' => $status,
     ];
 
@@ -189,18 +182,17 @@ if(isset($_POST['add_grades_GE101']))
 if(isset($_POST['add_grades_GE102']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade05'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade05' => $grade,
-        'sc5' => $scode,
-        'des5' => $desc,
+        'grade5' => $grade,
     ];
     $postStatus = [
-        'grade05' =>$grade,
+        'grade5' =>$grade,
         'Grade' => $status,
     ];
 
@@ -234,18 +226,17 @@ if(isset($_POST['add_grades_GE102']))
 if(isset($_POST['add_grades_GE103']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade06'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade06' => $grade,
-        'sc6' => $scode,
-        'des6' => $desc,
+        'grade6' => $grade,
     ];
     $postStatus = [
-        'grade06' =>$grade,
+        'grade6' =>$grade,
         'Grade' => $status,
     ];
 
@@ -281,18 +272,17 @@ if(isset($_POST['add_grades_GE103']))
 if(isset($_POST['add_grades_fil111']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade07'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade07' => $grade,
-        'sc7' => $scode,
-        'des7' => $desc,
+        'grade7' => $grade,
     ];
     $postStatus = [
-        'grade07' =>$grade,
+        'grade7' =>$grade,
         'Grade' => $status,
     ];
 
@@ -327,18 +317,17 @@ if(isset($_POST['add_grades_fil111']))
 if(isset($_POST['add_grades_REED111']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade08'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade08' => $grade,
-        'sc8' => $scode,
-        'des8' => $desc,
+        'grade8' => $grade,
     ];
     $postStatus = [
-        'grade08' =>$grade,
+        'grade8' =>$grade,
         'Grade' => $status,
     ];
 
@@ -373,18 +362,17 @@ if(isset($_POST['add_grades_REED111']))
 if(isset($_POST['add_grades_PE111']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade09'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade09' => $grade,
-        'sc9' => $scode,
-        'des9' => $desc,
+        'grade9' => $grade,
     ];
     $postStatus = [
-        'grade09' =>$grade,
+        'grade9' =>$grade,
         'Grade' => $status,
     ];
 
@@ -420,15 +408,14 @@ if(isset($_POST['add_grades_PE111']))
 if(isset($_POST['add_grades_NSTP1']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade10'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
         'grade10' => $grade,
-        'sc10' => $scode,
-        'des10' => $desc,
     ];
     $postStatus = [
         'grade10' =>$grade,
@@ -470,18 +457,17 @@ if(isset($_POST['add_grades_NSTP1']))
 if(isset($_POST['add_grades_CS121']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade01'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade01_12' => $grade,
-        'sc01_12' => $scode,
-        'des01_12' => $desc,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -515,18 +501,17 @@ if(isset($_POST['add_grades_CS121']))
 if(isset($_POST['add_grades_CS122']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade01'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade02_12' => $grade,
-        'sc02_12' => $scode,
-        'des02_12' => $desc,
+        'grade2' => $grade,
     ];
     $postStatus = [
-        'grade02' =>$grade,
+        'grade2' =>$grade,
         'Grade' => $status,
     ];
 
@@ -560,18 +545,17 @@ if(isset($_POST['add_grades_CS122']))
 if(isset($_POST['add_grades_GE104']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade01'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade03_12' => $grade,
-        'sc03_12' => $scode,
-        'des03_12' => $desc,
+        'grade3' => $grade,
     ];
     $postStatus = [
-        'grade03' =>$grade,
+        'grade3' =>$grade,
         'Grade' => $status,
     ];
 
@@ -607,18 +591,17 @@ if(isset($_POST['add_grades_GE104']))
 if(isset($_POST['add_grades_GE105']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade01'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade04_12' => $grade,
-        'sc04_12' => $scode,
-        'des04_12' => $desc,
+        'grade4' => $grade,
     ];
     $postStatus = [
-        'grade04' =>$grade,
+        'grade4' =>$grade,
         'Grade' => $status,
     ];
 
@@ -653,19 +636,17 @@ if(isset($_POST['add_grades_GE105']))
 if(isset($_POST['add_grades_GE106']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade01'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade05_12' => $grade,
-        'sc05_12' => $scode,
-        'des05_12' => $desc,
-        
+        'grade5' => $grade,
     ];
     $postStatus = [
-        'grade05' =>$grade,
+        'grade5' =>$grade,
         'Grade' => $status,
     ];
 
@@ -700,18 +681,17 @@ if(isset($_POST['add_grades_GE106']))
 if(isset($_POST['add_grades_GE107']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade01'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade06_12' => $grade,
-        'sc06_12' => $scode,
-        'des06_12' => $desc,
+        'grade6' => $grade,
     ];
     $postStatus = [
-        'grade06' =>$grade,
+        'grade6' =>$grade,
         'Grade' => $status,
     ];
 
@@ -747,18 +727,17 @@ if(isset($_POST['add_grades_GE107']))
 if(isset($_POST['add_grades_fil121']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade01'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade07_12' => $grade,
-        'sc07_12' => $scode,
-        'des07_12' => $desc,
+        'grade7' => $grade,
     ];
     $postStatus = [
-        'grade07' =>$grade,
+        'grade7' =>$grade,
         'Grade' => $status,
     ];
 
@@ -793,18 +772,17 @@ if(isset($_POST['add_grades_fil121']))
 if(isset($_POST['add_grades_REED121']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade01'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade08_12' => $grade,
-        'sc08_12' => $scode,
-        'des08_12' => $desc,
+        'grade8' => $grade,
     ];
     $postStatus = [
-        'grade08' =>$grade,
+        'grade8' =>$grade,
         'Grade' => $status,
     ];
 
@@ -848,12 +826,10 @@ if(isset($_POST['add_grades_REED121']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade09_12' => $grade,
-        'sc09_12' => $scode,
-        'des09_12' => $desc,
+        'grade9' => $grade,
     ];
     $postStatus = [
-        'grade09' =>$grade,
+        'grade9' =>$grade,
         'Grade' => $status,
     ];
  
@@ -896,9 +872,7 @@ if(isset($_POST['add_grades_REED121']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade10_12' => $grade,
-        'sc10_12' => $scode,
-        'des10_12' => $desc,
+        'grade10' => $grade,
     ];
     $postStatus = [
         'grade10' =>$grade,
@@ -947,12 +921,10 @@ if(isset($_POST['add_grades_REED121']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade01_21' => $grade,
-        'sc01_21' => $scode,
-        'des01_21' => $desc,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
  
@@ -993,12 +965,10 @@ if(isset($_POST['add_grades_REED121']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade02_21' => $grade,
-        'sc02_21' => $scode,
-        'des02_21' => $desc,
+        'grade2' => $grade,
     ];
     $postStatus = [
-        'grade02' =>$grade,
+        'grade2' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1039,12 +1009,10 @@ if(isset($_POST['add_grades_REED121']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade03_21' => $grade,
-        'sc03_21' => $scode,
-        'des03_21' => $desc,
+        'grade3' => $grade,
     ];
     $postStatus = [
-        'grade03' =>$grade,
+        'grade3' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1086,12 +1054,10 @@ if(isset($_POST['add_grades_REED121']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade04_21' => $grade,
-        'sc04_21' => $scode,
-        'des04_21' => $desc,
+        'grade4' => $grade,
     ];
     $postStatus = [
-        'grade04' =>$grade,
+        'grade4' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1133,12 +1099,10 @@ if(isset($_POST['add_grades_REED121']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade05_21' => $grade,
-        'sc05_21' => $scode,
-        'des05_21' => $desc,
+        'grade5' => $grade,
     ];
     $postStatus = [
-        'grade05' =>$grade,
+        'grade5' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1181,12 +1145,10 @@ if(isset($_POST['add_grades_REED121']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade06_21' => $grade,
-        'sc06_21' => $scode,
-        'des06_21' => $desc,
+        'grade6' => $grade,
     ];
     $postStatus = [
-        'grade06' =>$grade,
+        'grade6' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1228,12 +1190,10 @@ if(isset($_POST['add_grades_REED121']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade07_21' => $grade,
-        'sc07_21' => $scode,
-        'des07_21' => $desc,
+        'grade7' => $grade,
     ];
     $postStatus = [
-        'grade07' =>$grade,
+        'grade7' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1274,12 +1234,10 @@ if(isset($_POST['add_grades_REED121']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade08_21' => $grade,
-        'sc08_21' => $scode,
-        'des08_21' => $desc,
+        'grade8' => $grade,
     ];
     $postStatus = [
-        'grade08' =>$grade,
+        'grade8' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1320,12 +1278,10 @@ if(isset($_POST['add_grades_REED121']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade09_21' => $grade,
-        'sc09_21' => $scode,
-        'des09_21' => $desc,
+        'grade9' => $grade,
     ];
     $postStatus = [
-        'grade09' =>$grade,
+        'grade9' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1367,9 +1323,7 @@ if(isset($_POST['add_grades_REED121']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade10_21' => $grade,
-        'sc10_21' => $scode,
-        'des10_21' => $desc,
+        'grade10' => $grade,
     ];
     $postStatus = [
         'grade10' =>$grade,
@@ -1417,12 +1371,10 @@ if(isset($_POST['add_grades_REED121']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade01_22' => $grade,
-        'sc01_22' => $scode,
-        'des01_22' => $desc,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1463,12 +1415,10 @@ if(isset($_POST['add_grades_REED121']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade02_22' => $grade,
-        'sc02_22' => $scode,
-        'des02_22' => $desc,
+        'grade2' => $grade,
     ];
     $postStatus = [
-        'grade02' =>$grade,
+        'grade2' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1510,12 +1460,10 @@ if(isset($_POST['add_grades_REED121']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade03_22' => $grade,
-        'sc03_22' => $scode,
-        'des03_22' => $desc,
+        'grade3' => $grade,
     ];
     $postStatus = [
-        'grade03' =>$grade,
+        'grade3' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1549,18 +1497,17 @@ if(isset($_POST['add_grades_REED121']))
 if(isset($_POST['add_grades_CS224']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade01'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade04_22' => $grade,
-        'sc04_22' => $scode,
-        'des04_22' => $desc,
+        'grade4' => $grade,
     ];
     $postStatus = [
-        'grade04' =>$grade,
+        'grade4' =>$grade,
         'Grade' => $status,
     ];
 
@@ -1602,12 +1549,10 @@ if(isset($_POST['add_grades_CS224']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade05_22' => $grade,
-        'sc05_22' => $scode,
-        'des05_22' => $desc,
+        'grade5' => $grade,
     ];
     $postStatus = [
-        'grade05' =>$grade,
+        'grade5' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1650,12 +1595,10 @@ if(isset($_POST['add_grades_CS224']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade06_22' => $grade,
-        'sc06_22' => $scode,
-        'des06_22' => $desc,
+        'grade6' => $grade,
     ];
     $postStatus = [
-        'grade06' =>$grade,
+        'grade6' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1697,12 +1640,10 @@ if(isset($_POST['add_grades_CS224']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade07_22' => $grade,
-        'sc07_22' => $scode,
-        'des07_22' => $desc,
+        'grade7' => $grade,
     ];
     $postStatus = [
-        'grade07' =>$grade,
+        'grade7' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1744,12 +1685,10 @@ if(isset($_POST['add_grades_CS224']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade08_22' => $grade,
-        'sc08_22' => $scode,
-        'des08_22' => $desc,
+        'grade8' => $grade,
     ];
     $postStatus = [
-        'grade08' =>$grade,
+        'grade8' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1791,12 +1730,10 @@ if(isset($_POST['add_grades_CS224']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade09_22' => $grade,
-        'sc09_22' => $scode,
-        'des09_22' => $desc,
+        'grade9' => $grade,
     ];
     $postStatus = [
-        'grade09' =>$grade,
+        'grade9' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1837,9 +1774,7 @@ if(isset($_POST['add_grades_CS224']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade10_22' => $grade,
-        'sc10_22' => $scode,
-        'des10_22' => $desc,
+        'grade10' => $grade,
     ];
     $postStatus = [
         'grade10' =>$grade,
@@ -1873,12 +1808,6 @@ if(isset($_POST['add_grades_CS224']))
      }
 
      // THIRD YEAR 1ST SEM
-     // THIRD YEAR 1ST SEM
-     // THIRD YEAR 1ST SEM
-     // THIRD YEAR 1ST SEM
-     // THIRD YEAR 1ST SEM
-     // THIRD YEAR 1ST SEM
-     
 
      //CS311
  if(isset($_POST['add_grades_CS311']))
@@ -1891,12 +1820,10 @@ if(isset($_POST['add_grades_CS224']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade01_31' => $grade,
-        'sc01_31' => $scode,
-        'des01_31' => $desc,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1938,12 +1865,10 @@ if(isset($_POST['add_grades_CS224']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade02_31' => $grade,
-        'sc02_31' => $scode,
-        'des02_31' => $desc,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade02' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1985,12 +1910,10 @@ if(isset($_POST['add_grades_CS224']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade03_31' => $grade,
-        'sc03_31' => $scode,
-        'des03_31' => $desc,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade03' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
  
@@ -2031,12 +1954,10 @@ if(isset($_POST['add_grades_CS224']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade04_31' => $grade,
-        'sc04_31' => $scode,
-        'des04_31' => $desc,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade04' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
  
@@ -2070,18 +1991,17 @@ if(isset($_POST['add_grades_CS224']))
 if(isset($_POST['add_grades_CS315']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade01'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade05_31' => $grade,
-        'sc05_31' => $scode,
-        'des05_31' => $desc,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade05' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2116,18 +2036,17 @@ if(isset($_POST['add_grades_CS315']))
 if(isset($_POST['add_grades_EL311']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade01'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade06_31' => $grade,
-        'sc06_31' => $scode,
-        'des06_31' => $desc,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade06' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2161,18 +2080,17 @@ if(isset($_POST['add_grades_EL311']))
 if(isset($_POST['add_grades_EL312']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade01'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade07_31' => $grade,
-        'sc07_31' => $scode,
-        'des07_31' => $desc,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade07' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2210,18 +2128,17 @@ if(isset($_POST['add_grades_EL312']))
 if(isset($_POST['add_grades_CS321']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade01'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade01_32' => $grade,
-        'sc01_32' => $scode,
-        'des01_32' => $desc,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2255,18 +2172,17 @@ if(isset($_POST['add_grades_CS321']))
 if(isset($_POST['add_grades_CS322']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade01'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade02_32' => $grade,
-        'sc02_32' => $scode,
-        'des02_32' => $desc,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade02' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2300,18 +2216,17 @@ if(isset($_POST['add_grades_CS322']))
 if(isset($_POST['add_grades_CS323']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade01'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade03_32' => $grade,
-        'sc03_32' => $scode,
-        'des03_32' => $desc,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade03' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2345,18 +2260,17 @@ if(isset($_POST['add_grades_CS323']))
 if(isset($_POST['add_grades_CS324']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade01'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade04_32' => $grade,
-        'sc04_32' => $scode,
-        'des04_32' => $desc,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade04' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2390,18 +2304,17 @@ if(isset($_POST['add_grades_CS324']))
 if(isset($_POST['add_grades_CS325']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade01'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade05_32' => $grade,
-        'sc05_32' => $scode,
-        'des05_32' => $desc,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade05' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2435,18 +2348,17 @@ if(isset($_POST['add_grades_CS325']))
 if(isset($_POST['add_grades_CS326']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade01'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade06_32' => $grade,
-        'sc06_32' => $scode,
-        'des06_32' => $desc,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade06' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2480,18 +2392,17 @@ if(isset($_POST['add_grades_CS326']))
 if(isset($_POST['add_grades_CS327']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade01'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade07_32' => $grade,
-        'sc07_32' => $scode,
-        'des07_32' => $desc,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade07' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2528,18 +2439,17 @@ if(isset($_POST['add_grades_CS327']))
 if(isset($_POST['add_grades_CS411']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade01'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade01_41' => $grade,
-        'sc01_41' => $scode,
-        'des01_41' => $desc,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2573,18 +2483,17 @@ if(isset($_POST['add_grades_CS411']))
 if(isset($_POST['add_grades_CS412']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade01'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade02_41' => $grade,
-        'sc02_41' => $scode,
-        'des01_41' => $desc,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade02' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2618,18 +2527,17 @@ if(isset($_POST['add_grades_CS412']))
 if(isset($_POST['add_grades_CS413']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade01'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade03_41' => $grade,
-        'sc03_41' => $scode,
-        'des01_41' => $desc,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade03' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2663,18 +2571,17 @@ if(isset($_POST['add_grades_CS413']))
 if(isset($_POST['add_grades_CS414']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade01'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade04_41' => $grade,
-        'sc04_41' => $scode,
-        'des04_41' => $desc,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade04' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2708,18 +2615,17 @@ if(isset($_POST['add_grades_CS414']))
 if(isset($_POST['add_grades_CS415']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade01'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade05_41' => $grade,
-        'sc05_41' => $scode,
-        'des05_41' => $desc,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2755,18 +2661,17 @@ if(isset($_POST['add_grades_CS415']))
 if(isset($_POST['add_grades_CS421']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade01'];
-    $status = $_POST['Grade'];
-    $scode = $_POST['Subject_code'];
+    $course = $_POST['Course'];
+    $subject_code = $_POST['Subject_code'];
     $desc = $_POST['Desc_title'];
+    $grade = $_POST['Grade'];
+    $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade01_42' => $grade,
-        'sc01_42' => $scode,
-        'des01_42' => $desc,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 

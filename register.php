@@ -15,8 +15,8 @@ include_once("dbcon.php");
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">        
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">        
     </head>
 
  <body>
@@ -26,7 +26,7 @@ include_once("dbcon.php");
 <center>
  <div class="register-form">   
     
-     <form class="register-container"  action="CODE_register.php" method="POST">
+     <form class="register-container"  action="logincode.php" method="POST">
         <h3>Register</h3>  
        
             <label>Full Name:</label>
@@ -41,9 +41,9 @@ include_once("dbcon.php");
             <label>Password:</label>
             <input type="password" name="password">
             <br>
-
+            
             <div style="padding: 10px; text-align: center;">
-             <button type="submit" name="register_btn" class="register_btn"> Register </button>
+             <button type="submit" name="register" class="register_btn"> Register </button>
              <br><br>
              <p>Already have an account? <a href="login.php" class="login">Sign in</a> here.</p>
             </div>   

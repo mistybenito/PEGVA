@@ -8,16 +8,16 @@
         <title>BSED-SCI</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="curriculum-style.css" rel="stylesheet" type="text/css">
+        <link href="style.css" rel="stylesheet" type="text/css">
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
 
 	<h2>Curriculum</h2>
-    <div class="div1">
+    <div class="curriculum">
 	
-	<form name="form1" method="post" action="code.php"  style="height:550px;">
+	<form name="form1" method="post" action="code.php"  style="height: 500px;" class="curriculum-form">
 		<p name="courses[]" id="courses">Course: Bachelor of Secondary Education, Major in Science</p>
 		<label>Year Level and Semester:</label>
 			<select id="yearlevel" onchange="npup.doSelect(this);">
@@ -36,14 +36,14 @@
     <!--  these have ids that end with and index  for easy retrieval in "findeElement" function  below-->
     <div id="npup0" class="hidden">
     <h3>BSED-SCI 1st Year, 1st Sem</h3> 
-    <form name="form1" method="post" action="code.php"  style="height:550px;">
+    <form name="form1" method="post" action="code.php">
 <center>
 	<table>
 			<tr> 
 			<th>Course Code</th>
 			<th>Discriptive Title</th>
 			<th>Unit</th>
-			<th>Pre-Requisite</th>
+			<th>Edit</th>
 		</tr>
 			<?php
 			include('dbcon.php');
@@ -60,7 +60,9 @@
 			<td><?=$row['Course_Code']; ?></td>
 			<td><?=$row['Desc_title']; ?></td>
 			<td><?=$row['Unit']; ?></td>
-			<td><?=$row['Pre-Req']; ?></td>
+			<td>
+                <a href="editcurric.php?id=<?=$key;?>" id="btnView"> View </a>
+            </td>
 		</tr>
 			<?php
 				}
@@ -73,20 +75,24 @@
 			}
 			?>
 		</table> 
+		</form> 
+		<div id="btns">
+			<input type="button" onclick="window.location.href='subjects.php';" id="add_btn" value="Add Subjects"/>
+		</div>
 		  
 	</center>
-	</form>
     </div>
+
     <div id="npup1" class="hidden">
       <h3>BSED-SCI 1st Year, 2nd Sem</h3>
-      <form name="form1" method="post" action="code.php"  style="height:550px;">	   
+      <form name="form1" method="post" action="code.php">	   
 <center>
 	<table>
 			<tr> 
 			<th>Course Code</th>
 			<th>Discriptive Title</th>
 			<th>Unit</th>
-			<th>Pre-Requisite</th>
+			<th>Edit</th>
 		</tr>
 			<?php
 			include('dbcon.php');
@@ -103,7 +109,9 @@
 			<td><?=$row['Course_Code']; ?></td>
 			<td><?=$row['Desc_title']; ?></td>
 			<td><?=$row['Unit']; ?></td>
-			<td><?=$row['Pre-Req']; ?></td>
+			<td>
+                <a href="editcurric.php?id=<?=$key;?>" id="btnView"> View </a>
+            </td>
 		</tr>
 			<?php
 				}
@@ -116,22 +124,25 @@
 			}
 			?>
 		</table> 
+		</form> 
+		<div id="btns">
+			<input type="button" onclick="window.location.href='subjects.php';" id="add_btn" value="Add Subjects"/>
+		</div>
 		  
 	</center>
-	</form>
     </div>
 
 
     <div id="npup2" class="hidden">
       <h3>BSED-SCI 2nd Year, 1st Sem</h3>
-      <form name="form1" method="post" action="code.php"  style="height:550px;">   
+      <form name="form1" method="post" action="code.php">   
 <center>
 	<table>
 			<tr> 
 			<th>Course Code</th>
 			<th>Discriptive Title</th>
 			<th>Unit</th>
-			<th>Pre-Requisite</th>
+			<th>Edit</th>
 		</tr>
 			<?php
 			include('dbcon.php');
@@ -148,7 +159,9 @@
 			<td><?=$row['Course_Code']; ?></td>
 			<td><?=$row['Desc_title']; ?></td>
 			<td><?=$row['Unit']; ?></td>
-			<td><?=$row['Pre-Req']; ?></td>
+			<td>
+                <a href="editcurric.php?id=<?=$key;?>" id="btnView"> View </a>
+            </td>
 		</tr>
 			<?php
 				}
@@ -161,20 +174,24 @@
 			}
 			?>
 		</table> 
+		</form> 
+		<div id="btns">
+			<input type="button" onclick="window.location.href='subjects.php';" id="add_btn" value="Add Subjects"/>
+		</div>
 		  
 	</center>
     </div>
 
 	<div id="npup3" class="hidden">
       <h3>BSED-SCI 2nd Year, 2nd Sem</h3>
-      <form name="form1" method="post" action="code.php"  style="height:550px;">	   
+      <form name="form1" method="post" action="code.php">	   
 <center>
 	<table>
 			<tr> 
 			<th>Course Code</th>
 			<th>Discriptive Title</th>
 			<th>Unit</th>
-			<th>Pre-Requisite</th>
+			<th>Edit</th>
 		</tr>
 			<?php
 			include('dbcon.php');
@@ -191,7 +208,9 @@
 			<td><?=$row['Course_Code']; ?></td>
 			<td><?=$row['Desc_title']; ?></td>
 			<td><?=$row['Unit']; ?></td>
-			<td><?=$row['Pre-Req']; ?></td>
+			<td>
+                <a href="editcurric.php?id=<?=$key;?>" id="btnView"> View </a>
+            </td>
 		</tr>
 			<?php
 				}
@@ -204,19 +223,24 @@
 			}
 			?>
 		</table> 
+		</form> 
+		<div id="btns">
+			<input type="button" onclick="window.location.href='subjects.php';" id="add_btn" value="Add Subjects"/>
+		</div>
 		  
 	</center>
     </div>
+
 	<div id="npup4" class="hidden">
       <h3>BSED-SCI 3rd Year, 1st Sem</h3>
-      <form name="form1" method="post" action="code.php"  style="height:550px;">	   
+      <form name="form1" method="post" action="code.php">	   
 <center>
 	<table>
 			<tr> 
 			<th>Course Code</th>
 			<th>Discriptive Title</th>
 			<th>Unit</th>
-			<th>Pre-Requisite</th>
+			<th>Edit</th>
 		</tr>
 			<?php
 			include('dbcon.php');
@@ -233,7 +257,9 @@
 			<td><?=$row['Course_Code']; ?></td>
 			<td><?=$row['Desc_title']; ?></td>
 			<td><?=$row['Unit']; ?></td>
-			<td><?=$row['Pre-Req']; ?></td>
+			<td>
+                <a href="editcurric.php?id=<?=$key;?>" id="btnView"> View </a>
+            </td>
 		</tr>
 			<?php
 				}
@@ -247,19 +273,24 @@
 			?>
 		</table> 
 		  
+		</form> 
+		<div id="btns">
+			<input type="button" onclick="window.location.href='subjects.php';" id="add_btn" value="Add Subjects"/>
+		</div>
+		  
 	</center>
     </div>
 
 	<div id="npup5" class="hidden">
       <h3>BSED-SCI 3rd Year, 2nd Sem</h3>
-      <form name="form1" method="post" action="code.php"  style="height:550px;">   
+      <form name="form1" method="post" action="code.php">   
 <center>
 	<table>
 			<tr> 
 			<th>Course Code</th>
 			<th>Discriptive Title</th>
 			<th>Unit</th>
-			<th>Pre-Requisite</th>
+			<th>Edit</th>
 		</tr>
 			<?php
 			include('dbcon.php');
@@ -276,7 +307,9 @@
 			<td><?=$row['Course_Code']; ?></td>
 			<td><?=$row['Desc_title']; ?></td>
 			<td><?=$row['Unit']; ?></td>
-			<td><?=$row['Pre-Req']; ?></td>
+			<td>
+                <a href="editcurric.php?id=<?=$key;?>" id="btnView"> View </a>
+            </td>
 		</tr>
 			<?php
 				}
@@ -289,20 +322,24 @@
 			}
 			?>
 		</table> 
+		</form> 
+		<div id="btns">
+			<input type="button" onclick="window.location.href='subjects.php';" id="add_btn" value="Add Subjects"/>
+		</div>
 		  
 	</center>
     </div>
 
 	<div id="npup6" class="hidden">
       <h3>BSED-SCI 4th Year, 1st Sem</h3>
-      <form name="form1" method="post" action="code.php"  style="height:550px;">	   
+      <form name="form1" method="post" action="code.php">	   
 <center>
 	<table>
 			<tr> 
 			<th>Course Code</th>
 			<th>Discriptive Title</th>
 			<th>Unit</th>
-			<th>Pre-Requisite</th>
+			<th>Edit</th>
 		</tr>
 			<?php
 			include('dbcon.php');
@@ -319,7 +356,9 @@
 			<td><?=$row['Course_Code']; ?></td>
 			<td><?=$row['Desc_title']; ?></td>
 			<td><?=$row['Unit']; ?></td>
-			<td><?=$row['Pre-Req']; ?></td>
+			<td>
+                <a href="editcurric.php?id=<?=$key;?>" id="btnView"> View </a>
+            </td>
 		</tr>
 			<?php
 				}
@@ -332,20 +371,24 @@
 			}
 			?>
 		</table> 
+		</form> 
+		<div id="btns">
+			<input type="button" onclick="window.location.href='subjects.php';" id="add_btn" value="Add Subjects"/>
+		</div>
 		  
 	</center>
     </div>
 
 	<div id="npup7" class="hidden">
       <h3>BSED-SCI 4th Year, 2nd Sem</h3>
-      <form name="form1" method="post" action="code.php"  style="height:550px;">	   
+      <form name="form1" method="post" action="code.php">	   
 <center>
 	<table>
 			<tr> 
 			<th>Course Code</th>
 			<th>Discriptive Title</th>
 			<th>Unit</th>
-			<th>Pre-Requisite</th>
+			<th>Edit</th>
 		</tr>
 			<?php
 			include('dbcon.php');
@@ -362,7 +405,9 @@
 			<td><?=$row['Course_Code']; ?></td>
 			<td><?=$row['Desc_title']; ?></td>
 			<td><?=$row['Unit']; ?></td>
-			<td><?=$row['Pre-Req']; ?></td>
+			<td>
+                <a href="editcurric.php?id=<?=$key;?>" id="btnView"> View </a>
+            </td>
 		</tr>
 			<?php
 				}
@@ -374,10 +419,10 @@
 			<?php
 			}
 			?>
-		</table> 
+		</table>
+		</form> 
 		<div id="btns">
-		<button type="submit" name="update_registrar" id="update_btn" value="Update"> Update</button>
-		<input type="button" onclick="window.location.href='subjects.php';" id="add_btn" value="Add Subjects"/>
+			<input type="button" onclick="window.location.href='subjects.php';" id="add_btn" value="Add Subjects"/>
 		</div>
 		  
 	</center>

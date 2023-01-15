@@ -43,12 +43,12 @@
      
 <div>
     <center>    
-<div id="div1">
+<div id="add_grade-form">
 	
-	<form name="form1" method="post" action="add_grade_code.php"  style="height:600px;">
+	<form name="form1" method="post" action="add_grade_code.php"  style="height:325px;">
 	<center>
-<fieldset>
-    <legend>Subject Description</legend>
+
+    <h3>Subject Description</h3>
     <p>1st Year, 2nd Sem</p>
 <table class="grades">
 	<?php
@@ -105,7 +105,7 @@
 	?>
 
 	<center><button type="submit" name="1y1s" id="update"  value = "1y1s"> Add Subject and Grade </button></center></div>
-</fieldset>
+
 </center>
 </div>
     </div>
@@ -116,9 +116,9 @@
     <div id="npup1" class="hidden">
     <div>
     <div id="div1">
-	<form name="form1" method="post" action="add_grade_code.php"  style="height:600px;">
+	<form name="form1" method="post" action="add_grade_code.php">
 	<center>
-<fieldset  style= "width: fit-content;">
+
 	<legend>Subject Description</legend>
 	<center>1st Year, 2nd Sem</center>
 	<table>

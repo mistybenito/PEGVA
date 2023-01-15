@@ -41,7 +41,8 @@ nav p
 }
 h2
 {
-    margin-top: 10%;
+    text-align:center;
+    margin-top: 8%;
     margin-bottom: -7%;
     color: #111d3c;
 }
@@ -53,7 +54,7 @@ h2
 }
 div.div1
 {
-    margin-top: -38%;
+    margin-top: 6%;
     margin-left:50%;
     overflow: hidden;
 }
@@ -190,6 +191,8 @@ input[type=text].text-search,textarea
 { /* Microsoft Edge */
     color: rgb(210, 210, 210);
 }
+
+/*tables*/
 #student-list
 {
     width: 80%;
@@ -251,7 +254,7 @@ tr
 
 #profile
 {
-    padding: 5px 65px 0 65px;
+    padding: 10px 65px 10px 65px;
     background-color: #ddd;
     border-radius: 15px;
     margin: 6% auto auto;
@@ -275,8 +278,8 @@ table.user-list-content
     border-radius: 8px;
     box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
     box-sizing: border-box;
-    margin: 10% 0 0;
-    padding: 20px 0 20px;
+    margin: 15% auto 0 auto;
+    padding: 20px 20px;
     width: 30%;
 }
 .view_grades
@@ -364,7 +367,7 @@ input[type=text]#role-num
     font-size: 22px;
     padding: 3px;
 }
-#edit-btn, #view_btn, #update, #add_grade_btn, .register_btn
+#edit-btn, #view_btn, #update, #add_grade_btn, .register_btn, #delete_btn
 {
     background-color: #111d3c;
     border: none;
@@ -377,8 +380,7 @@ input[type=text]#role-num
 #btns
 {
     display: block;
-    height: 60px;
-    margin: 25px 0px;
+    margin: 20px;
 }
 #update_btn, .submit_btn
 {
@@ -402,5 +404,41 @@ input[type=text]#role-num
 }
 #btnView, #btnAdd
 {
-    color: black;
+    color: #0c59c5;
+}
+/*Curriculum*/
+.curriculum
+{   
+    width: 50%;
+    margin: 10% auto;
+}
+.curriculum-form
+{
+    background-color: #fcfcfc;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    border-radius: 8px;
+}
+#subject-form
+{
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    box-sizing: border-box;
+    margin: auto;
+    padding: 25px;
+    width: 30%; 
+    margin-top: 10%;
+}
+
+#add_grade-form
+{
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    box-sizing: border-box;
+    margin: auto;
+    padding: 25px;
+    width: 30%; 
+    margin-top: 30px;
 }

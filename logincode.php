@@ -2,6 +2,42 @@
 session_start();
 include('dbcon.php');
 
+// REGISTER CODE
+
+if(isset($_POST['register_btn']))
+{
+    $fullname = $_POST['full_name'];
+    $phone = $_POST['phone'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $userProperties = [
+        'email' => $email,
+        'emailVerified' => false,
+        'phoneNumber' => '+63'.$phone,
+        'password' => $password,   
+        'displayName' => $fullname,
+    ];
+    $createdUser = $auth->createUser($userProperties);
+
+    if($createdUser)
+    {
+        $_SESSION['status'] = "User created successfully.";
+        header('Location: login.php');
+        exit();
+    }
+
+
+    else
+    {
+        $_SESSION['status'] = "User creation failed.";
+        header('Location: register.php');
+        exit();
+    }
+}
+
+
+
 
 // login code
 
@@ -22,6 +58,7 @@ if(isset($_POST['login_btn']))
             $uid = $verifiedIdToken->claims()->get('sub');
             $claims = $auth->getUser($uid)->customClaims;
 
+<<<<<<< Updated upstream
             if(isset($claims['ch-bscs']) == true)
             {
                 $_SESSION['verified_bscs'] = true;
@@ -115,6 +152,9 @@ if(isset($_POST['login_btn']))
 
                 
             elseif(isset($claims['bscs']) == true)
+=======
+            if(isset($claims['bscs']) == true)
+>>>>>>> Stashed changes
                 {
                     $_SESSION['verified_bscs'] = true;
                     $_SESSION['verified_user_id'] = $uid;
