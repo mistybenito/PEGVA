@@ -1,5 +1,5 @@
 <?php
-    include("auth/ed_math_auth.php");
+    include("auth/ch-ed_math_auth.php");
     include("navbar.php");
 ?>
 <!DOCTYPE html>

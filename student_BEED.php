@@ -1,5 +1,5 @@
 <?php
-    include("auth/beed_auth.php");
+    include("auth/ch-beed_auth.php");
     include("navbar.php");
 ?>
 <!DOCTYPE html>

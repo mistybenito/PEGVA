@@ -1,5 +1,5 @@
 <?php
-    include("auth/abreed_auth.php");
+    include("auth/ch-abreed_auth.php");
     include("navbar.php");
 ?>
 <!DOCTYPE html>

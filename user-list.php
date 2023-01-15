@@ -54,9 +54,38 @@
                                     {
                                         echo "Role: Registrar";
                                     }
-                                    elseif(isset($claims['bscs']) == true)
+                                    elseif(isset($claims['ch-bscs']) == true)
                                     {
-                                        echo "Role: BSCS Teacher";
+                                        echo "Role: BSCS Chairman";
+                                    }
+                                    elseif(isset($claims['ch-abreed']) == true)
+                                    {
+                                        echo "Role: ABREED Chairman";
+                                    }
+                                    elseif(isset($claims['ch-bsba']) == true)
+                                    {
+                                        echo "Role: BSBA Chairman";
+                                    }
+                                    elseif(isset($claims['ch-bsoa']) == true)
+                                    {
+                                        echo "Role: BSOA Chairman";
+                                    }
+                                    elseif(isset($claims['ch-beed']) == true)
+                                    {
+                                        echo "Role: BEED Chairman";
+                                    }
+                                    elseif(isset($claims['ch-ed_eng']) == true)
+                                    {
+                                        echo "Role: BSED-ENG Chairman";
+                                    }
+                                    elseif(isset($claims['ch-ed_sci']) == true)
+                                    {
+                                        echo "Role: BSED-SCI Chairman";
+                                    }
+
+                                    elseif(isset($claims['ch-ed_math']) == true)
+                                    {
+                                        echo "Role: BSED-MATH Chairman";
                                     }
                                     elseif(isset($claims['abreed']) == true)
                                     {

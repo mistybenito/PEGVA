@@ -25,6 +25,7 @@ if(isset($_POST['login_btn']))
             if(isset($claims['ch-bscs']) == true)
             {
                 $_SESSION['verified_bscs'] = true;
+                $_SESSION['verified_chairman'] = true;
                 $_SESSION['verified_ch-bscs'] = true;
                 $_SESSION['verified_user_id'] = $uid;
                 $_SESSION['idTokenString'] = $idTokenString;
@@ -36,6 +37,7 @@ if(isset($_POST['login_btn']))
             elseif(isset($claims['ch-beed']) == true)
                 {
                     $_SESSION['verified_beed'] = true;
+                    $_SESSION['verified_chairman'] = true;
                     $_SESSION['verified_ch-beed'] = true;
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['idTokenString'] = $idTokenString;
@@ -46,6 +48,7 @@ if(isset($_POST['login_btn']))
             elseif(isset($claims['ch-abreed']) == true)
                 {
                     $_SESSION['verified_abreed'] = true;
+                    $_SESSION['verified_chairman'] = true;
                     $_SESSION['verified_ch-abreed'] = true;
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['idTokenString'] = $idTokenString;
@@ -56,6 +59,7 @@ if(isset($_POST['login_btn']))
             elseif(isset($claims['ch-bsoa']) == true)
                 {
                     $_SESSION['verified_bsoa'] = true;
+                    $_SESSION['verified_chairman'] = true;
                     $_SESSION['verified_ch-bsoa'] = true;
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['idTokenString'] = $idTokenString;
@@ -66,6 +70,7 @@ if(isset($_POST['login_btn']))
                 elseif(isset($claims['ch-bsba']) == true)
                 {
                     $_SESSION['verified_bsba'] = true;
+                    $_SESSION['verified_chairman'] = true;
                     $_SESSION['verified_ch-bsba'] = true;
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['idTokenString'] = $idTokenString;
@@ -73,29 +78,10 @@ if(isset($_POST['login_btn']))
                     header('Location: registrar.php');
                     exit();
                 }
-                elseif(isset($claims['ch-bsoa']) == true)
-                {
-                    $_SESSION['verified_bsoa'] = true;
-                    $_SESSION['verified_ch-bsoa'] = true;
-                    $_SESSION['verified_user_id'] = $uid;
-                    $_SESSION['idTokenString'] = $idTokenString;
-                    $_SESSION['status'] = "Logged in successfully as BSOA Chairman";
-                    header('Location: registrar.php');
-                    exit();
-                }
-                elseif(isset($claims['ch-bsoa']) == true)
-                {
-                    $_SESSION['verified_bsoa'] = true;
-                    $_SESSION['verified_ch-bsoa'] = true;
-                    $_SESSION['verified_user_id'] = $uid;
-                    $_SESSION['idTokenString'] = $idTokenString;
-                    $_SESSION['status'] = "Logged in successfully as BSOA Chairman";
-                    header('Location: registrar.php');
-                    exit();
-                }
             elseif(isset($claims['ch-ed_eng']) == true)
                 {
                     $_SESSION['verified_ed_eng'] = true;
+                    $_SESSION['verified_chairman'] = true;
                     $_SESSION['verified_ch-ed_eng'] = true;
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['idTokenString'] = $idTokenString;
@@ -106,6 +92,7 @@ if(isset($_POST['login_btn']))
             elseif(isset($claims['ch-ed_sci']) == true)
                 {
                     $_SESSION['verified_ed_sci'] = true;
+                    $_SESSION['verified_chairman'] = true;
                     $_SESSION['verified_ch-ed_sci'] = true;
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['idTokenString'] = $idTokenString;
@@ -117,6 +104,7 @@ if(isset($_POST['login_btn']))
             elseif(isset($claims['ch-ed_math']) == true)
                 {
                     $_SESSION['verified_ed_math'] = true;
+                    $_SESSION['verified_chairman'] = true;
                     $_SESSION['verified_ch-ed_math'] = true;
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['idTokenString'] = $idTokenString;
@@ -139,6 +127,7 @@ if(isset($_POST['login_btn']))
             elseif(isset($claims['abreed']) == true)
                 {
                     $_SESSION['verified_abreed'] = true;
+                    
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['idTokenString'] = $idTokenString;
                     $_SESSION['status'] = "Logged in successfully as ABREED Teacher";
@@ -209,6 +198,15 @@ if(isset($_POST['login_btn']))
             elseif(isset($claims['registrar']) == true)
                 {
                     $_SESSION['verified_registrar'] = true;
+                    $_SESSION['verified_chairman'] = true;
+                    $_SESSION['verified_ch-bscs'] = true;
+                    $_SESSION['verified_ch-abreed'] = true;
+                    $_SESSION['verified_ch-beed'] = true;
+                    $_SESSION['verified_ch-bsoa'] = true;
+                    $_SESSION['verified_ch-bsba'] = true;
+                    $_SESSION['verified_ch-ed_eng'] = true;
+                    $_SESSION['verified_ch-ed_sci'] = true;
+                    $_SESSION['verified_ch-ed_math'] = true;
                     $_SESSION['verified_bscs'] = true;
                     $_SESSION['verified_abreed'] = true;
                     $_SESSION['verified_beed'] = true;

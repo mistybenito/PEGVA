@@ -1,5 +1,5 @@
 <?php
-    include("auth/bsba_auth.php");
+    include("auth/ch-bsba_auth.php");
     include("navbar.php");
 ?>
 <!DOCTYPE html>

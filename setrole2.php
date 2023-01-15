@@ -113,45 +113,74 @@
                                     $claims = $auth->getUser($uid)->customClaims;
 
                                     if(isset($claims['registrar']) == true)
-                                    {
-                                        echo "Role: Registrar";
-                                    }
-                                    elseif(isset($claims['bscs']) == true)
-                                    {
-                                        echo "Role: BSCS Teacher";
-                                    }
-                                    elseif(isset($claims['abreed']) == true)
-                                    {
-                                        echo "Role: ABREED Teacher";
-                                    }
-                                    elseif(isset($claims['beed']) == true)
-                                    {
-                                        echo "Role: BEED Teacher";
-                                    }
-                                    elseif(isset($claims['bsoa']) == true)
-                                    {
-                                        echo "Role: BSOA Teacher";
-                                    }
-                                    elseif(isset($claims['bsba']) == true)
-                                    {
-                                        echo "Role: BSBA Teacher";
-                                    }
-                                    elseif(isset($claims['ed_eng']) == true)
-                                    {
-                                        echo "Role: BSED-ENG Teacher";
-                                    }
-                                    elseif(isset($claims['ed_sci']) == true)
-                                    {
-                                        echo "Role: BSED-SCI Teacher";
-                                    }
-                                    elseif(isset($claims['ed_math']) == true)
-                                    {
-                                        echo "Role: BSED-MATH Teacher";
-                                    }
-                                    elseif($claims == null)
-                                    {
-                                        echo "Role: No Role";
-                                    }
+                                            {
+                                                echo "Role: Registrar";
+                                            }
+                                    elseif(isset($claims['ch-bscs']) == true)
+                                            {
+                                                echo "Role: BSCS Chairman";
+                                            }
+                                            elseif(isset($claims['ch-abreed']) == true)
+                                            {
+                                                echo "Role: ABREED Chairman";
+                                            }
+                                            elseif(isset($claims['ch-bsba']) == true)
+                                            {
+                                                echo "Role: BSBA Chairman";
+                                            }
+                                            elseif(isset($claims['ch-bsoa']) == true)
+                                            {
+                                                echo "Role: BSOA Chairman";
+                                            }
+                                            elseif(isset($claims['ch-beed']) == true)
+                                            {
+                                                echo "Role: BEED Chairman";
+                                            }
+                                            elseif(isset($claims['ch-ed_eng']) == true)
+                                            {
+                                                echo "Role: BSED-ENG Chairman";
+                                            }
+                                            elseif(isset($claims['ch-ed_sci']) == true)
+                                            {
+                                                echo "Role: BSED-SCI Chairman";
+                                            }
+
+                                            elseif(isset($claims['ch-ed_math']) == true)
+                                            {
+                                                echo "Role: BSED-MATH Chairman";
+                                            }
+                                            elseif(isset($claims['abreed']) == true)
+                                            {
+                                                echo "Role: ABREED Teacher";
+                                            }
+                                            elseif(isset($claims['beed']) == true)
+                                            {
+                                                echo "Role: BEED Teacher";
+                                            }
+                                            elseif(isset($claims['bsoa']) == true)
+                                            {
+                                                echo "Role: BSOA Teacher";
+                                            }
+                                            elseif(isset($claims['bsba']) == true)
+                                            {
+                                                echo "Role: BSBA Teacher";
+                                            }
+                                            elseif(isset($claims['ed_eng']) == true)
+                                            {
+                                                echo "Role: BSED-ENG Teacher";
+                                            }
+                                            elseif(isset($claims['ed_sci']) == true)
+                                            {
+                                                echo "Role: BSED-SCI Teacher";
+                                            }
+                                            elseif(isset($claims['ed_math']) == true)
+                                            {
+                                                echo "Role: BSED-MATH Teacher";
+                                            }
+                                            elseif($claims == null)
+                                            {
+                                                echo "Role: No Role";
+                                            }
                                     ?>
                                 </h4>
 

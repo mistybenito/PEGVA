@@ -3,6 +3,15 @@ session_start();
 
 unset($_SESSION['verified_user_id']);
 unset($_SESSION['verified_registrar']);
+unset($_SESSION['verified_chairman']);
+unset($_SESSION['verified_ch-bscs']);
+unset($_SESSION['verified_ch-abreed']);
+unset($_SESSION['verified_ch-beed']);
+unset($_SESSION['verified_ch-bsoa']);
+unset($_SESSION['verified_ch-bsba']);
+unset($_SESSION['verified_ch-ed_eng']);
+unset($_SESSION['verified_ch-ed_sci']);
+unset($_SESSION['verified_ch-ed_math']);
 unset($_SESSION['verified_bscs']);
 unset($_SESSION['verified_abreed']);
 unset($_SESSION['verified_beed']);

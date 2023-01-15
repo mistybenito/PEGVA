@@ -1,5 +1,5 @@
 <?php
-    include("auth/ed_eng_auth.php");
+    include("auth/ch-ed_eng_auth.php");
     include("navbar.php");
 ?>
 <!DOCTYPE html>
