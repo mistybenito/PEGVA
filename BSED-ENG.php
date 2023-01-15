@@ -48,7 +48,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Secondary Education, Major in English/First Year/1st Sem";
+				$ref_table = "course_curriculum/bsed_e/first_year/first_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -95,7 +95,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Secondary Education, Major in English/First Year/2nd Sem";
+				$ref_table = "course_curriculum/bsed_e/first_year/second_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -144,7 +144,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Secondary Education, Major in English/Second Year/1st Sem";
+				$ref_table = "course_curriculum/bsed_e/second_year/first_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -191,7 +191,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Secondary Education, Major in English/Second Year/2nd Sem";
+				$ref_table = "course_curriculum/bsed_e/second_year/second_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -237,7 +237,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Secondary Education, Major in English/Third Year/1st Sem";
+				$ref_table = "course_curriculum/bsed_e/third_year/first_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -284,7 +284,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Secondary Education, Major in English/Third Year/2nd Sem";
+				$ref_table = "course_curriculum/bsed_e/third_year/second_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -331,7 +331,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Secondary Education, Major in English/Fourth Year/1st Sem";
+				$ref_table = "course_curriculum/bsed_e/fourth_year/first_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -378,7 +378,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Secondary Education, Major in English/Fourth Year/2nd Sem";
+				$ref_table = "course_curriculum/bsed_e/fourth_year/second_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{

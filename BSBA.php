@@ -50,7 +50,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Science in Business Administration/First Year/1st Sem";
+				$ref_table = "course_curriculum/bsba/first_year/first_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -99,7 +99,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Science in Business Administration/First Year/2nd Sem";
+				$ref_table = "course_curriculum/bsba/first_year/second_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -151,7 +151,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Science in Business Administration/Second Year/1st Sem";
+				$ref_table = "course_curriculum/bsba/second_year/first_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -202,7 +202,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Science in Business Administration/Second Year/2nd Sem";
+				$ref_table = "course_curriculum/bsba/second_year/second_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -253,7 +253,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Science in Business Administration/Third Year/1st Sem";
+				$ref_table = "course_curriculum/bsba/third_year/first_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -304,7 +304,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Science in Business Administration/Third Year/2nd Sem";
+				$ref_table = "course_curriculum/bsba/third_year/second_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -355,7 +355,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Science in Business Administration/Fourth Year/1st Sem";
+				$ref_table = "course_curriculum/bsba/fourth_year/first_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -406,7 +406,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Science in Business Administration/Fourth Year/2nd Sem";
+				$ref_table = "course_curriculum/bsba/fourth_year/second_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{

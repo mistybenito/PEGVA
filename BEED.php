@@ -49,7 +49,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Elementary Education/First Year/1st Sem";
+				$ref_table = "course_curriculum/beed/first_year/first_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -100,7 +100,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Elementary Education/First Year/2nd Sem";
+				$ref_table = "course_curriculum/beed/first_year/second_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -152,7 +152,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Elementary Education/Second Year/1st Sem";
+				$ref_table = "course_curriculum/beed/second_year/first_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -203,7 +203,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Elementary Education/Second Year/2nd Sem";
+				$ref_table = "course_curriculum/beed/second_year/second_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -253,7 +253,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Elementary Education/Third Year/1st Sem";
+				$ref_table = "course_curriculum/beed/third_year/first_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -304,7 +304,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Elementary Education/Third Year/2nd Sem";
+				$ref_table = "course_curriculum/beed/third_year/second_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -356,7 +356,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Elementary Education/Fourth Year/1st Sem";
+				$ref_table = "course_curriculum/beed/fourth_year/first_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -408,7 +408,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "Course&Curriculum/Bachelor of Elementary Education/Fourth Year/2nd Sem";
+				$ref_table = "course_curriculum/beed/fourth_year/second_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
