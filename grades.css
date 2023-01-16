@@ -14,10 +14,7 @@
 body
 {
     font-family: 'Nunito-VariableFont_wght';
-    background-image:url("images/bground.png");
-    background-attachment: fixed; 
-	background-position: center; 
-	background-size: cover;
+    background-color: #ddd;
 }
 
 nav

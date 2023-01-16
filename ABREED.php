@@ -17,7 +17,7 @@
 	<h2>Curriculum</h2>
     <div class="curriculum">
 	
-	<form name="form1" method="post" action="code.php"  style="height: 500px;" class="curriculum-form">
+	<form name="form1" method="post" action="code.php"  style="height:  fit-content;" class="curriculum-form">
 		<p name="courses[]" id="courses">Course: Bachelor of Arts in Religious Education (ABREED)</p>
 		<label>Year Level and Semester:</label>
 			<select id="yearlevel" onchange="npup.doSelect(this);">
@@ -61,7 +61,7 @@
 			<td><?=$row['descriptive_title']; ?></td>
 			<td><?=$row['units']; ?></td>
 			<td>
-                <a href="editcurric.php?id=<?=$key;?>"  id="btnView"> View </a>
+                <a href="editcurric.php?id=<?=$key;?>" id="btnView"> View </a>
             </td>
 		</tr>
 			<?php
@@ -112,7 +112,7 @@
 			<td><?=$row['descriptive_title']; ?></td>
 			<td><?=$row['units']; ?></td>
 			<td>
-                <a href="editcurric.php?id=<?=$key;?>" class = "btn btn btn-primary" id="btnView"> View </a>
+                <a href="editcurric.php?id=<?=$key;?>" id="btnView"> View </a>
             </td>
 		</tr>
 			<?php

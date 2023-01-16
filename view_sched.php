@@ -8,7 +8,7 @@
 <head>
 <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="grades.css" rel="stylesheet" type="text/css">
+        <link href="style.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -38,9 +38,10 @@
 <div id="mySpecialElements">
     <!--  these have ids that end with and index  for easy retrieval in "findeElement" function  below-->
 <div id="npup0" class="hidden">
-        <h3>BSCS</h3> 
+ <center>       
+     <h3>BSCS</h3> 
         <?//FIRST YEAR FIRST SEM GRADES?>
-            <center>    
+               
     <form name="form1" method="post" action="code.php"  style="height:550px;">
             <?// CONTENT SELECTION FOR GRADES?>
             <div class="content-selection">
@@ -431,8 +432,9 @@
 
 
     <div id="npup1" class="hidden">
-      <h3>ABREED</h3>
-      <center><!-- COPY FROM HERE -->    
+      <center>
+        <h3>ABREED</h3>
+      <!-- COPY FROM HERE -->    
                 <form name="form1" method="post" action="code.php"  style="height:550px;">
             <?// CONTENT SELECTION FOR GRADES?>
             <div class="content-selection">
@@ -764,8 +766,9 @@
 
 <!-- BOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARY-->
     <div id="npup2" class="hidden">
-      <h3>BEED</h3>
-      <center><!-- COPY FROM HERE -->    
+      <center>
+        <h3>BEED</h3>
+      <!-- COPY FROM HERE -->    
         <form name="form1" method="post" action="code.php"  style="height:550px;">
             <?// CONTENT SELECTION FOR GRADES?>
             <div class="content-selection">
@@ -1089,8 +1092,9 @@
 
 <!-- BOUNDARY BETWEEN SEMS ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 	<div id="npup3" class="hidden">
-      <h3>BSBA</h3>
-      <center><!-- COPY FROM HERE -->    
+      <center>
+        <h3>BSBA</h3>
+      <!-- COPY FROM HERE -->    
         <form name="form1" method="post" action="code.php"  style="height:550px;">
             <?// CONTENT SELECTION FOR GRADES?>
             <div class="content-selection">
@@ -1415,8 +1419,9 @@
 
 
 	<div id="npup4" class="hidden">
-      <h3>BSOA</h3>
-      <center><!-- COPY FROM HERE -->    
+      <center>
+        <h3>BSOA</h3>
+      <!-- COPY FROM HERE -->    
         <form name="form1" method="post" action="code.php"  style="height:550px;">
             <?// CONTENT SELECTION FOR GRADES?>
             <div class="content-selection">
@@ -1739,8 +1744,9 @@
 <!-- asdsadjiowqdjasd boundaryboundaryboundaryboundaryboundaryboundaryboundaryboundaryboundaryboundaryboundaryboundaryboundary -->
 
 	<div id="npup5" class="hidden">
-      <h3>BSED-ENG</h3>
-      <center><!-- COPY FROM HERE -->    
+      <center>
+        <h3>BSED-ENG</h3>
+      <!-- COPY FROM HERE -->    
         <form name="form1" method="post" action="code.php"  style="height:550px;">
             <?// CONTENT SELECTION FOR GRADES?>
             <div class="content-selection">
@@ -2062,8 +2068,9 @@
 
 <!-- 4TH YEAR year 4th year 4yearsad asdsaddwqeqeasdsa qfwqd asdwqdq safsadqwe asd  -->
 	<div id="npup6" class="hidden">
-      <h3>BSED-SCI</h3>
-      <center><!-- COPY FROM HERE -->    
+      <center>
+        <h3>BSED-SCI</h3>
+      <!-- COPY FROM HERE -->    
         <form name="form1" method="post" action="code.php"  style="height:550px;">
             <?// CONTENT SELECTION FOR GRADES?>
             <div class="content-selection">
@@ -2380,8 +2387,9 @@
         </div><!-- TO HERE -->
 
 	<div id="npup7" class="hidden">
-      <h3>BSED-MATH</h3>
-      <center><!-- COPY FROM HERE -->    
+      <center>
+        <h3>BSED-MATH</h3>
+      <!-- COPY FROM HERE -->    
         <form name="form1" method="post" action="code.php"  style="height:550px;">
             <?// CONTENT SELECTION FOR GRADES?>
             <div class="content-selection">
@@ -2692,9 +2700,6 @@
             </center>
         </div><!-- TO HERE -->
 </div>
-
-
-
 
 
 
@@ -3138,29 +3143,7 @@ window.fourtwo = (function (containerId, baseId) {
 
 
 
+    <p id="footer">All content copyright © 2022, PEGVA.</p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div  id="footer">
-    <p>All content copyright © 2022, PEGVA.</p>
-</div>
 </body>
 </html>

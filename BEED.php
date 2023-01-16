@@ -18,7 +18,7 @@
 	<h2>Curriculum</h2>
     <div class="curriculum">
 	
-	<form name="form1" method="post" action="code.php"  style="height: 500px;" class="curriculum-form">
+	<form name="form1" method="post" action="code.php"  style="height:  fit-content;" class="curriculum-form">
 		<p name="courses[]" id="courses">Course: Bachelor of Elementary Education</p>
 		<label>Year Level and Semester:</label>
 			<select id="yearlevel" onchange="npup.doSelect(this);">
