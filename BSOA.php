@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>BSCS</title>
+        <title>BSOA</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet" type="text/css">
@@ -35,7 +35,7 @@
 	<div id="mySpecialElements" style="margin-top: 10px;">
     <!--  these have ids that end with and index  for easy retrieval in "findeElement" function  below-->
     <div id="npup0" class="hidden">
-    <h3>BSCS 1st Year, First Sem</h3> 
+    <h3>BSOA 1st Year, First Sem</h3> 
     <form name="form1" method="post" action="code.php">
 <center>
 	<table>
@@ -85,7 +85,7 @@
     </div>
 
 <div id="npup1" class="hidden">
-      <h3>BSCS 1st Year, Second Sem</h3>
+      <h3>BSOA 1st Year, Second Sem</h3>
       <form name="form1" method="post" action="code.php">	   
 	<center>
 	<table>
@@ -134,7 +134,7 @@
 
 
     <div id="npup2" class="hidden">
-      <h3>BSCS 2nd Year, First Sem</h3>
+      <h3>BSOA 2nd Year, First Sem</h3>
       <form name="form1" method="post" action="code.php">
 	   
 	<center> 
@@ -183,7 +183,7 @@
 </div>
 
 	<div id="npup3" class="hidden">
-      <h3>BSCS 2nd Year, Second Sem</h3>
+      <h3>BSOA 2nd Year, Second Sem</h3>
       <form name="form1" method="post" action="code.php">	   
 <center>
 	<table>
@@ -233,7 +233,7 @@
 </div>
 
 	<div id="npup4" class="hidden">
-      <h3>BSCS 3rd Year, First Sem</h3>
+      <h3>BSOA 3rd Year, First Sem</h3>
       <form name="form1" method="post" action="code.php">	   
 <center>
 	<table>
@@ -283,7 +283,7 @@
 </div>
 
 	<div id="npup5" class="hidden">
-      <h3>BSCS 3rd Year, Second Sem</h3>
+      <h3>BSOA 3rd Year, Second Sem</h3>
       <form name="form1" method="post" action="code.php">	   
 <center>
 	<table>
@@ -333,7 +333,7 @@
 </div>
 
 	<div id="npup6" class="hidden">
-      <h3>BSCS 4th Year, First Sem</h3>
+      <h3>BSOA 4th Year, First Sem</h3>
       <form name="form1" method="post" action="code.php">		   
 <center>
 	<table>
@@ -383,7 +383,7 @@
 </div>
 
 	<div id="npup7" class="hidden">
-      <h3>BSCS 4th Year, Second Sem</h3>
+      <h3>BSOA 4th Year, Second Sem</h3>
       <form name="form1" method="post" action="code.php">	   
 <center>
 	<table>
