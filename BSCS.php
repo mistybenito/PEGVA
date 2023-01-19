@@ -61,7 +61,7 @@
 			<td><?=$row['descriptive_title']; ?></td>
 			<td><?=$row['units']; ?></td>
 			<td>
-                <a href="editcurric.php?id=<?=$key;?>" id="btnView"> View </a>
+                <a href="editcurric.php?id=bscs/first_year/first_sem/<?=$key;?>&course=BSCS" id="btnView"> View </a>
             </td>
 		</tr>
 			<?php
@@ -111,7 +111,7 @@
 			<td><?=$row['descriptive_title']; ?></td>
 			<td><?=$row['units']; ?></td>
 			<td>
-                <a href="editcurric.php?id=<?=$key;?>" class = "btn btn btn-primary" id="btnView"> View </a>
+                <a href="editcurric.php?id=bscs/first_year/second_sem/<?=$key;?>&course=BSCS" class = "btn btn btn-primary" id="btnView"> View </a>
             </td>
 		</tr>
 			<?php
@@ -161,7 +161,7 @@
 			<td><?=$row['descriptive_title']; ?></td>
 			<td><?=$row['units']; ?></td>
 			<td>
-                <a href="editcurric.php?id=<?=$key;?>" class = "btn btn btn-primary" id="btnView"> View </a>
+                <a href="editcurric.php?id=bscs/second_year/first_sem/<?=$key;?>&course=BSCS" class = "btn btn btn-primary" id="btnView"> View </a>
             </td>
 		</tr>
 			<?php
@@ -209,7 +209,7 @@
 			<td><?=$row['descriptive_title']; ?></td>
 			<td><?=$row['units']; ?></td>
 			<td>
-                <a href="editcurric.php?id=<?=$key;?>"  id="btnView"> View </a>
+                <a href="editcurric.php?id=bscs/second_year/second_sem/<?=$key;?>&course=BSCS"  id="btnView"> View </a>
             </td>
 		</tr>
 			<?php
@@ -259,7 +259,7 @@
 			<td><?=$row['descriptive_title']; ?></td>
 			<td><?=$row['units']; ?></td>
 			<td>
-                <a href="editcurric.php?id=<?=$key;?>" class = "btn btn btn-primary" id="btnView"> View </a>
+                <a href="editcurric.php?id=bscs/third_year/first_sem/<?=$key;?>&course=BSCS" class = "btn btn btn-primary" id="btnView"> View </a>
             </td>
 		</tr>
 			<?php
@@ -309,7 +309,7 @@
 			<td><?=$row['descriptive_title']; ?></td>
 			<td><?=$row['units']; ?></td>
 			<td>
-                <a href="editcurric.php?id=<?=$key;?>" class = "btn btn btn-primary" id="btnView"> View </a>
+                <a href="editcurric.php?id=bscs/third_year/second_sem/<?=$key;?>&course=BSCS" class = "btn btn btn-primary" id="btnView"> View </a>
             </td>
 		</tr>
 			<?php
@@ -346,7 +346,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "course_curriculum/bscs/Fourth Year/first_sem";
+				$ref_table = "course_curriculum/bscs/fourth_year/first_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -359,7 +359,7 @@
 			<td><?=$row['descriptive_title']; ?></td>
 			<td><?=$row['units']; ?></td>
 			<td>
-                <a href="editcurric.php?id=<?=$key;?>" class = "btn btn btn-primary" id="btnView"> View </a>
+                <a href="editcurric.php?id=bscs/fourth_year/first_sem/<?=$key;?>&course=BSCS" class = "btn btn btn-primary" id="btnView"> View </a>
             </td>
 		</tr>
 			<?php
@@ -396,7 +396,7 @@
 			<?php
 			include('dbcon.php');
 				
-				$ref_table = "course_curriculum/bscs/Fourth Year/second_sem";
+				$ref_table = "course_curriculum/bscs/fourth_year/second_sem";
 				$fetchdata = $database->getReference($ref_table)->getValue();
 					if($fetchdata > 0 )
 					{
@@ -409,7 +409,7 @@
 			<td><?=$row['descriptive_title']; ?></td>
 			<td><?=$row['units']; ?></td>
 			<td>
-                <a href="editcurric.php?id=<?=$key;?>" class = "btn btn btn-primary" id="btnView"> View </a>
+                <a href="editcurric.php?id=bscs/fourth_year/second_sem/<?=$key;?>&course=BSCS" class = "btn btn btn-primary" id="btnView"> View </a>
             </td>
 		</tr>
 			<?php

@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>BSBA</title>
+        <title>BSCS</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet" type="text/css">
@@ -14,34 +14,32 @@
     </head>
     <body>
 
-
-
 	<h2>Curriculum</h2>
     <div class="curriculum">
-	
-	<form name="form1" method="post" action="code.php"  style="height:  fit-content;" class="curriculum-form">
-		<p name="courses[]" id="courses">Course: Bachelor of Science in Business Administration</p>
+
+	<form name="form1" method="post" action="code.php"  style="height: fit-content;" class="curriculum-form">
+		<p name="courses[]" id="courses">Course: Bachelor of Science in Computer Science</p>
 		<label>Year Level and Semester:</label>
 			<select id="yearlevel" onchange="npup.doSelect(this);">
-				<option><b>-- Year and Semester --</b></option>
-				<option value="0">1st Year, 1st Sem</option>
-      			<option value="1">1st Year, 2nd Sem</option>
-      			<option value="2">2nd Year, 1st Sem</option>
-	  			<option value="3">2nd Year, 2nd Sem</option>
-	  			<option value="4">3rd Year, 1st Sem</option>
-	  			<option value="5">3rd Year, 2nd Sem</option>
-	  			<option value="6">4th Year, 1st Sem</option>
-	  			<option value="7">4th Year, 2nd Sem</option>
+				<option>-- Year and Semester --</option>
+				<option value="0">1st Year, First Sem</option>
+      			<option value="1">1st Year, Second Sem</option>
+      			<option value="2">2nd Year, First Sem</option>
+	  			<option value="3">2nd Year, Second Sem</option>
+	  			<option value="4">3rd Year, First Sem</option>
+	  			<option value="5">3rd Year, Second Sem</option>
+	  			<option value="6">4th Year, First Sem</option>
+	  			<option value="7">4th Year, Second Sem</option>
 			</select>		   
 <center>
 	<div id="mySpecialElements" style="margin-top: 10px;">
     <!--  these have ids that end with and index  for easy retrieval in "findeElement" function  below-->
     <div id="npup0" class="hidden">
-    <h3>BSBA 1st Year, 1st Sem</h3> 
+    <h3>BSCS 1st Year, First Sem</h3> 
     <form name="form1" method="post" action="code.php">
 <center>
 	<table>
-		<tr> 
+			<tr> 
 			<th>Course Code</th>
 			<th>Discriptive Title</th>
 			<th>Unit</th>
@@ -63,7 +61,7 @@
 			<td><?=$row['descriptive_title']; ?></td>
 			<td><?=$row['units']; ?></td>
 			<td>
-                <a href="editcurric.php?id=<?=$key;?>" class = "btn btn btn-primary" id="btnView"> View </a>
+                <a href="editcurric.php?id=bsba/first_year/first_sem/<?=$key;?>&course=BSBA" id="btnView"> View </a>
             </td>
 		</tr>
 			<?php
@@ -78,19 +76,20 @@
 			?>
 		</table> 
 		</form>
+
 		<div id="btns">
-			<button type="submit" name="update_registrar" id="update" value="Update"> Update</button>
 			<input type="button" onclick="window.location.href='subjects.php';" id="add_btn" value="Add Subjects"/>
 		</div>
 		  
 	</center>
     </div>
-    <div id="npup1" class="hidden">
-      <h3>BSBA 1st Year, 2nd Sem</h3>
+
+<div id="npup1" class="hidden">
+      <h3>BSCS 1st Year, Second Sem</h3>
       <form name="form1" method="post" action="code.php">	   
-<center>
+	<center>
 	<table>
-			<tr> 
+		<tr> 
 			<th>Course Code</th>
 			<th>Discriptive Title</th>
 			<th>Unit</th>
@@ -112,7 +111,7 @@
 			<td><?=$row['descriptive_title']; ?></td>
 			<td><?=$row['units']; ?></td>
 			<td>
-                <a href="editcurric.php?id=<?=$key;?>" class = "btn btn btn-primary" id="btnView"> View </a>
+                <a href="editcurric.php?id=bsba/first_year/second_sem/<?=$key;?>&course=BSBA" class = "btn btn btn-primary" id="btnView"> View </a>
             </td>
 		</tr>
 			<?php
@@ -126,23 +125,21 @@
 			}
 			?>
 		</table> 
-		  
 		</form>
-		<div id="btns">
-			<button type="submit" name="update_registrar" id="update" value="Update"> Update</button>
-			<input type="button" onclick="window.location.href='subjects.php';" id="add_btn" value="Add Subjects"/>
-		</div>
-		  
-	</center>
-    </div>
+			<div id="btns">
+				<input type ="button" onclick="window.location.href='subjects.php';" id="add_btn" value="Edit Subjects"/>
+			</div>
+  	</center>
+</div>
 
 
     <div id="npup2" class="hidden">
-      <h3>BSBA 2nd Year, 1st Sem</h3>
-      <form name="form1" method="post" action="code.php">   
-<center>
+      <h3>BSCS 2nd Year, First Sem</h3>
+      <form name="form1" method="post" action="code.php">
+	   
+	<center> 
 	<table>
-			<tr> 
+		<tr> 
 			<th>Course Code</th>
 			<th>Discriptive Title</th>
 			<th>Unit</th>
@@ -164,7 +161,7 @@
 			<td><?=$row['descriptive_title']; ?></td>
 			<td><?=$row['units']; ?></td>
 			<td>
-                <a href="editcurric.php?id=<?=$key;?>" class = "btn btn btn-primary" id="btnView"> View </a>
+                <a href="editcurric.php?id=bsba/second_year/first_sem/<?=$key;?>&course=BSBA" class = "btn btn btn-primary" id="btnView"> View </a>
             </td>
 		</tr>
 			<?php
@@ -178,18 +175,15 @@
 			}
 			?>
 		</table> 
-		  
-		</form>
+	</form>
 		<div id="btns">
-			<button type="submit" name="update_registrar" id="update" value="Update"> Update</button>
-			<input type="button" onclick="window.location.href='subjects.php';" id="add_btn" value="Add Subjects"/>
+			<input type="button" onclick="window.location.href='subjects.php';" id="add_btn" value="Edit Subjects"/>
 		</div>
-		  
 	</center>
-    </div>
+</div>
 
 	<div id="npup3" class="hidden">
-      <h3>BSBA 2nd Year, 2nd Sem</h3>
+      <h3>BSCS 2nd Year, Second Sem</h3>
       <form name="form1" method="post" action="code.php">	   
 <center>
 	<table>
@@ -215,7 +209,7 @@
 			<td><?=$row['descriptive_title']; ?></td>
 			<td><?=$row['units']; ?></td>
 			<td>
-                <a href="editcurric.php?id=<?=$key;?>" class = "btn btn btn-primary" id="btnView"> View </a>
+                <a href="editcurric.php?id=bsba/second_year/second_sem/<?=$key;?>&course=BSBA"  id="btnView"> View </a>
             </td>
 		</tr>
 			<?php
@@ -229,18 +223,17 @@
 			}
 			?>
 		</table> 
-		  
-		</form>
+	</form>
+
 		<div id="btns">
-			<button type="submit" name="update_registrar" id="update" value="Update"> Update</button>
-			<input type="button" onclick="window.location.href='subjects.php';" id="add_btn" value="Add Subjects"/>
-		</div>
-		  
-	</center>
-    </div>
+			<input type="button" onclick="window.location.href='subjects.php';" id="add_btn" value="Edit Subjects"/>
+	</div>
+  
+</center>
+</div>
 
 	<div id="npup4" class="hidden">
-      <h3>BSBA 3rd Year, 1st Sem</h3>
+      <h3>BSCS 3rd Year, First Sem</h3>
       <form name="form1" method="post" action="code.php">	   
 <center>
 	<table>
@@ -266,7 +259,7 @@
 			<td><?=$row['descriptive_title']; ?></td>
 			<td><?=$row['units']; ?></td>
 			<td>
-                <a href="editcurric.php?id=<?=$key;?>" class = "btn btn btn-primary" id="btnView"> View </a>
+                <a href="editcurric.php?id=bsba/third_year/first_sem/<?=$key;?>&course=BSBA" class = "btn btn btn-primary" id="btnView"> View </a>
             </td>
 		</tr>
 			<?php
@@ -280,19 +273,18 @@
 			}
 			?>
 		</table> 
-		  
 		</form>
-		<div id="btns">
-			<button type="submit" name="update_registrar" id="update" value="Update"> Update</button>
-			<input type="button" onclick="window.location.href='subjects.php';" id="add_btn" value="Add Subjects"/>
-		</div>
-		  
-	</center>
-    </div>
+
+<div id="btns">
+	<input type="button" onclick="window.location.href='subjects.php';" id="add_btn" value="Edit Subjects"/>
+</div>
+  
+</center>
+</div>
 
 	<div id="npup5" class="hidden">
-      <h3>BSBA 3rd Year, 2nd Sem</h3>
-      <form name="form1" method="post" action="code.php">   
+      <h3>BSCS 3rd Year, Second Sem</h3>
+      <form name="form1" method="post" action="code.php">	   
 <center>
 	<table>
 			<tr> 
@@ -317,7 +309,7 @@
 			<td><?=$row['descriptive_title']; ?></td>
 			<td><?=$row['units']; ?></td>
 			<td>
-                <a href="editcurric.php?id=<?=$key;?>" class = "btn btn btn-primary" id="btnView"> View </a>
+                <a href="editcurric.php?id=bsba/third_year/second_sem/<?=$key;?>&course=BSBA" class = "btn btn btn-primary" id="btnView"> View </a>
             </td>
 		</tr>
 			<?php
@@ -331,19 +323,18 @@
 			}
 			?>
 		</table> 
-		  
 		</form>
-		<div id="btns">
-			<button type="submit" name="update_registrar" id="update" value="Update"> Update</button>
-			<input type="button" onclick="window.location.href='subjects.php';" id="add_btn" value="Add Subjects"/>
-		</div>
-		  
-	</center>
-    </div>
+
+<div id="btns">
+	<input type="button" onclick="window.location.href='subjects.php';" id="add_btn" value="Edit Subjects"/>
+</div>
+  
+</center>
+</div>
 
 	<div id="npup6" class="hidden">
-      <h3>BSBA 4th Year, 1st Sem</h3>
-      <form name="form1" method="post" action="code.php">	   
+      <h3>BSCS 4th Year, First Sem</h3>
+      <form name="form1" method="post" action="code.php">		   
 <center>
 	<table>
 			<tr> 
@@ -368,7 +359,7 @@
 			<td><?=$row['descriptive_title']; ?></td>
 			<td><?=$row['units']; ?></td>
 			<td>
-                <a href="editcurric.php?id=<?=$key;?>" class = "btn btn btn-primary" id="btnView"> View </a>
+                <a href="editcurric.php?id=bsba/fourth_year/first_sem/<?=$key;?>&course=BSBA" class = "btn btn btn-primary" id="btnView"> View </a>
             </td>
 		</tr>
 			<?php
@@ -382,18 +373,17 @@
 			}
 			?>
 		</table> 
-		  
 		</form>
-		<div id="btns">
-			<button type="submit" name="update_registrar" id="update" value="Update"> Update</button>
-			<input type="button" onclick="window.location.href='subjects.php';" id="add_btn" value="Add Subjects"/>
-		</div>
-		  
-	</center>
-    </div>
+
+<div id="btns">
+	<input type="button" onclick="window.location.href='subjects.php';" id="add_btn" value="Edit Subjects"/>
+</div>
+  
+</center>
+</div>
 
 	<div id="npup7" class="hidden">
-      <h3>BSBA 4th Year, 2nd Sem</h3>
+      <h3>BSCS 4th Year, Second Sem</h3>
       <form name="form1" method="post" action="code.php">	   
 <center>
 	<table>
@@ -419,7 +409,7 @@
 			<td><?=$row['descriptive_title']; ?></td>
 			<td><?=$row['units']; ?></td>
 			<td>
-                <a href="editcurric.php?id=<?=$key;?>" class = "btn btn btn-primary" id="btnView"> View </a>
+                <a href="editcurric.php?id=bsba/fourth_year/second_sem/<?=$key;?>&course=BSBA" class = "btn btn btn-primary" id="btnView"> View </a>
             </td>
 		</tr>
 			<?php
@@ -434,13 +424,17 @@
 			?>
 		</table> 
 		</form>
-		<div id="btns">
-			<button type="submit" name="update_registrar" id="update" value="Update"> Update</button>
-			<input type="button" onclick="window.location.href='subjects.php';" id="add_btn" value="Add Subjects"/>
-		</div>
-		  
-	</center>
-    </div>
+
+<div id="btns">
+	<input type="button" onclick="window.location.href='subjects.php';" id="add_btn" value="Edit Subjects"/>
+</div>
+  
+</center>
+</div>
+
+
+
+ 
 
 
 
@@ -473,33 +467,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div  id="footer">
-    <p>All content copyright © 2022, PEGVA.</p>
-</div>	
 
 <script>
 window.npup = (function (containerId, baseId) {
@@ -545,5 +512,7 @@ window.npup = (function (containerId, baseId) {
     };
 })('mySpecialElements', 'npup'); // give the routine a container id of your special elements, and the base id of those elements
 </script>
+<p id="footer">All content copyright © 2022, PEGVA.</p>
+
 </body>
 </html>

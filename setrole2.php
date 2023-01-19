@@ -21,7 +21,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h4>
-                            Edit and Update User Data
+                            Set Role
                             <a href="user-list.php" class="btn btn-danger float-end"> BACK </a>
                         </h4>
                     </div>
