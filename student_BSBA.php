@@ -15,12 +15,16 @@
     <body>
     <div id="student-list">
         <p class="course-student-list">BSBA Student List</p>
+
+
+
         
-        <input type="text" placeholder="Search.." class="text-search" >
-            <label for="search" type="submit" class="searchbtn">
-                <i class="fa fa-search"></i>
-            </label>
-            <table class="student-list-content" style="width:100%;">
+   
+            <div class="input-group mb-3">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+            </div>
+
+            <table id="myTable" class="student-list-content" style="width:100%;" >
                 <tr>
                     <th>Student #</th>
                     <th>Name</th>
@@ -72,7 +76,34 @@
             ?>
          </tbody>
             </table>
+
+
+            <script>
+        function myFunction() {
+    var input, filter, found, table, tr, td, i, j;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+        for (j = 0; j < td.length; j++) {
+            if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                found = true;
+            }
+        }
+        if (found) {
+            tr[i].style.display = "";
+            found = false;
+        } else {
+            tr[i].style.display = "none";
+        }
+    }
+}
+</script>
             </div>
             <p id="footer">All content copyright © 2022, PEGVA.</p>
+            
     </body>
+    
 </html>

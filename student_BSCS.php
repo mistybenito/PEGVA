@@ -15,11 +15,15 @@
     <body>
     <div id="student-list">
         <p class="course-student-list">BSCS Student List</p>
-        <input type="text" placeholder="Search.." class="text-search" >
-            <label for="search" type="submit" class="searchbtn">
-                <i class="fa fa-search"></i>
-            </label>
-            <table class="student-list-content">
+
+
+
+
+        <div class="input-group mb-3">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+        </div>
+
+            <table class="student-list-content" id = "myTable" style="width:100%;">
                 <tr>
                     <th>Student #</th>
                     <th>Name</th>
@@ -34,36 +38,33 @@
                 include('dbcon.php');
                 $ref_table = 'User';
                 $fetchdata = $database->getReference($ref_table)->getValue();
-                if($fetchdata > 0)
+                if ($fetchdata > 0) 
                 {
-                $i = 0;
-                foreach($fetchdata as $key => $row)
-                {
-            ?>
+                    $i = 0;
+                    foreach ($fetchdata as $key => $row) {
+                        ?>
             <tr>
                 <?php
-                    if ($row['Course'] == "Bachelor of Science in Computer Science")
-                     {
-                ?>
+                if ($row['Course'] == "Bachelor of Science in Computer Science") {
+                    ?>
                     <td> <?= $row['Student_number']; ?> </td>
                     <td> <?= $row['Name']; ?> </td>
                     <td> <?= $row['Email']; ?> </td>
                     <td> <?= $row['Course']; ?> </td>
-                    <td> <?= $row['verify'];?></td>
+                    <td> <?= $row['verify']; ?></td>
                     <td>    
-                    <a href="verify_page.php?id=<?= $key;?>" class = "btn btn btn-primary" style="color:#0054c7"> Verify </a>
+                    <a href="verify_page.php?id=<?= $key; ?>" class = "btn btn btn-primary" style="color:#0054c7"> Verify </a>
                     </td>
                     <td>    
-                    <a href="profile.php?id=<?= $key;?>" class = "btn btn btn-primary" style="color:#0054c7"> View </a>
+                    <a href="profile.php?id=<?= $key; ?>" class = "btn btn btn-primary" style="color:#0054c7"> View </a>
                     </td>
                 </tr>                
             <?php
+                }
                     }
-                }
-                }
-                else
-                {
-            ?>
+                } 
+                else {
+                    ?>
             <tr>
                 <td > No Record Found </td>
             </tr>
@@ -74,4 +75,28 @@
             </div>
             <p id="footer">All content copyright © 2022, PEGVA.</p>
     </body>
+    <script>
+        function myFunction() {
+    var input, filter, found, table, tr, td, i, j;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+        for (j = 0; j < td.length; j++) {
+            if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                found = true;
+            }
+        }
+        if (found) {
+            tr[i].style.display = "";
+            found = false;
+        } else {
+            tr[i].style.display = "none";
+        }
+    }
+}
+</script>
 </html>
+
