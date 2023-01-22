@@ -53,8 +53,16 @@
 				{
 				?>
 					<tr> 
-						<td>Grade</td>
-						<td><input type="text" name =  "grade1"> </td>
+						<td><label for="grade01"></label>
+							<select name="grade01" id="grade01">
+								<option value="">--- Choose a grade---</option>
+								<option value="1.0">1.0</option>
+								<option value="1.5">1.5</option>
+								<option value="2.0">2.0</option>
+								<option value="2.5">2.5</option>
+								<option value="3.0">3.0</option>
+								<option value="5.0">5.0</option>
+							</select></td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?=$scode;?> </button></center>
@@ -68,7 +76,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade2"> </td>
+						<td><input type="text" name =  "grade02"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -81,7 +89,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade3"> </td>
+						<td><input type="text" name =  "grade03"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -94,7 +102,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade4"> </td>
+						<td><input type="text" name =  "grade04"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -107,7 +115,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade5"> </td>
+						<td><input type="text" name =  "grade05"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save<?= $scode;?> </button></center>
@@ -120,7 +128,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade6"> </td>
+						<td><input type="text" name =  "grade06"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -133,7 +141,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade7"> </td>
+						<td><input type="text" name =  "grade07"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -146,7 +154,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade8"> </td>
+						<td><input type="text" name =  "grade08"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -159,7 +167,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade9"> </td>
+						<td><input type="text" name =  "grade09"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -187,7 +195,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade1"> </td>
+						<td><input type="text" name =  "grade01"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -200,7 +208,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade2"> </td>
+						<td><input type="text" name =  "grade02"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -213,7 +221,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade3"> </td>
+						<td><input type="text" name =  "grade03"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -225,7 +233,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade4"> </td>
+						<td><input type="text" name =  "grade04"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -237,7 +245,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade5"> </td>
+						<td><input type="text" name =  "grade05"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -250,7 +258,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade6"> </td>
+						<td><input type="text" name =  "grade06"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -263,7 +271,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade7"> </td>
+						<td><input type="text" name =  "grade07"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -276,7 +284,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade8"> </td>
+						<td><input type="text" name =  "grade08"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -289,7 +297,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade9"> </td>
+						<td><input type="text" name =  "grade09"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -304,7 +312,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade1"> </td>
+						<td><input type="text" name =  "grade01"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -317,7 +325,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade2"> </td>
+						<td><input type="text" name =  "grade02"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -329,7 +337,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade3"> </td>
+						<td><input type="text" name =  "grade03"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -342,7 +350,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade4"> </td>
+						<td><input type="text" name =  "grade04"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -355,7 +363,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade5"> </td>
+						<td><input type="text" name =  "grade05"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -367,7 +375,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade6"> </td>
+						<td><input type="text" name =  "grade06"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -380,7 +388,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade7"> </td>
+						<td><input type="text" name =  "grade07"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -393,7 +401,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade8"> </td>
+						<td><input type="text" name =  "grade08"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -406,7 +414,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade9"> </td>
+						<td><input type="text" name =  "grade09"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -433,7 +441,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade1"> </td>
+						<td><input type="text" name =  "grade01"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -446,7 +454,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade2"> </td>
+						<td><input type="text" name =  "grade02"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -459,7 +467,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade3"> </td>
+						<td><input type="text" name =  "grade03"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -472,7 +480,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade4"> </td>
+						<td><input type="text" name =  "grade04"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -485,7 +493,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade5"> </td>
+						<td><input type="text" name =  "grade05"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -498,7 +506,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade6"> </td>
+						<td><input type="text" name =  "grade06"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -511,7 +519,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade7"> </td>
+						<td><input type="text" name =  "grade07"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -524,7 +532,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade8"> </td>
+						<td><input type="text" name =  "grade08"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -537,7 +545,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade9"> </td>
+						<td><input type="text" name =  "grade09"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -565,7 +573,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade1"> </td>
+						<td><input type="text" name =  "grade01"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -578,7 +586,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade2"> </td>
+						<td><input type="text" name =  "grade02"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -591,7 +599,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade3"> </td>
+						<td><input type="text" name =  "grade03"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -604,7 +612,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade4"> </td>
+						<td><input type="text" name =  "grade04"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -617,7 +625,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade5"> </td>
+						<td><input type="text" name =  "grade05"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -630,7 +638,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade6"> </td>
+						<td><input type="text" name =  "grade06"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -643,7 +651,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade7"> </td>
+						<td><input type="text" name =  "grade07"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -658,7 +666,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade1"> </td>
+						<td><input type="text" name =  "grade01"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -672,7 +680,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade2"> </td>
+						<td><input type="text" name =  "grade02"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -685,7 +693,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade3"> </td>
+						<td><input type="text" name =  "grade03"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -699,7 +707,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade4"> </td>
+						<td><input type="text" name =  "grade04"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -712,7 +720,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade5"> </td>
+						<td><input type="text" name =  "grade05"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -725,7 +733,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade6"> </td>
+						<td><input type="text" name =  "grade06"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -738,7 +746,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade7"> </td>
+						<td><input type="text" name =  "grade07"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -754,7 +762,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade1"> </td>
+						<td><input type="text" name =  "grade01"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -767,7 +775,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade2"> </td>
+						<td><input type="text" name =  "grade02"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -780,7 +788,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade3"> </td>
+						<td><input type="text" name =  "grade03"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -794,7 +802,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade4"> </td>
+						<td><input type="text" name =  "grade04"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -808,7 +816,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade5"> </td>
+						<td><input type="text" name =  "grade05"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>
@@ -823,7 +831,7 @@
 					?>
 					<tr> 
 						<td>Grade</td>
-						<td><input type="text" name =  "grade1"> </td>
+						<td><input type="text" name =  "grade01"> </td>
 					</tr>
 					</table> 
 					<center><button type="submit" name = "add_grades_<?= $scode;?>" id="update"> Save <?= $scode;?> </button></center>

@@ -49,17 +49,18 @@
             <?php
                     if ($row['Course'] == "Bachelor of Science in Business Administration")
                      {
-                ?>
-                    <td> <?= $row['Student_number']; ?> </td>
-                    <td> <?= $row['Name']; ?> </td>
-                    <td> <?= $row['Email']; ?> </td>
-                    <td> <?= $row['Course']; ?> </td>
-                    <td> 
-                    <a href="verify_page.php?id=<?= $key;?>" class = "btn btn btn-primary" style="color:#0054c7"> Verify </a>
-                    </td>
-                    <td>    
-                    <a href="profile.php?id=<?= $key;?>" class = "btn btn btn-primary" style="color:#0054c7"> View </a>
-                    </td>
+                        ?>
+                        <td> <?= $row['Student_number']; ?> </td>
+                        <td> <?= $row['Name']; ?> </td>
+                        <td> <?= $row['Email']; ?> </td>
+                        <td> <?= $row['Course']; ?> </td>
+                        <td> <?= $row['verify']; ?></td>
+                        <td>    
+                        <a href="verify_page.php?id=<?= $key; ?>" class = "btn btn btn-primary" style="color:#0054c7"> Verify </a>
+                        </td>
+                        <td>    
+                        <a href="profile.php?id=<?= $key; ?>" class = "btn btn btn-primary" style="color:#0054c7"> View </a>
+                        </td>
                 </tr>                
             <?php
                     }
