@@ -16,7 +16,7 @@
 
 <!-- Drop downn section and options -->
 <center>
-<div class="content-selection">
+<div class="content-selection-course">
   <select id="mySelect" onchange="npup.doSelect(this);">
       <option value="">--Course--</option>
       <!-- the option values are suffixes for the elements to show -->

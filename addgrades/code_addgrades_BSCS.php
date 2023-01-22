@@ -6,15 +6,15 @@ include('dbcon.php');
 if(isset($_POST['add_grades_CS111']))
 {
     $key = $_POST['id'];
-    $grade = $_POST['grade01'];
+    $grade = $_POST['grade1'];
     $status = $_POST['Grade'];
 
 
     $postGrade = [
-        'grade01' => $grade,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -55,10 +55,10 @@ if(isset($_POST['add_grades_CS112']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade02' => $grade,
+        'grade2' => $grade,
     ];
     $postStatus = [
-        'grade02' =>$grade,
+        'grade2' =>$grade,
         'Grade' => $status,
     ];
 
@@ -100,10 +100,10 @@ if(isset($_POST['add_grades_GE100']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade03' => $grade,
+        'grade3' => $grade,
     ];
     $postStatus = [
-        'grade03' =>$grade,
+        'grade3' =>$grade,
         'Grade' => $status,
     ];
 
@@ -144,10 +144,10 @@ if(isset($_POST['add_grades_GE101']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade04' => $grade,
+        'grade4' => $grade,
     ];
     $postStatus = [
-        'grade04' =>$grade,
+        'grade4' =>$grade,
         'Grade' => $status,
     ];
 
@@ -189,10 +189,10 @@ if(isset($_POST['add_grades_GE102']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade05' => $grade,
+        'grade5' => $grade,
     ];
     $postStatus = [
-        'grade05' =>$grade,
+        'grade5' =>$grade,
         'Grade' => $status,
     ];
 
@@ -233,10 +233,10 @@ if(isset($_POST['add_grades_GE103']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade06' => $grade,
+        'grade6' => $grade,
     ];
     $postStatus = [
-        'grade06' =>$grade,
+        'grade6' =>$grade,
         'Grade' => $status,
     ];
 
@@ -279,10 +279,10 @@ if(isset($_POST['add_grades_fil111']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade07' => $grade,
+        'grade7' => $grade,
     ];
     $postStatus = [
-        'grade07' =>$grade,
+        'grade7' =>$grade,
         'Grade' => $status,
     ];
 
@@ -324,10 +324,10 @@ if(isset($_POST['add_grades_REED111']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade08' => $grade,
+        'grade8' => $grade,
     ];
     $postStatus = [
-        'grade08' =>$grade,
+        'grade8' =>$grade,
         'Grade' => $status,
     ];
 
@@ -369,10 +369,10 @@ if(isset($_POST['add_grades_PE111']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade09' => $grade,
+        'grade9' => $grade,
     ];
     $postStatus = [
-        'grade09' =>$grade,
+        'grade9' =>$grade,
         'Grade' => $status,
     ];
 
@@ -464,10 +464,10 @@ if(isset($_POST['add_grades_CS121']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade01' => $grade,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -508,10 +508,10 @@ if(isset($_POST['add_grades_CS122']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade02' => $grade,
+        'grade2' => $grade,
     ];
     $postStatus = [
-        'grade02' =>$grade,
+        'grade2' =>$grade,
         'Grade' => $status,
     ];
 
@@ -552,10 +552,10 @@ if(isset($_POST['add_grades_GE104']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade03' => $grade,
+        'grade3' => $grade,
     ];
     $postStatus = [
-        'grade03' =>$grade,
+        'grade3' =>$grade,
         'Grade' => $status,
     ];
 
@@ -598,10 +598,10 @@ if(isset($_POST['add_grades_GE105']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade04' => $grade,
+        'grade4' => $grade,
     ];
     $postStatus = [
-        'grade04' =>$grade,
+        'grade4' =>$grade,
         'Grade' => $status,
     ];
 
@@ -643,10 +643,10 @@ if(isset($_POST['add_grades_GE106']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade05' => $grade,
+        'grade5' => $grade,
     ];
     $postStatus = [
-        'grade05' =>$grade,
+        'grade5' =>$grade,
         'Grade' => $status,
     ];
 
@@ -688,10 +688,10 @@ if(isset($_POST['add_grades_GE107']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade06' => $grade,
+        'grade6' => $grade,
     ];
     $postStatus = [
-        'grade06' =>$grade,
+        'grade6' =>$grade,
         'Grade' => $status,
     ];
 
@@ -734,10 +734,10 @@ if(isset($_POST['add_grades_fil121']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade07' => $grade,
+        'grade7' => $grade,
     ];
     $postStatus = [
-        'grade07' =>$grade,
+        'grade7' =>$grade,
         'Grade' => $status,
     ];
 
@@ -779,10 +779,10 @@ if(isset($_POST['add_grades_REED121']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade08' => $grade,
+        'grade8' => $grade,
     ];
     $postStatus = [
-        'grade08' =>$grade,
+        'grade8' =>$grade,
         'Grade' => $status,
     ];
 
@@ -826,10 +826,10 @@ if(isset($_POST['add_grades_REED121']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade09' => $grade,
+        'grade9' => $grade,
     ];
     $postStatus = [
-        'grade09' =>$grade,
+        'grade9' =>$grade,
         'Grade' => $status,
     ];
  
@@ -921,10 +921,10 @@ if(isset($_POST['add_grades_REED121']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade01' => $grade,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
  
@@ -965,10 +965,10 @@ if(isset($_POST['add_grades_REED121']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade02' => $grade,
+        'grade2' => $grade,
     ];
     $postStatus = [
-        'grade02' =>$grade,
+        'grade2' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1009,10 +1009,10 @@ if(isset($_POST['add_grades_REED121']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade03' => $grade,
+        'grade3' => $grade,
     ];
     $postStatus = [
-        'grade03' =>$grade,
+        'grade3' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1054,10 +1054,10 @@ if(isset($_POST['add_grades_REED121']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade04' => $grade,
+        'grade4' => $grade,
     ];
     $postStatus = [
-        'grade04' =>$grade,
+        'grade4' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1099,10 +1099,10 @@ if(isset($_POST['add_grades_REED121']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade05' => $grade,
+        'grade5' => $grade,
     ];
     $postStatus = [
-        'grade05' =>$grade,
+        'grade5' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1145,10 +1145,10 @@ if(isset($_POST['add_grades_REED121']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade06' => $grade,
+        'grade6' => $grade,
     ];
     $postStatus = [
-        'grade06' =>$grade,
+        'grade6' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1190,10 +1190,10 @@ if(isset($_POST['add_grades_REED121']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade07' => $grade,
+        'grade7' => $grade,
     ];
     $postStatus = [
-        'grade07' =>$grade,
+        'grade7' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1234,10 +1234,10 @@ if(isset($_POST['add_grades_REED121']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade08' => $grade,
+        'grade8' => $grade,
     ];
     $postStatus = [
-        'grade08' =>$grade,
+        'grade8' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1278,10 +1278,10 @@ if(isset($_POST['add_grades_REED121']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade09' => $grade,
+        'grade9' => $grade,
     ];
     $postStatus = [
-        'grade09' =>$grade,
+        'grade9' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1371,10 +1371,10 @@ if(isset($_POST['add_grades_REED121']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade01' => $grade,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1415,10 +1415,10 @@ if(isset($_POST['add_grades_REED121']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade02' => $grade,
+        'grade2' => $grade,
     ];
     $postStatus = [
-        'grade02' =>$grade,
+        'grade2' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1460,10 +1460,10 @@ if(isset($_POST['add_grades_REED121']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade03' => $grade,
+        'grade3' => $grade,
     ];
     $postStatus = [
-        'grade03' =>$grade,
+        'grade3' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1504,10 +1504,10 @@ if(isset($_POST['add_grades_CS224']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade04' => $grade,
+        'grade4' => $grade,
     ];
     $postStatus = [
-        'grade04' =>$grade,
+        'grade4' =>$grade,
         'Grade' => $status,
     ];
 
@@ -1549,10 +1549,10 @@ if(isset($_POST['add_grades_CS224']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade05' => $grade,
+        'grade5' => $grade,
     ];
     $postStatus = [
-        'grade05' =>$grade,
+        'grade5' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1595,10 +1595,10 @@ if(isset($_POST['add_grades_CS224']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade06' => $grade,
+        'grade6' => $grade,
     ];
     $postStatus = [
-        'grade06' =>$grade,
+        'grade6' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1640,10 +1640,10 @@ if(isset($_POST['add_grades_CS224']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade07' => $grade,
+        'grade7' => $grade,
     ];
     $postStatus = [
-        'grade07' =>$grade,
+        'grade7' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1685,10 +1685,10 @@ if(isset($_POST['add_grades_CS224']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade08' => $grade,
+        'grade8' => $grade,
     ];
     $postStatus = [
-        'grade08' =>$grade,
+        'grade8' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1730,10 +1730,10 @@ if(isset($_POST['add_grades_CS224']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade09' => $grade,
+        'grade9' => $grade,
     ];
     $postStatus = [
-        'grade09' =>$grade,
+        'grade9' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1820,10 +1820,10 @@ if(isset($_POST['add_grades_CS224']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade01' => $grade,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1865,10 +1865,10 @@ if(isset($_POST['add_grades_CS224']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade01' => $grade,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1910,10 +1910,10 @@ if(isset($_POST['add_grades_CS224']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade01' => $grade,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1954,10 +1954,10 @@ if(isset($_POST['add_grades_CS224']))
      $unit = $_POST['Unit'];
  
      $postGrade = [
-        'grade01' => $grade,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
  
@@ -1998,10 +1998,10 @@ if(isset($_POST['add_grades_CS315']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade01' => $grade,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2043,10 +2043,10 @@ if(isset($_POST['add_grades_EL311']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade01' => $grade,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2087,10 +2087,10 @@ if(isset($_POST['add_grades_EL312']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade01' => $grade,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2135,10 +2135,10 @@ if(isset($_POST['add_grades_CS321']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade01' => $grade,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2179,10 +2179,10 @@ if(isset($_POST['add_grades_CS322']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade01' => $grade,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2223,10 +2223,10 @@ if(isset($_POST['add_grades_CS323']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade01' => $grade,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2267,10 +2267,10 @@ if(isset($_POST['add_grades_CS324']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade01' => $grade,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2311,10 +2311,10 @@ if(isset($_POST['add_grades_CS325']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade01' => $grade,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2355,10 +2355,10 @@ if(isset($_POST['add_grades_CS326']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade01' => $grade,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2399,10 +2399,10 @@ if(isset($_POST['add_grades_CS327']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade01' => $grade,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2446,10 +2446,10 @@ if(isset($_POST['add_grades_CS411']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade01' => $grade,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2490,10 +2490,10 @@ if(isset($_POST['add_grades_CS412']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade01' => $grade,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2534,10 +2534,10 @@ if(isset($_POST['add_grades_CS413']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade01' => $grade,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2578,10 +2578,10 @@ if(isset($_POST['add_grades_CS414']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade01' => $grade,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2622,10 +2622,10 @@ if(isset($_POST['add_grades_CS415']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade01' => $grade,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 
@@ -2668,10 +2668,10 @@ if(isset($_POST['add_grades_CS421']))
     $unit = $_POST['Unit'];
 
     $postGrade = [
-        'grade01' => $grade,
+        'grade1' => $grade,
     ];
     $postStatus = [
-        'grade01' =>$grade,
+        'grade1' =>$grade,
         'Grade' => $status,
     ];
 

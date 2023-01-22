@@ -2,16 +2,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Set Role</title>
+        <title>Student List</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="style.css" rel="stylesheet" type="text/css">
+        <link href="students.css" rel="stylesheet" type="text/css">
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <h1>Set your role</h1>
+        <h1>Student List</h1>
         <div id="div1">  
+            <input type="text" placeholder="Search.." class="text-search" >
+            <label for="search" type="submit" class="searchbtn">
+                <i class="fa fa-search"></i>
+            </label>
         </div>
         <div id="div2">
             <tbody>
@@ -131,6 +135,9 @@
 
                             }
                             ?>
+            <tr>
+                <td > No Record Found </td>
+            </tr>
          </tbody>
             </table>
             </div>

@@ -24,7 +24,7 @@
         </div>
 
             <table class="student-list-content" id = "myTable" style="width:100%;">
-                <tr class="header">
+                <tr>
                     <th>Student #</th>
                     <th>Name</th>
                     <th>Email</th>
