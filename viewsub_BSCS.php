@@ -79,20 +79,21 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Remark</th>
-                                        <th>Add</th>
+                                        <th>Add/Edit</th>
+                                        <th>Delete</th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/first_year/first_sem/subject1'; //HERE
+                                    $reference = 'course_curriculum/bscs/first_year/first_sem/subject01'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
-                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
-                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
-                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <input type="text" name = "Subject_code" value ="<?= $scode = $fetch['code']; ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title']; ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units']; ?>">                              
                                         <?php
                                     }//to HERE
-                                    $ref_table = 'Subjects/BSCS/first_year/first_sem/CS111';
+                                    $ref_table = 'Subjects/BSCS/first_year/first_sem/'.$scode;
                                     $fetchdata = $database->getReference($ref_table)->getValue();
                                     if ($fetchdata > 0) {
                                         $i = 0;
@@ -113,26 +114,31 @@
                                                          <td> 
                                                         <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
+                                                        <td> N/A </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade1']; ?></td>
+                                                        <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade1'] >= "75") 
+                                                if ($row['grade01'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade1'] < "75") 
+                                                elseif ($row['grade01'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
+                                                        <td> Delete </td>
+                                                        
                                                         <?php
                                             }
                                         }
@@ -159,10 +165,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php 
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/first_year/first_sem/subject2'; //HERE
+                                    $reference = 'course_curriculum/bscs/first_year/first_sem/subject02'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -171,7 +178,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/first_year/first_sem/CS112';
+                                                $ref_table = 'Subjects/BSCS/first_year/first_sem//'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -182,8 +189,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -196,22 +203,26 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade2']; ?></td>
+                                                        <td> <?= $row['grade02']; ?></td>
                                                         <?php
-                                                if ($row['grade2'] > "75") 
+                                                if ($row['grade02'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade2'] < "75") 
+                                                elseif ($row['grade02'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
+                                                        <td> Delete </td>
+                                                            
                                                         <?php
                                             }
                                         }
@@ -236,10 +247,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/first_year/first_sem/subject3'; //HERE
+                                    $reference = 'course_curriculum/bscs/first_year/first_sem/'.$scode; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -260,8 +272,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -274,22 +286,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade3']; ?></td>
+                                                        <td> <?= $row['grade03']; ?></td>
                                                         <?php
-                                                if ($row['grade3'] > "75") 
+                                                if ($row['grade03'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade3'] < "75") 
+                                                elseif ($row['grade03'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -314,10 +328,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/first_year/first_sem/subject4'; //HERE
+                                    $reference = 'course_curriculum/bscs/first_year/first_sem/'.$scode; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -338,8 +353,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -352,22 +367,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade4']; ?></td>
+                                                        <td> <?= $row['grade04']; ?></td>
                                                         <?php
-                                                if ($row['grade4'] > "75") 
+                                                if ($row['grade04'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade4'] < "75") 
+                                                elseif ($row['grade04'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -392,10 +409,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/first_year/first_sem/subject5'; //HERE
+                                    $reference = 'course_curriculum/bscs/first_year/first_sem/'.$scode; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -415,8 +433,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -429,22 +447,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade5']; ?></td>
+                                                        <td> <?= $row['grade05']; ?></td>
                                                         <?php
-                                                if ($row['grade5'] > "75") 
+                                                if ($row['grade05'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade5'] < "75") 
+                                                elseif ($row['grade05'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -469,10 +489,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/first_year/first_sem/subject6'; //HERE
+                                    $reference = 'course_curriculum/bscs/first_year/first_sem/'.$scode; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -492,8 +513,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -506,22 +527,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade6']; ?></td>
+                                                        <td> <?= $row['grade06']; ?></td>
                                                         <?php
-                                                if ($row['grade6'] > "75") 
+                                                if ($row['grade06'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade6'] < "75") 
+                                                elseif ($row['grade06'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -547,10 +570,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/first_year/first_sem/subject7'; //HERE
+                                    $reference = 'course_curriculum/bscs/first_year/first_sem/'.$scode; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -570,8 +594,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -584,22 +608,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade7']; ?></td>
+                                                        <td> <?= $row['grade07']; ?></td>
                                                         <?php
-                                                if ($row['grade7'] > "75") 
+                                                if ($row['grade07'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade7'] < "75") 
+                                                elseif ($row['grade07'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -624,10 +650,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/first_year/first_sem/subject8'; //HERE
+                                    $reference = 'course_curriculum/bscs/first_year/first_sem/'.$scode; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -647,8 +674,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -661,22 +688,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade8']; ?></td>
+                                                        <td> <?= $row['grade08']; ?></td>
                                                         <?php
-                                                if ($row['grade8'] > "75") 
+                                                if ($row['grade08'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade8'] < "75") 
+                                                elseif ($row['grade08'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -701,10 +730,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/first_year/first_sem/subject9'; //HERE
+                                    $reference = 'course_curriculum/bscs/first_year/first_sem/'.$scode; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -724,8 +754,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -738,22 +768,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade9']; ?></td>
+                                                        <td> <?= $row['grade09']; ?></td>
                                                         <?php
-                                                if ($row['grade9'] > "75") 
+                                                if ($row['grade09'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade9'] < "75") 
+                                                elseif ($row['grade09'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -779,10 +811,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/first_year/first_sem/subject10'; //HERE
+                                    $reference = 'course_curriculum/bscs/first_year/first_sem/'.$scode; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -802,8 +835,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>              
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>              
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -824,14 +857,16 @@
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade10'] < "75") 
+                                                elseif ($row['grade10'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -961,10 +996,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/first_year/second_sem/subject1'; //HERE
+                                    $reference = 'course_curriculum/bscs/first_year/second_sem/subject01'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -973,7 +1009,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/CS121';
+                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -985,8 +1021,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -999,22 +1035,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade1']; ?></td>
+                                                        <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade1'] > "75") 
+                                                if ($row['grade01'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade1'] < "75") 
+                                                elseif ($row['grade01'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -1042,10 +1080,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/first_year/second_sem/subject2'; //HERE
+                                    $reference = 'course_curriculum/bscs/first_year/second_sem/subject02'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1054,7 +1093,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/CS122';
+                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1065,8 +1104,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -1079,22 +1118,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade2']; ?></td>
+                                                        <td> <?= $row['grade02']; ?></td>
                                                         <?php
-                                                if ($row['grade2'] > "75") 
+                                                if ($row['grade02'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade2'] < "75") 
+                                                elseif ($row['grade02'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -1121,10 +1162,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/first_year/second_sem/subject3'; //HERE
+                                    $reference = 'course_curriculum/bscs/first_year/second_sem/subject03'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1133,7 +1175,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/GE104';
+                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1145,8 +1187,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -1159,22 +1201,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade3']; ?></td>
+                                                        <td> <?= $row['grade03']; ?></td>
                                                         <?php
-                                                if ($row['grade3'] > "75") 
+                                                if ($row['grade03'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade3'] < "75") 
+                                                elseif ($row['grade03'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -1200,10 +1244,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/first_year/second_sem/subject4'; //HERE
+                                    $reference = 'course_curriculum/bscs/first_year/second_sem/subject04'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1212,7 +1257,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/GE105';
+                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1224,8 +1269,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -1238,22 +1283,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade4']; ?></td>
+                                                        <td> <?= $row['grade04']; ?></td>
                                                         <?php
-                                                if ($row['grade4'] > "75") 
+                                                if ($row['grade04'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade4'] < "75") 
+                                                elseif ($row['grade04'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -1279,10 +1326,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/first_year/second_sem/subject5'; //HERE
+                                    $reference = 'course_curriculum/bscs/first_year/second_sem/subject05'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1291,7 +1339,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/GE106';
+                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1302,8 +1350,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -1316,22 +1364,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade5']; ?></td>
+                                                        <td> <?= $row['grade05']; ?></td>
                                                         <?php
-                                                if ($row['grade5'] > "75") 
+                                                if ($row['grade05'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade5'] < "75") 
+                                                elseif ($row['grade05'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -1357,10 +1407,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/first_year/second_sem/subject6'; //HERE
+                                    $reference = 'course_curriculum/bscs/first_year/second_sem/subject06'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1369,7 +1420,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/GE107';
+                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1380,8 +1431,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -1394,22 +1445,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade6']; ?></td>
+                                                        <td> <?= $row['grade06']; ?></td>
                                                         <?php
-                                                if ($row['grade6'] > "75") 
+                                                if ($row['grade06'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade6'] < "75") 
+                                                elseif ($row['grade06'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -1435,10 +1488,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/first_year/second_sem/subject7'; //HERE
+                                    $reference = 'course_curriculum/bscs/first_year/second_sem/subject07'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1447,7 +1501,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/FIL121';
+                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1458,8 +1512,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -1472,22 +1526,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade7']; ?></td>
+                                                        <td> <?= $row['grade07']; ?></td>
                                                         <?php
-                                                if ($row['grade7'] > "75") 
+                                                if ($row['grade07'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade7'] < "75") 
+                                                elseif ($row['grade07'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -1513,10 +1569,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/first_year/second_sem/subject8'; //HERE
+                                    $reference = 'course_curriculum/bscs/first_year/second_sem/subject08'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1525,7 +1582,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/REED121';
+                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1536,8 +1593,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -1550,22 +1607,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade8']; ?></td>
+                                                        <td> <?= $row['grade08']; ?></td>
                                                         <?php
-                                                if ($row['grade8'] > "75") 
+                                                if ($row['grade08'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade8'] < "75") 
+                                                elseif ($row['grade08'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -1591,10 +1650,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/first_year/second_sem/subject9'; //HERE
+                                    $reference = 'course_curriculum/bscs/first_year/second_sem/subject09'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1603,7 +1663,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/PE121';
+                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1614,8 +1674,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -1628,22 +1688,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                        <td> <?= $row['grade9']; ?></td>
+                                                        <td> <?= $row['grade09']; ?></td>
                                                         <?php
-                                                if ($row['grade9'] > "75") 
+                                                if ($row['grade09'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade9'] < "75") 
+                                                elseif ($row['grade09'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -1670,6 +1732,7 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -1682,7 +1745,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/NSTP2';
+                                                $ref_table = 'Subjects/BSCS/first_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1693,8 +1756,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -1715,14 +1778,16 @@
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade10'] < "75") 
+                                                elseif ($row['grade10'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -1813,10 +1878,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/second_year/first_sem/subject1'; //HERE
+                                    $reference = 'course_curriculum/bscs/second_year/first_sem/subject01'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1825,7 +1891,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/CS211';
+                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1837,8 +1903,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') 
                                             {
@@ -1854,22 +1920,24 @@
                                              else 
                                              {
                                                     ?>
-                                                       <td> <?= $row['grade1']; ?></td>
+                                                       <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade1'] > "75") 
+                                                if ($row['grade01'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade1'] < "75") 
+                                                elseif ($row['grade01'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -1897,10 +1965,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/second_year/first_sem/subject2'; //HERE
+                                    $reference = 'course_curriculum/bscs/second_year/first_sem/subject02'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1909,7 +1978,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/CS212';
+                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -1920,8 +1989,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -1934,22 +2003,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade2']; ?></td>
+                                                       <td> <?= $row['grade02']; ?></td>
                                                         <?php
-                                                if ($row['grade2'] > "75") 
+                                                if ($row['grade02'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade2'] < "75") 
+                                                elseif ($row['grade02'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -1976,10 +2047,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/second_year/first_sem/subject3'; //HERE
+                                    $reference = 'course_curriculum/bscs/second_year/first_sem/subject03'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -1988,7 +2060,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/CS213';
+                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2000,8 +2072,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -2014,22 +2086,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade3']; ?></td>
+                                                       <td> <?= $row['grade03']; ?></td>
                                                         <?php
-                                                if ($row['grade3'] > "75") 
+                                                if ($row['grade03'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade3'] < "75") 
+                                                elseif ($row['grade03'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -2055,10 +2129,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/second_year/first_sem/subject4'; //HERE
+                                    $reference = 'course_curriculum/bscs/second_year/first_sem/subject04'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2067,7 +2142,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/CS214';
+                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2079,8 +2154,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -2093,22 +2168,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade4']; ?></td>
+                                                       <td> <?= $row['grade04']; ?></td>
                                                         <?php
-                                                if ($row['grade4'] > "75") 
+                                                if ($row['grade04'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade4'] < "75") 
+                                                elseif ($row['grade04'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -2134,10 +2211,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/second_year/first_sem/subject5'; //HERE
+                                    $reference = 'course_curriculum/bscs/second_year/first_sem/subject05'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2146,7 +2224,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/GE108';
+                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2157,8 +2235,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -2171,22 +2249,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade5']; ?></td>
+                                                       <td> <?= $row['grade05']; ?></td>
                                                         <?php
-                                                if ($row['grade5'] > "75") 
+                                                if ($row['grade05'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade5'] < "75") 
+                                                elseif ($row['grade05'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -2212,10 +2292,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/second_year/first_sem/subject6'; //HERE
+                                    $reference = 'course_curriculum/bscs/second_year/first_sem/subject06'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2224,7 +2305,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/GE109';
+                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2235,8 +2316,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     < <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -2249,22 +2330,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade6']; ?></td>
+                                                       <td> <?= $row['grade06']; ?></td>
                                                         <?php
-                                                if ($row['grade6'] > "75") 
+                                                if ($row['grade06'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade6'] < "75") 
+                                                elseif ($row['grade06'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -2290,10 +2373,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/second_year/first_sem/subject7'; //HERE
+                                    $reference = 'course_curriculum/bscs/second_year/first_sem/subject07'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2302,7 +2386,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/FIL211';
+                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2313,8 +2397,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -2327,22 +2411,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade7']; ?></td>
+                                                       <td> <?= $row['grade07']; ?></td>
                                                         <?php
-                                                if ($row['grade7'] > "75") 
+                                                if ($row['grade07'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade7'] < "75") 
+                                                elseif ($row['grade07'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -2368,10 +2454,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/second_year/first_sem/subject8'; //HERE
+                                    $reference = 'course_curriculum/bscs/second_year/first_sem/subject08'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2380,7 +2467,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/EL211';
+                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2391,8 +2478,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -2405,22 +2492,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade8']; ?></td>
+                                                       <td> <?= $row['grade08']; ?></td>
                                                         <?php
-                                                if ($row['grade8'] > "75") 
+                                                if ($row['grade08'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade8'] < "75") 
+                                                elseif ($row['grade08'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -2446,10 +2535,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/second_year/first_sem/subject9'; //HERE
+                                    $reference = 'course_curriculum/bscs/second_year/first_sem/subject09'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2458,7 +2548,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/REED211';
+                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2469,8 +2559,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -2483,22 +2573,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade9']; ?></td>
+                                                       <td> <?= $row['grade09']; ?></td>
                                                         <?php
-                                                if ($row['grade9'] > "75") 
+                                                if ($row['grade09'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade9'] < "75") 
+                                                elseif ($row['grade09'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -2525,6 +2617,7 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -2537,7 +2630,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/PE211';
+                                                $ref_table = 'Subjects/BSCS/second_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2548,8 +2641,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -2570,14 +2663,16 @@
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade10'] < "75") 
+                                                elseif ($row['grade10'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -2633,10 +2728,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/second_year/second_sem/subject1'; //HERE
+                                    $reference = 'course_curriculum/bscs/second_year/second_sem/subject01'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2645,7 +2741,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/second_year/second_sem/CS221';
+                                                $ref_table = 'Subjects/BSCS/second_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2657,8 +2753,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
@@ -2672,22 +2768,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade1']; ?></td>
+                                                       <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade1'] > "75") 
+                                                if ($row['grade01'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade1'] < "75") 
+                                                elseif ($row['grade01'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -2715,10 +2813,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/second_year/second_sem/subject2'; //HERE
+                                    $reference = 'course_curriculum/bscs/second_year/second_sem/subject02'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2727,7 +2826,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/second_year/second_sem/CS222';
+                                                $ref_table = 'Subjects/BSCS/second_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2738,8 +2837,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -2752,22 +2851,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade2']; ?></td>
+                                                       <td> <?= $row['grade02']; ?></td>
                                                         <?php
-                                                if ($row['grade2'] > "75") 
+                                                if ($row['grade02'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade2'] < "75") 
+                                                elseif ($row['grade02'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -2794,11 +2895,12 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                         
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/second_year/second_sem/subject3'; //HERE
+                                    $reference = 'course_curriculum/bscs/second_year/second_sem/subject03'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2819,8 +2921,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -2833,22 +2935,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade3']; ?></td>
+                                                       <td> <?= $row['grade03']; ?></td>
                                                         <?php
-                                                if ($row['grade3'] > "75") 
+                                                if ($row['grade03'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade3'] < "75") 
+                                                elseif ($row['grade03'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -2874,10 +2978,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/second_year/second_sem/subject4'; //HERE
+                                    $reference = 'course_curriculum/bscs/second_year/second_sem/subject04'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2886,7 +2991,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/second_year/second_sem/CS224';
+                                                $ref_table = 'Subjects/BSCS/second_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2898,8 +3003,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -2912,22 +3017,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade4']; ?></td>
+                                                       <td> <?= $row['grade04']; ?></td>
                                                         <?php
-                                                if ($row['grade4'] > "75") 
+                                                if ($row['grade04'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade4'] < "75") 
+                                                elseif ($row['grade04'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -2953,10 +3060,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/second_year/second_sem/subject5'; //HERE
+                                    $reference = 'course_curriculum/bscs/second_year/second_sem/subject05'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -2965,7 +3073,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/second_year/second_sem/GE110';
+                                                $ref_table = 'Subjects/BSCS/second_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -2976,8 +3084,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -2990,22 +3098,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade5']; ?></td>
+                                                       <td> <?= $row['grade05']; ?></td>
                                                         <?php
-                                                if ($row['grade5'] > "75") 
+                                                if ($row['grade05'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade5'] < "75") 
+                                                elseif ($row['grade05'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -3031,10 +3141,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/second_year/second_sem/subject6'; //HERE
+                                    $reference = 'course_curriculum/bscs/second_year/second_sem/subject06'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3043,7 +3154,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/second_year/second_sem/GE111';
+                                                $ref_table = 'Subjects/BSCS/second_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3054,8 +3165,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -3068,22 +3179,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade6']; ?></td>
+                                                       <td> <?= $row['grade06']; ?></td>
                                                         <?php
-                                                if ($row['grade6'] > "75") 
+                                                if ($row['grade06'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade6'] < "75") 
+                                                elseif ($row['grade06'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -3109,10 +3222,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/second_year/second_sem/subject7'; //HERE
+                                    $reference = 'course_curriculum/bscs/second_year/second_sem/subject07'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3121,7 +3235,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/second_year/second_sem/EL221';
+                                                $ref_table = 'Subjects/BSCS/second_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3132,8 +3246,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -3146,22 +3260,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade7']; ?></td>
+                                                       <td> <?= $row['grade07']; ?></td>
                                                         <?php
-                                                if ($row['grade7'] > "75") 
+                                                if ($row['grade07'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade7'] < "75") 
+                                                elseif ($row['grade07'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -3187,10 +3303,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/second_year/second_sem/subject8'; //HERE
+                                    $reference = 'course_curriculum/bscs/second_year/second_sem/subject08'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3199,7 +3316,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/second_year/second_sem/EL222';
+                                                $ref_table = 'Subjects/BSCS/second_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3210,8 +3327,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -3224,22 +3341,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade8']; ?></td>
+                                                       <td> <?= $row['grade08']; ?></td>
                                                         <?php
-                                                if ($row['grade8'] > "75") 
+                                                if ($row['grade08'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade8'] < "75") 
+                                                elseif ($row['grade08'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -3265,10 +3384,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/second_year/second_sem/subject9'; //HERE
+                                    $reference = 'course_curriculum/bscs/second_year/second_sem/subject09'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3277,7 +3397,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/second_year/second_sem/REED221';
+                                                $ref_table = 'Subjects/BSCS/second_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3288,8 +3408,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -3301,22 +3421,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade9']; ?></td>
+                                                       <td> <?= $row['grade09']; ?></td>
                                                         <?php
-                                                if ($row['grade9'] > "75") 
+                                                if ($row['grade09'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade9'] < "75") 
+                                                elseif ($row['grade09'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -3343,6 +3465,7 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -3355,7 +3478,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/second_year/second_sem/PE221';
+                                                $ref_table = 'Subjects/BSCS/second_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3366,8 +3489,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -3388,14 +3511,16 @@
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade10'] < "75") 
+                                                elseif ($row['grade10'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -3453,10 +3578,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/third_year/first_sem/subject1'; //HERE
+                                    $reference = 'course_curriculum/bscs/third_year/first_sem/subject01'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3465,7 +3591,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/third_year/first_sem/CS311';
+                                                $ref_table = 'Subjects/BSCS/third_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3477,8 +3603,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -3491,22 +3617,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade1']; ?></td>
+                                                       <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade1'] > "75") 
+                                                if ($row['grade01'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade1'] < "75") 
+                                                elseif ($row['grade01'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -3534,10 +3662,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/third_year/first_sem/subject2'; //HERE
+                                    $reference = 'course_curriculum/bscs/third_year/first_sem/subject02'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3546,7 +3675,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/third_year/first_sem/CS312';
+                                                $ref_table = 'Subjects/BSCS/third_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3557,8 +3686,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -3571,22 +3700,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade2']; ?></td>
+                                                       <td> <?= $row['grade02']; ?></td>
                                                         <?php
-                                                if ($row['grade2'] > "75") 
+                                                if ($row['grade02'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade2'] < "75") 
+                                                elseif ($row['grade02'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -3613,11 +3744,12 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                         
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/third_year/first_sem/subject3'; //HERE
+                                    $reference = 'course_curriculum/bscs/third_year/first_sem/subject03'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3626,7 +3758,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/third_year/first_sem/CS313';
+                                                $ref_table = 'Subjects/BSCS/third_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3638,8 +3770,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -3652,22 +3784,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade3']; ?></td>
+                                                       <td> <?= $row['grade03']; ?></td>
                                                         <?php
-                                                if ($row['grade3'] > "75") 
+                                                if ($row['grade03'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade3'] < "75") 
+                                                elseif ($row['grade03'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -3693,10 +3827,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/third_year/first_sem/subject4'; //HERE
+                                    $reference = 'course_curriculum/bscs/third_year/first_sem/subject04'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3705,7 +3840,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/third_year/first_sem/CS314';
+                                                $ref_table = 'Subjects/BSCS/third_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3717,8 +3852,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <<?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -3731,22 +3866,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade4']; ?></td>
+                                                       <td> <?= $row['grade04']; ?></td>
                                                         <?php
-                                                if ($row['grade4'] > "75") 
+                                                if ($row['grade04'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade4'] < "75") 
+                                                elseif ($row['grade04'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -3772,10 +3909,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/third_year/first_sem/subject5'; //HERE
+                                    $reference = 'course_curriculum/bscs/third_year/first_sem/subject05'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3784,7 +3922,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/third_year/first_sem/CS315';
+                                                $ref_table = 'Subjects/BSCS/third_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3795,8 +3933,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -3809,22 +3947,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade5']; ?></td>
+                                                       <td> <?= $row['grade05']; ?></td>
                                                         <?php
-                                                if ($row['grade5'] > "75") 
+                                                if ($row['grade05'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade5'] < "75") 
+                                                elseif ($row['grade05'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -3850,10 +3990,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/third_year/first_sem/subject6'; //HERE
+                                    $reference = 'course_curriculum/bscs/third_year/first_sem/subject06'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3862,7 +4003,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/third_year/first_sem/EL311';
+                                                $ref_table = 'Subjects/BSCS/third_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3873,8 +4014,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -3887,22 +4028,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade6']; ?></td>
+                                                       <td> <?= $row['grade06']; ?></td>
                                                         <?php
-                                                if ($row['grade6'] > "75") 
+                                                if ($row['grade06'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade6'] < "75") 
+                                                elseif ($row['grade06'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -3928,10 +4071,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/third_year/first_sem/subject7'; //HERE
+                                    $reference = 'course_curriculum/bscs/third_year/first_sem/subject07'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -3940,7 +4084,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/third_year/first_sem/EL312';
+                                                $ref_table = 'Subjects/BSCS/third_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -3951,8 +4095,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
@@ -3966,22 +4110,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade7']; ?></td>
+                                                       <td> <?= $row['grade07']; ?></td>
                                                         <?php
-                                                if ($row['grade7'] > "75") 
+                                                if ($row['grade07'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade7'] < "75") 
+                                                elseif ($row['grade07'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -4038,10 +4184,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/third_year/second_sem/subject1'; //HERE
+                                    $reference = 'course_curriculum/bscs/third_year/second_sem/subject01'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4050,7 +4197,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/third_year/second_sem/CS321';
+                                                $ref_table = 'Subjects/BSCS/third_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -4062,8 +4209,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -4076,22 +4223,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade1']; ?></td>
+                                                       <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade1'] > "75") 
+                                                if ($row['grade01'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade1'] < "75") 
+                                                elseif ($row['grade01'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -4119,10 +4268,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/third_year/second_sem/subject2'; //HERE
+                                    $reference = 'course_curriculum/bscs/third_year/second_sem/subject02'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4131,7 +4281,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/third_year/second_sem/CS322';
+                                                $ref_table = 'Subjects/BSCS/third_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -4142,8 +4292,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -4156,22 +4306,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade2']; ?></td>
+                                                       <td> <?= $row['grade02']; ?></td>
                                                         <?php
-                                                if ($row['grade2'] > "75") 
+                                                if ($row['grade02'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade2'] < "75") 
+                                                elseif ($row['grade02'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -4198,11 +4350,12 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                         
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/third_year/second_sem/subject3'; //HERE
+                                    $reference = 'course_curriculum/bscs/third_year/second_sem/subject03'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4211,7 +4364,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/third_year/second_sem/CS323';
+                                                $ref_table = 'Subjects/BSCS/third_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -4223,8 +4376,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -4237,22 +4390,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade3']; ?></td>
+                                                       <td> <?= $row['grade03']; ?></td>
                                                         <?php
-                                                if ($row['grade3'] > "75") 
+                                                if ($row['grade03'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade3'] < "75") 
+                                                elseif ($row['grade03'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -4278,10 +4433,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/third_year/second_sem/subject4'; //HERE
+                                    $reference = 'course_curriculum/bscs/third_year/second_sem/subject04'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4290,7 +4446,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/third_year/second_sem/CS324';
+                                                $ref_table = 'Subjects/BSCS/third_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -4302,8 +4458,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -4316,22 +4472,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade4']; ?></td>
+                                                       <td> <?= $row['grade04']; ?></td>
                                                         <?php
-                                                if ($row['grade4'] > "75") 
+                                                if ($row['grade04'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade4'] < "75") 
+                                                elseif ($row['grade04'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -4357,10 +4515,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/third_year/second_sem/subject5'; //HERE
+                                    $reference = 'course_curriculum/bscs/third_year/second_sem/subject05'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4369,7 +4528,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/third_year/second_sem/CS325';
+                                                $ref_table = 'Subjects/BSCS/third_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -4380,8 +4539,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -4394,22 +4553,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade5']; ?></td>
+                                                       <td> <?= $row['grade05']; ?></td>
                                                         <?php
-                                                if ($row['grade5'] > "75") 
+                                                if ($row['grade05'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade5'] < "75") 
+                                                elseif ($row['grade05'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -4435,10 +4596,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/third_year/second_sem/subject6'; //HERE
+                                    $reference = 'course_curriculum/bscs/third_year/second_sem/subject06'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4447,7 +4609,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/third_year/second_sem/CS326';
+                                                $ref_table = 'Subjects/BSCS/third_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -4458,8 +4620,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -4472,22 +4634,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade6']; ?></td>
+                                                       <td> <?= $row['grade06']; ?></td>
                                                         <?php
-                                                if ($row['grade6'] > "75") 
+                                                if ($row['grade06'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade6'] < "75") 
+                                                elseif ($row['grade06'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -4513,10 +4677,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/third_year/second_sem/subject7'; //HERE
+                                    $reference = 'course_curriculum/bscs/third_year/second_sem/subject07'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4525,7 +4690,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/third_year/second_sem/CS327';
+                                                $ref_table = 'Subjects/BSCS/third_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -4536,8 +4701,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -4550,22 +4715,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade7']; ?></td>
+                                                       <td> <?= $row['grade07']; ?></td>
                                                         <?php
-                                                if ($row['grade7'] > "75") 
+                                                if ($row['grade07'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade7'] < "75") 
+                                                elseif ($row['grade07'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -4622,10 +4789,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/fourth_year/first_sem/subject1'; //HERE
+                                    $reference = 'course_curriculum/bscs/fourth_year/first_sem/subject01'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4634,7 +4802,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/fourth_year/first_sem/CS411';
+                                                $ref_table = 'Subjects/BSCS/fourth_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -4646,8 +4814,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -4659,22 +4827,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade1']; ?></td>
+                                                       <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade1'] > "75") 
+                                                if ($row['grade01'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade1'] < "75") 
+                                                elseif ($row['grade01'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -4702,10 +4872,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/fourth_year/first_sem/subject2'; //HERE
+                                    $reference = 'course_curriculum/bscs/fourth_year/first_sem/subject02'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4714,7 +4885,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/fourth_year/first_sem/CS412';
+                                                $ref_table = 'Subjects/BSCS/fourth_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -4725,8 +4896,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -4739,22 +4910,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade2']; ?></td>
+                                                       <td> <?= $row['grade02']; ?></td>
                                                         <?php
-                                                if ($row['grade2'] > "75") 
+                                                if ($row['grade02'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade2'] < "75") 
+                                                elseif ($row['grade02'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -4781,11 +4954,12 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                         
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/fourth_year/first_sem/subject3'; //HERE
+                                    $reference = 'course_curriculum/bscs/fourth_year/first_sem/subject03'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4794,7 +4968,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/fourth_year/first_sem/CS413';
+                                                $ref_table = 'Subjects/BSCS/fourth_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -4806,8 +4980,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -4820,22 +4994,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade3']; ?></td>
+                                                       <td> <?= $row['grade03']; ?></td>
                                                         <?php
-                                                if ($row['grade3'] > "75") 
+                                                if ($row['grade03'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade3'] < "75") 
+                                                elseif ($row['grade03'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -4861,10 +5037,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/fourth_year/first_sem/subject4'; //HERE
+                                    $reference = 'course_curriculum/bscs/fourth_year/first_sem/subject04'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4873,7 +5050,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/fourth_year/first_sem/CS414';
+                                                $ref_table = 'Subjects/BSCS/fourth_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -4885,8 +5062,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -4899,22 +5076,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade4']; ?></td>
+                                                       <td> <?= $row['grade04']; ?></td>
                                                         <?php
-                                                if ($row['grade4'] > "75") 
+                                                if ($row['grade04'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade4'] < "75") 
+                                                elseif ($row['grade04'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -4940,10 +5119,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/fourth_year/first_sem/subject5'; //HERE
+                                    $reference = 'course_curriculum/bscs/fourth_year/first_sem/subject05'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -4952,7 +5132,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/fourth_year/first_sem/CS415';
+                                                $ref_table = 'Subjects/BSCS/fourth_year/first_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -4963,8 +5143,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -4977,22 +5157,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade5']; ?></td>
+                                                       <td> <?= $row['grade05']; ?></td>
                                                         <?php
-                                                if ($row['grade5'] > "75") 
+                                                if ($row['grade05'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade5'] < "75") 
+                                                elseif ($row['grade05'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }
@@ -5044,10 +5226,11 @@
                                         <th>Name</th>
                                         <th>Grade</th>
                                         <th>Add</th>
+                                        <th>Delete </th>
                                     </tr>
                                     <?php
                                     include('dbcon.php');
-                                    $reference = 'course_curriculum/bscs/fourth_year/second_sem/subject1'; //HERE
+                                    $reference = 'course_curriculum/bscs/fourth_year/second_sem/subject01'; //HERE
                                     $fetch = $database->getReference($reference)->getValue();
                                     if ($fetch > 0) {
                                         ?>
@@ -5056,7 +5239,7 @@
                                         <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
                                         <?php
                                     }//to HERE
-                                                $ref_table = 'Subjects/BSCS/fourth_year/second_sem/CS421';
+                                                $ref_table = 'Subjects/BSCS/fourth_year/second_sem/'.$scode;
                                                 $fetchdata = $database->getReference($ref_table)->getValue();
                                                     if($fetchdata > 0)
                                                     {
@@ -5068,8 +5251,8 @@
                                                 <tr>
                                                     <td> <?= $row['Student_number'];?> </td>
                                                     <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
@@ -5082,22 +5265,24 @@
                                                     <?php
                                             } else {
                                                     ?>
-                                                       <td> <?= $row['grade1']; ?></td>
+                                                       <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade1'] > "75") 
+                                                if ($row['grade01'] > "75") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
                                                             <?php
                                                 } 
-                                                elseif ($row['grade1'] < "75") 
+                                                elseif ($row['grade01'] > "3.0") 
                                                 {
                                                             ?>
                                                             <td> Failed </td>
                                                             <?php
                                                 }
                                                             ?>
-                                                        <td> Edit </td>
+                                                        <td> 
+                                                        <a href="addgrades/BSCS_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&Desc_title=<?= $desc; ?>&Unit=<?= $units;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
+                                                        </td>
                                                         <?php
                                             }
                                         }

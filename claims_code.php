@@ -13,6 +13,71 @@ if(isset($_POST['user_claims_btn']))
         $auth->setCustomUserClaims($uid, ['registrar' => true]);
         $msg = "User role as Registrar.";
     }
+    elseif($roles == 'ch-bscs')
+    {
+        $auth->setCustomUserClaims($uid, ['ch-bscs' => true]);
+        $msg = "User role as BSCS Chairman.";
+    }
+    elseif($roles == 'ch-abreed')
+    {
+        $auth->setCustomUserClaims($uid, ['ch-abreed' => true]);
+        $msg = "User role as ABREED Chairman.";
+    }
+    elseif($roles == 'ch-beed')
+    {
+        $auth->setCustomUserClaims($uid, ['ch-beed' => true]);
+        $msg = "User role as BEED Chairman.";
+    }
+    elseif($roles == 'ch-bsoa')
+    {
+        $auth->setCustomUserClaims($uid, ['ch-bsoa' => true]);
+        $msg = "User role as BSOA Chairman.";
+    }
+    elseif($roles == 'ch-bsba')
+    {
+        $auth->setCustomUserClaims($uid, ['ch-bsba' => true]);
+        $msg = "User role as BSBA Chairman.";
+    }
+
+    elseif($roles == 'ch-ed_eng')
+    {
+        $auth->setCustomUserClaims($uid, ['ch-ed_eng' => true]);
+        $msg = "User role as BSED-ENG Chairman.";
+    }
+    elseif($roles == 'ch-ed_sci')
+    {
+        $auth->setCustomUserClaims($uid, ['ch-ed_sci' => true]);
+        $msg = "User role as BSED-SCI Chairman.";
+    }
+    elseif($roles == 'ch-ed_math')
+    {
+        $auth->setCustomUserClaims($uid, ['ch-ed_math' => true]);
+        $msg = "User role as BSED-MATH Chairman.";
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     elseif($roles == 'bscs')
     {
         $auth->setCustomUserClaims($uid, ['bscs' => true]);
@@ -109,12 +174,12 @@ $updatedUser = $auth->updateUser($uid, $properties);
 if($updatedUser)
 {
     $_SESSION['status'] = "User updated successfully.";
-    header('Location: user-list.php');
+    header('Location: login.php');
     exit();
 }
 else
 {
     $_SESSION['status'] = "User not updated.";
-    header('Location: user-list.php');
+    header("Location: setrole.php?id=$displayname");
     exit();
 }

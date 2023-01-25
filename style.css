@@ -35,8 +35,8 @@ nav p
 
 .logo4
 {
-    margin-top: 15%;
-    width: 350px;
+    margin-top: 10%;
+    width: 300px;
     border-radius:100%;
 }
 h2
@@ -66,7 +66,7 @@ div.login-form
     box-sizing: border-box;
     margin: 10% 0 0;
     padding: 20px 0 20px;
-    width: fit-content;
+    width: 50%;
 }
 div.register-form
 {
@@ -75,8 +75,8 @@ div.register-form
     box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
     box-sizing: border-box;
     margin: 10% 0 0;
-    padding:20px 30px;
-    width: fit-content; 
+    padding: 20px 0 20px;
+    width: 30%; 
 }
 .register-container
 {
@@ -90,10 +90,10 @@ div.register-form
 {
     position: relative;
     display: block;
-    width: auto;
+    width: 35%;
+    margin-right: 50%;
     overflow: hidden;
     text-align: -webkit-left;
-    padding: 10px 20px;
 }
 
 input[type=text]#email, input[type=password] 
@@ -102,7 +102,7 @@ input[type=text]#email, input[type=password]
     padding: 9px 9px;
     margin: 8px 0;
     border: none;
-    border-bottom: 1px solid #111d3c;
+    border-bottom: 2px solid #111d3c;
     outline: none;
 }
 input[type=text].input
@@ -111,7 +111,7 @@ input[type=text].input
     padding: 9px 9px;
     margin: 8px 0;
     border: none;
-    border-bottom: 1px solid #111d3c;
+    border-bottom: 2px solid #111d3c;
     outline: none;
 }
 .forgot
@@ -258,7 +258,7 @@ tr
     background-color: #ddd;
     border-radius: 15px;
     margin: 6% auto auto;
-    width: fit-content;
+    width: 50%;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 #user-list
@@ -443,7 +443,7 @@ input[type=text]#role-num
     margin-top: 30px;
 }
 /*schedule*/
-.content-selection-course
+.content-selection
 {
-    margin-top: 10%;
+    margin: 8%;
 }

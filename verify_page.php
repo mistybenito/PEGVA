@@ -80,25 +80,13 @@
 			<td><input type="text" id="emergency_num" name="Emergency_num" value = "<?=$getdata['Emergency_number']; ?>" class="form-control">
 		</tr>
 		<tr>
-		<td>Year Level</td>
-		<td>
-            <select>
-                <option value="">Year Level</option><!-- here -->
-        		<option value="0">1st Year</option>
-				<option value="2">2nd Year</option>
-				<option value="4">3rd Year</option>
-				<option value="6">4th Year</option>
-            </select><!-- to here here -->
-            </td>
+		<td>Year Level(First Year, Second Year, Third Year, Fourth Year) </td>
+		<td><input type = "text" id = "year" name ="Year"></input></td>
 		<tr>
 		<tr>
-		<td>Semester</td>
-		<td><select>
-                <option value="">Semester</option><!-- here -->
-        		<option value="0">1st Semester</option>
-				<option value="2">2nd Semester</option>
-            </select><!-- to here here --></td>
-			</tr>>
+		<td>Semester(First, Second)</td>
+		<td><input type="text" id ="sem" name = "Semester"></input></td>
+			</tr>
 		</table>
 		<center>
 		<div id="btns">

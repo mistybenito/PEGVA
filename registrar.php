@@ -15,7 +15,7 @@
 <body>
 <body>
         <center>
-
+        <h2>Registrar</h2>
         <div>
             <img src="images/pegva-logo.png" class="logo4">
         </div>

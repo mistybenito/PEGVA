@@ -32,7 +32,7 @@ include_once("dbcon.php");
 
                 ?>
     
-    <form class="container"  action="logincode.php" method="POST">
+        <form class="container"  action="logincode.php" method="POST">
         <div class="imgcontainer">                        
              <img src="images/admin.png" alt="Admin" class="avatar">
                 <h3>Hello Admin! Welcome!</h3>
@@ -54,6 +54,8 @@ include_once("dbcon.php");
             </div>     
         </div>
         </form>
+
+                <img src="images/ccc.png" alt="logo" class="ccc-logo">
           
     </div>
 </center>
