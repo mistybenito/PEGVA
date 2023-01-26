@@ -11,8 +11,8 @@ if (isset($_POST['yes_verify'])) {
     $email = $_POST['Email'];
     $name = $_POST['Name'];
     $snumber = $_POST['Student_number'];
-    $year = $_POST['Year'];
-    $sem = $_POST['Semester'];
+    $year = $_POST['year'];
+    $sem = $_POST['sem'];
     $grade = $_POST['Grade'];
 
     $updateData = [
@@ -27,7 +27,7 @@ if (isset($_POST['yes_verify'])) {
         'Grade' => $grade,
     ];
 
-    if ($year == "First Year" && $sem == "First" && $course == "Bachelor of Science in Computer Science") 
+    if ($year == "1st Year" && $sem == "1st Sem" && $course == "Bachelor of Science in Computer Science") 
     {
     $reference = 'course_curriculum/bscs/first_year/first_sem';
     $fetch = $database->getReference($reference)->getValue();
@@ -51,7 +51,7 @@ if (isset($_POST['yes_verify'])) {
         }
     }
 
-    elseif ($year == "First Year" && $sem == "Second" && $course == "Bachelor of Science in Computer Science") 
+    elseif ($year == "1st Year" && $sem == "2nd Sem" && $course == "Bachelor of Science in Computer Science") 
     {
         $reference = 'course_curriculum/bscs/first_year/second_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -75,7 +75,7 @@ if (isset($_POST['yes_verify'])) {
             }
         }
 
-        elseif ($year == "Second Year" && $sem == "First" && $course == "Bachelor of Science in Computer Science") 
+        elseif ($year == "2nd Year" && $sem == "1st Sem" && $course == "Bachelor of Science in Computer Science") 
     {
         $reference = 'course_curriculum/bscs/second_year/first_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -98,7 +98,7 @@ if (isset($_POST['yes_verify'])) {
                 }
             }
         }
-        elseif ($year == "Second Year" && $sem == "Second" && $course == "Bachelor of Science in Computer Science") 
+        elseif ($year == "2nd Year" && $sem == "2nd Sem" && $course == "Bachelor of Science in Computer Science") 
     {
         $reference = 'course_curriculum/bscs/second_year/second_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -122,7 +122,7 @@ if (isset($_POST['yes_verify'])) {
             }
         }
 
-        elseif ($year == "Third Year" && $sem == "First" && $course == "Bachelor of Science in Computer Science") 
+        elseif ($year == "3rd Year" && $sem == "1st Sem" && $course == "Bachelor of Science in Computer Science") 
     {
         $reference = 'course_curriculum/bscs/third_year/first_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -146,9 +146,9 @@ if (isset($_POST['yes_verify'])) {
             }
         }
 
-        elseif ($year == "Third Year" && $sem == "Second" && $course == "Bachelor of Science in Computer Science") 
+        elseif ($year == "3rd Year" && $sem == "2nd Sem" && $course == "Bachelor of Science in Computer Science") 
         {
-            $reference = 'course_curriculum/bscs/second_year/first_sem';
+            $reference = 'course_curriculum/bscs/third_year/second_sem';
             $fetch = $database->getReference($reference)->getValue();
             if ($fetch > 0) {
                 $i = 0;
@@ -170,7 +170,7 @@ if (isset($_POST['yes_verify'])) {
                 }
             }
 
-            elseif ($year == "Fourth Year" && $sem == "First" && $course == "Bachelor of Science in Computer Science") 
+            elseif ($year == "4th Year" && $sem == "1st Sem" && $course == "Bachelor of Science in Computer Science") 
             {
                 $reference = 'course_curriculum/bscs/fourth_year/first_sem';
                 $fetch = $database->getReference($reference)->getValue();
@@ -194,7 +194,7 @@ if (isset($_POST['yes_verify'])) {
                     }
                 }
 
-                elseif ($year == "Fourth Year" && $sem == "Second" && $course == "Bachelor of Science in Computer Science") 
+                elseif ($year == "4th Year" && $sem == "2nd Sem" && $course == "Bachelor of Science in Computer Science") 
                 {
                     $reference = 'course_curriculum/bscs/fourth_year/second_sem';
                     $fetch = $database->getReference($reference)->getValue();
@@ -218,7 +218,7 @@ if (isset($_POST['yes_verify'])) {
                         }
                     }
 
-                    elseif ($year == "First Year" && $sem == "First" && $course == "Bachelor of Elementary Education") 
+                    elseif ($year == "1st Year" && $sem == "1st Sem" && $course == "Bachelor of Elementary Education") 
     {
     $reference = 'course_curriculum/beed/first_year/first_sem';
     $fetch = $database->getReference($reference)->getValue();
@@ -242,7 +242,7 @@ if (isset($_POST['yes_verify'])) {
         }
     }
 
-    elseif ($year == "First Year" && $sem == "Second" && $course == "Bachelor of Elementary Education") 
+    elseif ($year == "1st Year" && $sem == "2nd Sem" && $course == "Bachelor of Elementary Education") 
     {
         $reference = 'course_curriculum/beed/first_year/second_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -266,7 +266,7 @@ if (isset($_POST['yes_verify'])) {
             }
         }
 
-        elseif ($year == "Second Year" && $sem == "First" && $course == "Bachelor of Elementary Education") 
+        elseif ($year == "2nd Year" && $sem == "1st Sem" && $course == "Bachelor of Elementary Education") 
     {
         $reference = 'course_curriculum/beed/second_year/first_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -289,7 +289,7 @@ if (isset($_POST['yes_verify'])) {
                 }
             }
         }
-        elseif ($year == "Second Year" && $sem == "Second" && $course == "Bachelor of Elementary Education") 
+        elseif ($year == "2nd Year" && $sem == "2nd Sem" && $course == "Bachelor of Elementary Education") 
     {
         $reference = 'course_curriculum/beed/second_year/second_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -313,7 +313,7 @@ if (isset($_POST['yes_verify'])) {
             }
         }
 
-        elseif ($year == "Third Year" && $sem == "First" && $course == "Bachelor of Elementary Education") 
+        elseif ($year == "3rd Year" && $sem == "1st Sem" && $course == "Bachelor of Elementary Education") 
     {
         $reference = 'course_curriculum/beed/third_year/first_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -337,9 +337,9 @@ if (isset($_POST['yes_verify'])) {
             }
         }
 
-        elseif ($year == "Third Year" && $sem == "Second" && $course == "Bachelor of Elementary Education") 
+        elseif ($year == "3rd Year" && $sem == "2nd Sem" && $course == "Bachelor of Elementary Education") 
         {
-            $reference = 'course_curriculum/beed/second_year/first_sem';
+            $reference = 'course_curriculum/beed/third_year/second_sem';
             $fetch = $database->getReference($reference)->getValue();
             if ($fetch > 0) {
                 $i = 0;
@@ -361,7 +361,7 @@ if (isset($_POST['yes_verify'])) {
                 }
             }
 
-            elseif ($year == "Fourth Year" && $sem == "First" && $course == "Bachelor of Elementary Education") 
+            elseif ($year == "4th Year" && $sem == "1st Sem" && $course == "Bachelor of Elementary Education") 
             {
                 $reference = 'course_curriculum/beed/fourth_year/first_sem';
                 $fetch = $database->getReference($reference)->getValue();
@@ -385,7 +385,7 @@ if (isset($_POST['yes_verify'])) {
                     }
                 }
 
-                elseif ($year == "Fourth Year" && $sem == "Second" && $course == "Bachelor of Elementary Education") 
+                elseif ($year == "4th Year" && $sem == "2nd Sem" && $course == "Bachelor of Elementary Education") 
                 {
                     $reference = 'course_curriculum/beed/fourth_year/second_sem';
                     $fetch = $database->getReference($reference)->getValue();
@@ -409,7 +409,7 @@ if (isset($_POST['yes_verify'])) {
                         }
                     }
 
-                    elseif ($year == "First Year" && $sem == "First" && $course == "Bachelor of Science in Office Administration") 
+                    elseif ($year == "1st Year" && $sem == "1st Sem" && $course == "Bachelor of Science in Office Administration") 
     {
     $reference = 'course_curriculum/bsoa/first_year/first_sem';
     $fetch = $database->getReference($reference)->getValue();
@@ -433,7 +433,7 @@ if (isset($_POST['yes_verify'])) {
         }
     }
 
-    elseif ($year == "First Year" && $sem == "Second" && $course == "Bachelor of Science in Office Administration") 
+    elseif ($year == "1st Year" && $sem == "2nd Sem" && $course == "Bachelor of Science in Office Administration") 
     {
         $reference = 'course_curriculum/bsoa/first_year/second_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -457,7 +457,7 @@ if (isset($_POST['yes_verify'])) {
             }
         }
 
-        elseif ($year == "Second Year" && $sem == "First" && $course == "Bachelor of Science in Office Administration") 
+        elseif ($year == "2nd Year" && $sem == "1st Sem" && $course == "Bachelor of Science in Office Administration") 
     {
         $reference = 'course_curriculum/bsoa/second_year/first_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -480,7 +480,7 @@ if (isset($_POST['yes_verify'])) {
                 }
             }
         }
-        elseif ($year == "Second Year" && $sem == "Second" && $course == "Bachelor of Science in Office Administration") 
+        elseif ($year == "2nd Year" && $sem == "2nd Sem" && $course == "Bachelor of Science in Office Administration") 
     {
         $reference = 'course_curriculum/bsoa/second_year/second_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -504,7 +504,7 @@ if (isset($_POST['yes_verify'])) {
             }
         }
 
-        elseif ($year == "Third Year" && $sem == "First" && $course == "Bachelor of Science in Office Administration") 
+        elseif ($year == "3rd Year" && $sem == "1st Sem" && $course == "Bachelor of Science in Office Administration") 
     {
         $reference = 'course_curriculum/bsoa/third_year/first_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -528,9 +528,9 @@ if (isset($_POST['yes_verify'])) {
             }
         }
 
-        elseif ($year == "Third Year" && $sem == "Second" && $course == "Bachelor of Science in Office Administration") 
+        elseif ($year == "3rd Year" && $sem == "2nd Sem" && $course == "Bachelor of Science in Office Administration") 
         {
-            $reference = 'course_curriculum/bsoa/second_year/first_sem';
+            $reference = 'course_curriculum/bsoa/third_year/second_sem';
             $fetch = $database->getReference($reference)->getValue();
             if ($fetch > 0) {
                 $i = 0;
@@ -552,7 +552,7 @@ if (isset($_POST['yes_verify'])) {
                 }
             }
 
-            elseif ($year == "Fourth Year" && $sem == "First" && $course == "Bachelor of Science in Office Administration") 
+            elseif ($year == "4th Year" && $sem == "1st Sem" && $course == "Bachelor of Science in Office Administration") 
             {
                 $reference = 'course_curriculum/bsoa/fourth_year/first_sem';
                 $fetch = $database->getReference($reference)->getValue();
@@ -576,7 +576,7 @@ if (isset($_POST['yes_verify'])) {
                     }
                 }
 
-                elseif ($year == "Fourth Year" && $sem == "Second" && $course == "Bachelor of Science in Office Administration") 
+                elseif ($year == "4th Year" && $sem == "2nd Sem" && $course == "Bachelor of Science in Office Administration") 
                 {
                     $reference = 'course_curriculum/bsoa/fourth_year/second_sem';
                     $fetch = $database->getReference($reference)->getValue();
@@ -600,7 +600,7 @@ if (isset($_POST['yes_verify'])) {
                         }
                     }
 
-                    elseif ($year == "First Year" && $sem == "First" && $course == "Bachelor of Science in Business Administration") 
+                    elseif ($year == "1st Year" && $sem == "1st Sem" && $course == "Bachelor of Science in Business Administration") 
     {
     $reference = 'course_curriculum/bsba/first_year/first_sem';
     $fetch = $database->getReference($reference)->getValue();
@@ -624,7 +624,7 @@ if (isset($_POST['yes_verify'])) {
         }
     }
 
-    elseif ($year == "First Year" && $sem == "Second" && $course == "Bachelor of Science in Business Administration") 
+    elseif ($year == "1st Year" && $sem == "2nd Sem" && $course == "Bachelor of Science in Business Administration") 
     {
         $reference = 'course_curriculum/bsba/first_year/second_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -648,7 +648,7 @@ if (isset($_POST['yes_verify'])) {
             }
         }
 
-        elseif ($year == "Second Year" && $sem == "First" && $course == "Bachelor of Science in Business Administration") 
+        elseif ($year == "2nd Year" && $sem == "1st Sem" && $course == "Bachelor of Science in Business Administration") 
     {
         $reference = 'course_curriculum/bsba/second_year/first_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -671,7 +671,7 @@ if (isset($_POST['yes_verify'])) {
                 }
             }
         }
-        elseif ($year == "Second Year" && $sem == "Second" && $course == "Bachelor of Science in Business Administration") 
+        elseif ($year == "2nd Year" && $sem == "2nd Sem" && $course == "Bachelor of Science in Business Administration") 
     {
         $reference = 'course_curriculum/bsba/second_year/second_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -695,7 +695,7 @@ if (isset($_POST['yes_verify'])) {
             }
         }
 
-        elseif ($year == "Third Year" && $sem == "First" && $course == "Bachelor of Science in Business Administration") 
+        elseif ($year == "3rd Year" && $sem == "1st Sem" && $course == "Bachelor of Science in Business Administration") 
     {
         $reference = 'course_curriculum/bsba/third_year/first_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -719,9 +719,9 @@ if (isset($_POST['yes_verify'])) {
             }
         }
 
-        elseif ($year == "Third Year" && $sem == "Second" && $course == "Bachelor of Science in Business Administration") 
+        elseif ($year == "3rd Year" && $sem == "2nd Sem" && $course == "Bachelor of Science in Business Administration") 
         {
-            $reference = 'course_curriculum/bsba/second_year/first_sem';
+            $reference = 'course_curriculum/bsba/third_year/second_sem';
             $fetch = $database->getReference($reference)->getValue();
             if ($fetch > 0) {
                 $i = 0;
@@ -743,7 +743,7 @@ if (isset($_POST['yes_verify'])) {
                 }
             }
 
-            elseif ($year == "Fourth Year" && $sem == "First" && $course == "Bachelor of Science in Business Administration") 
+            elseif ($year == "4th Year" && $sem == "1st Sem" && $course == "Bachelor of Science in Business Administration") 
             {
                 $reference = 'course_curriculum/bsba/fourth_year/first_sem';
                 $fetch = $database->getReference($reference)->getValue();
@@ -767,7 +767,7 @@ if (isset($_POST['yes_verify'])) {
                     }
                 }
 
-                elseif ($year == "Fourth Year" && $sem == "Second" && $course == "Bachelor of Science in Business Administration") 
+                elseif ($year == "4th Year" && $sem == "2nd Sem" && $course == "Bachelor of Science in Business Administration") 
                 {
                     $reference = 'course_curriculum/bsba/fourth_year/second_sem';
                     $fetch = $database->getReference($reference)->getValue();
@@ -791,7 +791,7 @@ if (isset($_POST['yes_verify'])) {
                         }
                     }
 
-                    elseif ($year == "First Year" && $sem == "First" && $course == "Bachelor of Arts in Religious Education") 
+                    elseif ($year == "1st Year" && $sem == "1st Sem" && $course == "Bachelor of Arts in Religious Education") 
     {
     $reference = 'course_curriculum/abreed/first_year/first_sem';
     $fetch = $database->getReference($reference)->getValue();
@@ -815,7 +815,7 @@ if (isset($_POST['yes_verify'])) {
         }
     }
 
-    elseif ($year == "First Year" && $sem == "Second" && $course == "Bachelor of Arts in Religious Education") 
+    elseif ($year == "1st Year" && $sem == "2nd Sem" && $course == "Bachelor of Arts in Religious Education") 
     {
         $reference = 'course_curriculum/abreed/first_year/second_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -839,7 +839,7 @@ if (isset($_POST['yes_verify'])) {
             }
         }
 
-        elseif ($year == "Second Year" && $sem == "First" && $course == "Bachelor of Arts in Religious Education") 
+        elseif ($year == "2nd Year" && $sem == "1st Sem" && $course == "Bachelor of Arts in Religious Education") 
     {
         $reference = 'course_curriculum/abreed/second_year/first_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -862,7 +862,7 @@ if (isset($_POST['yes_verify'])) {
                 }
             }
         }
-        elseif ($year == "Second Year" && $sem == "Second" && $course == "Bachelor of Arts in Religious Education") 
+        elseif ($year == "2nd Year" && $sem == "2nd Sem" && $course == "Bachelor of Arts in Religious Education") 
     {
         $reference = 'course_curriculum/abreed/second_year/second_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -886,7 +886,7 @@ if (isset($_POST['yes_verify'])) {
             }
         }
 
-        elseif ($year == "Third Year" && $sem == "First" && $course == "Bachelor of Arts in Religious Education") 
+        elseif ($year == "3rd Year" && $sem == "1st Sem" && $course == "Bachelor of Arts in Religious Education") 
     {
         $reference = 'course_curriculum/abreed/third_year/first_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -910,9 +910,9 @@ if (isset($_POST['yes_verify'])) {
             }
         }
 
-        elseif ($year == "Third Year" && $sem == "Second" && $course == "Bachelor of Arts in Religious Education") 
+        elseif ($year == "3rd Year" && $sem == "2nd Sem" && $course == "Bachelor of Arts in Religious Education") 
         {
-            $reference = 'course_curriculum/abreed/second_year/first_sem';
+            $reference = 'course_curriculum/abreed/third_year/second_sem';
             $fetch = $database->getReference($reference)->getValue();
             if ($fetch > 0) {
                 $i = 0;
@@ -934,7 +934,7 @@ if (isset($_POST['yes_verify'])) {
                 }
             }
 
-            elseif ($year == "Fourth Year" && $sem == "First" && $course == "Bachelor of Arts in Religious Education") 
+            elseif ($year == "4th Year" && $sem == "1st Sem" && $course == "Bachelor of Arts in Religious Education") 
             {
                 $reference = 'course_curriculum/abreed/fourth_year/first_sem';
                 $fetch = $database->getReference($reference)->getValue();
@@ -958,7 +958,7 @@ if (isset($_POST['yes_verify'])) {
                     }
                 }
 
-                elseif ($year == "Fourth Year" && $sem == "Second" && $course == "Bachelor of Arts in Religious Education") 
+                elseif ($year == "4th Year" && $sem == "2nd Sem" && $course == "Bachelor of Arts in Religious Education") 
                 {
                     $reference = 'course_curriculum/abreed/fourth_year/second_sem';
                     $fetch = $database->getReference($reference)->getValue();
@@ -981,7 +981,7 @@ if (isset($_POST['yes_verify'])) {
                             }
                         }
                     }
-                    elseif ($year == "First Year" && $sem == "First" && $course == "Bachelor of Secondary Education, Major in English") 
+                    elseif ($year == "1st Year" && $sem == "1st Sem" && $course == "Bachelor of Secondary Education, Major in English") 
     {
     $reference = 'course_curriculum/bsed_e/first_year/first_sem';
     $fetch = $database->getReference($reference)->getValue();
@@ -1005,7 +1005,7 @@ if (isset($_POST['yes_verify'])) {
         }
     }
 
-    elseif ($year == "First Year" && $sem == "Second" && $course == "Bachelor of Secondary Education, Major in English") 
+    elseif ($year == "1st Year" && $sem == "2nd Sem" && $course == "Bachelor of Secondary Education, Major in English") 
     {
         $reference = 'course_curriculum/bsed_e/first_year/second_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -1029,7 +1029,7 @@ if (isset($_POST['yes_verify'])) {
             }
         }
 
-        elseif ($year == "Second Year" && $sem == "First" && $course == "Bachelor of Secondary Education, Major in English") 
+        elseif ($year == "2nd Year" && $sem == "1st Sem" && $course == "Bachelor of Secondary Education, Major in English") 
     {
         $reference = 'course_curriculum/bsed_e/second_year/first_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -1052,7 +1052,7 @@ if (isset($_POST['yes_verify'])) {
                 }
             }
         }
-        elseif ($year == "Second Year" && $sem == "Second" && $course == "Bachelor of Secondary Education, Major in English") 
+        elseif ($year == "2nd Year" && $sem == "2nd Sem" && $course == "Bachelor of Secondary Education, Major in English") 
     {
         $reference = 'course_curriculum/bsed_e/second_year/second_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -1076,7 +1076,7 @@ if (isset($_POST['yes_verify'])) {
             }
         }
 
-        elseif ($year == "Third Year" && $sem == "First" && $course == "Bachelor of Secondary Education, Major in English") 
+        elseif ($year == "3rd Year" && $sem == "1st Sem" && $course == "Bachelor of Secondary Education, Major in English") 
     {
         $reference = 'course_curriculum/bsed_e/third_year/first_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -1100,9 +1100,9 @@ if (isset($_POST['yes_verify'])) {
             }
         }
 
-        elseif ($year == "Third Year" && $sem == "Second" && $course == "Bachelor of Secondary Education, Major in English") 
+        elseif ($year == "3rd Year" && $sem == "2nd Sem" && $course == "Bachelor of Secondary Education, Major in English") 
         {
-            $reference = 'course_curriculum/bsed_e/second_year/first_sem';
+            $reference = 'course_curriculum/bsed_e/third_year/second_sem';
             $fetch = $database->getReference($reference)->getValue();
             if ($fetch > 0) {
                 $i = 0;
@@ -1124,7 +1124,7 @@ if (isset($_POST['yes_verify'])) {
                 }
             }
 
-            elseif ($year == "Fourth Year" && $sem == "First" && $course == "Bachelor of Secondary Education, Major in English") 
+            elseif ($year == "4th Year" && $sem == "1st Sem" && $course == "Bachelor of Secondary Education, Major in English") 
             {
                 $reference = 'course_curriculum/bsed_e/fourth_year/first_sem';
                 $fetch = $database->getReference($reference)->getValue();
@@ -1148,7 +1148,7 @@ if (isset($_POST['yes_verify'])) {
                     }
                 }
 
-                elseif ($year == "Fourth Year" && $sem == "Second" && $course == "Bachelor of Secondary Education, Major in English") 
+                elseif ($year == "4th Year" && $sem == "2nd Sem" && $course == "Bachelor of Secondary Education, Major in English") 
                 {
                     $reference = 'course_curriculum/bsed_e/fourth_year/second_sem';
                     $fetch = $database->getReference($reference)->getValue();
@@ -1172,7 +1172,7 @@ if (isset($_POST['yes_verify'])) {
                         }
                     }
 
-                    elseif ($year == "First Year" && $sem == "First" && $course == "Bachelor of Secondary Education, Major in Science") 
+                    elseif ($year == "1st Year" && $sem == "1st Sem" && $course == "Bachelor of Secondary Education, Major in Science") 
     {
     $reference = 'course_curriculum/bsed_s/first_year/first_sem';
     $fetch = $database->getReference($reference)->getValue();
@@ -1196,7 +1196,7 @@ if (isset($_POST['yes_verify'])) {
         }
     }
 
-    elseif ($year == "First Year" && $sem == "Second" && $course == "Bachelor of Secondary Education, Major in Science") 
+    elseif ($year == "1st Year" && $sem == "2nd Sem" && $course == "Bachelor of Secondary Education, Major in Science") 
     {
         $reference = 'course_curriculum/bsed_s/first_year/second_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -1220,7 +1220,7 @@ if (isset($_POST['yes_verify'])) {
             }
         }
 
-        elseif ($year == "Second Year" && $sem == "First" && $course == "Bachelor of Secondary Education, Major in Science") 
+        elseif ($year == "2nd Year" && $sem == "1st Sem" && $course == "Bachelor of Secondary Education, Major in Science") 
     {
         $reference = 'course_curriculum/bsed_s/second_year/first_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -1243,7 +1243,7 @@ if (isset($_POST['yes_verify'])) {
                 }
             }
         }
-        elseif ($year == "Second Year" && $sem == "Second" && $course == "Bachelor of Secondary Education, Major in Science") 
+        elseif ($year == "2nd Year" && $sem == "2nd Sem" && $course == "Bachelor of Secondary Education, Major in Science") 
     {
         $reference = 'course_curriculum/bsed_s/second_year/second_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -1267,7 +1267,7 @@ if (isset($_POST['yes_verify'])) {
             }
         }
 
-        elseif ($year == "Third Year" && $sem == "First" && $course == "Bachelor of Secondary Education, Major in Science") 
+        elseif ($year == "3rd Year" && $sem == "1st Sem" && $course == "Bachelor of Secondary Education, Major in Science") 
     {
         $reference = 'course_curriculum/bsed_s/third_year/first_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -1291,9 +1291,9 @@ if (isset($_POST['yes_verify'])) {
             }
         }
 
-        elseif ($year == "Third Year" && $sem == "Second" && $course == "Bachelor of Secondary Education, Major in Science") 
+        elseif ($year == "3rd Year" && $sem == "2nd Sem" && $course == "Bachelor of Secondary Education, Major in Science") 
         {
-            $reference = 'course_curriculum/bsed_s/second_year/first_sem';
+            $reference = 'course_curriculum/bsed_s/third_year/second_sem';
             $fetch = $database->getReference($reference)->getValue();
             if ($fetch > 0) {
                 $i = 0;
@@ -1315,7 +1315,7 @@ if (isset($_POST['yes_verify'])) {
                 }
             }
 
-            elseif ($year == "Fourth Year" && $sem == "First" && $course == "Bachelor of Secondary Education, Major in Science") 
+            elseif ($year == "4th Year" && $sem == "1st Sem" && $course == "Bachelor of Secondary Education, Major in Science") 
             {
                 $reference = 'course_curriculum/bsed_s/fourth_year/first_sem';
                 $fetch = $database->getReference($reference)->getValue();
@@ -1339,7 +1339,7 @@ if (isset($_POST['yes_verify'])) {
                     }
                 }
 
-                elseif ($year == "Fourth Year" && $sem == "Second" && $course == "Bachelor of Secondary Education, Major in Science") 
+                elseif ($year == "4th Year" && $sem == "2nd Sem" && $course == "Bachelor of Secondary Education, Major in Science") 
                 {
                     $reference = 'course_curriculum/bsed_s/fourth_year/second_sem';
                     $fetch = $database->getReference($reference)->getValue();
@@ -1463,7 +1463,7 @@ if (isset($_POST['yes_verify'])) {
         $sub_table = 'User/'.$key."/grades/first_year";
         
         
-        if($year == "First Year" && $sem == "First" && $course == "Bachelor of Science in Computer Science")
+        if($year == "1st Year" && $sem == "1st Sem" && $course == "Bachelor of Science in Computer Science")
         {
                 $updatequery_result = $database->getReference($ref_table)->update($updateData);
                 $addsubCS111 = $database->getReference($BSCScs111)->update($studentData);
@@ -1488,7 +1488,7 @@ if (isset($_POST['yes_verify'])) {
                     header('Location: student_BSCS.php');
                 }
         }
-        elseif($year == "First Year" && $sem == "Second" && $course == "Bachelor of Science in Computer Science")
+        elseif($year == "1st Year" && $sem == "2nd Sem" && $course == "Bachelor of Science in Computer Science")
             {
                 $updatequery_result = $database->getReference($ref_table)->update($updateData);
                 $addsubCS121 = $database->getReference($BSCScs121)->update($studentData);
@@ -1513,7 +1513,7 @@ if (isset($_POST['yes_verify'])) {
                     header('Location: student_BSCS.php');
                 }
             }
-        elseif($year == "Second Year" && $sem == "First" && $course == "Bachelor of Science in Computer Science") 
+        elseif($year == "2nd Year" && $sem == "1st Sem" && $course == "Bachelor of Science in Computer Science") 
         {
             $updatequery_result = $database->getReference($ref_table)->update($updateData);
             $addsubCS211 = $database->getReference($BSCScs211)->update($studentData);
@@ -1540,7 +1540,7 @@ if (isset($_POST['yes_verify'])) {
         }
 
     }
-    elseif($year == "Second Year" && $sem == "Second" && $course == "Bachelor of Science in Computer Science")
+    elseif($year == "2nd Year" && $sem == "2nd Sem" && $course == "Bachelor of Science in Computer Science")
     {
         $updatequery_result = $database->getReference($ref_table)->update($updateData);
         $addsubCS221 = $database->getReference($BSCScs221)->update($studentData);
@@ -1566,7 +1566,7 @@ if (isset($_POST['yes_verify'])) {
             }
     }
     // 3y1s 3y1s 3y1s 3y1s 3y1s 3y1s 3y1s 3y1s 3y1s 3y1s 3y1s 3y1s 3y1s 3y1s 3y1s 3y1s 3y1s 3y1s 3y1s 3y1s 3y1s 
-    elseif($year == "Third Year" && $sem == "First" && $course == "Bachelor of Science in Computer Science")
+    elseif($year == "3rd Year" && $sem == "1st Sem" && $course == "Bachelor of Science in Computer Science")
     {
         $updatequery_result = $database->getReference($ref_table)->update($updateData);
         $addsubCS311 = $database->getReference($BSCScs311)->update($studentData);
@@ -1591,7 +1591,7 @@ if (isset($_POST['yes_verify'])) {
 
     //3y2s 3y2s 3y2s 3y2s 3y2s 3y2s 3y2s 3y2s 3y2s 3y2s 3y2s 3y2s 3y2s 3y2s 3y2s 3y2s 3y2s 3y2s 3y2s 3y2s 3y2s 3y2s 
 
-    elseif($year == "Third Year" && $sem == "Second" && $course == "Bachelor of Science in Computer Science")
+    elseif($year == "3rd Year" && $sem == "2nd Sem" && $course == "Bachelor of Science in Computer Science")
     {
         $updatequery_result = $database->getReference($ref_table)->update($updateData);
         $addsubCS321 = $database->getReference($BSCScs321)->update($studentData);
@@ -1616,7 +1616,7 @@ if (isset($_POST['yes_verify'])) {
 
     //4y1s 4y1s 4y1s 4y1s 4y1s 4y1s 4y1s 4y1s 4y1s 4y1s 4y1s 4y1s 4y1s 4y1s 4y1s 4y1s 4y1s 4y1s 4y1s 4y1s 4y1s 4y1s 4y1s 
 
-    elseif($year == "Fourth Year" && $sem == "First" && $course == "Bachelor of Science in Computer Science")
+    elseif($year == "4th Year" && $sem == "1st Sem" && $course == "Bachelor of Science in Computer Science")
     {
         $updatequery_result = $database->getReference($ref_table)->update($updateData);
         $addsubCS411 = $database->getReference($BSCScs411)->update($studentData);
@@ -1638,7 +1638,7 @@ if (isset($_POST['yes_verify'])) {
     }
     // 4y2s 4y2s 4y2s 4y2s 4y2s 4y2s 4y2s 4y2s 4y2s 4y2s 4y2s 4y2s 4y2s 4y2s 4y2s 4y2s 4y2s 4y2s 4y2s 4y2s 4y2s 4y2s 4y2s 4y2s 4y2s 4y2s 4y2s 4y2s 4y2s 
 
-    elseif($year == "Fourth Year" && $sem == "Second" && $course == "Bachelor of Science in Computer Science")
+    elseif($year == "4th Year" && $sem == "2nd Sem" && $course == "Bachelor of Science in Computer Science")
     {
         $updatequery_result = $database->getReference($ref_table)->update($updateData);
         $addsubCS421 = $database->getReference($BSCScs421)->update($studentData);
