@@ -1,11 +1,11 @@
 <?php
     include("authentication.php");
-	include("navbar.php");
+    include("nav-new.php");
 ?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>BSCS</title>
+        <title>BSCS Curriculum</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet" type="text/css">
@@ -512,7 +512,7 @@ window.npup = (function (containerId, baseId) {
     };
 })('mySpecialElements', 'npup'); // give the routine a container id of your special elements, and the base id of those elements
 </script>
-<p id="footer">All content copyright © 2022, PEGVA.</p>
+
 
 </body>
 </html>

@@ -1,34 +1,37 @@
 <?php
     include("authentication.php");
-	include("navbar.php");
+    include("nav-new.php");
 ?>
 <!DOCTYPE html>
 <html>
-<title> Student List </title>
 <head>
-<meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="grades.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title> Student List </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <h2>Students per Subject</h2>
 
 <!-- Drop downn section and options -->
 <center>
-<div class="content-selection">
-  <select id="mySelect" onchange="npup.doSelect(this);">
-      <option value="">Year and Semester</option>
-      <!-- the option values are suffixes for the elements to show -->
-      <option value="0">1st Year, 1st Sem</option>
-      <option value="1">1st Year, 2nd Sem</option>
-      <option value="2">2nd Year, 1st Sem</option>
-	  <option value="3">2nd Year, 2nd Sem</option>
-	  <option value="4">3rd Year, 1st Sem</option>
-	  <option value="5">3rd Year, 2nd Sem</option>
-	  <option value="6">4th Year, 1st Sem</option>
-	  <option value="7">4th Year, 2nd Sem</option>
-  </select>
+<div class="viewsub">
+    <div class="content-selection">
+    <select id="mySelect" onchange="npup.doSelect(this);">
+        <option value="">Year and Semester</option>
+        <!-- the option values are suffixes for the elements to show -->
+        <option value="0">1st Year, 1st Sem</option>
+        <option value="1">1st Year, 2nd Sem</option>
+        <option value="2">2nd Year, 1st Sem</option>
+        <option value="3">2nd Year, 2nd Sem</option>
+        <option value="4">3rd Year, 1st Sem</option>
+        <option value="5">3rd Year, 2nd Sem</option>
+        <option value="6">4th Year, 1st Sem</option>
+        <option value="7">4th Year, 2nd Sem</option>
+    </select>
+    </div>
 </div>
 </center>
 <!-- end of content-selection -->
@@ -37,11 +40,12 @@
 <!-- container for any elements that are to be in the game -->
 <div id="mySpecialElements">
     <!--  these have ids that end with and index  for easy retrieval in "findeElement" function  below-->
-<div id="npup0" class="hidden">
+<div id="npup0" class="hidden" style="margin-left:300px">
+<center> 
         <h3>1st Year, 1st Sem</h3> 
         <?//FIRST YEAR FIRST SEM GRADES?>
-            <center>    
-    <form name="form1" method="post" action="code.php"  style="height:550px;">
+             
+    <form name="form1" method="post" action="code.php" style="height:fit-content;"  class="viewsub-form">
             <?// CONTENT SELECTION FOR GRADES?>
             <div class="content-selection">
             <select id="mySelect" onchange="oneone.doSelect(this);">
@@ -962,10 +966,11 @@
 
 
 
-    <div id="npup1" class="hidden">
+    <div id="npup1" class="hidden" style="margin-left:300px">
+    <center> 
       <h3>1st Year, 2nd Sem</h3>
-      <center><!-- COPY FROM HERE -->    
-                <form name="form1" method="post" action="code.php"  style="height:550px;">
+    <!-- COPY FROM HERE -->    
+        <form name="form1" method="post" action="code.php" style="height:fit-content;"  class="viewsub-form">
             <?// CONTENT SELECTION FOR GRADES?>
             <div class="content-selection">
             <select id="mySelect" onchange="onetwo.doSelect(this);">
@@ -1839,15 +1844,24 @@
 
 
 
+
+
+
+
+
+
+
+
             </div>
     </div>
 </center><!-- TO HERE -->
 
 <!-- BOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARY-->
-    <div id="npup2" class="hidden">
+    <div id="npup2" class="hidden" style="margin-left:300px">
+    <center>
       <h3>2nd Year, 1st Sem</h3>
-      <center><!-- COPY FROM HERE -->    
-        <form name="form1" method="post" action="code.php"  style="height:550px;">
+<!-- COPY FROM HERE -->    
+        <form name="form1" method="post" action="code.php" style="height:fit-content;"  class="viewsub-form">
             <?// CONTENT SELECTION FOR GRADES?>
             <div class="content-selection">
             <select id="mySelect" onchange="twoone.doSelect(this);">
@@ -2693,11 +2707,50 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
 <!-- BOUNDARY BETWEEN SEMS ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-	<div id="npup3" class="hidden">
+	<div id="npup3" class="hidden" style="margin-left:300px">
+    <center>
       <h3>2nd Year, 2nd Sem</h3>
-      <center><!-- COPY FROM HERE -->    
-        <form name="form1" method="post" action="code.php"  style="height:550px;">
+<!-- COPY FROM HERE -->    
+        <form name="form1" method="post" action="code.php" style="height:fit-content;"  class="viewsub-form">
             <?// CONTENT SELECTION FOR GRADES?>
             <div class="content-selection">
             <select id="mySelect" onchange="twotwo.doSelect(this);">
@@ -3544,10 +3597,54 @@
 
 
 
-	<div id="npup4" class="hidden">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div id="npup4" class="hidden" style="margin-left:300px">
+    <center>
       <h3>3rd Year, 1st Sem</h3>
-      <center><!-- COPY FROM HERE -->    
-        <form name="form1" method="post" action="code.php"  style="height:550px;">
+<!-- COPY FROM HERE -->    
+        <form name="form1" method="post" action="code.php" style="height:fit-content;"  class="viewsub-form">
             <?// CONTENT SELECTION FOR GRADES?>
             <div class="content-selection">
             <select id="mySelect" onchange="threeone.doSelect(this);">
@@ -4148,12 +4245,53 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- asdsadjiowqdjasd boundaryboundaryboundaryboundaryboundaryboundaryboundaryboundaryboundaryboundaryboundaryboundaryboundary -->
 
-	<div id="npup5" class="hidden">
+	<div id="npup5" class="hidden" style="margin-left:300px">
+    <center>
       <h3>3rd Year, 2nd Sem</h3>
-      <center><!-- COPY FROM HERE -->    
-        <form name="form1" method="post" action="code.php"  style="height:550px;">
+ 
+      <!-- COPY FROM HERE -->    
+        <form name="form1" method="post" action="code.php" style="height:fit-content;"  class="viewsub-form">
             <?// CONTENT SELECTION FOR GRADES?>
             <div class="content-selection">
             <select id="mySelect" onchange="threetwo.doSelect(this);">
@@ -4754,11 +4892,45 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- 4TH YEAR year 4th year 4yearsad asdsaddwqeqeasdsa qfwqd asdwqdq safsadqwe asd  -->
-	<div id="npup6" class="hidden">
+	<div id="npup6" class="hidden" style="margin-left:300px">
+    <center>
       <h3>4th Year, 1st Sem</h3>
-      <center><!-- COPY FROM HERE -->    
-        <form name="form1" method="post" action="code.php"  style="height:550px;">
+<!-- COPY FROM HERE -->    
+        <form name="form1" method="post" action="code.php" style="height:fit-content;"  class="viewsub-form">
             <?// CONTENT SELECTION FOR GRADES?>
             <div class="content-selection">
             <select id="mySelect" onchange="fourone.doSelect(this);">
@@ -5192,10 +5364,42 @@
             </center>
         </div><!-- TO HERE -->
 
-	<div id="npup7" class="hidden">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div id="npup7" class="hidden" style="margin-left:300px">
+    <center>
       <h3>4th Year, 2nd Sem</h3>
-      <center><!-- COPY FROM HERE -->    
-        <form name="form1" method="post" action="code.php"  style="height:550px;">
+
+      <!-- COPY FROM HERE -->    
+        <form name="form1" method="post" action="code.php"   style="height:fit-content;"  class="viewsub-form">
             <?// CONTENT SELECTION FOR GRADES?>
             <div class="content-selection">
             <select id="mySelect" onchange="fourtwo.doSelect(this);">
@@ -5753,22 +5957,5 @@ window.fourtwo = (function (containerId, baseId) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div  id="footer">
-    <p>All content copyright © 2022, PEGVA.</p>
-</div>
 </body>
 </html>

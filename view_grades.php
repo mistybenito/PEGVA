@@ -1,6 +1,6 @@
 <?php
     include("authentication.php");
-	include("navbar.php");
+    include("nav-new.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,38 +12,44 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-
-<p class="label">Student Remarks</p>
-
-<!-- Drop downn section and options -->
 <center>
+<h2>Student Remarks</h2>
+<br>
+<!-- Drop downn section and options -->
+
+<div class="grds">
 <div class="content-selection">
-  <select id="mySelect" onchange="npup.doSelect(this);">
-      <option value="">Year and Semester</option>
-      <!-- the option values are suffixes for the elements to show -->
-      <option value="0">1st Year, 1st Sem</option>
-      <option value="1">1st Year, 2nd Sem</option>
-      <option value="2">2nd Year, 1st Sem</option>
-	  <option value="3">2nd Year, 2nd Sem</option>
-	  <option value="4">3rd Year, 1st Sem</option>
-	  <option value="5">3rd Year, 2nd Sem</option>
-	  <option value="6">4th Year, 1st Sem</option>
-	  <option value="7">4th Year, 2nd Sem</option>
-  </select>
+  	<select id="mySelect" onchange="npup.doSelect(this);">
+		<option value="">Year and Semester</option>
+		<!-- the option values are suffixes for the elements to show -->
+		<option value="0">1st Year, 1st Sem</option>
+		<option value="1">1st Year, 2nd Sem</option>
+		<option value="2">2nd Year, 1st Sem</option>
+		<option value="3">2nd Year, 2nd Sem</option>
+		<option value="4">3rd Year, 1st Sem</option>
+		<option value="5">3rd Year, 2nd Sem</option>
+		<option value="6">4th Year, 1st Sem</option>
+		<option value="7">4th Year, 2nd Sem</option>
+  	</select>
+</div>
 </div>
 </center>
 <!-- end of content-selection -->
 
-
 <!-- container for any elements that are to be in the game -->
 <div id="mySpecialElements">
     <!--  these have ids that end with and index  for easy retrieval in "findeElement" function  below-->
-    <div id="npup0" class="hidden">
-	<p style="font-size: 18px; margin-left: 25%;">1st Year, 1st Sem</p>
-<center>	
-     
-	<form name="form1" method="post" action="code.php"   >
 
+<div id="npup0" class="hidden" style="margin-left:300px">
+
+<div>
+
+<center> 
+
+	<p style="font-size: 18px; margin-top: 20px;">1st Year, 1st Sem</p>	
+     
+	<form name="form1" method="post" action="code.php">
+<center>
 	<table class="view_grades">
 			<tr> 
 				<th>Course</th>
@@ -169,15 +175,20 @@
 		   
 	</form>
   </div>
+		</div>
  </center>
 
 
 
 
 
-    <div id="npup1" class="hidden">
-	<p style="font-size: 18px; margin-left: 25%;">1st Year, 2nd Sem</p>
-<center>	
+    <div id="npup1" class="hidden" style="margin-left:300px">
+
+<div>
+
+<center> 
+
+	<p style="font-size: 18px; margin-top: 20px;">1st Year, 2nd Sem</p>	
      
 	<form name="form1" method="post" action="code.php"   >
 
@@ -301,13 +312,18 @@
 			?>
 		</table> 
 		   
-	</form>
-    </div>
-	</center>
+		</form>
+  </div>
+		</div>
+ </center>
 
 
-    <div id="npup2" class="hidden">
-	<p style="font-size: 18px; margin-left: 25%;">2nd Year, 1st Sem</p>
+
+    <div id="npup2" class="hidden" style="margin-left:300px">
+
+<div>
+<center> 
+	<p style="font-size: 18px; margin-top: 20px;">2nd Year, 1st Sem</p>
 <center>	
      
 	<form name="form1" method="post" action="code.php"   >
@@ -433,14 +449,18 @@
 
 			?>
 		</table> 
-		   
 		</form>
-    </div>
-	
-</center>
+  </div>
+		</div>
+ </center>
 
-	<div id="npup3" class="hidden">
-	<p style="font-size: 18px; margin-left: 25%;">2nd Year, 2nd Sem</p>
+	<div id="npup3" class="hidden" style="margin-left:300px">
+
+<div>
+
+<center> 
+
+	<p style="font-size: 18px; margin-top: 20px;">2nd Year, 2nd Sem</p>
 <center>	
      
 	<form name="form1" method="post" action="code.php"   >
@@ -569,9 +589,9 @@
 		</table> 
 		   
 		</form>
-    </div>
-	
-	</center>
+  </div>
+		</div>
+ </center>
 
 
 
@@ -579,8 +599,13 @@
 
 
 
-	<div id="npup4" class="hidden">
-	<p style="font-size: 18px; margin-left: 25%;">3rd Year, 1st Sem</p>
+	<div id="npup4" class="hidden" style="margin-left:300px">
+
+<div>
+
+<center> 
+
+	<p style="font-size: 18px; margin-top: 20px;">3rd Year, 1st Sem</p>
 <center>	
      
 	<form name="form1" method="post" action="code.php"   >
@@ -709,13 +734,18 @@
 		</table> 
 		   
 		</form>
-    </div>
+  </div>
+		</div>
+ </center>
 
-	</center>
 
+	<div id="npup5" class="hidden" style="margin-left:300px">
 
-	<div id="npup5" class="hidden">
-	<p style="font-size: 18px; margin-left: 25%;">3rd Year, 2nd Sem</p>
+<div>
+
+<center> 
+
+	<p style="font-size: 18px; margin-top: 20px;">3rd Year, 2nd Sem</p>
 <center>	
      
 	<form name="form1" method="post" action="code.php"   >
@@ -841,13 +871,19 @@
 		</table> 
 		   
 		</form>
-    </div>
-</center>
+  </div>
+		</div>
+ </center>
 
 
 
-	<div id="npup6" class="hidden">
-	<p style="font-size: 18px; margin-left: 25%;">4th Year, 1st Sem</p>
+	<div id="npup6" class="hidden" style="margin-left:300px">
+
+<div>
+
+<center> 
+
+	<p style="font-size: 18px; margin-top: 20px;">4th Year, 1st Sem</p>
 <center>	
      
 	<form name="form1" method="post" action="code.php"   >
@@ -976,11 +1012,17 @@
 		</table> 
 		   
 		</form>
-    </div>
-	</center>
+  </div>
+		</div>
+ </center>
 
-	<div id="npup7" class="hidden">
-      <<p style="font-size: 18px; margin-left: 25%;">4th Year, 2nd Sem</p>
+	<div id="npup7" class="hidden" style="margin-left:300px">
+
+<div>
+
+<center> 
+
+	<p style="font-size: 18px; margin-top: 20px;">4th Year, 2nd Sem</p>
 <center>	
      
 	<form name="form1" method="post" action="code.php">
@@ -1107,11 +1149,10 @@
 
 			?>
 		</table> 
-		   
 		</form>
-    </div>
-
-	</center>
+  </div>
+		</div>
+ </center>
 
 
 </div>

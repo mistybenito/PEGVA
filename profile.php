@@ -1,6 +1,6 @@
 <?php
     include("authentication.php");
-	include("navbar.php");
+    include("nav-new.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-
+<center>
     <div id="profile">
 	<p style="font-size: 18px; font-weight: bold; padding: 12px 0px 0px 10px;">Student Information</p>
     <?php
@@ -104,6 +104,6 @@
 		}
 	?>
 </div>
-<p id="footer">All content copyright © 2022, PEGVA.</p>
+	</center>
     </body>
 </html>

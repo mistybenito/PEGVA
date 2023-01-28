@@ -17,12 +17,13 @@ include_once("dbcon.php");
         <link href="style.css" rel="stylesheet" type="text/css">
     </head>
 
- <body>
- <nav>
-<p class="title">Cainta Catholic College</p>    
+<body style="background: linear-gradient(157deg, #111d3c, #014a99, #3b89ba, #4bb0e8); background-repeat: no-repeat; background-attachment: fixed;">
+
+<nav>
+    <p class="title"><img src="images/logo.png" alt="Admin" class="avatar">Cainta Catholic College</p>    
 </nav>
 <center>
-    <div class="login-form">
+    <div id="login-form">
     <?php
                 if(isset($_SESSION['status']))
                 {
@@ -34,9 +35,9 @@ include_once("dbcon.php");
     
         <form class="container"  action="logincode.php" method="POST">
         <div class="imgcontainer">                        
-             <img src="images/admin.png" alt="Admin" class="avatar">
+            <img src="images/pegva.png" alt="logo" style="width:50px; ">
                 <h3>Hello Admin! Welcome!</h3>
-            </div>
+        </div>
       
             <label>Email:</label>
             <input type="text" name="email"  placeholder="Enter email" id="email">
@@ -55,12 +56,9 @@ include_once("dbcon.php");
         </div>
         </form>
 
-                <img src="images/ccc.png" alt="logo" class="ccc-logo">
-          
+                
     </div>
 </center>
-
-    <p id="footer">All content copyright © 2022, PEGVA.</p>
  
    </body>
 </html>

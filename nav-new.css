@@ -1,0 +1,125 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+@font-face
+{
+    font-family: 'Nunito-VariableFont_wght';
+    src: url('fonts/Nunito-VariableFont_wght.ttf');
+}
+body
+{
+    font-family: 'Nunito-VariableFont_wght';
+    background-color: #f0f2f5;
+}
+
+label.title
+{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 50px;
+    letter-spacing: 4px;
+    line-height: 60px;
+}
+nav ul
+{
+    display: block;
+    margin-right: 20px;
+    padding: 0;
+    list-style: none;
+    float: right;
+}
+
+
+/* Top Navigation */
+img.avatar 
+{
+    width: 60px;
+}
+p.title
+{
+    color: #ffffff;
+    letter-spacing: 4px;
+    text-align: center;
+    padding: 40px 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111d3c;
+  overflow-x: hidden;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #ffffff;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main 
+{
+    margin-left: 250px;
+    font-size: 20px;
+    padding: 20px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: rgb(184, 184, 184);
+  color: rgb(0, 0, 0);
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+#footer
+{
+    font-size: 12px;
+    color: #adadad;
+    padding: 5px;
+    margin: 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}

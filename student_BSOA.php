@@ -1,6 +1,6 @@
 <?php
     include("auth/ch-bsoa_auth.php");
-    include("navbar.php");
+    include("nav-new.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -74,7 +74,7 @@
          </tbody>
             </table>
             </div>
-            <p id="footer">All content copyright © 2022, PEGVA.</p>
+ 
     </body>
     <script>
         function myFunction() {

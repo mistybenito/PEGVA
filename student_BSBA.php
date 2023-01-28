@@ -1,11 +1,11 @@
 <?php
-    include("auth/ch-bsba_auth.php");
-    include("navbar.php");
+    include("auth/ch-beed_auth.php");
+    include("nav-new.php");
 ?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>BSBA Student List</title>
+        <title>BEED Student List</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet" type="text/css">
@@ -13,18 +13,14 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-    <div id="student-list">
-        <p class="course-student-list">BSBA Student List</p>
-
-
-
+        <div id="student-list">
+        <p class="course-student-list">BEED Student List</p>
         
-   
-            <div class="input-group mb-3">
+        <div class="input-group mb-3">
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
-            </div>
+        </div>
 
-            <table id="myTable" class="student-list-content" style="width:100%;" >
+            <table class="student-list-content" id = "myTable" style="width:100%;">
                 <tr>
                     <th>Student #</th>
                     <th>Name</th>
@@ -46,21 +42,21 @@
                 {
             ?>
             <tr>
-            <?php
-                    if ($row['Course'] == "Bachelor of Science in Business Administration")
+                <?php
+                    if ($row['Course'] == "Bachelor of Elementary Education")
                      {
-                        ?>
-                        <td> <?= $row['Student_number']; ?> </td>
-                        <td> <?= $row['Name']; ?> </td>
-                        <td> <?= $row['Email']; ?> </td>
-                        <td> <?= $row['Course']; ?> </td>
-                        <td> <?= $row['verify']; ?></td>
-                        <td>    
-                        <a href="verify_page.php?id=<?= $key; ?>" class = "btn btn btn-primary" style="color:#0054c7"> Verify </a>
-                        </td>
-                        <td>    
-                        <a href="profile.php?id=<?= $key; ?>" class = "btn btn btn-primary" style="color:#0054c7"> View </a>
-                        </td>
+                ?>
+                    <td> <?= $row['Student_number']; ?> </td>
+                    <td> <?= $row['Name']; ?> </td>
+                    <td> <?= $row['Email']; ?> </td>
+                    <td> <?= $row['Course']; ?> </td>
+                    <td> <?= $row['verify'];?></td>
+                    <td>    
+                    <a href="verify_page.php?id=<?= $key;?>" class = "btn btn btn-primary" style="color:#0054c7"> Verify </a>
+                    </td>
+                    <td>    
+                    <a href="profile.php?id=<?= $key;?>" class = "btn btn btn-primary" style="color:#0054c7"> View </a>
+                    </td>
                 </tr>                
             <?php
                     }
@@ -77,9 +73,10 @@
             ?>
          </tbody>
             </table>
-
-
-            <script>
+            </div>
+           
+    </body>
+    <script>
         function myFunction() {
     var input, filter, found, table, tr, td, i, j;
     input = document.getElementById("myInput");
@@ -102,9 +99,4 @@
     }
 }
 </script>
-            </div>
-            <p id="footer">All content copyright © 2022, PEGVA.</p>
-            
-    </body>
-    
 </html>

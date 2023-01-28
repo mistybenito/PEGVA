@@ -1,6 +1,6 @@
 <?php
     include("authentication.php");
-	include("navbar.php");
+	include("nav-new.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,19 +11,12 @@
         <link href="style.css" rel="stylesheet" type="text/css">
     </head>
    
-
-<body>
-<body>
-        <center>
-        <h2>Registrar</h2>
+    <body>
+    <center>
         <div>
-            <img src="images/pegva-logo.png" class="logo4">
+            <img src="images/pegva.png" class="pegva-logo">
         </div>
-        </center>
-        
-        <p id="footer">All content copyright © 2022, PEGVA.</p>
-    </body>
-   
+    </center>
 </body> 
 </html>
            

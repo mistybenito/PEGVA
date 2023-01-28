@@ -1,9 +1,10 @@
 <?php
-include('authentication.php');
-include('navbar.php');
+    include('authentication.php');
+    include("nav-new.php");
 ?>
 
 <head>
+    <title>Edit</title>
 <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet" type="text/css">
@@ -11,9 +12,8 @@ include('navbar.php');
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <center>
     <div id="role">
-        
-       
                 <?php
                 if(isset($_SESSION['status']))
                 {
@@ -188,7 +188,7 @@ include('navbar.php');
                 
         
     </div>
-
-    <p id="footer">All content copyright © 2022, PEGVA.</p>
+    </center>
+    
     </body>
 </html>

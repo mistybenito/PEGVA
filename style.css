@@ -2,9 +2,6 @@
 {
     padding: 0;
     margin: 0;
-    text-decoration: none;
-    list-style-type: none;
-    box-sizing: border-box;
 }
 @font-face
 {
@@ -16,57 +13,46 @@ body
     font-family: 'Nunito-VariableFont_wght';
     background-color: #ddd;
 }
-p.title
-{
-    color: #ffffff;
-    font-size: 20px;
-    line-height: 50px;
-    font-weight: bold;
-    letter-spacing: 4px;
-    text-align: center;
-}
+
 nav p
 {
     display: block;
-    margin: 0;
-    padding: 0;
-    background-color: #111d3c;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
 }
 
-.logo4
+.pegva-logo
 {
-    margin-top: 10%;
-    width: 300px;
-    border-radius:100%;
+    margin-left: 250px;
+    margin-top: 100px;
+    width: 450px;
 }
 h2
 {
-    text-align:center;
-    margin-top: 8%;
-    margin-bottom: -7%;
+    text-align: center;
     color: #111d3c;
+    margin-left: 300px;
 }
-.ccc-logo
-{
-    float: right;
-    margin-top: -21%;
-    margin-right: 30%;
-}
+
 div.div1
 {
     margin-top: 6%;
     margin-left:50%;
     overflow: hidden;
 }
-div.login-form
+#login-form
 {   
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
     box-sizing: border-box;
-    margin: 10% 0 0;
-    padding: 20px 0 20px;
-    width: 50%;
+    margin: 100px;
+    padding: 25px 25px;
+    width: fit-content;
 }
 div.register-form
 {
@@ -75,8 +61,8 @@ div.register-form
     box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
     box-sizing: border-box;
     margin: 10% 0 0;
-    padding: 20px 0 20px;
-    width: 30%; 
+    padding:20px 30px;
+    width: fit-content; 
 }
 .register-container
 {
@@ -90,10 +76,10 @@ div.register-form
 {
     position: relative;
     display: block;
-    width: 35%;
-    margin-right: 50%;
+    width: auto;
     overflow: hidden;
     text-align: -webkit-left;
+    padding: 10px 20px;
 }
 
 input[type=text]#email, input[type=password] 
@@ -102,7 +88,7 @@ input[type=text]#email, input[type=password]
     padding: 9px 9px;
     margin: 8px 0;
     border: none;
-    border-bottom: 2px solid #111d3c;
+    border-bottom: 1px solid #111d3c;
     outline: none;
 }
 input[type=text].input
@@ -111,7 +97,7 @@ input[type=text].input
     padding: 9px 9px;
     margin: 8px 0;
     border: none;
-    border-bottom: 2px solid #111d3c;
+    border-bottom: 1px solid #111d3c;
     outline: none;
 }
 .forgot
@@ -131,7 +117,7 @@ input[type=text].input
 }
 img.avatar 
 {
-    width: 13%;
+    width: 60px;
     border-radius: 50%;
 }
 
@@ -144,18 +130,25 @@ img.avatar
 }
 .label
 {
-    margin-top: 6%;
     color:black; 
     font-size: 22px; 
     text-align: center;
     font-weight: bold;
+    margin-left: 300px;
 }
 .grade_form
 {
     margin-top: 8px;
     width: max-content;
 }
-
+select
+{
+    padding: 10px 10px;
+    margin: 12px 0 12px 0px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
 input[type=text], input[type=password] 
 {
     margin: 8px 0;
@@ -195,9 +188,9 @@ input[type=text].text-search,textarea
 /*tables*/
 #student-list
 {
-    width: 80%;
+    width: 75%;
     height: 100%;
-    margin: 7% auto 2% auto;
+    margin-left: 300px;
 }
 table.student-list-content
 {
@@ -237,15 +230,6 @@ tr
     padding: 10px 10px;
     
 }
-#footer 
-{
-    color: rgb(56, 56, 56);
-    margin: 0;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
 #div-user-list
 {
     margin: auto;
@@ -254,18 +238,18 @@ tr
 
 #profile
 {
-    padding: 10px 65px 10px 65px;
+    padding: 10px 50px 10px 50px;
     background-color: #ddd;
     border-radius: 15px;
-    margin: 6% auto auto;
-    width: 50%;
+    margin-left: 300px;
+    width: fit-content;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 #user-list
 {
-    width: 80%;
+    width: 75%;
     height: 100%;
-    margin: 7% auto 2% auto;
+    margin-left: 300px;
 }
 table.user-list-content
 {
@@ -278,9 +262,10 @@ table.user-list-content
     border-radius: 8px;
     box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
     box-sizing: border-box;
-    margin: 15% auto 0 auto;
+    margin-left: 300px;
     padding: 20px 20px;
     width: 30%;
+    text-align: left;
 }
 .view_grades
 {
@@ -290,10 +275,7 @@ table.user-list-content
     width: 50%;
     box-shadow: 0 12px 16px 0 rgb(0 0 0 / 24%), 0 17px 50px 0 rgb(0 0 0 / 19%);
 }
-fieldset
-{
-    width: fit-content;
-}
+
 input[type=text]#role-name
 {
     width: 200px;
@@ -358,7 +340,8 @@ input[type=text]#role-num
 #update_btn:not([disabled]):hover 
 {
     box-shadow: 0 0 0.25rem rgb(0 0 0 / 50%), -0.125rem -0.125rem 1rem #111d3c, 0.125rem 0.125rem 1rem #214198;
-}*/s
+}*/
+
 .searchbtn
 {
     text-align: center;
@@ -409,8 +392,8 @@ input[type=text]#role-num
 /*Curriculum*/
 .curriculum
 {   
-    width: 50%;
-    margin: 10% auto;
+    width: 75%;
+    margin-left: 300px;
 }
 .curriculum-form
 {
@@ -430,20 +413,66 @@ input[type=text]#role-num
     width: 30%; 
     margin-top: 10%;
 }
-
+#subject_info
+{
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    box-sizing: border-box;
+    margin-left: 300px;
+    padding: 25px;
+    width: fit-content;
+    margin-top: 50px;
+}
 #add_grade-form
 {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
     box-sizing: border-box;
-    margin: auto;
+    margin-left: 300px;
     padding: 25px;
-    width: 30%; 
+    width: 40%;
     margin-top: 30px;
 }
-/*schedule*/
-.content-selection
+#yr_sem
 {
-    margin: 8%;
+    margin-left: 300px;
+}
+.grds1
+{
+    margin-left: 300px;
+    margin-top: 35px;
+}
+/*.hidden
+{
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    box-sizing: border-box;
+    padding: 25px;
+    width: 40%;
+    margin-top: 30px;
+
+}*/
+/*schedule*/
+.content-selection-course
+{
+    margin-top: 10%;
+}
+.sched, .grds, .sub, .viewsub
+{
+    margin-left: 300px;
+}
+/*#mySpecialElements
+{
+    margin-left: 300px;
+}*/
+.sched-form , .viewsub-form
+{
+    background-color: #fcfcfc;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    border-radius: 8px;
+    width: fit-content;
 }

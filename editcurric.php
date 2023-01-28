@@ -1,6 +1,6 @@
 <?php
     include('authentication.php');
-
+    include("nav-new.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,10 +13,11 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 <body>
+	<center>
 <div id="subject_info">
 	<form name="form1" method="post" action="CODE_edit-curriculum.php" >
 
-    <center><legend>Subject Description</legend></center>
+    <center><h3>Subject Description</h3></center>
 
 	<table>
 	<?php
@@ -67,6 +68,6 @@
 	 
 
 </div>
-
+					</center>
 </body>
     </html>
