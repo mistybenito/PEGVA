@@ -37,7 +37,7 @@
 						<input type="hidden" name = "where" value = "<?= $where;?>">
 					<tr> 
 						<td>Course</td>
-						<td><input type="text" name = "Course" value = "Bachelor of Elementary Education"></td>
+						<td><input type="text" name = "Course" value = "Bachelor of Secondary Education, Major in English"></td>
 					</tr>
 					<tr> 
 						<td>Subject Code</td>

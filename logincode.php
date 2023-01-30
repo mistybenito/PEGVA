@@ -281,7 +281,7 @@ if(isset($_POST['login_btn']))
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['idTokenString'] = $idTokenString;
                     $_SESSION['status'] = "Logged in successfully.";
-                    header('Location: registrar.php');
+                    header("Location: setrole.php?email=$email");
                     exit();
                 }
 
