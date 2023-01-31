@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Schedule</title>
+        <title>Curriculum</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 <body>
-<h2>Schedule</h2>
+<h2>Curriculum</h2>
 
 <!-- Drop downn section and options -->
 <center>
@@ -30,7 +30,6 @@
             <option value="5">BSED-ENG</option>
             <option value="6">BSED-SCI</option>
             <option value="7">BSED-MATH</option>
-            
         </select>
         </div>
 </div>
@@ -68,10 +67,9 @@
                                             <table>
                                                     <tr> 
                                                         <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                                        <th>Section A</th>
-                                                        <th>Section B</th>
-                                                        <th>Section C</th>
+                                                        <th>Descriptive Title</th>
+                                                        <th>Units</th>
+                                                        
                                                     </tr>
                                                     <?php
                                                     include('dbcon.php');
@@ -83,10 +81,9 @@
                                                             ?>
                                                         <tr>	
                                                             <td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                                            <td> <?= $row['a']; ?> </td>
-                                                            <td> <?= $row['b']; ?> </td>
-                                                            <td> <?= $row['c']; ?> </td>
+                                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                                            <td> <?= $row['units']; ?> </td>
+                                                            
                                                         </tr>
                                                     <?php
                                                         }
@@ -109,9 +106,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -124,9 +120,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -147,9 +142,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -162,9 +156,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -184,9 +177,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -199,9 +191,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -222,9 +213,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -237,9 +227,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -260,9 +249,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -275,9 +263,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -298,9 +285,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -313,9 +299,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -337,9 +322,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -352,9 +336,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -409,9 +392,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -424,9 +406,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -450,9 +431,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -465,9 +445,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -490,9 +469,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -505,9 +483,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -529,9 +506,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -544,9 +520,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -568,9 +543,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -583,9 +557,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -607,9 +580,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -622,9 +594,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -646,9 +617,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -661,9 +631,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -685,9 +654,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -700,9 +668,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -758,9 +725,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -773,9 +739,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -799,9 +764,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -814,9 +778,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -839,9 +802,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -854,9 +816,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -878,9 +839,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -893,9 +853,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -917,9 +876,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -932,9 +890,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -956,9 +913,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -971,9 +927,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -995,9 +950,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -1010,9 +964,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -1034,9 +987,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -1049,9 +1001,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -1099,9 +1050,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -1114,9 +1064,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -1140,9 +1089,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -1155,9 +1103,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -1180,9 +1127,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -1195,9 +1141,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -1219,9 +1164,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -1234,9 +1178,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -1258,9 +1201,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -1273,9 +1215,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -1297,9 +1238,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -1312,9 +1252,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -1336,9 +1275,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -1351,9 +1289,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -1375,9 +1312,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -1390,9 +1326,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -1442,9 +1377,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -1457,9 +1391,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -1483,9 +1416,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -1498,9 +1430,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -1523,9 +1454,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -1538,9 +1468,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -1562,9 +1491,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -1577,9 +1505,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -1601,9 +1528,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -1616,9 +1542,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -1640,9 +1565,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -1655,9 +1579,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -1679,9 +1602,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -1694,9 +1616,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -1718,9 +1639,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -1733,9 +1653,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -1783,9 +1702,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -1798,9 +1716,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -1824,9 +1741,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -1839,9 +1755,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -1863,9 +1778,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -1878,9 +1792,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -1902,9 +1815,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -1917,9 +1829,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -1941,9 +1852,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -1956,9 +1866,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -1980,9 +1889,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -1995,9 +1903,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -2019,9 +1926,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -2034,9 +1940,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -2058,9 +1963,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -2073,9 +1977,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -2123,9 +2026,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -2138,9 +2040,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -2164,9 +2065,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -2179,9 +2079,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -2203,9 +2102,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -2218,9 +2116,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -2242,9 +2139,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -2257,9 +2153,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -2281,9 +2176,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -2296,9 +2190,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -2320,9 +2213,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -2335,9 +2227,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -2359,9 +2250,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -2374,9 +2264,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -2398,9 +2287,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -2413,9 +2301,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -2458,9 +2345,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -2473,9 +2359,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -2496,9 +2381,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -2511,9 +2395,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -2534,9 +2417,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -2549,9 +2431,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -2572,9 +2453,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -2587,9 +2467,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -2610,9 +2489,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -2625,9 +2503,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -2648,9 +2525,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -2663,9 +2539,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -2686,9 +2561,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -2701,9 +2575,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}
@@ -2725,9 +2598,8 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Section A</th>
-                                        <th>Section B</th>
-                                        <th>Section C</th>
+                                        <th>Units</th>
+                                        
                                     </tr>
                                     <?php
                                     include('dbcon.php');
@@ -2740,9 +2612,8 @@
 										<tr>	
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['a']; ?> </td>
-                                            <td> <?= $row['b']; ?> </td>
-                                            <td> <?= $row['c']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                            
 										</tr>
                                     <?php
 										}

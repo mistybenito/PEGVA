@@ -48,20 +48,7 @@
   <?php endif; ?>
 
 <a href="view_sched.php">Schedule</a>
-
-<button class="dropdown-btn">Curiculum 
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-container">
-    <a href="ABREED.php">ABREED</a>
-    <a href="BEED.php">BEED</a>
-    <a href="BSED-ENG.php">BSED-ENG</a>
-    <a href="BSED-MATH.php">BSED-MATH</a>
-    <a href="BSED-SCI.php">BSED-SCI</a>
-    <a href="BSBA.php">BSBA</a>
-    <a href="BSCS.php">BSCS</a>
-    <a href="BSOA.php">BSOA</a>
-  </div>
+<a href="view_curriculum.php">Curriculum</a>
   <div id="logoutbtn">
     <a href="logout.php" style="color:#a70000;">Logout</a>
   </div>
