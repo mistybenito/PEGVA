@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> Student List - BSBA</title>
+    <title> Student List </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
@@ -211,7 +211,7 @@
                                                     ?>
                                                         <td> <?= $row['grade02']; ?></td>
                                                         <?php
-                                                if ($row['grade02'] > "75") 
+                                                if ($row['grade02'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -295,7 +295,7 @@
                                                     ?>
                                                         <td> <?= $row['grade03']; ?></td>
                                                         <?php
-                                                if ($row['grade03'] > "75") 
+                                                if ($row['grade03'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -377,7 +377,7 @@
                                                     ?>
                                                         <td> <?= $row['grade04']; ?></td>
                                                         <?php
-                                                if ($row['grade04'] > "75") 
+                                                if ($row['grade04'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -458,7 +458,7 @@
                                                     ?>
                                                         <td> <?= $row['grade05']; ?></td>
                                                         <?php
-                                                if ($row['grade05'] > "75") 
+                                                if ($row['grade05'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -539,7 +539,7 @@
                                                     ?>
                                                         <td> <?= $row['grade06']; ?></td>
                                                         <?php
-                                                if ($row['grade06'] > "75") 
+                                                if ($row['grade06'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -621,7 +621,7 @@
                                                     ?>
                                                         <td> <?= $row['grade07']; ?></td>
                                                         <?php
-                                                if ($row['grade07'] > "75") 
+                                                if ($row['grade07'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -702,7 +702,7 @@
                                                     ?>
                                                         <td> <?= $row['grade08']; ?></td>
                                                         <?php
-                                                if ($row['grade08'] > "75") 
+                                                if ($row['grade08'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -783,7 +783,7 @@
                                                     ?>
                                                         <td> <?= $row['grade09']; ?></td>
                                                         <?php
-                                                if ($row['grade09'] > "75") 
+                                                if ($row['grade09'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -865,7 +865,7 @@
                                                     ?>
                                                         <td> <?= $row['grade10']; ?></td>
                                                         <?php
-                                                if ($row['grade10'] > "75") 
+                                                if ($row['grade10'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -1053,7 +1053,7 @@
                                                     ?>
                                                         <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade01'] > "75") 
+                                                if ($row['grade01'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -1137,7 +1137,7 @@
                                                     ?>
                                                         <td> <?= $row['grade02']; ?></td>
                                                         <?php
-                                                if ($row['grade02'] > "75") 
+                                                if ($row['grade02'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -1221,7 +1221,7 @@
                                                     ?>
                                                         <td> <?= $row['grade03']; ?></td>
                                                         <?php
-                                                if ($row['grade03'] > "75") 
+                                                if ($row['grade03'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -1304,7 +1304,7 @@
                                                     ?>
                                                         <td> <?= $row['grade04']; ?></td>
                                                         <?php
-                                                if ($row['grade04'] > "75") 
+                                                if ($row['grade04'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -1386,7 +1386,7 @@
                                                     ?>
                                                         <td> <?= $row['grade05']; ?></td>
                                                         <?php
-                                                if ($row['grade05'] > "75") 
+                                                if ($row['grade05'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -1468,7 +1468,7 @@
                                                     ?>
                                                         <td> <?= $row['grade06']; ?></td>
                                                         <?php
-                                                if ($row['grade06'] > "75") 
+                                                if ($row['grade06'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -1550,7 +1550,7 @@
                                                     ?>
                                                         <td> <?= $row['grade07']; ?></td>
                                                         <?php
-                                                if ($row['grade07'] > "75") 
+                                                if ($row['grade07'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -1632,7 +1632,7 @@
                                                     ?>
                                                         <td> <?= $row['grade08']; ?></td>
                                                         <?php
-                                                if ($row['grade08'] > "75") 
+                                                if ($row['grade08'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -1714,7 +1714,7 @@
                                                     ?>
                                                         <td> <?= $row['grade09']; ?></td>
                                                         <?php
-                                                if ($row['grade09'] > "75") 
+                                                if ($row['grade09'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -1797,7 +1797,7 @@
                                                     ?>
                                                         <td> <?= $row['grade10']; ?></td>
                                                         <?php
-                                                if ($row['grade10'] > "75") 
+                                                if ($row['grade10'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -1957,7 +1957,7 @@
                                                     ?>
                                                        <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade01'] > "75") 
+                                                if ($row['grade01'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -2041,7 +2041,7 @@
                                                     ?>
                                                        <td> <?= $row['grade02']; ?></td>
                                                         <?php
-                                                if ($row['grade02'] > "75") 
+                                                if ($row['grade02'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -2125,7 +2125,7 @@
                                                     ?>
                                                        <td> <?= $row['grade03']; ?></td>
                                                         <?php
-                                                if ($row['grade03'] > "75") 
+                                                if ($row['grade03'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -2208,7 +2208,7 @@
                                                     ?>
                                                        <td> <?= $row['grade04']; ?></td>
                                                         <?php
-                                                if ($row['grade04'] > "75") 
+                                                if ($row['grade04'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -2290,7 +2290,7 @@
                                                     ?>
                                                        <td> <?= $row['grade05']; ?></td>
                                                         <?php
-                                                if ($row['grade05'] > "75") 
+                                                if ($row['grade05'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -2372,7 +2372,7 @@
                                                     ?>
                                                        <td> <?= $row['grade06']; ?></td>
                                                         <?php
-                                                if ($row['grade06'] > "75") 
+                                                if ($row['grade06'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -2454,7 +2454,7 @@
                                                     ?>
                                                        <td> <?= $row['grade07']; ?></td>
                                                         <?php
-                                                if ($row['grade07'] > "75") 
+                                                if ($row['grade07'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -2536,7 +2536,7 @@
                                                     ?>
                                                        <td> <?= $row['grade08']; ?></td>
                                                         <?php
-                                                if ($row['grade08'] > "75") 
+                                                if ($row['grade08'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -2618,7 +2618,7 @@
                                                     ?>
                                                        <td> <?= $row['grade09']; ?></td>
                                                         <?php
-                                                if ($row['grade09'] > "75") 
+                                                if ($row['grade09'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -2701,7 +2701,7 @@
                                                     ?>
                                                        <td> <?= $row['grade10']; ?></td>
                                                         <?php
-                                                if ($row['grade10'] > "75") 
+                                                if ($row['grade10'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -2854,7 +2854,7 @@
                                                     ?>
                                                        <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade01'] > "75") 
+                                                if ($row['grade01'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -2938,7 +2938,7 @@
                                                     ?>
                                                        <td> <?= $row['grade02']; ?></td>
                                                         <?php
-                                                if ($row['grade02'] > "75") 
+                                                if ($row['grade02'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -3023,7 +3023,7 @@
                                                     ?>
                                                        <td> <?= $row['grade03']; ?></td>
                                                         <?php
-                                                if ($row['grade03'] > "75") 
+                                                if ($row['grade03'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -3107,7 +3107,7 @@
                                                     ?>
                                                        <td> <?= $row['grade04']; ?></td>
                                                         <?php
-                                                if ($row['grade04'] > "75") 
+                                                if ($row['grade04'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -3190,7 +3190,7 @@
                                                     ?>
                                                        <td> <?= $row['grade05']; ?></td>
                                                         <?php
-                                                if ($row['grade05'] > "75") 
+                                                if ($row['grade05'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -3273,7 +3273,7 @@
                                                     ?>
                                                        <td> <?= $row['grade06']; ?></td>
                                                         <?php
-                                                if ($row['grade06'] > "75") 
+                                                if ($row['grade06'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -3356,7 +3356,7 @@
                                                     ?>
                                                        <td> <?= $row['grade07']; ?></td>
                                                         <?php
-                                                if ($row['grade07'] > "75") 
+                                                if ($row['grade07'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -3439,7 +3439,7 @@
                                                     ?>
                                                        <td> <?= $row['grade08']; ?></td>
                                                         <?php
-                                                if ($row['grade08'] > "75") 
+                                                if ($row['grade08'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -3521,7 +3521,7 @@
                                                     ?>
                                                        <td> <?= $row['grade09']; ?></td>
                                                         <?php
-                                                if ($row['grade09'] > "75") 
+                                                if ($row['grade09'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -3605,7 +3605,7 @@
                                                     ?>
                                                        <td> <?= $row['grade10']; ?></td>
                                                         <?php
-                                                if ($row['grade10'] > "75") 
+                                                if ($row['grade10'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -3764,7 +3764,7 @@
                                                     ?>
                                                        <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade01'] > "75") 
+                                                if ($row['grade01'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -3848,7 +3848,7 @@
                                                     ?>
                                                        <td> <?= $row['grade02']; ?></td>
                                                         <?php
-                                                if ($row['grade02'] > "75") 
+                                                if ($row['grade02'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -3933,7 +3933,7 @@
                                                     ?>
                                                        <td> <?= $row['grade03']; ?></td>
                                                         <?php
-                                                if ($row['grade03'] > "75") 
+                                                if ($row['grade03'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -4016,7 +4016,7 @@
                                                     ?>
                                                        <td> <?= $row['grade04']; ?></td>
                                                         <?php
-                                                if ($row['grade04'] > "75") 
+                                                if ($row['grade04'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -4098,7 +4098,7 @@
                                                     ?>
                                                        <td> <?= $row['grade05']; ?></td>
                                                         <?php
-                                                if ($row['grade05'] > "75") 
+                                                if ($row['grade05'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -4180,7 +4180,7 @@
                                                     ?>
                                                        <td> <?= $row['grade06']; ?></td>
                                                         <?php
-                                                if ($row['grade06'] > "75") 
+                                                if ($row['grade06'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -4263,7 +4263,7 @@
                                                     ?>
                                                        <td> <?= $row['grade07']; ?></td>
                                                         <?php
-                                                if ($row['grade07'] > "75") 
+                                                if ($row['grade07'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -4293,7 +4293,276 @@
                                 </table>
                             </form>
                         </div>
-                                </DIV>
+
+                        <?//boundary for subject?>
+                        <div id ="threeone7" class = "hidden">
+                            <table>
+                                    <tr> 
+                                        <th>Student Number</th>
+                                        <th>Course</th>
+                                        <th>Email</th>
+                                        <th>Name</th>
+                                        <th>Grade</th>
+                                        <th>Add</th>
+                                        <th>Delete </th>
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $reference = 'course_curriculum/bsba/third_year/first_sem/subject08'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                               $ref_table = 'Subjects/BSBA/third_year/first_sem/'.$scode;
+                                    $sub_table = 'third_year/first_sem';
+                                                $fetchdata = $database->getReference($ref_table)->getValue();
+                                                    if($fetchdata > 0)
+                                                    {
+                                                    $i = 0;
+                                                    foreach($fetchdata as $key_child => $row)
+                                                    {
+                                                ?>
+                                                <tr>
+                                                    <td> <?= $row['Student_number'];?> </td>
+                                                    <td> <?= $row['Course'];?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <?php // here
+                                            if ($row['Grade'] == '0') {
+                                                    ?>
+                                                        <td> No Grades yet.</td>
+                                                        <td> N/A </td>
+                                                         <td> 
+                                                         <a href="addgrades/BSBA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        </td>
+                                                    </tr>
+                                                    <?php
+                                            } else {
+                                                    ?>
+                                                       <td> <?= $row['grade08']; ?></td>
+                                                        <?php
+                                                if ($row['grade08'] <= "3.0") 
+                                                {
+                                                        ?>
+                                                            <td> Passed </td>
+                                                            <?php
+                                                } 
+                                                elseif ($row['grade08'] > "3.0") 
+                                                {
+                                                            ?>
+                                                            <td> Failed </td>
+                                                            <?php
+                                                }
+                                                            ?>
+                                                        <td> 
+                                                        <a href="addgrades/BSBA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        </td>
+                                                        <?php
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "7"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?> <!-- to here -->
+                                </table>
+                            </form>
+                        </div>
+
+
+                        <?//boundary for subject?>
+                        <div id ="threeone8" class = "hidden">
+                            <table>
+                                    <tr> 
+                                        <th>Student Number</th>
+                                        <th>Course</th>
+                                        <th>Email</th>
+                                        <th>Name</th>
+                                        <th>Grade</th>
+                                        <th>Add</th>
+                                        <th>Delete </th>
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $reference = 'course_curriculum/bsba/third_year/first_sem/subject09'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                               $ref_table = 'Subjects/BSBA/third_year/first_sem/'.$scode;
+                                    $sub_table = 'third_year/first_sem';
+                                                $fetchdata = $database->getReference($ref_table)->getValue();
+                                                    if($fetchdata > 0)
+                                                    {
+                                                    $i = 0;
+                                                    foreach($fetchdata as $key_child => $row)
+                                                    {
+                                                ?>
+                                                <tr>
+                                                    <td> <?= $row['Student_number'];?> </td>
+                                                    <td> <?= $row['Course'];?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <?php // here
+                                            if ($row['Grade'] == '0') {
+                                                    ?>
+                                                        <td> No Grades yet.</td>
+                                                        <td> N/A </td>
+                                                         <td> 
+                                                         <a href="addgrades/BSBA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        </td>
+                                                    </tr>
+                                                    <?php
+                                            } else {
+                                                    ?>
+                                                       <td> <?= $row['grade09']; ?></td>
+                                                        <?php
+                                                if ($row['grade09'] <= "3.0") 
+                                                {
+                                                        ?>
+                                                            <td> Passed </td>
+                                                            <?php
+                                                } 
+                                                elseif ($row['grade09'] > "3.0") 
+                                                {
+                                                            ?>
+                                                            <td> Failed </td>
+                                                            <?php
+                                                }
+                                                            ?>
+                                                        <td> 
+                                                        <a href="addgrades/BSBA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        </td>
+                                                        <?php
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "7"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?> <!-- to here -->
+                                </table>
+                            </form>
+                        </div>
+
+
+                        <?//boundary for subject?>
+                        <div id ="threeone9" class = "hidden">
+                            <table>
+                                    <tr> 
+                                        <th>Student Number</th>
+                                        <th>Course</th>
+                                        <th>Email</th>
+                                        <th>Name</th>
+                                        <th>Grade</th>
+                                        <th>Add</th>
+                                        <th>Delete </th>
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $reference = 'course_curriculum/bsba/third_year/first_sem/subject10'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                               $ref_table = 'Subjects/BSBA/third_year/first_sem/'.$scode;
+                                    $sub_table = 'third_year/first_sem';
+                                                $fetchdata = $database->getReference($ref_table)->getValue();
+                                                    if($fetchdata > 0)
+                                                    {
+                                                    $i = 0;
+                                                    foreach($fetchdata as $key_child => $row)
+                                                    {
+                                                ?>
+                                                <tr>
+                                                    <td> <?= $row['Student_number'];?> </td>
+                                                    <td> <?= $row['Course'];?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $row['Grade'];?> </td>
+                                                    <?php // here
+                                            if ($row['Grade'] == '0') {
+                                                    ?>
+                                                        <td> No Grades yet.</td>
+                                                        <td> N/A </td>
+                                                         <td> 
+                                                         <a href="addgrades/BSBA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        </td>
+                                                    </tr>
+                                                    <?php
+                                            } else {
+                                                    ?>
+                                                       <td> <?= $row['grade10']; ?></td>
+                                                        <?php
+                                                if ($row['grade10'] <= "3.0") 
+                                                {
+                                                        ?>
+                                                            <td> Passed </td>
+                                                            <?php
+                                                } 
+                                                elseif ($row['grade10'] > "3.0") 
+                                                {
+                                                            ?>
+                                                            <td> Failed </td>
+                                                            <?php
+                                                }
+                                                            ?>
+                                                        <td> 
+                                                        <a href="addgrades/BSBA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        </td>
+                                                        <?php
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "7"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?> <!-- to here -->
+                                </table>
+                            </form>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </DIV>
             </center><!-- TO HERE -->
     </div>
 
@@ -4418,7 +4687,7 @@
                                                     ?>
                                                        <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade01'] > "75") 
+                                                if ($row['grade01'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -4502,7 +4771,7 @@
                                                     ?>
                                                        <td> <?= $row['grade02']; ?></td>
                                                         <?php
-                                                if ($row['grade02'] > "75") 
+                                                if ($row['grade02'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -4587,7 +4856,7 @@
                                                     ?>
                                                        <td> <?= $row['grade03']; ?></td>
                                                         <?php
-                                                if ($row['grade03'] > "75") 
+                                                if ($row['grade03'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -4670,7 +4939,7 @@
                                                     ?>
                                                        <td> <?= $row['grade04']; ?></td>
                                                         <?php
-                                                if ($row['grade04'] > "75") 
+                                                if ($row['grade04'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -4752,7 +5021,7 @@
                                                     ?>
                                                        <td> <?= $row['grade05']; ?></td>
                                                         <?php
-                                                if ($row['grade05'] > "75") 
+                                                if ($row['grade05'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -4834,7 +5103,7 @@
                                                     ?>
                                                        <td> <?= $row['grade06']; ?></td>
                                                         <?php
-                                                if ($row['grade06'] > "75") 
+                                                if ($row['grade06'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -4916,7 +5185,7 @@
                                                     ?>
                                                        <td> <?= $row['grade07']; ?></td>
                                                         <?php
-                                                if ($row['grade07'] > "75") 
+                                                if ($row['grade07'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -4946,6 +5215,269 @@
                                 </table>
                             </form>
                         </div>
+
+
+                        <?//boundary for subject?>
+                        <div id ="threetwo7" class = "hidden">
+                            <table>
+                                    <tr> 
+                                        <th>Student Number</th>
+                                        <th>Course</th>
+                                        <th>Email</th>
+                                        <th>Name</th>
+                                        <th>Grade</th>
+                                        <th>Add</th>
+                                        <th>Delete </th>
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $reference = 'course_curriculum/bsba/third_year/second_sem/subject08'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                               $ref_table = 'Subjects/BSBA/third_year/second_sem/'.$scode;
+                                    $sub_table = 'third_year/second_sem';
+                                                $fetchdata = $database->getReference($ref_table)->getValue();
+                                                    if($fetchdata > 0)
+                                                    {
+                                                    $i = 0;
+                                                    foreach($fetchdata as $key_child => $row)
+                                                    {
+                                                ?>
+                                                <tr>
+                                                    <td> <?= $row['Student_number'];?> </td>
+                                                    <td> <?= $row['Course'];?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
+                                                    <?php // here
+                                            if ($row['Grade'] == '0') {
+                                                    ?>
+                                                        <td> No Grades yet.</td>
+                                                        <td> N/A </td>
+                                                         <td> 
+                                                         <a href="addgrades/BSBA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        </td>
+                                                    </tr>
+                                                    <?php
+                                            } else {
+                                                    ?>
+                                                       <td> <?= $row['grade08']; ?></td>
+                                                        <?php
+                                                if ($row['grade08'] <= "3.0") 
+                                                {
+                                                        ?>
+                                                            <td> Passed </td>
+                                                            <?php
+                                                } 
+                                                elseif ($row['grade08'] > "3.0") 
+                                                {
+                                                            ?>
+                                                            <td> Failed </td>
+                                                            <?php
+                                                }
+                                                            ?>
+                                                        <td> 
+                                                        <a href="addgrades/BSBA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        </td>
+                                                        <?php
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "7"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?> <!-- to here -->
+                                </table>
+                            </form>
+                        </div>
+
+
+                        <?//boundary for subject?>
+                        <div id ="threetwo8" class = "hidden">
+                            <table>
+                                    <tr> 
+                                        <th>Student Number</th>
+                                        <th>Course</th>
+                                        <th>Email</th>
+                                        <th>Name</th>
+                                        <th>Grade</th>
+                                        <th>Add</th>
+                                        <th>Delete </th>
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $reference = 'course_curriculum/bsba/third_year/second_sem/subject09'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                               $ref_table = 'Subjects/BSBA/third_year/second_sem/'.$scode;
+                                    $sub_table = 'third_year/second_sem';
+                                                $fetchdata = $database->getReference($ref_table)->getValue();
+                                                    if($fetchdata > 0)
+                                                    {
+                                                    $i = 0;
+                                                    foreach($fetchdata as $key_child => $row)
+                                                    {
+                                                ?>
+                                                <tr>
+                                                    <td> <?= $row['Student_number'];?> </td>
+                                                    <td> <?= $row['Course'];?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
+                                                    <?php // here
+                                            if ($row['Grade'] == '0') {
+                                                    ?>
+                                                        <td> No Grades yet.</td>
+                                                        <td> N/A </td>
+                                                         <td> 
+                                                         <a href="addgrades/BSBA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        </td>
+                                                    </tr>
+                                                    <?php
+                                            } else {
+                                                    ?>
+                                                       <td> <?= $row['grade09']; ?></td>
+                                                        <?php
+                                                if ($row['grade09'] <= "3.0") 
+                                                {
+                                                        ?>
+                                                            <td> Passed </td>
+                                                            <?php
+                                                } 
+                                                elseif ($row['grade09'] > "3.0") 
+                                                {
+                                                            ?>
+                                                            <td> Failed </td>
+                                                            <?php
+                                                }
+                                                            ?>
+                                                        <td> 
+                                                        <a href="addgrades/BSBA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        </td>
+                                                        <?php
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "7"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?> <!-- to here -->
+                                </table>
+                            </form>
+                        </div>
+
+                        <?//boundary for subject?>
+                        <div id ="threetwo9" class = "hidden">
+                            <table>
+                                    <tr> 
+                                        <th>Student Number</th>
+                                        <th>Course</th>
+                                        <th>Email</th>
+                                        <th>Name</th>
+                                        <th>Grade</th>
+                                        <th>Add</th>
+                                        <th>Delete </th>
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $reference = 'course_curriculum/bsba/third_year/second_sem/subject10'; //HERE
+                                    $fetch = $database->getReference($reference)->getValue();
+                                    if ($fetch > 0) {
+                                        ?>
+                                        <input type="text" name = "Subject_code" value ="<?=$scode = $fetch['code'] ?>">
+                                        <input type="text" name = "Desc_title" value = "<?= $desc = $fetch['descriptive_title'] ?>">
+                                        <input type="text" name = "Unit" value ="<?= $units = $fetch['units'] ?>">                              
+                                        <?php
+                                    }//to HERE
+                                    $ref_table = 'Subjects/BSBA/third_year/second_sem/'.$scode;
+                                    $sub_table = 'third_year/second_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+
+                                        if($fetchdata > 0)
+                                            {
+                                            $i = 0;
+                                                foreach($fetchdata as $key_child => $row)
+                                                    {
+                                                ?>
+                                                <tr>
+                                                    <td> <?= $row['Student_number'];?> </td>
+                                                    <td> <?= $row['Course'];?> </td>
+                                                    <td> <?= $row['Name'];?> </td>
+                                                    <td> <?= $row['Email'];?> </td>
+                                                    <?php // here
+                                            if ($row['Grade'] == '0') {
+                                                    ?>
+                                                        <td> No Grades yet.</td>
+                                                        <td> N/A </td>
+                                                         <td> 
+                                                         <a href="addgrades/BSBA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        </td>
+                                                    </tr>
+                                                    <?php
+                                            } else {
+                                                    ?>
+                                                       <td> <?= $row['grade10']; ?></td>
+                                                        <?php
+                                                if ($row['grade10'] <= "3.0") 
+                                                {
+                                                        ?>
+                                                            <td> Passed </td>
+                                                            <?php
+                                                } 
+                                                elseif ($row['grade10'] > "3.0") 
+                                                {
+                                                            ?>
+                                                            <td> Failed </td>
+                                                            <?php
+                                                }
+                                                            ?>
+                                                        <td> 
+                                                        <a href="addgrades/BSBA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        </td>
+                                                        <?php
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "7"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?> <!-- to here -->
+                                </table>
+                            </form>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             </center>
         </div><!-- TO HERE -->
@@ -5063,7 +5595,7 @@
                                                     ?>
                                                        <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade01'] > "75") 
+                                                if ($row['grade01'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -5147,7 +5679,7 @@
                                                     ?>
                                                        <td> <?= $row['grade02']; ?></td>
                                                         <?php
-                                                if ($row['grade02'] > "75") 
+                                                if ($row['grade02'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -5232,7 +5764,7 @@
                                                     ?>
                                                        <td> <?= $row['grade03']; ?></td>
                                                         <?php
-                                                if ($row['grade03'] > "75") 
+                                                if ($row['grade03'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -5315,7 +5847,7 @@
                                                     ?>
                                                        <td> <?= $row['grade04']; ?></td>
                                                         <?php
-                                                if ($row['grade04'] > "75") 
+                                                if ($row['grade04'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -5397,7 +5929,7 @@
                                                     ?>
                                                        <td> <?= $row['grade05']; ?></td>
                                                         <?php
-                                                if ($row['grade05'] > "75") 
+                                                if ($row['grade05'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
@@ -5538,7 +6070,7 @@
                                                     ?>
                                                        <td> <?= $row['grade01']; ?></td>
                                                         <?php
-                                                if ($row['grade01'] > "75") 
+                                                if ($row['grade01'] <= "3.0") 
                                                 {
                                                         ?>
                                                             <td> Passed </td>
