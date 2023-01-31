@@ -123,3 +123,23 @@ p.title
     bottom: 0;
     width: 100%;
 }
+#logoutbtn
+{
+  margin-bottom: 20px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.notif
+{
+  margin: 5px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+.status
+{
+  color:bisque;
+}
