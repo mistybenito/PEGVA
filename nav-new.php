@@ -11,7 +11,13 @@
 
 </div>
 <div class="sidenav">
-<p class="title"><img src="images/logo.png" alt="Admin" class="avatar">Cainta Catholic College</p> 
+<input type="checkbox" id="check">
+            <label for="check" class="chckbtn">
+                <i class="fa fa-bars"></i>
+            </label>
+<p class="title">
+  <img src="images/logo.png" alt="Admin" class="avatar">
+    <a href="registrar.php">Cainta Catholic College</a></p> 
 
 <?php if(isset($_SESSION['verified_chairman'])):?>
   <button class="dropdown-btn">Student List 
@@ -285,10 +291,9 @@ elseif(isset($_POST['close']))
 
 
   </div>
-
-    <div id="logoutbtn">
-      <a href="logout.php" style="color:#a70000;">Logout</a>
-    </div>
+  <div id="logoutbtn">
+    <a href="logout.php" style="color:#a70000;">Logout</a>
+  </div>
   <p id="footer">All content copyright © 2022, PEGVA.</p>
 </div>
 

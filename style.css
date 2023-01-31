@@ -309,39 +309,6 @@ input[type=text]#role-num
     opacity: 0.9;
     box-shadow: 0 0 0.25rem rgb(0 0 0 / 50%), -0.125rem -0.125rem 1rem #111d3c, 0.125rem 0.125rem 1rem #214198;
 }
-
-/*#update_btn 
-{
-    background: linear-gradient(to bottom right, #214198, #111d3c);
-    border: 0;
-    border-radius: 12px;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 2.5;
-    outline: transparent;
-    padding: 0 1rem;
-    text-align: center;
-    text-decoration: none;
-    transition: box-shadow .2s ease-in-out;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    white-space: nowrap;
-}
-
-#update_btn:not([disabled]):focus 
-{
-    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
-}
-
-#update_btn:not([disabled]):hover 
-{
-    box-shadow: 0 0 0.25rem rgb(0 0 0 / 50%), -0.125rem -0.125rem 1rem #111d3c, 0.125rem 0.125rem 1rem #214198;
-}*/
-
 .searchbtn
 {
     text-align: center;
@@ -444,17 +411,6 @@ input[type=text]#role-num
     margin-left: 300px;
     margin-top: 35px;
 }
-/*.hidden
-{
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
-    box-sizing: border-box;
-    padding: 25px;
-    width: 40%;
-    margin-top: 30px;
-
-}*/
 /*schedule*/
 .content-selection-course
 {
@@ -464,10 +420,6 @@ input[type=text]#role-num
 {
     margin-left: 300px;
 }
-/*#mySpecialElements
-{
-    margin-left: 300px;
-}*/
 .sched-form , .viewsub-form
 {
     background-color: #fcfcfc;
@@ -475,4 +427,24 @@ input[type=text]#role-num
     box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
     border-radius: 8px;
     width: fit-content;
+}
+@media (max-width: 858px)
+{
+    .title
+    {
+        font-size: 20px;
+        padding-left: 50px;
+    }   
+    .pegva-logo
+    {
+        margin: auto;
+    }
+    #user-list, #student-list
+    {
+        margin: auto;
+    }
+    #role
+    {
+        margin: auto;
+    }
 }
