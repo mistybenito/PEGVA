@@ -13,7 +13,7 @@
 <div class="sidenav">
 <p class="title"><img src="images/logo.png" alt="Admin" class="avatar">Cainta Catholic College</p> 
 
-
+<?php if(isset($_SESSION['verified_chairman'])):?>
   <button class="dropdown-btn">Student List 
     <i class="fa fa-caret-down"></i>
   </button>
@@ -27,6 +27,7 @@
     <a href="student_BSCS.php">BSCS</a>
     <a href="student_BSOA.php">BSOA</a>
   </div>
+  <?php endif; ?>
 
   <button class="dropdown-btn">Student Per Subject
     <i class="fa fa-caret-down"></i>
@@ -42,9 +43,9 @@
     <a href="viewsub_BSOA.php">BSOA</a>
   </div>
 
-
+  <?php if(isset($_SESSION['verified_registrar'])) :?>
   <a href="user-list.php">User List</a>
-
+  <?php endif; ?>
 
 <a href="view_sched.php">Schedule</a>
 
