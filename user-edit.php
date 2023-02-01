@@ -64,7 +64,7 @@
                     <div class="user-claims">
                         <h4 style="margin-top: 15px;">Custom User Claims</h4>
                      
-                            <form action="CODE_setrolereg.php" method = "POST">
+                            <form action="code_useredit.php" method = "POST">
                                 <?php
                                 if(isset($_GET['id']))
                                 {

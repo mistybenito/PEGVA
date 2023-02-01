@@ -26,15 +26,19 @@ if (isset($_POST['register_btn'])) {
 
     if ($getdata > 0) 
     {
-        $secretcode = $getdata['seccode'];
-        if ($secret == $secretcode) 
+        $teacher= $getdata['teacode'];
+        $registrar = $getdata['regcode'];
+        $chairperson = $getdata['chaircode'];
+
+
+
+        if ($secret == $registrar) 
         {
             $createdUser = $auth->createUser($userProperties);
-
             if ($createdUser) 
             {
                 $_SESSION['status'] = "User created successfully.";
-                header("Location: setrole.php?name=$fullname");
+                header("Location: setrole.php?name=$fullname&role=registrar");
                 exit();
             } 
             else 
@@ -44,11 +48,40 @@ if (isset($_POST['register_btn'])) {
                 exit();
             }
         }
-        else
+        elseif($secret == $chairperson)
         {
-            $_SESSION['status'] = "Wrong secret code.";
-                header("Location: register.php");
+            $createdUser = $auth->createUser($userProperties);
+
+            if ($createdUser) 
+            {
+                $_SESSION['status'] = "User created successfully.";
+                header("Location: setrole.php?name=$fullname&role=chairperson");
                 exit();
+            } 
+            else 
+            {
+                $_SESSION['status'] = "User creation failed.";
+                header('Location: register.php');
+                exit();
+            }
+        }
+
+        elseif($secret == $teacher)
+        {
+            $createdUser = $auth->createUser($userProperties);
+
+            if ($createdUser) 
+            {
+                $_SESSION['status'] = "User created successfully.";
+                header("Location: setrole.php?name=$fullname&role=teacher");
+                exit();
+            } 
+            else 
+            {
+                $_SESSION['status'] = "User creation failed.";
+                header('Location: register.php');
+                exit();
+            }
         }
     }
 }
