@@ -38,7 +38,7 @@ if (isset($_POST['register_btn'])) {
             if ($createdUser) 
             {
                 $_SESSION['status'] = "User created successfully.";
-                header("Location: setrole.php?name=$fullname&role=registrar");
+                header("Location: setrole.php?email=$email&role=registrar");
                 exit();
             } 
             else 
@@ -55,7 +55,7 @@ if (isset($_POST['register_btn'])) {
             if ($createdUser) 
             {
                 $_SESSION['status'] = "User created successfully.";
-                header("Location: setrole.php?name=$fullname&role=chairperson");
+                header("Location: setrole.php?email=$email&role=chairperson");
                 exit();
             } 
             else 
@@ -73,7 +73,7 @@ if (isset($_POST['register_btn'])) {
             if ($createdUser) 
             {
                 $_SESSION['status'] = "User created successfully.";
-                header("Location: setrole.php?name=$fullname&role=teacher");
+                header("Location: setrole.php?email=$email&role=teacher");
                 exit();
             } 
             else 
