@@ -26,7 +26,7 @@
 			if($getdata > 0)
 			{
 	?>
-         <form name="form1" method="post" action="code.php"  >
+         <form name="form1" method="post" action="code_editprofile.php"  >
 		<table id="student-info">
 		<input type="hidden" name = "id" value = "<?=$key_child;?>">
         

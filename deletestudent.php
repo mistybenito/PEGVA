@@ -1,23 +1,62 @@
 <?php
+session_start();
 include('dbcon.php');
 
 
 if(isset($_POST['delete_btn']))
 {
     $del_id = $_POST['delete_btn'];
+    $course = $_POST['Course'];
 
-    $ref_table = 'User/'.$del_id;
-    $delete = $database->getReference($ref_table)->remove();
 
-    if($delete)
+    if($course == "Bachelor of Science in Computer Science")
     {
-        $_SESSION['status'] = "Contact deleted.";
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
+        $ref_table = 'User/'.$del_id;
+        $delete = $database->getReference($ref_table)->remove();
+
+        if($delete)
+        {
+            $_SESSION['status'] = "Contact deleted.";
+            header('Location: student_BSCS.php');
+        }
+        else
+        {
+            $_SESSION['status'] = "Contact not deleted.";
+            header('Location: student_BSCS.php');
+        }
     }
-    else
+    elseif($course == "Bachelor of Science in Business Administration")
     {
-        $_SESSION['status'] = "Contact not deleted.";
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
+        $ref_table = 'User/'.$del_id;
+        $delete = $database->getReference($ref_table)->remove();
+
+        if($delete)
+        {
+            $_SESSION['status'] = "Contact deleted.";
+            header('Location: student_BSBA.php');
+        }
+        else
+        {
+            $_SESSION['status'] = "Contact not deleted.";
+            header('Location: student_BSBA.php');
+        }
+    }
+
+    elseif($course == "Bachelor of Science in Office Administration")
+    {
+        $ref_table = 'User/'.$del_id;
+        $delete = $database->getReference($ref_table)->remove();
+
+        if($delete)
+        {
+            $_SESSION['status'] = "Contact deleted.";
+            header('Location: student_BSOA.php');
+        }
+        else
+        {
+            $_SESSION['status'] = "Contact not deleted.";
+            header('Location: student_BSOA.php');
+        }
     }
 }
 

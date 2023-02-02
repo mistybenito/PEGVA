@@ -52,11 +52,11 @@
 <center>
 	<table class="view_grades">
 			<tr> 
-				<th>Course</th>
+				
 				<th>Course Code</th>
+				<th>Descriptive Title</th>
 				<th>Unit</th>
-				<th>Discriptive Title</th>
-				<th>Pre-Requisite</th>
+				
 				<th>Grade</th>
 			</tr>
 			<?php
@@ -76,7 +76,7 @@
 						<td> <?= $fetchdata['sc1'];?> </td>
 						<td> <?= $fetchdata['des1'];?> </td>
 						<td> <?= $fetchdata['unit1'];?> </td>
-						<td> <?= $fetchdata['grade1'];?> </td>
+						<td> <?= $fetchdata['grade01'];?> </td>
 						</tr>
 
 						<!-- 2 -->
@@ -84,7 +84,7 @@
 						<td> <?= $fetchdata['sc2'];?> </td>
 						<td> <?= $fetchdata['des2'];?> </td>
 						<td> <?= $fetchdata['unit2'];?> </td>
-						<td> <?= $fetchdata['grade2'];?> </td>
+						<td> <?= $fetchdata['grade02'];?> </td>
 						</tr>
 
 
@@ -94,7 +94,7 @@
 						<td> <?= $fetchdata['sc3'];?> </td>
 						<td> <?= $fetchdata['des3'];?> </td>
 						<td> <?= $fetchdata['unit3'];?> </td>
-						<td> <?= $fetchdata['grade3'];?> </td>
+						<td> <?= $fetchdata['grade03'];?> </td>
 						</tr>
 
 						<!-- 4 -->
@@ -102,7 +102,7 @@
 						<td> <?= $fetchdata['sc4'];?> </td>
 						<td> <?= $fetchdata['des4'];?> </td>
 						<td> <?= $fetchdata['unit4'];?> </td>
-						<td> <?= $fetchdata['grade4'];?> </td>
+						<td> <?= $fetchdata['grade04'];?> </td>
 						</tr>
 
 						<!-- 5 -->
@@ -110,7 +110,7 @@
 						<td> <?= $fetchdata['sc5'];?> </td>
 						<td> <?= $fetchdata['des5'];?> </td>
 						<td> <?= $fetchdata['unit5'];?> </td>
-						<td> <?= $fetchdata['grade5'];?> </td>
+						<td> <?= $fetchdata['grade05'];?> </td>
 						</tr>
 
 						<!-- 6 -->
@@ -118,7 +118,7 @@
 						<td> <?= $fetchdata['sc6'];?> </td>
 						<td> <?= $fetchdata['des6'];?> </td>
 						<td> <?= $fetchdata['unit6'];?> </td>
-						<td> <?= $fetchdata['grade6'];?> </td>
+						<td> <?= $fetchdata['grade06'];?> </td>
 						</tr>
 
 						<!-- 7 -->
@@ -126,7 +126,7 @@
 						<td> <?= $fetchdata['sc7'];?> </td>
 						<td> <?= $fetchdata['des7'];?> </td>
 						<td> <?= $fetchdata['unit7'];?> </td>
-						<td> <?= $fetchdata['grade7'];?> </td>
+						<td> <?= $fetchdata['grade07'];?> </td>
 						</tr>
 
 						<!-- 8 -->
@@ -134,7 +134,7 @@
 						<td> <?= $fetchdata['sc8'];?> </td>
 						<td> <?= $fetchdata['des8'];?> </td>
 						<td> <?= $fetchdata['unit8'];?> </td>
-						<td> <?= $fetchdata['grade8'];?> </td>
+						<td> <?= $fetchdata['grade08'];?> </td>
 						</tr>
 
 						<!-- 9 -->
@@ -142,7 +142,7 @@
 						<td> <?= $fetchdata['sc9'];?> </td>
 						<td> <?= $fetchdata['des9'];?> </td>
 						<td> <?= $fetchdata['unit9'];?> </td>
-						<td> <?= $fetchdata['grade9'];?> </td>
+						<td> <?= $fetchdata['grade09'];?> </td>
 						</tr>
 
 						<!-- 10 -->
@@ -194,11 +194,11 @@
 
 	<table class="view_grades">
 			<tr> 
-				<th>Course</th>
+				
 				<th>Course Code</th>
+				<th>Descriptive Title</th>
 				<th>Unit</th>
-				<th>Discriptive Title</th>
-				<th>Pre-Requisite</th>
+				
 				<th>Grade</th>
 			</tr>
 			<?php
@@ -218,7 +218,7 @@
 						<td> <?= $fetchdata['sc1'];?> </td>
 						<td> <?= $fetchdata['des1'];?> </td>
 						<td> <?= $fetchdata['unit1'];?> </td>
-						<td> <?= $fetchdata['grade1'];?> </td>
+						<td> <?= $fetchdata['grade01'];?> </td>
 						</tr>
 
 						<!-- 2 -->
@@ -226,7 +226,7 @@
 						<td> <?= $fetchdata['sc2'];?> </td>
 						<td> <?= $fetchdata['des2'];?> </td>
 						<td> <?= $fetchdata['unit2'];?> </td>
-						<td> <?= $fetchdata['grade2'];?> </td>
+						<td> <?= $fetchdata['grade02'];?> </td>
 						</tr>
 
 
@@ -236,7 +236,7 @@
 						<td> <?= $fetchdata['sc3'];?> </td>
 						<td> <?= $fetchdata['des3'];?> </td>
 						<td> <?= $fetchdata['unit3'];?> </td>
-						<td> <?= $fetchdata['grade3'];?> </td>
+						<td> <?= $fetchdata['grade03'];?> </td>
 						</tr>
 
 						<!-- 4 -->
@@ -244,7 +244,7 @@
 						<td> <?= $fetchdata['sc4'];?> </td>
 						<td> <?= $fetchdata['des4'];?> </td>
 						<td> <?= $fetchdata['unit4'];?> </td>
-						<td> <?= $fetchdata['grade4'];?> </td>
+						<td> <?= $fetchdata['grade04'];?> </td>
 						</tr>
 
 						<!-- 5 -->
@@ -252,7 +252,7 @@
 						<td> <?= $fetchdata['sc5'];?> </td>
 						<td> <?= $fetchdata['des5'];?> </td>
 						<td> <?= $fetchdata['unit5'];?> </td>
-						<td> <?= $fetchdata['grade5'];?> </td>
+						<td> <?= $fetchdata['grade05'];?> </td>
 						</tr>
 
 						<!-- 6 -->
@@ -260,7 +260,7 @@
 						<td> <?= $fetchdata['sc6'];?> </td>
 						<td> <?= $fetchdata['des6'];?> </td>
 						<td> <?= $fetchdata['unit6'];?> </td>
-						<td> <?= $fetchdata['grade6'];?> </td>
+						<td> <?= $fetchdata['grade06'];?> </td>
 						</tr>
 
 						<!-- 7 -->
@@ -268,7 +268,7 @@
 						<td> <?= $fetchdata['sc7'];?> </td>
 						<td> <?= $fetchdata['des7'];?> </td>
 						<td> <?= $fetchdata['unit7'];?> </td>
-						<td> <?= $fetchdata['grade7'];?> </td>
+						<td> <?= $fetchdata['grade07'];?> </td>
 						</tr>
 
 						<!-- 8 -->
@@ -276,7 +276,7 @@
 						<td> <?= $fetchdata['sc8'];?> </td>
 						<td> <?= $fetchdata['des8'];?> </td>
 						<td> <?= $fetchdata['unit8'];?> </td>
-						<td> <?= $fetchdata['grade8'];?> </td>
+						<td> <?= $fetchdata['grade08'];?> </td>
 						</tr>
 
 						<!-- 9 -->
@@ -284,7 +284,7 @@
 						<td> <?= $fetchdata['sc9'];?> </td>
 						<td> <?= $fetchdata['des9'];?> </td>
 						<td> <?= $fetchdata['unit9'];?> </td>
-						<td> <?= $fetchdata['grade9'];?> </td>
+						<td> <?= $fetchdata['grade09'];?> </td>
 						</tr>
 
 						<!-- 10 -->
@@ -330,11 +330,11 @@
 
 	<table class="view_grades">
 			<tr> 
-				<th>Course</th>
+				
 				<th>Course Code</th>
+				<th>Descriptive Title</th>
 				<th>Unit</th>
-				<th>Discriptive Title</th>
-				<th>Pre-Requisite</th>
+				
 				<th>Grade</th>
 			</tr>
 			<?php
@@ -353,7 +353,7 @@
 						<td> <?= $fetchdata['sc1'];?> </td>
 						<td> <?= $fetchdata['des1'];?> </td>
 						<td> <?= $fetchdata['unit1'];?> </td>
-						<td> <?= $fetchdata['grade1'];?> </td>
+						<td> <?= $fetchdata['grade01'];?> </td>
 						</tr>
 
 						<!-- 2 -->
@@ -361,7 +361,7 @@
 						<td> <?= $fetchdata['sc2'];?> </td>
 						<td> <?= $fetchdata['des2'];?> </td>
 						<td> <?= $fetchdata['unit2'];?> </td>
-						<td> <?= $fetchdata['grade2'];?> </td>
+						<td> <?= $fetchdata['grade02'];?> </td>
 						</tr>
 
 
@@ -371,7 +371,7 @@
 						<td> <?= $fetchdata['sc3'];?> </td>
 						<td> <?= $fetchdata['des3'];?> </td>
 						<td> <?= $fetchdata['unit3'];?> </td>
-						<td> <?= $fetchdata['grade3'];?> </td>
+						<td> <?= $fetchdata['grade03'];?> </td>
 						</tr>
 
 						<!-- 4 -->
@@ -379,7 +379,7 @@
 						<td> <?= $fetchdata['sc4'];?> </td>
 						<td> <?= $fetchdata['des4'];?> </td>
 						<td> <?= $fetchdata['unit4'];?> </td>
-						<td> <?= $fetchdata['grade4'];?> </td>
+						<td> <?= $fetchdata['grade04'];?> </td>
 						</tr>
 
 						<!-- 5 -->
@@ -387,7 +387,7 @@
 						<td> <?= $fetchdata['sc5'];?> </td>
 						<td> <?= $fetchdata['des5'];?> </td>
 						<td> <?= $fetchdata['unit5'];?> </td>
-						<td> <?= $fetchdata['grade5'];?> </td>
+						<td> <?= $fetchdata['grade05'];?> </td>
 						</tr>
 
 						<!-- 6 -->
@@ -395,7 +395,7 @@
 						<td> <?= $fetchdata['sc6'];?> </td>
 						<td> <?= $fetchdata['des6'];?> </td>
 						<td> <?= $fetchdata['unit6'];?> </td>
-						<td> <?= $fetchdata['grade6'];?> </td>
+						<td> <?= $fetchdata['grade06'];?> </td>
 						</tr>
 
 						<!-- 7 -->
@@ -403,7 +403,7 @@
 						<td> <?= $fetchdata['sc7'];?> </td>
 						<td> <?= $fetchdata['des7'];?> </td>
 						<td> <?= $fetchdata['unit7'];?> </td>
-						<td> <?= $fetchdata['grade7'];?> </td>
+						<td> <?= $fetchdata['grade07'];?> </td>
 						</tr>
 
 						<!-- 8 -->
@@ -411,7 +411,7 @@
 						<td> <?= $fetchdata['sc8'];?> </td>
 						<td> <?= $fetchdata['des8'];?> </td>
 						<td> <?= $fetchdata['unit8'];?> </td>
-						<td> <?= $fetchdata['grade8'];?> </td>
+						<td> <?= $fetchdata['grade08'];?> </td>
 						</tr>
 
 						<!-- 9 -->
@@ -419,7 +419,7 @@
 						<td> <?= $fetchdata['sc9'];?> </td>
 						<td> <?= $fetchdata['des9'];?> </td>
 						<td> <?= $fetchdata['unit9'];?> </td>
-						<td> <?= $fetchdata['grade9'];?> </td>
+						<td> <?= $fetchdata['grade09'];?> </td>
 						</tr>
 
 						<!-- 10 -->
@@ -467,11 +467,11 @@
 
 	<table class="view_grades">
 			<tr> 
-				<th>Course</th>
+				
 				<th>Course Code</th>
+				<th>Descriptive Title</th>
 				<th>Unit</th>
-				<th>Discriptive Title</th>
-				<th>Pre-Requisite</th>
+				
 				<th>Grade</th>
 			</tr>
 			<?php
@@ -491,7 +491,7 @@
 						<td> <?= $fetchdata['sc1'];?> </td>
 						<td> <?= $fetchdata['des1'];?> </td>
 						<td> <?= $fetchdata['unit1'];?> </td>
-						<td> <?= $fetchdata['grade1'];?> </td>
+						<td> <?= $fetchdata['grade01'];?> </td>
 						</tr>
 
 						<!-- 2 -->
@@ -499,7 +499,7 @@
 						<td> <?= $fetchdata['sc2'];?> </td>
 						<td> <?= $fetchdata['des2'];?> </td>
 						<td> <?= $fetchdata['unit2'];?> </td>
-						<td> <?= $fetchdata['grade2'];?> </td>
+						<td> <?= $fetchdata['grade02'];?> </td>
 						</tr>
 
 
@@ -509,7 +509,7 @@
 						<td> <?= $fetchdata['sc3'];?> </td>
 						<td> <?= $fetchdata['des3'];?> </td>
 						<td> <?= $fetchdata['unit3'];?> </td>
-						<td> <?= $fetchdata['grade3'];?> </td>
+						<td> <?= $fetchdata['grade03'];?> </td>
 						</tr>
 
 						<!-- 4 -->
@@ -517,7 +517,7 @@
 						<td> <?= $fetchdata['sc4'];?> </td>
 						<td> <?= $fetchdata['des4'];?> </td>
 						<td> <?= $fetchdata['unit4'];?> </td>
-						<td> <?= $fetchdata['grade4'];?> </td>
+						<td> <?= $fetchdata['grade04'];?> </td>
 						</tr>
 
 						<!-- 5 -->
@@ -525,7 +525,7 @@
 						<td> <?= $fetchdata['sc5'];?> </td>
 						<td> <?= $fetchdata['des5'];?> </td>
 						<td> <?= $fetchdata['unit5'];?> </td>
-						<td> <?= $fetchdata['grade5'];?> </td>
+						<td> <?= $fetchdata['grade05'];?> </td>
 						</tr>
 
 						<!-- 6 -->
@@ -533,7 +533,7 @@
 						<td> <?= $fetchdata['sc6'];?> </td>
 						<td> <?= $fetchdata['des6'];?> </td>
 						<td> <?= $fetchdata['unit6'];?> </td>
-						<td> <?= $fetchdata['grade6'];?> </td>
+						<td> <?= $fetchdata['grade06'];?> </td>
 						</tr>
 
 						<!-- 7 -->
@@ -541,7 +541,7 @@
 						<td> <?= $fetchdata['sc7'];?> </td>
 						<td> <?= $fetchdata['des7'];?> </td>
 						<td> <?= $fetchdata['unit7'];?> </td>
-						<td> <?= $fetchdata['grade7'];?> </td>
+						<td> <?= $fetchdata['grade07'];?> </td>
 						</tr>
 
 						<!-- 8 -->
@@ -549,7 +549,7 @@
 						<td> <?= $fetchdata['sc8'];?> </td>
 						<td> <?= $fetchdata['des8'];?> </td>
 						<td> <?= $fetchdata['unit8'];?> </td>
-						<td> <?= $fetchdata['grade8'];?> </td>
+						<td> <?= $fetchdata['grade08'];?> </td>
 						</tr>
 
 						<!-- 9 -->
@@ -557,7 +557,7 @@
 						<td> <?= $fetchdata['sc9'];?> </td>
 						<td> <?= $fetchdata['des9'];?> </td>
 						<td> <?= $fetchdata['unit9'];?> </td>
-						<td> <?= $fetchdata['grade9'];?> </td>
+						<td> <?= $fetchdata['grade09'];?> </td>
 						</tr>
 
 						<!-- 10 -->
@@ -612,11 +612,11 @@
 
 	<table class="view_grades">
 			<tr> 
-				<th>Course</th>
+				
 				<th>Course Code</th>
+				<th>Descriptive Title</th>
 				<th>Unit</th>
-				<th>Discriptive Title</th>
-				<th>Pre-Requisite</th>
+				
 				<th>Grade</th>
 			</tr>
 			<?php
@@ -636,7 +636,7 @@
 						<td> <?= $fetchdata['sc1'];?> </td>
 						<td> <?= $fetchdata['des1'];?> </td>
 						<td> <?= $fetchdata['unit1'];?> </td>
-						<td> <?= $fetchdata['grade1'];?> </td>
+						<td> <?= $fetchdata['grade01'];?> </td>
 						</tr>
 
 						<!-- 2 -->
@@ -644,7 +644,7 @@
 						<td> <?= $fetchdata['sc2'];?> </td>
 						<td> <?= $fetchdata['des2'];?> </td>
 						<td> <?= $fetchdata['unit2'];?> </td>
-						<td> <?= $fetchdata['grade2'];?> </td>
+						<td> <?= $fetchdata['grade02'];?> </td>
 						</tr>
 
 
@@ -654,7 +654,7 @@
 						<td> <?= $fetchdata['sc3'];?> </td>
 						<td> <?= $fetchdata['des3'];?> </td>
 						<td> <?= $fetchdata['unit3'];?> </td>
-						<td> <?= $fetchdata['grade3'];?> </td>
+						<td> <?= $fetchdata['grade03'];?> </td>
 						</tr>
 
 						<!-- 4 -->
@@ -662,7 +662,7 @@
 						<td> <?= $fetchdata['sc4'];?> </td>
 						<td> <?= $fetchdata['des4'];?> </td>
 						<td> <?= $fetchdata['unit4'];?> </td>
-						<td> <?= $fetchdata['grade4'];?> </td>
+						<td> <?= $fetchdata['grade04'];?> </td>
 						</tr>
 
 						<!-- 5 -->
@@ -670,7 +670,7 @@
 						<td> <?= $fetchdata['sc5'];?> </td>
 						<td> <?= $fetchdata['des5'];?> </td>
 						<td> <?= $fetchdata['unit5'];?> </td>
-						<td> <?= $fetchdata['grade5'];?> </td>
+						<td> <?= $fetchdata['grade05'];?> </td>
 						</tr>
 
 						<!-- 6 -->
@@ -678,7 +678,7 @@
 						<td> <?= $fetchdata['sc6'];?> </td>
 						<td> <?= $fetchdata['des6'];?> </td>
 						<td> <?= $fetchdata['unit6'];?> </td>
-						<td> <?= $fetchdata['grade6'];?> </td>
+						<td> <?= $fetchdata['grade06'];?> </td>
 						</tr>
 
 						<!-- 7 -->
@@ -686,7 +686,7 @@
 						<td> <?= $fetchdata['sc7'];?> </td>
 						<td> <?= $fetchdata['des7'];?> </td>
 						<td> <?= $fetchdata['unit7'];?> </td>
-						<td> <?= $fetchdata['grade7'];?> </td>
+						<td> <?= $fetchdata['grade07'];?> </td>
 						</tr>
 
 						<!-- 8 -->
@@ -694,7 +694,7 @@
 						<td> <?= $fetchdata['sc8'];?> </td>
 						<td> <?= $fetchdata['des8'];?> </td>
 						<td> <?= $fetchdata['unit8'];?> </td>
-						<td> <?= $fetchdata['grade8'];?> </td>
+						<td> <?= $fetchdata['grade08'];?> </td>
 						</tr>
 
 						<!-- 9 -->
@@ -702,7 +702,7 @@
 						<td> <?= $fetchdata['sc9'];?> </td>
 						<td> <?= $fetchdata['des9'];?> </td>
 						<td> <?= $fetchdata['unit9'];?> </td>
-						<td> <?= $fetchdata['grade9'];?> </td>
+						<td> <?= $fetchdata['grade09'];?> </td>
 						</tr>
 
 						<!-- 10 -->
@@ -752,11 +752,11 @@
 
 	<table class="view_grades">
 			<tr> 
-				<th>Course</th>
+				
 				<th>Course Code</th>
+				<th>Descriptive Title</th>
 				<th>Unit</th>
-				<th>Discriptive Title</th>
-				<th>Pre-Requisite</th>
+				
 				<th>Grade</th>
 			</tr>
 			<?php
@@ -776,7 +776,7 @@
 						<td> <?= $fetchdata['sc1'];?> </td>
 						<td> <?= $fetchdata['des1'];?> </td>
 						<td> <?= $fetchdata['unit1'];?> </td>
-						<td> <?= $fetchdata['grade1'];?> </td>
+						<td> <?= $fetchdata['grade01'];?> </td>
 						</tr>
 
 						<!-- 2 -->
@@ -784,7 +784,7 @@
 						<td> <?= $fetchdata['sc2'];?> </td>
 						<td> <?= $fetchdata['des2'];?> </td>
 						<td> <?= $fetchdata['unit2'];?> </td>
-						<td> <?= $fetchdata['grade2'];?> </td>
+						<td> <?= $fetchdata['grade02'];?> </td>
 						</tr>
 
 
@@ -794,7 +794,7 @@
 						<td> <?= $fetchdata['sc3'];?> </td>
 						<td> <?= $fetchdata['des3'];?> </td>
 						<td> <?= $fetchdata['unit3'];?> </td>
-						<td> <?= $fetchdata['grade3'];?> </td>
+						<td> <?= $fetchdata['grade03'];?> </td>
 						</tr>
 
 						<!-- 4 -->
@@ -802,7 +802,7 @@
 						<td> <?= $fetchdata['sc4'];?> </td>
 						<td> <?= $fetchdata['des4'];?> </td>
 						<td> <?= $fetchdata['unit4'];?> </td>
-						<td> <?= $fetchdata['grade4'];?> </td>
+						<td> <?= $fetchdata['grade04'];?> </td>
 						</tr>
 
 						<!-- 5 -->
@@ -810,7 +810,7 @@
 						<td> <?= $fetchdata['sc5'];?> </td>
 						<td> <?= $fetchdata['des5'];?> </td>
 						<td> <?= $fetchdata['unit5'];?> </td>
-						<td> <?= $fetchdata['grade5'];?> </td>
+						<td> <?= $fetchdata['grade05'];?> </td>
 						</tr>
 
 						<!-- 6 -->
@@ -818,7 +818,7 @@
 						<td> <?= $fetchdata['sc6'];?> </td>
 						<td> <?= $fetchdata['des6'];?> </td>
 						<td> <?= $fetchdata['unit6'];?> </td>
-						<td> <?= $fetchdata['grade6'];?> </td>
+						<td> <?= $fetchdata['grade06'];?> </td>
 						</tr>
 
 						<!-- 7 -->
@@ -826,7 +826,7 @@
 						<td> <?= $fetchdata['sc7'];?> </td>
 						<td> <?= $fetchdata['des7'];?> </td>
 						<td> <?= $fetchdata['unit7'];?> </td>
-						<td> <?= $fetchdata['grade7'];?> </td>
+						<td> <?= $fetchdata['grade07'];?> </td>
 						</tr>
 
 						<!-- 8 -->
@@ -834,7 +834,7 @@
 						<td> <?= $fetchdata['sc8'];?> </td>
 						<td> <?= $fetchdata['des8'];?> </td>
 						<td> <?= $fetchdata['unit8'];?> </td>
-						<td> <?= $fetchdata['grade8'];?> </td>
+						<td> <?= $fetchdata['grade08'];?> </td>
 						</tr>
 
 						<!-- 9 -->
@@ -842,7 +842,7 @@
 						<td> <?= $fetchdata['sc9'];?> </td>
 						<td> <?= $fetchdata['des9'];?> </td>
 						<td> <?= $fetchdata['unit9'];?> </td>
-						<td> <?= $fetchdata['grade9'];?> </td>
+						<td> <?= $fetchdata['grade09'];?> </td>
 						</tr>
 
 						<!-- 10 -->
@@ -890,11 +890,11 @@
 
 	<table class="view_grades">
 			<tr> 
-				<th>Course</th>
+				
 				<th>Course Code</th>
+				<th>Descriptive Title</th>
 				<th>Unit</th>
-				<th>Discriptive Title</th>
-				<th>Pre-Requisite</th>
+				
 				<th>Grade</th>
 			</tr>
 			<?php
@@ -914,7 +914,7 @@
 						<td> <?= $fetchdata['sc1'];?> </td>
 						<td> <?= $fetchdata['des1'];?> </td>
 						<td> <?= $fetchdata['unit1'];?> </td>
-						<td> <?= $fetchdata['grade1'];?> </td>
+						<td> <?= $fetchdata['grade01'];?> </td>
 						</tr>
 
 						<!-- 2 -->
@@ -922,7 +922,7 @@
 						<td> <?= $fetchdata['sc2'];?> </td>
 						<td> <?= $fetchdata['des2'];?> </td>
 						<td> <?= $fetchdata['unit2'];?> </td>
-						<td> <?= $fetchdata['grade2'];?> </td>
+						<td> <?= $fetchdata['grade02'];?> </td>
 						</tr>
 
 
@@ -932,7 +932,7 @@
 						<td> <?= $fetchdata['sc3'];?> </td>
 						<td> <?= $fetchdata['des3'];?> </td>
 						<td> <?= $fetchdata['unit3'];?> </td>
-						<td> <?= $fetchdata['grade3'];?> </td>
+						<td> <?= $fetchdata['grade03'];?> </td>
 						</tr>
 
 						<!-- 4 -->
@@ -940,7 +940,7 @@
 						<td> <?= $fetchdata['sc4'];?> </td>
 						<td> <?= $fetchdata['des4'];?> </td>
 						<td> <?= $fetchdata['unit4'];?> </td>
-						<td> <?= $fetchdata['grade4'];?> </td>
+						<td> <?= $fetchdata['grade04'];?> </td>
 						</tr>
 
 						<!-- 5 -->
@@ -948,7 +948,7 @@
 						<td> <?= $fetchdata['sc5'];?> </td>
 						<td> <?= $fetchdata['des5'];?> </td>
 						<td> <?= $fetchdata['unit5'];?> </td>
-						<td> <?= $fetchdata['grade5'];?> </td>
+						<td> <?= $fetchdata['grade05'];?> </td>
 						</tr>
 
 						<!-- 6 -->
@@ -956,7 +956,7 @@
 						<td> <?= $fetchdata['sc6'];?> </td>
 						<td> <?= $fetchdata['des6'];?> </td>
 						<td> <?= $fetchdata['unit6'];?> </td>
-						<td> <?= $fetchdata['grade6'];?> </td>
+						<td> <?= $fetchdata['grade06'];?> </td>
 						</tr>
 
 						<!-- 7 -->
@@ -964,7 +964,7 @@
 						<td> <?= $fetchdata['sc7'];?> </td>
 						<td> <?= $fetchdata['des7'];?> </td>
 						<td> <?= $fetchdata['unit7'];?> </td>
-						<td> <?= $fetchdata['grade7'];?> </td>
+						<td> <?= $fetchdata['grade07'];?> </td>
 						</tr>
 
 						<!-- 8 -->
@@ -972,7 +972,7 @@
 						<td> <?= $fetchdata['sc8'];?> </td>
 						<td> <?= $fetchdata['des8'];?> </td>
 						<td> <?= $fetchdata['unit8'];?> </td>
-						<td> <?= $fetchdata['grade8'];?> </td>
+						<td> <?= $fetchdata['grade08'];?> </td>
 						</tr>
 
 						<!-- 9 -->
@@ -980,7 +980,7 @@
 						<td> <?= $fetchdata['sc9'];?> </td>
 						<td> <?= $fetchdata['des9'];?> </td>
 						<td> <?= $fetchdata['unit9'];?> </td>
-						<td> <?= $fetchdata['grade9'];?> </td>
+						<td> <?= $fetchdata['grade09'];?> </td>
 						</tr>
 
 						<!-- 10 -->
@@ -1029,11 +1029,11 @@
 
 	<table class="view_grades">
 			<tr> 
-				<th>Course</th>
+				
 				<th>Course Code</th>
+				<th>Descriptive Title</th>
 				<th>Unit</th>
-				<th>Discriptive Title</th>
-				<th>Pre-Requisite</th>
+				
 				<th>Grade</th>
 			</tr>
 			<?php
@@ -1053,7 +1053,7 @@
 						<td> <?= $fetchdata['sc1'];?> </td>
 						<td> <?= $fetchdata['des1'];?> </td>
 						<td> <?= $fetchdata['unit1'];?> </td>
-						<td> <?= $fetchdata['grade1'];?> </td>
+						<td> <?= $fetchdata['grade01'];?> </td>
 						</tr>
 
 						<!-- 2 -->
@@ -1061,7 +1061,7 @@
 						<td> <?= $fetchdata['sc2'];?> </td>
 						<td> <?= $fetchdata['des2'];?> </td>
 						<td> <?= $fetchdata['unit2'];?> </td>
-						<td> <?= $fetchdata['grade2'];?> </td>
+						<td> <?= $fetchdata['grade02'];?> </td>
 						</tr>
 
 
@@ -1071,7 +1071,7 @@
 						<td> <?= $fetchdata['sc3'];?> </td>
 						<td> <?= $fetchdata['des3'];?> </td>
 						<td> <?= $fetchdata['unit3'];?> </td>
-						<td> <?= $fetchdata['grade3'];?> </td>
+						<td> <?= $fetchdata['grade03'];?> </td>
 						</tr>
 
 						<!-- 4 -->
@@ -1079,7 +1079,7 @@
 						<td> <?= $fetchdata['sc4'];?> </td>
 						<td> <?= $fetchdata['des4'];?> </td>
 						<td> <?= $fetchdata['unit4'];?> </td>
-						<td> <?= $fetchdata['grade4'];?> </td>
+						<td> <?= $fetchdata['grade04'];?> </td>
 						</tr>
 
 						<!-- 5 -->
@@ -1087,7 +1087,7 @@
 						<td> <?= $fetchdata['sc5'];?> </td>
 						<td> <?= $fetchdata['des5'];?> </td>
 						<td> <?= $fetchdata['unit5'];?> </td>
-						<td> <?= $fetchdata['grade5'];?> </td>
+						<td> <?= $fetchdata['grade05'];?> </td>
 						</tr>
 
 						<!-- 6 -->
@@ -1095,7 +1095,7 @@
 						<td> <?= $fetchdata['sc6'];?> </td>
 						<td> <?= $fetchdata['des6'];?> </td>
 						<td> <?= $fetchdata['unit6'];?> </td>
-						<td> <?= $fetchdata['grade6'];?> </td>
+						<td> <?= $fetchdata['grade06'];?> </td>
 						</tr>
 
 						<!-- 7 -->
@@ -1103,7 +1103,7 @@
 						<td> <?= $fetchdata['sc7'];?> </td>
 						<td> <?= $fetchdata['des7'];?> </td>
 						<td> <?= $fetchdata['unit7'];?> </td>
-						<td> <?= $fetchdata['grade7'];?> </td>
+						<td> <?= $fetchdata['grade07'];?> </td>
 						</tr>
 
 						<!-- 8 -->
@@ -1111,7 +1111,7 @@
 						<td> <?= $fetchdata['sc8'];?> </td>
 						<td> <?= $fetchdata['des8'];?> </td>
 						<td> <?= $fetchdata['unit8'];?> </td>
-						<td> <?= $fetchdata['grade8'];?> </td>
+						<td> <?= $fetchdata['grade08'];?> </td>
 						</tr>
 
 						<!-- 9 -->
@@ -1119,7 +1119,7 @@
 						<td> <?= $fetchdata['sc9'];?> </td>
 						<td> <?= $fetchdata['des9'];?> </td>
 						<td> <?= $fetchdata['unit9'];?> </td>
-						<td> <?= $fetchdata['grade9'];?> </td>
+						<td> <?= $fetchdata['grade09'];?> </td>
 						</tr>
 
 						<!-- 10 -->

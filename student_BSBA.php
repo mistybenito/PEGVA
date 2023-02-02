@@ -1,11 +1,11 @@
 <?php
-    include("auth/ch-beed_auth.php");
+    include("auth/ch-BSBA_auth.php");
     include("nav-new.php");
 ?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>BEED Student List</title>
+        <title>BSBA Student List</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet" type="text/css">
@@ -14,7 +14,7 @@
     </head>
     <body>
         <div id="student-list">
-        <p class="course-student-list">BEED Student List</p>
+        <p class="course-student-list">BSBA Student List</p>
         
         <div class="input-group mb-3">
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
@@ -43,7 +43,7 @@
             ?>
             <tr>
                 <?php
-                    if ($row['Course'] == "Bachelor of Elementary Education")
+                    if ($row['Course'] == "Bachelor of Science in Business Administration")
                      {
                 ?>
                     <td> <?= $row['Student_number']; ?> </td>
