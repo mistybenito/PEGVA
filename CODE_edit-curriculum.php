@@ -37,7 +37,7 @@ if(isset($_POST['edit_curric']))
         }
     }
 
-    elseif($course == "BSED-ENG")
+    elseif($course == "BSED_E")
     {
         $updatequery_result = $database->getReference($ref_table)->update($updateData);
         if($updatequery_result)
@@ -52,7 +52,7 @@ if(isset($_POST['edit_curric']))
         }
     }
 
-    elseif($course == "BSED-SCI")
+    elseif($course == "BSED_S")
     {
         $updatequery_result = $database->getReference($ref_table)->update($updateData);
         if($updatequery_result)
@@ -67,7 +67,7 @@ if(isset($_POST['edit_curric']))
         }
     }
 
-    elseif($course == "BSED-MATH")
+    elseif($course == "BSED_M")
     {
         $updatequery_result = $database->getReference($ref_table)->update($updateData);
         if($updatequery_result)

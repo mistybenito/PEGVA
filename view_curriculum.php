@@ -68,7 +68,10 @@
                                                     <tr> 
                                                         <th>Course Code</th>
                                                         <th>Descriptive Title</th>
-                                                        <th>Units</th>
+                                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
                                                         
                                                     </tr>
                                                     <?php
@@ -83,6 +86,11 @@
                                                             <td> <?= $row['code']; ?> </td>
                                                             <td> <?= $row['descriptive_title']; ?> </td>
                                                             <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bscs/first_year/first_sem/<?=$key;?>&course=BSCS" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
                                                             
                                                         </tr>
                                                     <?php
@@ -106,7 +114,10 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Units</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
                                         
                                     </tr>
                                     <?php
@@ -121,6 +132,11 @@
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
                                             <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bscs/first_year/second_sem/<?=$key;?>&course=BSCS" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
                                             
 										</tr>
                                     <?php
@@ -142,7 +158,10 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Units</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
                                         
                                     </tr>
                                     <?php
@@ -157,6 +176,11 @@
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
                                             <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bscs/second_year/first_sem/<?=$key;?>&course=BSCS" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
                                             
 										</tr>
                                     <?php
@@ -177,7 +201,10 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Units</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
                                         
                                     </tr>
                                     <?php
@@ -192,6 +219,11 @@
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
                                             <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bscs/second_year/second_sem/<?=$key;?>&course=BSCS" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
                                             
 										</tr>
                                     <?php
@@ -213,7 +245,10 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Units</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
                                         
                                     </tr>
                                     <?php
@@ -228,6 +263,11 @@
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
                                             <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bscs/third_year/first_sem/<?=$key;?>&course=BSCS" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
                                             
 										</tr>
                                     <?php
@@ -249,7 +289,10 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Units</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
                                         
                                     </tr>
                                     <?php
@@ -264,6 +307,11 @@
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
                                             <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bscs/third_year/second_sem/<?=$key;?>&course=BSCS" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
                                             
 										</tr>
                                     <?php
@@ -285,7 +333,10 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Units</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
                                         
                                     </tr>
                                     <?php
@@ -300,6 +351,11 @@
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
                                             <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bscs/fourth_year/first_sem/<?=$key;?>&course=BSCS" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
                                             
 										</tr>
                                     <?php
@@ -322,7 +378,10 @@
                                     <tr> 
                                         <th>Course Code</th>
                                         <th>Descriptive Title</th>
-                                        <th>Units</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
                                         
                                     </tr>
                                     <?php
@@ -337,6 +396,2715 @@
 											<td> <?= $row['code']; ?> </td>
                                             <td> <?= $row['descriptive_title']; ?> </td>
                                             <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bscs/fourth_year/second_sem/<?=$key;?>&course=BSCS" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+								</div>
+
+                    
+                </form>
+
+
+
+                                </div>
+                                </div>
+</center>
+
+
+<div id="npup1" class="hidden" style="margin-left:300px">
+                <center>       
+                    <h3>ABREED</h3> 
+                        <?//FIRST YEAR FIRST SEM GRADES?>
+                            
+                    <form name="form1" method="post" action="code.php"  style="height:fit-content;" class="sched-form">
+                            <?// CONTENT SELECTION FOR GRADES?>
+                            <div class="content-selection">
+                            <select id="mySelect" onchange="onetwo.doSelect(this);">
+                                <option value="">Year and Sem</option><!-- here -->
+                                <option value="0">1st Year, 1st Sem</option>
+                                <option value="1">1st Year, 2nd Sem</option>
+                                <option value="2">2nd Year, 1st Sem</option>
+                                <option value="3">2nd Year, 2nd Sem</option>
+                                <option value="4">3rd Year, 1st Sem</option>
+                                <option value="5">3rd Year, 2nd Sem</option>
+                                <option value="6">4th Year, 1st Sem</option>
+                                <option value="7">4th Year, 2nd Sem</option>
+                            </select><!-- to here here -->
+                            </div>
+
+                            <?// CONTENT SELECTION FOR GRADES?>
+                            <div id ="one-two">
+                                        <div id ="onetwo0" class = "hidden">
+                                            <table>
+                                                    <tr> 
+                                                        <th>Course Code</th>
+                                                        <th>Descriptive Title</th>
+                                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                                        
+                                                    </tr>
+                                                    <?php
+                                                    include('dbcon.php');
+                                                    $ref_table = 'course_curriculum/abreed/first_year/first_sem';
+                                                    $fetchdata = $database->getReference($ref_table)->getValue();
+                                                    if ($fetchdata > 0) {
+                                                        $i = 0;
+                                                        foreach ($fetchdata as $key => $row) {
+                                                            ?>
+                                                        <tr>	
+                                                            <td> <?= $row['code']; ?> </td>
+                                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=abreed/first_year/first_sem/<?=$key;?>&course=ABREED" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                                            
+                                                        </tr>
+                                                    <?php
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                            ?>
+                                                                <td colspan = "4"> No Record found </td> 
+                                                            <?php
+                                                    }
+                                                    ?>
+                                                </table>
+                                        </div>
+                        
+
+                <?//boundary/////////////////////////////////////////////////////////////////////////////////////////////////////////////?>
+
+                        <div id ="onetwo1" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/abreed/first_year/second_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=abreed/first_year/second_sem/<?=$key;?>&course=ABREED" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+
+                        <?//boundary?>
+                        <div id ="onetwo2" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/abreed/second_year/first_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=abreed/second_year/first_sem/<?=$key;?>&course=ABREED" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+
+						<div id ="onetwo3" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/abreed/second_year/second_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=abreed/second_year/second_sem/<?=$key;?>&course=ABREED" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+                        
+                        <?//boundary?>
+                        <div id ="onetwo4" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/abreed/third_year/first_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=abreed/third_year/first_sem/<?=$key;?>&course=ABREED" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+                        
+                        <?//boundary for subject?>
+                        <div id ="onetwo5" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/abreed/third_year/second_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=abreed/third_year/second_sem/<?=$key;?>&course=ABREED" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+
+                        <?//boundary for subject?>
+                        <div id ="onetwo6" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/abreed/fourth_year/first_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=abreed/fourth_year/first_sem/<?=$key;?>&course=ABREED" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+
+                        </div>
+
+                        <?//boundary for subject?>
+                        <div id ="onetwo7" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/abreed/fourth_year/second_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=abreed/fourth_year/second_sem/<?=$key;?>&course=ABREED" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+								</div>
+
+                    
+                </form>
+
+
+
+                                </div>
+                                </div>
+</center>
+
+
+<div id="npup2" class="hidden" style="margin-left:300px">
+                <center>       
+                    <h3>BEED</h3> 
+                        <?//FIRST YEAR FIRST SEM GRADES?>
+                            
+                    <form name="form1" method="post" action="code.php"  style="height:fit-content;" class="sched-form">
+                            <?// CONTENT SELECTION FOR GRADES?>
+                            <div class="content-selection">
+                            <select id="mySelect" onchange="twoone.doSelect(this);">
+                                <option value="">Year and Sem</option><!-- here -->
+                                <option value="0">1st Year, 1st Sem</option>
+                                <option value="1">1st Year, 2nd Sem</option>
+                                <option value="2">2nd Year, 1st Sem</option>
+                                <option value="3">2nd Year, 2nd Sem</option>
+                                <option value="4">3rd Year, 1st Sem</option>
+                                <option value="5">3rd Year, 2nd Sem</option>
+                                <option value="6">4th Year, 1st Sem</option>
+                                <option value="7">4th Year, 2nd Sem</option>
+                            </select><!-- to here here -->
+                            </div>
+
+                            <?// CONTENT SELECTION FOR GRADES?>
+                            <div id ="two-one">
+                                        <div id ="twoone0" class = "hidden">
+                                            <table>
+                                                    <tr> 
+                                                        <th>Course Code</th>
+                                                        <th>Descriptive Title</th>
+                                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                                        
+                                                    </tr>
+                                                    <?php
+                                                    include('dbcon.php');
+                                                    $ref_table = 'course_curriculum/beed/first_year/first_sem';
+                                                    $fetchdata = $database->getReference($ref_table)->getValue();
+                                                    if ($fetchdata > 0) {
+                                                        $i = 0;
+                                                        foreach ($fetchdata as $key => $row) {
+                                                            ?>
+                                                        <tr>	
+                                                            <td> <?= $row['code']; ?> </td>
+                                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=beed/first_year/first_sem/<?=$key;?>&course=BEED" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                                            
+                                                        </tr>
+                                                    <?php
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                            ?>
+                                                                <td colspan = "4"> No Record found </td> 
+                                                            <?php
+                                                    }
+                                                    ?>
+                                                </table>
+                                        </div>
+                        
+
+                <?//boundary/////////////////////////////////////////////////////////////////////////////////////////////////////////////?>
+
+                        <div id ="twoone1" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/beed/first_year/second_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=beed/first_year/second_sem/<?=$key;?>&course=BEED" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+
+                        <?//boundary?>
+                        <div id ="twoone2" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/beed/second_year/first_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=beed/second_year/first_sem/<?=$key;?>&course=BEED" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+
+						<div id ="twoone3" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/beed/second_year/second_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=beed/second_year/second_sem/<?=$key;?>&course=BEED" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+                        
+                        <?//boundary?>
+                        <div id ="twoone4" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/beed/third_year/first_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=beed/third_year/first_sem/<?=$key;?>&course=BEED" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+                        
+                        <?//boundary for subject?>
+                        <div id ="twoone5" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/beed/third_year/second_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=beed/third_year/second_sem/<?=$key;?>&course=BEED" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+
+                        <?//boundary for subject?>
+                        <div id ="twoone6" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/beed/fourth_year/first_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=beed/fourth_year/first_sem/<?=$key;?>&course=BEED" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+
+                        </div>
+
+                        <?//boundary for subject?>
+                        <div id ="twoone7" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/beed/fourth_year/second_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=beed/fourth_year/second_sem/<?=$key;?>&course=BEED" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+								</div>
+
+                    
+                </form>
+
+
+
+                                </div>
+                                </div>
+</center>
+
+<div id="npup3" class="hidden" style="margin-left:300px">
+                <center>       
+                    <h3>BSBA</h3> 
+                        <?//FIRST YEAR FIRST SEM GRADES?>
+                            
+                    <form name="form1" method="post" action="code.php"  style="height:fit-content;" class="sched-form">
+                            <?// CONTENT SELECTION FOR GRADES?>
+                            <div class="content-selection">
+                            <select id="mySelect" onchange="twotwo.doSelect(this);">
+                                <option value="">Year and Sem</option><!-- here -->
+                                <option value="0">1st Year, 1st Sem</option>
+                                <option value="1">1st Year, 2nd Sem</option>
+                                <option value="2">2nd Year, 1st Sem</option>
+                                <option value="3">2nd Year, 2nd Sem</option>
+                                <option value="4">3rd Year, 1st Sem</option>
+                                <option value="5">3rd Year, 2nd Sem</option>
+                                <option value="6">4th Year, 1st Sem</option>
+                                <option value="7">4th Year, 2nd Sem</option>
+                            </select><!-- to here here -->
+                            </div>
+
+                            <?// CONTENT SELECTION FOR GRADES?>
+                            <div id ="two-two">
+                                        <div id ="twotwo0" class = "hidden">
+                                            <table>
+                                                    <tr> 
+                                                        <th>Course Code</th>
+                                                        <th>Descriptive Title</th>
+                                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                                        
+                                                    </tr>
+                                                    <?php
+                                                    include('dbcon.php');
+                                                    $ref_table = 'course_curriculum/bsba/first_year/first_sem';
+                                                    $fetchdata = $database->getReference($ref_table)->getValue();
+                                                    if ($fetchdata > 0) {
+                                                        $i = 0;
+                                                        foreach ($fetchdata as $key => $row) {
+                                                            ?>
+                                                        <tr>	
+                                                            <td> <?= $row['code']; ?> </td>
+                                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsba/first_year/first_sem/<?=$key;?>&course=BSBA" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                                            
+                                                        </tr>
+                                                    <?php
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                            ?>
+                                                                <td colspan = "4"> No Record found </td> 
+                                                            <?php
+                                                    }
+                                                    ?>
+                                                </table>
+                                        </div>
+                        
+
+                <?//boundary/////////////////////////////////////////////////////////////////////////////////////////////////////////////?>
+
+                        <div id ="twotwo1" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsba/first_year/second_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsba/first_year/second_sem/<?=$key;?>&course=BSBA" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+
+                        <?//boundary?>
+                        <div id ="twotwo2" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsba/second_year/first_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsba/second_year/first_sem/<?=$key;?>&course=BSBA" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+
+						<div id ="twotwo3" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsba/second_year/second_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsba/second_year/second_sem/<?=$key;?>&course=BSBA" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+                        
+                        <?//boundary?>
+                        <div id ="twotwo4" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsba/third_year/first_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsba/third_year/first_sem/<?=$key;?>&course=BSBA" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+                        
+                        <?//boundary for subject?>
+                        <div id ="twotwo5" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsba/third_year/second_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsba/third_year/second_sem/<?=$key;?>&course=BSBA" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+
+                        <?//boundary for subject?>
+                        <div id ="twotwo6" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsba/fourth_year/first_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsba/fourth_year/first_sem/<?=$key;?>&course=BSBA" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+
+                        </div>
+
+                        <?//boundary for subject?>
+                        <div id ="twotwo7" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsba/fourth_year/second_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsba/fourth_year/second_sem/<?=$key;?>&course=BSBA" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+								</div>
+
+                    
+                </form>
+
+
+
+                                </div>
+                                </div>
+</center>
+
+
+
+<div id="npup4" class="hidden" style="margin-left:300px">
+                <center>       
+                    <h3>BSOA</h3> 
+                        <?//FIRST YEAR FIRST SEM GRADES?>
+                            
+                    <form name="form1" method="post" action="code.php"  style="height:fit-content;" class="sched-form">
+                            <?// CONTENT SELECTION FOR GRADES?>
+                            <div class="content-selection">
+                            <select id="mySelect" onchange="threeone.doSelect(this);">
+                                <option value="">Year and Sem</option><!-- here -->
+                                <option value="0">1st Year, 1st Sem</option>
+                                <option value="1">1st Year, 2nd Sem</option>
+                                <option value="2">2nd Year, 1st Sem</option>
+                                <option value="3">2nd Year, 2nd Sem</option>
+                                <option value="4">3rd Year, 1st Sem</option>
+                                <option value="5">3rd Year, 2nd Sem</option>
+                                <option value="6">4th Year, 1st Sem</option>
+                                <option value="7">4th Year, 2nd Sem</option>
+                            </select><!-- to here here -->
+                            </div>
+
+                            <?// CONTENT SELECTION FOR GRADES?>
+                            <div id ="three-one">
+                                        <div id ="threeone0" class = "hidden">
+                                            <table>
+                                                    <tr> 
+                                                        <th>Course Code</th>
+                                                        <th>Descriptive Title</th>
+                                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                                        
+                                                    </tr>
+                                                    <?php
+                                                    include('dbcon.php');
+                                                    $ref_table = 'course_curriculum/bsoa/first_year/first_sem';
+                                                    $fetchdata = $database->getReference($ref_table)->getValue();
+                                                    if ($fetchdata > 0) {
+                                                        $i = 0;
+                                                        foreach ($fetchdata as $key => $row) {
+                                                            ?>
+                                                        <tr>	
+                                                            <td> <?= $row['code']; ?> </td>
+                                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsoa/first_year/first_sem/<?=$key;?>&course=BSOA" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                                            
+                                                        </tr>
+                                                    <?php
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                            ?>
+                                                                <td colspan = "4"> No Record found </td> 
+                                                            <?php
+                                                    }
+                                                    ?>
+                                                </table>
+                                        </div>
+                        
+
+                <?//boundary/////////////////////////////////////////////////////////////////////////////////////////////////////////////?>
+
+                        <div id ="threeone1" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsoa/first_year/second_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsoa/first_year/second_sem/<?=$key;?>&course=BSOA" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+
+                        <?//boundary?>
+                        <div id ="threeone2" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsoa/second_year/first_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsoa/second_year/first_sem/<?=$key;?>&course=BSOA" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+
+						<div id ="threeone3" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsoa/second_year/second_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsoa/second_year/second_sem/<?=$key;?>&course=BSOA" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+                        
+                        <?//boundary?>
+                        <div id ="threeone4" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsoa/third_year/first_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsoa/third_year/first_sem/<?=$key;?>&course=BSOA" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+                        
+                        <?//boundary for subject?>
+                        <div id ="threeone5" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsoa/third_year/second_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsoa/third_year/second_sem/<?=$key;?>&course=BSOA" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+
+                        <?//boundary for subject?>
+                        <div id ="threeone6" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsoa/fourth_year/first_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsoa/fourth_year/first_sem/<?=$key;?>&course=BSOA" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+
+                        </div>
+
+                        <?//boundary for subject?>
+                        <div id ="threeone7" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsoa/fourth_year/second_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsoa/fourth_year/second_sem/<?=$key;?>&course=BSOA" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+								</div>
+
+                    
+                </form>
+
+
+
+                                </div>
+                                </div>
+</center>
+
+
+
+<div id="npup5" class="hidden" style="margin-left:300px">
+                <center>       
+                    <h3>BSED-ENG</h3> 
+                        <?//FIRST YEAR FIRST SEM GRADES?>
+                            
+                    <form name="form1" method="post" action="code.php"  style="height:fit-content;" class="sched-form">
+                            <?// CONTENT SELECTION FOR GRADES?>
+                            <div class="content-selection">
+                            <select id="mySelect" onchange="threetwo.doSelect(this);">
+                                <option value="">Year and Sem</option><!-- here -->
+                                <option value="0">1st Year, 1st Sem</option>
+                                <option value="1">1st Year, 2nd Sem</option>
+                                <option value="2">2nd Year, 1st Sem</option>
+                                <option value="3">2nd Year, 2nd Sem</option>
+                                <option value="4">3rd Year, 1st Sem</option>
+                                <option value="5">3rd Year, 2nd Sem</option>
+                                <option value="6">4th Year, 1st Sem</option>
+                                <option value="7">4th Year, 2nd Sem</option>
+                            </select><!-- to here here -->
+                            </div>
+
+                            <?// CONTENT SELECTION FOR GRADES?>
+                            <div id ="three-two">
+                                        <div id ="threetwo0" class = "hidden">
+                                            <table>
+                                                    <tr> 
+                                                        <th>Course Code</th>
+                                                        <th>Descriptive Title</th>
+                                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                                        
+                                                    </tr>
+                                                    <?php
+                                                    include('dbcon.php');
+                                                    $ref_table = 'course_curriculum/bsed_e/first_year/first_sem';
+                                                    $fetchdata = $database->getReference($ref_table)->getValue();
+                                                    if ($fetchdata > 0) {
+                                                        $i = 0;
+                                                        foreach ($fetchdata as $key => $row) {
+                                                            ?>
+                                                        <tr>	
+                                                            <td> <?= $row['code']; ?> </td>
+                                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsed_e/first_year/first_sem/<?=$key;?>&course=BSED_E" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                                            
+                                                        </tr>
+                                                    <?php
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                            ?>
+                                                                <td colspan = "4"> No Record found </td> 
+                                                            <?php
+                                                    }
+                                                    ?>
+                                                </table>
+                                        </div>
+                        
+
+                <?//boundary/////////////////////////////////////////////////////////////////////////////////////////////////////////////?>
+
+                        <div id ="threetwo1" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsed_e/first_year/second_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsed_e/first_year/second_sem/<?=$key;?>&course=BSED_E" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+
+                        <?//boundary?>
+                        <div id ="threetwo2" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsed_e/second_year/first_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsed_e/second_year/first_sem/<?=$key;?>&course=BSED_E" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+
+						<div id ="threetwo3" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsed_e/second_year/second_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsed_e/second_year/second_sem/<?=$key;?>&course=BSED_E" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+                        
+                        <?//boundary?>
+                        <div id ="threetwo4" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsed_e/third_year/first_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsed_e/third_year/first_sem/<?=$key;?>&course=BSED_E" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+                        
+                        <?//boundary for subject?>
+                        <div id ="threetwo5" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsed_e/third_year/second_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsed_e/third_year/second_sem/<?=$key;?>&course=BSED_E" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+
+                        <?//boundary for subject?>
+                        <div id ="threetwo6" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsed_e/fourth_year/first_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsed_e/fourth_year/first_sem/<?=$key;?>&course=BSED_E" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+
+                        </div>
+
+                        <?//boundary for subject?>
+                        <div id ="threetwo7" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsed_e/fourth_year/second_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsed_e/fourth_year/second_sem/<?=$key;?>&course=BSED_E" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+								</div>
+
+                    
+                </form>
+
+
+
+                                </div>
+                                </div>
+</center>
+
+
+<div id="npup6" class="hidden" style="margin-left:300px">
+                <center>       
+                    <h3>BSED-SCI</h3> 
+                        <?//FIRST YEAR FIRST SEM GRADES?>
+                            
+                    <form name="form1" method="post" action="code.php"  style="height:fit-content;" class="sched-form">
+                            <?// CONTENT SELECTION FOR GRADES?>
+                            <div class="content-selection">
+                            <select id="mySelect" onchange="fourone.doSelect(this);">
+                                <option value="">Year and Sem</option><!-- here -->
+                                <option value="0">1st Year, 1st Sem</option>
+                                <option value="1">1st Year, 2nd Sem</option>
+                                <option value="2">2nd Year, 1st Sem</option>
+                                <option value="3">2nd Year, 2nd Sem</option>
+                                <option value="4">3rd Year, 1st Sem</option>
+                                <option value="5">3rd Year, 2nd Sem</option>
+                                <option value="6">4th Year, 1st Sem</option>
+                                <option value="7">4th Year, 2nd Sem</option>
+                            </select><!-- to here here -->
+                            </div>
+
+                            <?// CONTENT SELECTION FOR GRADES?>
+                            <div id ="four-one">
+                                        <div id ="fourone0" class = "hidden">
+                                            <table>
+                                                    <tr> 
+                                                        <th>Course Code</th>
+                                                        <th>Descriptive Title</th>
+                                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                                        
+                                                    </tr>
+                                                    <?php
+                                                    include('dbcon.php');
+                                                    $ref_table = 'course_curriculum/bsed_s/first_year/first_sem';
+                                                    $fetchdata = $database->getReference($ref_table)->getValue();
+                                                    if ($fetchdata > 0) {
+                                                        $i = 0;
+                                                        foreach ($fetchdata as $key => $row) {
+                                                            ?>
+                                                        <tr>	
+                                                            <td> <?= $row['code']; ?> </td>
+                                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsed_s/first_year/first_sem/<?=$key;?>&course=BSED_S" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                                            
+                                                        </tr>
+                                                    <?php
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                            ?>
+                                                                <td colspan = "4"> No Record found </td> 
+                                                            <?php
+                                                    }
+                                                    ?>
+                                                </table>
+                                        </div>
+                        
+
+                <?//boundary/////////////////////////////////////////////////////////////////////////////////////////////////////////////?>
+
+                        <div id ="fourone1" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsed_s/first_year/second_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsed_s/first_year/second_sem/<?=$key;?>&course=BSED_S" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+
+                        <?//boundary?>
+                        <div id ="fourone2" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsed_s/second_year/first_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsed_s/second_year/first_sem/<?=$key;?>&course=BSED_S" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+
+						<div id ="fourone3" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsed_s/second_year/second_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsed_s/second_year/second_sem/<?=$key;?>&course=BSED_S" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+                        
+                        <?//boundary?>
+                        <div id ="fourone4" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsed_s/third_year/first_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsed_s/third_year/first_sem/<?=$key;?>&course=BSED_S" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+                        
+                        <?//boundary for subject?>
+                        <div id ="fourone5" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsed_s/third_year/second_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsed_s/third_year/second_sem/<?=$key;?>&course=BSED_S" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+
+                        <?//boundary for subject?>
+                        <div id ="fourone6" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsed_s/fourth_year/first_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsed_s/fourth_year/first_sem/<?=$key;?>&course=BSED_S" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+
+                        </div>
+
+                        <?//boundary for subject?>
+                        <div id ="fourone7" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsed_s/fourth_year/second_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsed_s/fourth_year/second_sem/<?=$key;?>&course=BSED_S" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+								</div>
+
+                    
+                </form>
+
+
+
+                                </div>
+                                </div>
+</center>
+
+
+
+<div id="npup7" class="hidden" style="margin-left:300px">
+                <center>       
+                    <h3>BSED-MATH</h3> 
+                        <?//FIRST YEAR FIRST SEM GRADES?>
+                            
+                    <form name="form1" method="post" action="code.php"  style="height:fit-content;" class="sched-form">
+                            <?// CONTENT SELECTION FOR GRADES?>
+                            <div class="content-selection">
+                            <select id="mySelect" onchange="fourtwo.doSelect(this);">
+                                <option value="">Year and Sem</option><!-- here -->
+                                <option value="0">1st Year, 1st Sem</option>
+                                <option value="1">1st Year, 2nd Sem</option>
+                                <option value="2">2nd Year, 1st Sem</option>
+                                <option value="3">2nd Year, 2nd Sem</option>
+                                <option value="4">3rd Year, 1st Sem</option>
+                                <option value="5">3rd Year, 2nd Sem</option>
+                                <option value="6">4th Year, 1st Sem</option>
+                                <option value="7">4th Year, 2nd Sem</option>
+                            </select><!-- to here here -->
+                            </div>
+
+                            <?// CONTENT SELECTION FOR GRADES?>
+                            <div id ="four-two">
+                                        <div id ="fourtwo0" class = "hidden">
+                                            <table>
+                                                    <tr> 
+                                                        <th>Course Code</th>
+                                                        <th>Descriptive Title</th>
+                                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                                        
+                                                    </tr>
+                                                    <?php
+                                                    include('dbcon.php');
+                                                    $ref_table = 'course_curriculum/bsed_m/first_year/first_sem';
+                                                    $fetchdata = $database->getReference($ref_table)->getValue();
+                                                    if ($fetchdata > 0) {
+                                                        $i = 0;
+                                                        foreach ($fetchdata as $key => $row) {
+                                                            ?>
+                                                        <tr>	
+                                                            <td> <?= $row['code']; ?> </td>
+                                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsed_m/first_year/first_sem/<?=$key;?>&course=BSED_M" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                                            
+                                                        </tr>
+                                                    <?php
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                            ?>
+                                                                <td colspan = "4"> No Record found </td> 
+                                                            <?php
+                                                    }
+                                                    ?>
+                                                </table>
+                                        </div>
+                        
+
+                <?//boundary/////////////////////////////////////////////////////////////////////////////////////////////////////////////?>
+
+                        <div id ="fourtwo1" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsed_m/first_year/second_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsed_m/first_year/second_sem/<?=$key;?>&course=BSED_M" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+
+                        <?//boundary?>
+                        <div id ="fourtwo2" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsed_m/second_year/first_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsed_m/second_year/first_sem/<?=$key;?>&course=BSED_M" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+
+						<div id ="fourtwo3" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsed_m/second_year/second_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsed_m/second_year/second_sem/<?=$key;?>&course=BSED_M" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+                        
+                        <?//boundary?>
+                        <div id ="fourtwo4" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsed_m/third_year/first_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsed_m/third_year/first_sem/<?=$key;?>&course=BSED_M" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+                        
+                        <?//boundary for subject?>
+                        <div id ="fourtwo5" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsed_m/third_year/second_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsed_m/third_year/second_sem/<?=$key;?>&course=BSED_M" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+                        </div>
+
+                        <?//boundary for subject?>
+                        <div id ="fourtwo6" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsed_m/fourth_year/first_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsed_m/fourth_year/first_sem/<?=$key;?>&course=BSED_M" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
+                                            
+										</tr>
+                                    <?php
+										}
+									}
+                                    else
+                                    {
+                                            ?>
+                                                <td colspan = "4"> No Record found </td> 
+                                            <?php
+                                    }
+                                    ?>
+                                </table>
+
+                        </div>
+
+                        <?//boundary for subject?>
+                        <div id ="fourtwo7" class = "hidden">
+						<table>
+                                    <tr> 
+                                        <th>Course Code</th>
+                                        <th>Descriptive Title</th>
+                                         <th>Units</th>
+                                                        <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                        <th>Edit</th>
+                                                        <?php endif; ?>
+                                        
+                                    </tr>
+                                    <?php
+                                    include('dbcon.php');
+                                    $ref_table = 'course_curriculum/bsed_m/fourth_year/second_sem';
+                                    $fetchdata = $database->getReference($ref_table)->getValue();
+									if ($fetchdata > 0) {
+										$i = 0;
+										foreach ($fetchdata as $key => $row) {
+											?>
+										<tr>	
+											<td> <?= $row['code']; ?> </td>
+                                            <td> <?= $row['descriptive_title']; ?> </td>
+                                            <td> <?= $row['units']; ?> </td>
+                                                            <?php if(isset($_SESSION['verified_registrar'])):?>
+                                                            <td>
+                                                                <a href="editcurric.php?id=bsed_m/fourth_year/second_sem/<?=$key;?>&course=BSED_M" id="btnView"> View </a>
+                                                            </td>
+                                                            <?php endif; ?>
                                             
 										</tr>
                                     <?php
@@ -364,2276 +3132,6 @@
 
 
 
-
-    <div id="npup1" class="hidden" style="margin-left:300px">
-      <center>
-        <h3>ABREED</h3>
-      <!-- COPY FROM HERE -->    
-                <form name="form1" method="post" action="code.php"  style="height:fit-content;" class="sched-form">
-            <?// CONTENT SELECTION FOR GRADES?>
-            <div class="content-selection">
-            <select id="mySelect" onchange="onetwo.doSelect(this);">
-                <option value="">Year and Sem</option><!-- here -->
-        		<option value="0">1st Year, 1st Sem</option>
-				<option value="1">1st Year, 2nd Sem</option>
-				<option value="2">2nd Year, 1st Sem</option>
-				<option value="3">2nd Year, 2nd Sem</option>
-				<option value="4">3rd Year, 1st Sem</option>
-				<option value="5">3rd Year, 2nd Sem</option>
-				<option value="6">4th Year, 1st Sem</option>
-				<option value="7">4th Year, 2nd Sem</option>
-
-            </select><!-- to here -->
-            </div>
-            <?// CONTENT SELECTION FOR GRADES?>
-            <div id ="one-two">
-                        <div id ="onetwo0" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/abreed/first_year/first_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-           
-
-<?//boundary/////////////////////////////////////////////////////////////////////////////////////////////////////////////?>
-
-                        <div id ="onetwo1" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/abreed/first_year/second_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                                
-                            </form>
-                        </div>
-
-                        <?//boundary?>
-                        <div id ="onetwo2" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/abreed/second_year/first_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-                        
-                        <?//boundary?>
-                        <div id ="onetwo3" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/abreed/second_year/second_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-                        
-                        <?//boundary for subject?>
-                        <div id ="onetwo4" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/abreed/third_year/first_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-                        <?//boundary for subject?>
-                        <div id ="onetwo5" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/abreed/third_year/second_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-                        <?//boundary for subject?>
-                        <div id ="onetwo6" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/abreed/fourth_year/first_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-                        <?//boundary for subject?>
-                        <div id ="onetwo7" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/abreed/fourth_year/second_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-
-
-
-
-
-
-
-
-
-            </div>
-    </div>
-</center><!-- TO HERE -->
-
-<!-- BOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARYBOUNDARY-->
-    <div id="npup2" class="hidden" style="margin-left:300px">
-      <center>
-        <h3>BEED</h3>
-      <!-- COPY FROM HERE -->    
-        <form name="form1" method="post" action="code.php"  style="height:fit-content;" class="sched-form">
-            <?// CONTENT SELECTION FOR GRADES?>
-            <div class="content-selection">
-            <select id="mySelect" onchange="twoone.doSelect(this);">
-            <option value="">Year and Sem</option><!-- here -->
-        		<option value="0">1st Year, 1st Sem</option>
-				<option value="1">1st Year, 2nd Sem</option>
-				<option value="2">2nd Year, 1st Sem</option>
-				<option value="3">2nd Year, 2nd Sem</option>
-				<option value="4">3rd Year, 1st Sem</option>
-				<option value="5">3rd Year, 2nd Sem</option>
-				<option value="6">4th Year, 1st Sem</option>
-				<option value="7">4th Year, 2nd Sem</option>
-            </select><!-- to here -->
-            </div>
-            <?// CONTENT SELECTION FOR GRADES?>
-            <div id ="two-one">
-                    <div id ="twoone0" class = "hidden">
-                    <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/beed/first_year/first_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-           
-
-<?//boundary/////////////////////////////////////////////////////////////////////////////////////////////////////////////?>
-
-                        <div id ="twoone1" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/beed/first_year/second_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                                
-                            </form>
-                        </div>
-
-                        <?//boundary?>
-                        <div id ="twoone2" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/beed/second_year/first_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-                        
-                        <?//boundary?>
-                        <div id ="twoone3" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/beed/second_year/second_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-                        
-                        <?//boundary for subject?>
-                        <div id ="twoone4" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/beed/third_year/first_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-                        <?//boundary for subject?>
-                        <div id ="twoone5" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/beed/third_year/second_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-                        <?//boundary for subject?>
-                        <div id ="twoone6" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/beed/fourth_year/first_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-                        <?//boundary for subject?>
-                        <div id ="twoone7" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/beed/fourth_year/second_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-     
-
-                        </center><!-- TO HERE -->
-    </div>
-
-
-
-<!-- BOUNDARY BETWEEN SEMS ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-	<div id="npup3" class="hidden"  style="margin-left:300px">
-      <center>
-        <h3>BSBA</h3>
-      <!-- COPY FROM HERE -->    
-        <form name="form1" method="post" action="code.php"  style="height:fit-content;" class="sched-form">
-            <?// CONTENT SELECTION FOR GRADES?>
-            <div class="content-selection">
-            <select id="mySelect" onchange="twotwo.doSelect(this);">
-            <option value="0">1st Year, 1st Sem</option>
-			<option value="1">1st Year, 2nd Sem</option>
-			<option value="2">2nd Year, 1st Sem</option>
-			<option value="3">2nd Year, 2nd Sem</option>
-			<option value="4">3rd Year, 1st Sem</option>
-			<option value="5">3rd Year, 2nd Sem</option>
-			<option value="6">4th Year, 1st Sem</option>
-			<option value="7">4th Year, 2nd Sem</option>
-            </select><!-- to here -->
-            </div>
-            <?// CONTENT SELECTION FOR GRADES?>
-            <div id ="two-two">
-                    <div id ="twotwo0" class = "hidden">
-                    <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsba/first_year/first_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-           
-
-<?//boundary/////////////////////////////////////////////////////////////////////////////////////////////////////////////?>
-
-                        <div id ="twotwo1" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsba/first_year/second_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                                
-                            </form>
-                        </div>
-
-                        <?//boundary?>
-                        <div id ="twotwo2" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsba/second_year/first_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-                        
-                        <?//boundary?>
-                        <div id ="twotwo3" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsba/second_year/second_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-                        
-                        <?//boundary for subject?>
-                        <div id ="twotwo4" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsba/third_year/first_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-                        <?//boundary for subject?>
-                        <div id ="twotwo5" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsba/third_year/second_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-                        <?//boundary for subject?>
-                        <div id ="twotwo6" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsba/fourth_year/first_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-                        <?//boundary for subject?>
-                        <div id ="twotwo7" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsba/fourth_year/second_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                                </div>
-                
-                              
-            </center>
-            </div><!-- TO HERE -->
-
-
-
-
-
-
-	<div id="npup4" class="hidden" style="margin-left:300px">
-      <center>
-        <h3>BSOA</h3>
-      <!-- COPY FROM HERE -->    
-        <form name="form1" method="post" action="code.php"  style="height:fit-content;" class="sched-form">
-            <?// CONTENT SELECTION FOR GRADES?>
-            <div class="content-selection">
-            <select id="mySelect" onchange="threeone.doSelect(this);">
-                <option value="0">1st Year, 1st Sem</option>
-				<option value="1">1st Year, 2nd Sem</option>
-				<option value="2">2nd Year, 1st Sem</option>
-				<option value="3">2nd Year, 2nd Sem</option>
-				<option value="4">3rd Year, 1st Sem</option>
-				<option value="5">3rd Year, 2nd Sem</option>
-				<option value="6">4th Year, 1st Sem</option>
-				<option value="7">4th Year, 2nd Sem</option>
-            </select><!-- to here -->
-            </div>
-            <?// CONTENT SELECTION FOR GRADES?>
-            <div id ="three-one">
-                    <div id ="threeone0" class = "hidden">
-                    <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsoa/first_year/first_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-           
-
-<?//boundary/////////////////////////////////////////////////////////////////////////////////////////////////////////////?>
-
-                        <div id ="threeone1" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsoa/first_year/second_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                                
-                            </form>
-                        </div>
-
-                        <?//boundary?>
-                        <div id ="threeone2" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsoa/second_year/first_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-                        
-                        <?//boundary?>
-                        <div id ="threeone3" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsoa/second_year/second_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-                        
-                        <?//boundary for subject?>
-                        <div id ="threeone4" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsoa/third_year/first_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-                        <?//boundary for subject?>
-                        <div id ="threeone5" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsoa/third_year/second_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-                        <?//boundary for subject?>
-                        <div id ="threeone7" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsoa/fourth_year/second_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-                        <?//boundary for subject?>
-                        <div id ="threeone6" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsoa/fourth_year/first_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-                                </DIV>
-            </center><!-- TO HERE -->
-    </div>
-
-
-
-<!-- asdsadjiowqdjasd boundaryboundaryboundaryboundaryboundaryboundaryboundaryboundaryboundaryboundaryboundaryboundaryboundary -->
-
-	<div id="npup5" class="hidden" style="margin-left:300px">
-      <center>
-        <h3>BSED-ENG</h3>
-      <!-- COPY FROM HERE -->    
-        <form name="form1" method="post" action="code.php"  style="height:fit-content;" class="sched-form">
-            <?// CONTENT SELECTION FOR GRADES?>
-            <div class="content-selection">
-            <select id="mySelect" onchange="threetwo.doSelect(this);">
-            <option value="0">1st Year, 1st Sem</option>
-				<option value="1">1st Year, 2nd Sem</option>
-				<option value="2">2nd Year, 1st Sem</option>
-				<option value="3">2nd Year, 2nd Sem</option>
-				<option value="4">3rd Year, 1st Sem</option>
-				<option value="5">3rd Year, 2nd Sem</option>
-				<option value="6">4th Year, 1st Sem</option>
-				<option value="7">4th Year, 2nd Sem</option>
-            </select><!-- to here -->
-            </div>
-            <?// CONTENT SELECTION FOR GRADES?>
-            <div id ="three-two">
-                    <div id ="threetwo0" class = "hidden">
-                    <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsed_e/first_year/first_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-           
-
-<?//boundary/////////////////////////////////////////////////////////////////////////////////////////////////////////////?>
-
-                        <div id ="threetwo1" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsed_e/first_year/second_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-                        <?//boundary?>
-                        <div id ="threetwo2" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsed_e/second_year/first_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-                        
-                        <?//boundary?>
-                        <div id ="threetwo3" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsed_e/second_year/second_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-                        
-                        <?//boundary for subject?>
-                        <div id ="threetwo4" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsed_e/third_year/first_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-                        <?//boundary for subject?>
-                        <div id ="threetwo5" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsed_e/third_year/second_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-                        <?//boundary for subject?>
-                        <div id ="threetwo6" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsed_e/fourth_year/first_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-                        <?//boundary for subject?>
-                        <div id ="threetwo7" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsed_e/fourth_year/second_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-            </center>
-        </div><!-- TO HERE -->
-    
-
-
-
-<!-- 4TH YEAR year 4th year 4yearsad asdsaddwqeqeasdsa qfwqd asdwqdq safsadqwe asd  -->
-	<div id="npup6" class="hidden" style="margin-left:300px">
-      <center>
-        <h3>BSED-SCI</h3>
-      <!-- COPY FROM HERE -->    
-        <form name="form1" method="post" action="code.php"  style="height:fit-content;" class="sched-form">
-            <?// CONTENT SELECTION FOR GRADES?>
-            <div class="content-selection">
-            <select id="mySelect" onchange="fourone.doSelect(this);">
-            <option value="0">1st Year, 1st Sem</option>
-				<option value="1">1st Year, 2nd Sem</option>
-				<option value="2">2nd Year, 1st Sem</option>
-				<option value="3">2nd Year, 2nd Sem</option>
-				<option value="4">3rd Year, 1st Sem</option>
-				<option value="5">3rd Year, 2nd Sem</option>
-				<option value="6">4th Year, 1st Sem</option>
-				<option value="7">4th Year, 2nd Sem</option>
-            </select><!-- to here -->
-            </div>
-            <?// CONTENT SELECTION FOR GRADES?>
-            <div id ="four-one">
-                    <div id ="fourone0" class = "hidden">
-                    <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsed_s/first_year/first_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-           
-
-<?//boundary/////////////////////////////////////////////////////////////////////////////////////////////////////////////?>
-
-                        <div id ="fourone1" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsed_s/first_year/second_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-                        <?//boundary?>
-                        <div id ="fourone2" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsed_s/second_year/first_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-                        
-                        <?//boundary?>
-                        <div id ="fourone3" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsed_s/second_year/second_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-                        
-                        <?//boundary for subject?>
-                        <div id ="fourone4" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsed_s/third_year/first_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-                        <?//boundary for subject?>
-                        <div id ="fourone5" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsed_s/third_year/second_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-                        <?//boundary for subject?>
-                        <div id ="fourone6" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsed_s/fourth_year/first_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-                        <?//boundary for subject?>
-                        <div id ="fourone6" class = "hidden">
-                        <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsed_s/fourth_year/second_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-            </center>
-        </div><!-- TO HERE -->
-
-	<div id="npup7" class="hidden" style="margin-left:300px">
-      <center>
-        <h3>BSED-MATH</h3>
-      <!-- COPY FROM HERE -->    
-        <form name="form1" method="post" action="code.php"  style="height:fit-content;" class="sched-form">
-            <?// CONTENT SELECTION FOR GRADES?>
-            <div class="content-selection">
-            <select id="mySelect" onchange="fourtwo.doSelect(this);">
-            <option value="0">1st Year, 1st Sem</option>
-				<option value="1">1st Year, 2nd Sem</option>
-				<option value="2">2nd Year, 1st Sem</option>
-				<option value="3">2nd Year, 2nd Sem</option>
-				<option value="4">3rd Year, 1st Sem</option>
-				<option value="5">3rd Year, 2nd Sem</option>
-				<option value="6">4th Year, 1st Sem</option>
-				<option value="7">4th Year, 2nd Sem</option>
-            </select><!-- to here -->
-            </div>
-            <?// CONTENT SELECTION FOR GRADES?>
-            <div id ="four-two">
-                    <div id ="fourtwo0" class = "hidden">
-                    <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsed_m/first_year/first_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-                        <div id ="fourtwo1" class = "hidden">
-                    <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsed_m/first_year/second_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-                        <div id ="fourtwo2" class = "hidden">
-                    <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsed_m/second_year/first_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-                <div id ="fourtwo3" class = "hidden">
-                    <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsed_m/second_year/second_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-                <div id ="fourtwo4" class = "hidden">
-                    <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsed_m/third_year/first_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-                <div id ="fourtwo5" class = "hidden">
-                    <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsed_m/third_year/second_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-                <div id ="fourtwo6" class = "hidden">
-                    <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsed_m/fourth_year/first_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-
-                <div id ="fourtwo7" class = "hidden">
-                    <table>
-                                    <tr> 
-                                        <th>Course Code</th>
-                                        <th>Descriptive Title</th>
-                                        <th>Units</th>
-                                        
-                                    </tr>
-                                    <?php
-                                    include('dbcon.php');
-                                    $ref_table = 'course_curriculum/bsed_m/fourth_year/second_sem';
-                                    $fetchdata = $database->getReference($ref_table)->getValue();
-									if ($fetchdata > 0) {
-										$i = 0;
-										foreach ($fetchdata as $key => $row) {
-											?>
-										<tr>	
-											<td> <?= $row['code']; ?> </td>
-                                            <td> <?= $row['descriptive_title']; ?> </td>
-                                            <td> <?= $row['units']; ?> </td>
-                                            
-										</tr>
-                                    <?php
-										}
-									}
-                                    else
-                                    {
-                                            ?>
-                                                <td colspan = "4"> No Record found </td> 
-                                            <?php
-                                    }
-                                    ?>
-                                </table>
-                            </form>
-                        </div>
-
-
-
-            </center>
-        </div><!-- TO HERE -->
-</div>
 
 
                 
