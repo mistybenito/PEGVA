@@ -692,7 +692,7 @@ elseif ($course == "Bachelor of Elementary Education")
     }
     
 
-    elseif ($course == "Bachelor of Secondary Education, Major in English") 
+    elseif ($course == "Bachelor of Secondary Education Major in English") 
     {
 
         $ref_table = 'User/' . $del_id;
@@ -828,7 +828,7 @@ elseif ($course == "Bachelor of Elementary Education")
         }
     }
 
-    elseif ($course == "Bachelor of Secondary Education, Major in Science") 
+    elseif ($course == "Bachelor of Secondary Education Major in Science") 
     {
 
         $ref_table = 'User/' . $del_id;
@@ -964,7 +964,7 @@ elseif ($course == "Bachelor of Elementary Education")
         }
     }
 
-    elseif ($course == "Bachelor of Secondary Education, Major in Math") 
+    elseif ($course == "Bachelor of Secondary Education Major in Mathematics") 
     {
 
         $ref_table = 'User/' . $del_id;

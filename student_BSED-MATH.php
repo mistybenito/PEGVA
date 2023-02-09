@@ -27,8 +27,13 @@
                     <th>Email</th>
                     <th>Course</th>
                     <th>Verification</th>
+                    <?php if(isset($_SESSION['verified_registrar'])) :?>
                     <th>Verify</th>
+                    <?php endif; ?>
                     <th>Profile</th>
+                    <?php if(isset($_SESSION['verified_registrar'])) :?>
+                    <th>Delete</th>
+                    <?php endif; ?>
                     
                 </tr>
             <?php
@@ -43,7 +48,7 @@
             ?>
             <tr>
                 <?php
-                    if ($row['Course'] == "Bachelor in Secondary Education, Major in Math")
+                    if ($row['Course'] == "Bachelor in Secondary Education Major in Mathematics")
                      {
                 ?>
                     <td> <?= $row['Student_number']; ?> </td>
@@ -51,12 +56,25 @@
                     <td> <?= $row['Email']; ?> </td>
                     <td> <?= $row['Course']; ?> </td>
                     <td> <?= $row['verify'];?></td>
+                    <?php if(isset($_SESSION['verified_registrar'])) :?>
                     <td>    
-                    <a href="verify_page.php?id=<?= $key;?>" class = "btn btn btn-primary" style="color:#0054c7"> Verify </a>
+                    <a href="verify_page.php?id=<?= $key; ?>" class = "btn btn btn-primary" style="color:#0054c7"> Verify </a>
                     </td>
+                    <?php endif; ?>
+
                     <td>    
-                    <a href="profile.php?id=<?= $key;?>" class = "btn btn btn-primary" style="color:#0054c7"> View </a>
+                    <a href="profile.php?id=<?= $key; ?>" class = "btn btn btn-primary" style="color:#0054c7"> View </a>
                     </td>
+
+
+                    <?php if(isset($_SESSION['verified_registrar'])) :?>
+                    <td>
+                    <form action="deletestudent.php" method = "POST">
+                        <input type="hidden" name = "Course" value = "<?=$course?>">
+                    <button type="submit" name="delete_btn" id = "delete_btn" value="<?=$key;?>"  class="btn btn-primary"> Delete </button>
+                    </form>
+                    </td>
+                    <?php endif; ?>
                 </tr>                
             <?php
                     }

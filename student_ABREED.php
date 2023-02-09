@@ -16,63 +16,83 @@
     <div id="student-list">
         <p class="course-student-list">ABREED Student List</p>
 
+
+
+
         <div class="input-group mb-3">
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
         </div>
 
             <table class="student-list-content" id = "myTable" style="width:100%;">
-                <tr>
+                <tr class="header">
                     <th>Student #</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Verification</th>
+                    <?php if(isset($_SESSION['verified_registrar'])) :?>
                     <th>Verify</th>
+                    <?php endif; ?>
                     <th>Profile</th>
+                    <?php if(isset($_SESSION['verified_registrar'])) :?>
+                    <th>Delete</th>
+                    <?php endif; ?>
                     
                 </tr>
             <?php
                 include('dbcon.php');
                 $ref_table = 'User';
                 $fetchdata = $database->getReference($ref_table)->getValue();
-                if($fetchdata > 0)
+                if ($fetchdata > 0) 
                 {
-                $i = 0;
-                foreach($fetchdata as $key => $row)
-                {
-            ?>
+                    $i = 0;
+                    foreach ($fetchdata as $key => $row) {
+                        ?>
             <tr>
                 <?php
-                    if ($row['Course'] == "Bachelor of Arts in Religious Education")
-                     {
-                ?>
+                
+                if ($row['Course'] == "Bachelor of Arts in Religious Education") {
+                    $course = $row['Course'];
+                    ?>
                     <td> <?= $row['Student_number']; ?> </td>
                     <td> <?= $row['Name']; ?> </td>
                     <td> <?= $row['Email']; ?> </td>
-                    <td> <?= $row['verify'];?></td>
+                    <td> <?= $row['verify']; ?></td>
+
+                    <?php if(isset($_SESSION['verified_registrar'])) :?>
                     <td>    
-                    <a href="verify_page.php?id=<?= $key;?>" class = "btn btn btn-primary" style="color:#0054c7"> Verify </a>
+                    <a href="verify_page.php?id=<?= $key; ?>" class = "btn btn btn-primary" style="color:#0054c7"> Verify </a>
                     </td>
+                    <?php endif; ?>
+
                     <td>    
-                    <a href="profile.php?id=<?= $key;?>" class = "btn btn btn-primary" style="color:#0054c7"> View </a>
+                    <a href="profile.php?id=<?= $key; ?>" class = "btn btn btn-primary" style="color:#0054c7"> View </a>
                     </td>
+
+
+                    <?php if(isset($_SESSION['verified_registrar'])) :?>
+                    <td>
+                    <form action="deletestudent.php" method = "POST">
+                        <input type="hidden" name = "Course" value = "<?=$course?>">
+                    <button type="submit" name="delete_btn" id = "delete_btn" value="<?=$key;?>"  class="btn btn-primary"> Delete </button>
+                    </form>
+                    </td>
+                    <?php endif; ?>
                 </tr>                
             <?php
+                }
                     }
-                }
-                }
-                else
-                {
-            ?>
+                } 
+                else {
+                    ?>
             <tr>
                 <td > No Record Found </td>
             </tr>
             <?php
                 }
             ?>
-         </tbody>
             </table>
             </div>
-
+ 
     </body>
     <script>
         function myFunction() {
@@ -98,3 +118,4 @@
 }
 </script>
 </html>
+

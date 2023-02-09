@@ -981,7 +981,7 @@ if (isset($_POST['yes_verify'])) {
                             }
                         }
                     }
-                    elseif ($year == "1st Year" && $sem == "1st Sem" && $course == "Bachelor of Secondary Education, Major in English") 
+                    elseif ($year == "1st Year" && $sem == "1st Sem" && $course == "Bachelor of Secondary Education Major in English") 
     {
     $reference = 'course_curriculum/bsed_e/first_year/first_sem';
     $fetch = $database->getReference($reference)->getValue();
@@ -1005,7 +1005,7 @@ if (isset($_POST['yes_verify'])) {
         }
     }
 
-    elseif ($year == "1st Year" && $sem == "2nd Sem" && $course == "Bachelor of Secondary Education, Major in English") 
+    elseif ($year == "1st Year" && $sem == "2nd Sem" && $course == "Bachelor of Secondary Education Major in English") 
     {
         $reference = 'course_curriculum/bsed_e/first_year/second_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -1029,7 +1029,7 @@ if (isset($_POST['yes_verify'])) {
             }
         }
 
-        elseif ($year == "2nd Year" && $sem == "1st Sem" && $course == "Bachelor of Secondary Education, Major in English") 
+        elseif ($year == "2nd Year" && $sem == "1st Sem" && $course == "Bachelor of Secondary Education Major in English") 
     {
         $reference = 'course_curriculum/bsed_e/second_year/first_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -1052,7 +1052,7 @@ if (isset($_POST['yes_verify'])) {
                 }
             }
         }
-        elseif ($year == "2nd Year" && $sem == "2nd Sem" && $course == "Bachelor of Secondary Education, Major in English") 
+        elseif ($year == "2nd Year" && $sem == "2nd Sem" && $course == "Bachelor of Secondary Education Major in English") 
     {
         $reference = 'course_curriculum/bsed_e/second_year/second_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -1076,7 +1076,7 @@ if (isset($_POST['yes_verify'])) {
             }
         }
 
-        elseif ($year == "3rd Year" && $sem == "1st Sem" && $course == "Bachelor of Secondary Education, Major in English") 
+        elseif ($year == "3rd Year" && $sem == "1st Sem" && $course == "Bachelor of Secondary Education Major in English") 
     {
         $reference = 'course_curriculum/bsed_e/third_year/first_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -1100,7 +1100,7 @@ if (isset($_POST['yes_verify'])) {
             }
         }
 
-        elseif ($year == "3rd Year" && $sem == "2nd Sem" && $course == "Bachelor of Secondary Education, Major in English") 
+        elseif ($year == "3rd Year" && $sem == "2nd Sem" && $course == "Bachelor of Secondary Education Major in English") 
         {
             $reference = 'course_curriculum/bsed_e/third_year/second_sem';
             $fetch = $database->getReference($reference)->getValue();
@@ -1124,7 +1124,7 @@ if (isset($_POST['yes_verify'])) {
                 }
             }
 
-            elseif ($year == "4th Year" && $sem == "1st Sem" && $course == "Bachelor of Secondary Education, Major in English") 
+            elseif ($year == "4th Year" && $sem == "1st Sem" && $course == "Bachelor of Secondary Education Major in English") 
             {
                 $reference = 'course_curriculum/bsed_e/fourth_year/first_sem';
                 $fetch = $database->getReference($reference)->getValue();
@@ -1148,7 +1148,7 @@ if (isset($_POST['yes_verify'])) {
                     }
                 }
 
-                elseif ($year == "4th Year" && $sem == "2nd Sem" && $course == "Bachelor of Secondary Education, Major in English") 
+                elseif ($year == "4th Year" && $sem == "2nd Sem" && $course == "Bachelor of Secondary Education Major in English") 
                 {
                     $reference = 'course_curriculum/bsed_e/fourth_year/second_sem';
                     $fetch = $database->getReference($reference)->getValue();
@@ -1172,7 +1172,7 @@ if (isset($_POST['yes_verify'])) {
                         }
                     }
 
-                    elseif ($year == "1st Year" && $sem == "1st Sem" && $course == "Bachelor of Secondary Education, Major in Science") 
+    elseif ($year == "1st Year" && $sem == "1st Sem" && $course == "Bachelor of Secondary Education Major in Science") 
     {
     $reference = 'course_curriculum/bsed_s/first_year/first_sem';
     $fetch = $database->getReference($reference)->getValue();
@@ -1196,7 +1196,7 @@ if (isset($_POST['yes_verify'])) {
         }
     }
 
-    elseif ($year == "1st Year" && $sem == "2nd Sem" && $course == "Bachelor of Secondary Education, Major in Science") 
+    elseif ($year == "1st Year" && $sem == "2nd Sem" && $course == "Bachelor of Secondary Education Major in Science") 
     {
         $reference = 'course_curriculum/bsed_s/first_year/second_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -1220,7 +1220,7 @@ if (isset($_POST['yes_verify'])) {
             }
         }
 
-        elseif ($year == "2nd Year" && $sem == "1st Sem" && $course == "Bachelor of Secondary Education, Major in Science") 
+        elseif ($year == "2nd Year" && $sem == "1st Sem" && $course == "Bachelor of Secondary Education Major in Science") 
     {
         $reference = 'course_curriculum/bsed_s/second_year/first_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -1243,7 +1243,7 @@ if (isset($_POST['yes_verify'])) {
                 }
             }
         }
-        elseif ($year == "2nd Year" && $sem == "2nd Sem" && $course == "Bachelor of Secondary Education, Major in Science") 
+        elseif ($year == "2nd Year" && $sem == "2nd Sem" && $course == "Bachelor of Secondary Education Major in Science") 
     {
         $reference = 'course_curriculum/bsed_s/second_year/second_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -1267,7 +1267,7 @@ if (isset($_POST['yes_verify'])) {
             }
         }
 
-        elseif ($year == "3rd Year" && $sem == "1st Sem" && $course == "Bachelor of Secondary Education, Major in Science") 
+        elseif ($year == "3rd Year" && $sem == "1st Sem" && $course == "Bachelor of Secondary Education Major in Science") 
     {
         $reference = 'course_curriculum/bsed_s/third_year/first_sem';
         $fetch = $database->getReference($reference)->getValue();
@@ -1291,7 +1291,7 @@ if (isset($_POST['yes_verify'])) {
             }
         }
 
-        elseif ($year == "3rd Year" && $sem == "2nd Sem" && $course == "Bachelor of Secondary Education, Major in Science") 
+        elseif ($year == "3rd Year" && $sem == "2nd Sem" && $course == "Bachelor of Secondary Education Major in Science") 
         {
             $reference = 'course_curriculum/bsed_s/third_year/second_sem';
             $fetch = $database->getReference($reference)->getValue();
@@ -1315,7 +1315,7 @@ if (isset($_POST['yes_verify'])) {
                 }
             }
 
-            elseif ($year == "4th Year" && $sem == "1st Sem" && $course == "Bachelor of Secondary Education, Major in Science") 
+            elseif ($year == "4th Year" && $sem == "1st Sem" && $course == "Bachelor of Secondary Education Major in Science") 
             {
                 $reference = 'course_curriculum/bsed_s/fourth_year/first_sem';
                 $fetch = $database->getReference($reference)->getValue();
@@ -1339,7 +1339,7 @@ if (isset($_POST['yes_verify'])) {
                     }
                 }
 
-                elseif ($year == "4th Year" && $sem == "2nd Sem" && $course == "Bachelor of Secondary Education, Major in Science") 
+                elseif ($year == "4th Year" && $sem == "2nd Sem" && $course == "Bachelor of Secondary Education Major in Science") 
                 {
                     $reference = 'course_curriculum/bsed_s/fourth_year/second_sem';
                     $fetch = $database->getReference($reference)->getValue();
@@ -1361,8 +1361,214 @@ if (isset($_POST['yes_verify'])) {
                                 }
                             }
                         }
+                }
+
+                elseif ($year == "1st Year" && $sem == "1st Sem" && $course == "Bachelor of Secondary Education Major in Mathematics") 
+                {
+                $reference = 'course_curriculum/bsed_m/first_year/first_sem';
+                $fetch = $database->getReference($reference)->getValue();
+                if ($fetch > 0) {
+                    $i = 0;
+                    foreach ($fetch as $key_child => $row) {
+                        //1y1s 1y1s
+                        $subject = $row['code'];
+                        $ref_table = 'User/' . $key;
+                        $oneone = 'Subjects/BSED_M/first_year/first_sem/' . $subject . '/' . $key;
+                        $updatequery_result = $database->getReference($ref_table)->update($updateData);
+                        $addsub = $database->getReference($oneone)->update($studentData);
+                            if ($updatequery_result) {
+                                $_SESSION['status'] = "Contact Verified Successfully";
+                                header('Location: student_BSED_M.php');
+                            } else {
+                                $_SESSION['status'] = "Contact Not Verified";
+                                header('Location: student_BSED_M.php');
+                            }
+                        }
                     }
                 }
+            
+                elseif ($year == "1st Year" && $sem == "2nd Sem" && $course == "Bachelor of Secondary Education Major in Mathematics") 
+                {
+                    $reference = 'course_curriculum/bsed_m/first_year/second_sem';
+                    $fetch = $database->getReference($reference)->getValue();
+                    if ($fetch > 0) {
+                        $i = 0;
+                        foreach ($fetch as $key_child => $row) {
+                            //1y1s 1y1s
+                            $subject = $row['code'];
+                            $ref_table = 'User/' . $key;
+                            $oneone = 'Subjects/BSED_M/first_year/second_sem/' . $subject . '/' . $key;
+                            $updatequery_result = $database->getReference($ref_table)->update($updateData);
+                            $addsub = $database->getReference($oneone)->update($studentData);
+                                if ($updatequery_result) {
+                                    $_SESSION['status'] = "Contact Verified Successfully";
+                                    header('Location: student_BSED_M.php');
+                                } else {
+                                    $_SESSION['status'] = "Contact Not Verified";
+                                    header('Location: student_BSED_M.php');
+                                }
+                            }
+                        }
+                    }
+            
+                    elseif ($year == "2nd Year" && $sem == "1st Sem" && $course == "Bachelor of Secondary Education Major in Mathematics") 
+                {
+                    $reference = 'course_curriculum/bsed_m/second_year/first_sem';
+                    $fetch = $database->getReference($reference)->getValue();
+                    if ($fetch > 0) {
+                        $i = 0;
+                        foreach ($fetch as $key_child => $row) {
+                            //1y1s 1y1s
+                            $subject = $row['code'];
+                            $ref_table = 'User/' . $key;
+                            $oneone = 'Subjects/BSED_M/second_year/first_sem/' . $subject . '/' . $key;
+                            $updatequery_result = $database->getReference($ref_table)->update($updateData);
+                            $addsub = $database->getReference($oneone)->update($studentData);
+                                if ($updatequery_result) {
+                                    $_SESSION['status'] = "Contact Verified Successfully";
+                                    header('Location: student_BSED_M.php');
+                                } else {
+                                    $_SESSION['status'] = "Contact Not Verified";
+                                    header('Location: student_BSED_M.php');
+                                }
+                            }
+                        }
+                    }
+                    elseif ($year == "2nd Year" && $sem == "2nd Sem" && $course == "Bachelor of Secondary Education Major in Mathematics") 
+                {
+                    $reference = 'course_curriculum/bsed_m/second_year/second_sem';
+                    $fetch = $database->getReference($reference)->getValue();
+                    if ($fetch > 0) {
+                        $i = 0;
+                        foreach ($fetch as $key_child => $row) {
+                            //1y1s 1y1s
+                            $subject = $row['code'];
+                            $ref_table = 'User/' . $key;
+                            $oneone = 'Subjects/BSED_M/second_year/second_sem/' . $subject . '/' . $key;
+                            $updatequery_result = $database->getReference($ref_table)->update($updateData);
+                            $addsub = $database->getReference($oneone)->update($studentData);
+                                if ($updatequery_result) {
+                                    $_SESSION['status'] = "Contact Verified Successfully";
+                                    header('Location: student_BSED_M.php');
+                                } else {
+                                    $_SESSION['status'] = "Contact Not Verified";
+                                    header('Location: student_BSED_M.php');
+                                }
+                            }
+                        }
+                    }
+            
+                    elseif ($year == "3rd Year" && $sem == "1st Sem" && $course == "Bachelor of Secondary Education Major in Mathematics") 
+                {
+                    $reference = 'course_curriculum/bsed_m/third_year/first_sem';
+                    $fetch = $database->getReference($reference)->getValue();
+                    if ($fetch > 0) {
+                        $i = 0;
+                        foreach ($fetch as $key_child => $row) {
+                            //1y1s 1y1s
+                            $subject = $row['code'];
+                            $ref_table = 'User/' . $key;
+                            $oneone = 'Subjects/BSED_M/third_year/first_sem/' . $subject . '/' . $key;
+                            $updatequery_result = $database->getReference($ref_table)->update($updateData);
+                            $addsub = $database->getReference($oneone)->update($studentData);
+                                if ($updatequery_result) {
+                                    $_SESSION['status'] = "Contact Verified Successfully";
+                                    header('Location: student_BSED_M.php');
+                                } else {
+                                    $_SESSION['status'] = "Contact Not Verified";
+                                    header('Location: student_BSED_M.php');
+                                }
+                            }
+                        }
+                    }
+            
+                    elseif ($year == "3rd Year" && $sem == "2nd Sem" && $course == "Bachelor of Secondary Education Major in Mathematics") 
+                    {
+                        $reference = 'course_curriculum/bsed_m/third_year/second_sem';
+                        $fetch = $database->getReference($reference)->getValue();
+                        if ($fetch > 0) {
+                            $i = 0;
+                            foreach ($fetch as $key_child => $row) {
+                                //1y1s 1y1s
+                                $subject = $row['code'];
+                                $ref_table = 'User/' . $key;
+                                $oneone = 'Subjects/BSED_M/third_year/second_sem/' . $subject . '/' . $key;
+                                $updatequery_result = $database->getReference($ref_table)->update($updateData);
+                                $addsub = $database->getReference($oneone)->update($studentData);
+                                    if ($updatequery_result) {
+                                        $_SESSION['status'] = "Contact Verified Successfully";
+                                        header('Location: student_BSED_M.php');
+                                    } else {
+                                        $_SESSION['status'] = "Contact Not Verified";
+                                        header('Location: student_BSED_M.php');
+                                    }
+                                }
+                            }
+                        }
+            
+                        elseif ($year == "4th Year" && $sem == "1st Sem" && $course == "Bachelor of Secondary Education Major in Mathematics") 
+                        {
+                            $reference = 'course_curriculum/bsed_m/fourth_year/first_sem';
+                            $fetch = $database->getReference($reference)->getValue();
+                            if ($fetch > 0) {
+                                $i = 0;
+                                foreach ($fetch as $key_child => $row) {
+                                    //1y1s 1y1s
+                                    $subject = $row['code'];
+                                    $ref_table = 'User/' . $key;
+                                    $oneone = 'Subjects/BSED_M/fourth_year/first_sem/' . $subject . '/' . $key;
+                                    $updatequery_result = $database->getReference($ref_table)->update($updateData);
+                                    $addsub = $database->getReference($oneone)->update($studentData);
+                                        if ($updatequery_result) {
+                                            $_SESSION['status'] = "Contact Verified Successfully";
+                                            header('Location: student_BSED_M.php');
+                                        } else {
+                                            $_SESSION['status'] = "Contact Not Verified";
+                                            header('Location: student_BSED_M.php');
+                                        }
+                                    }
+                                }
+                            }
+            
+                            elseif ($year == "4th Year" && $sem == "2nd Sem" && $course == "Bachelor of Secondary Education Major in Mathematics") 
+                            {
+                                $reference = 'course_curriculum/bsed_m/fourth_year/second_sem';
+                                $fetch = $database->getReference($reference)->getValue();
+                                if ($fetch > 0) {
+                                    $i = 0;
+                                    foreach ($fetch as $key_child => $row) {
+                                        //1y1s 1y1s
+                                        $subject = $row['code'];
+                                        $ref_table = 'User/' . $key;
+                                        $oneone = 'Subjects/BSED_M/fourth_year/second_sem/' . $subject . '/' . $key;
+                                        $updatequery_result = $database->getReference($ref_table)->update($updateData);
+                                        $addsub = $database->getReference($oneone)->update($studentData);
+                                            if ($updatequery_result) {
+                                                $_SESSION['status'] = "Contact Verified Successfully";
+                                                header('Location: student_BSED_M.php');
+                                            } else {
+                                                $_SESSION['status'] = "Contact Not Verified";
+                                                header('Location: student_BSED_M.php');
+                                            }
+                                        }
+                                    }
+                                }
+
+
+
+                                
+                            }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

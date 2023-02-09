@@ -105,7 +105,7 @@ if ($getdata > 0) {
                     header('Location: ../viewsub_BSBA.php');
                 }
             }
-            elseif($course == "Bachelor of Secondary Education, Major in English")
+            elseif($course == "Bachelor of Secondary Education Major in English")
             {
                 if ($postRef_result) 
                 {
@@ -118,7 +118,7 @@ if ($getdata > 0) {
                     header('Location: ../viewsub_BSED_ENGphp');
                 }
             }
-            elseif($course == "Bachelor of Secondary Education, Major in Science")
+            elseif($course == "Bachelor of Secondary Education Major in Science")
             {
                 if ($postRef_result) 
                 {
@@ -131,7 +131,7 @@ if ($getdata > 0) {
                     header('Location: ../viewsub_BSED_SCI.php');
                 }
             }
-            elseif($course == "Bachelor of Secondary Education, Major in Math")
+            elseif($course == "Bachelor of Secondary Education Major in Mathematics")
             {
                 if ($postRef_result) 
                 {
