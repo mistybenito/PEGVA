@@ -53,7 +53,7 @@
 		</tr>
 		<tr>
 			<td>Birthdate:</td>
-			<td><input type="date" name="Birthday" value = "<?=$getdata['Birthday'];?>" class="form-control"></td>
+			<td><input type="text" name="Birthday" value = "<?=$getdata['Birthday'];?>" class="form-control"></td>
 		</tr>
 		<tr> 
 			<td>Contact Number:</td>

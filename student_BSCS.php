@@ -28,7 +28,6 @@
                     <th>Student #</th>
                     <th>Name</th>
                     <th>Email</th>
-                    <th>Course</th>
                     <th>Verification</th>
                     <?php if(isset($_SESSION['verified_registrar'])) :?>
                     <th>Verify</th>
@@ -57,7 +56,6 @@
                     <td> <?= $row['Student_number']; ?> </td>
                     <td> <?= $row['Name']; ?> </td>
                     <td> <?= $row['Email']; ?> </td>
-                    <td> <?= $row['Course']; ?> </td>
                     <td> <?= $row['verify']; ?></td>
 
                     <?php if(isset($_SESSION['verified_registrar'])) :?>

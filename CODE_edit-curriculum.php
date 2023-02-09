@@ -19,133 +19,18 @@ if(isset($_POST['edit_curric']))
         'units'=> $unit,
     ];
     $ref_table = 'course_curriculum/'.$key;
-
-
-    if($course == "BSCS")
-    {
-        $updatequery_result = $database->getReference($ref_table)->update($updateData);
+    $updatequery_result = $database->getReference($ref_table)->update($updateData);
 
         if($updatequery_result)
         {
             $_SESSION['status'] = "Contact Updated Successfully";
-            header('Location: BSCS.php');
+            header('Location: view_curriculum.php');
         }
         else
         {
             $_SESSION['status'] = "Contact Not Updated Successfully";
-            header('Location: BSCS.php');
+            header('Location: view_curriculum.php');
         }
-    }
-
-    elseif($course == "BSED_E")
-    {
-        $updatequery_result = $database->getReference($ref_table)->update($updateData);
-        if($updatequery_result)
-        {
-            $_SESSION['status'] = "Contact Updated Successfully";
-            header('Location: BSED-ENG.php');
-        }
-        else
-        {
-            $_SESSION['status'] = "Contact Not Updated Successfully";
-            header('Location: BSED-ENG.php');
-        }
-    }
-
-    elseif($course == "BSED_S")
-    {
-        $updatequery_result = $database->getReference($ref_table)->update($updateData);
-        if($updatequery_result)
-        {
-            $_SESSION['status'] = "Contact Updated Successfully";
-            header('Location: BSED-SCI.php');
-        }
-        else
-        {
-            $_SESSION['status'] = "Contact Not Updated Successfully";
-            header('Location: BSED-SCI.php');
-        }
-    }
-
-    elseif($course == "BSED_M")
-    {
-        $updatequery_result = $database->getReference($ref_table)->update($updateData);
-        if($updatequery_result)
-        {
-            $_SESSION['status'] = "Contact Updated Successfully";
-            header('Location: BSED-MATH.php');
-        }
-        else
-        {
-            $_SESSION['status'] = "Contact Not Updated Successfully";
-            header('Location: BSED-MATH.php');
-
-            
-        }
-    }
-
-    elseif($course == "ABREED")
-    {
-        $updatequery_result = $database->getReference($ref_table)->update($updateData);
-        if($updatequery_result)
-        {
-            $_SESSION['status'] = "Contact Updated Successfully";
-            header('Location: ABREED.php');
-        }
-        else
-        {
-            $_SESSION['status'] = "Contact Not Updated Successfully";
-            header('Location: ABREED.php');
-        }
-    }
-
-
-    elseif($course == "BEED")
-    {
-        $updatequery_result = $database->getReference($ref_table)->update($updateData);
-        if($updatequery_result)
-        {
-            $_SESSION['status'] = "Contact Updated Successfully";
-            header('Location: BEED.php');
-        }
-        else
-        {
-            $_SESSION['status'] = "Contact Not Updated Successfully";
-            header('Location: BEED.php');
-        }
-    }
-
-    elseif($course == "BSOA")
-    {
-        $updatequery_result = $database->getReference($ref_table)->update($updateData);
-        if($updatequery_result)
-        {
-            $_SESSION['status'] = "Contact Updated Successfully";
-            header('Location: BSOA.php');
-        }
-        else
-        {
-            $_SESSION['status'] = "Contact Not Updated Successfully";
-            header('Location: BSOA.php');
-        }
-    }
-
-    elseif($course == "BSBA")
-    {
-        $updatequery_result = $database->getReference($ref_table)->update($updateData);
-        if($updatequery_result)
-        {
-            $_SESSION['status'] = "Contact Updated Successfully";
-            header('Location: BSBA.php');
-        }
-        else
-        {
-            $_SESSION['status'] = "Contact Not Updated Successfully";
-            header('Location: BSBA.php');
-        }
-    }
-
-
 
 
 

@@ -11,7 +11,7 @@
 
 </div>
 <div class="sidenav">
-<p class="title"><img src="images/logo.png" alt="Admin" class="avatar">Cainta Catholic College</p> 
+<p class="title"><img src="../images/logo.png" alt="Admin" class="avatar">Cainta Catholic College</p> 
 
 
   <button class="dropdown-btn">Student List 

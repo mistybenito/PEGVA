@@ -25,7 +25,6 @@
                     <th>Student #</th>
                     <th>Name</th>
                     <th>Email</th>
-                    <th>Course</th>
                     <th>Verification</th>
                     <th>Verify</th>
                     <th>Profile</th>
@@ -49,7 +48,6 @@
                     <td> <?= $row['Student_number']; ?> </td>
                     <td> <?= $row['Name']; ?> </td>
                     <td> <?= $row['Email']; ?> </td>
-                    <td> <?= $row['Course']; ?> </td>
                     <td> <?= $row['verify'];?></td>
                     <td>    
                     <a href="verify_page.php?id=<?= $key;?>" class = "btn btn btn-primary" style="color:#0054c7"> Verify </a>
