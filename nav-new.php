@@ -55,6 +55,15 @@
 
 <a href="view_sched.php">Schedule</a>
 <a href="view_curriculum.php">Curriculum</a>
+<td><?php
+
+if(isset($_SESSION['name']))
+{
+  echo "Logged in as:";
+  echo $_SESSION['name'];
+}
+?>
+</td>
 
 <button class="dropdown-btn">Pre-Enrollment
     <i class="fa fa-caret-down"></i>

@@ -35,6 +35,7 @@ if (isset($_POST['register_btn'])) {
         if ($secret == $registrar) 
         {
             $createdUser = $auth->createUser($userProperties);
+            $link = $auth->getEmailVerificationLink($email);
             if ($createdUser) 
             {
                 $_SESSION['status'] = "User created successfully.";
@@ -51,6 +52,7 @@ if (isset($_POST['register_btn'])) {
         elseif($secret == $chairperson)
         {
             $createdUser = $auth->createUser($userProperties);
+            $link = $auth->getEmailVerificationLink($email);
 
             if ($createdUser) 
             {
@@ -69,6 +71,7 @@ if (isset($_POST['register_btn'])) {
         elseif($secret == $teacher)
         {
             $createdUser = $auth->createUser($userProperties);
+            $link = $auth->getEmailVerificationLink($email);
 
             if ($createdUser) 
             {

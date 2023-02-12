@@ -65,6 +65,7 @@ if(isset($_POST['login_btn']))
                 $_SESSION['verified_chairman'] = true;
                 $_SESSION['verified_ch-bscs'] = true;
                 $_SESSION['verified_user_id'] = $uid;
+                 $_SESSION['name'] = $user->displayName;;
                 $_SESSION['idTokenString'] = $idTokenString;
                 $_SESSION['status'] = "Logged in successfully as BSCS Chairman";
                 header('Location: registrar.php');
@@ -78,6 +79,7 @@ if(isset($_POST['login_btn']))
                     $_SESSION['verified_chairman'] = true;
                     $_SESSION['verified_ch-beed'] = true;
                     $_SESSION['verified_user_id'] = $uid;
+                     $_SESSION['name'] = $user->displayName;
                     $_SESSION['idTokenString'] = $idTokenString;
                     $_SESSION['status'] = "Logged in successfully as BEED Chairman";
                     header('Location: registrar.php');
@@ -90,6 +92,7 @@ if(isset($_POST['login_btn']))
                     $_SESSION['verified_chairman'] = true;
                     $_SESSION['verified_ch-abreed'] = true;
                     $_SESSION['verified_user_id'] = $uid;
+                     $_SESSION['name'] = $user->displayName;
                     $_SESSION['idTokenString'] = $idTokenString;
                     $_SESSION['status'] = "Logged in successfully as ABREED Chairman";
                     header('Location: registrar.php');
@@ -102,6 +105,7 @@ if(isset($_POST['login_btn']))
                     $_SESSION['has_role'] == true;
                     $_SESSION['verified_ch-bsoa'] = true;
                     $_SESSION['verified_user_id'] = $uid;
+                     $_SESSION['name'] = $user->displayName;
                     $_SESSION['idTokenString'] = $idTokenString;
                     $_SESSION['status'] = "Logged in successfully as BSOA Chairman";
                     header('Location: registrar.php');
@@ -114,6 +118,7 @@ if(isset($_POST['login_btn']))
                     $_SESSION['has_role'] == true;
                     $_SESSION['verified_ch-bsba'] = true;
                     $_SESSION['verified_user_id'] = $uid;
+                     $_SESSION['name'] = $user->displayName;
                     $_SESSION['idTokenString'] = $idTokenString;
                     $_SESSION['status'] = "Logged in successfully as BSBA Chairman";
                     header('Location: registrar.php');
@@ -126,6 +131,7 @@ if(isset($_POST['login_btn']))
                     $_SESSION['has_role'] == true;
                     $_SESSION['verified_ch-ed_eng'] = true;
                     $_SESSION['verified_user_id'] = $uid;
+                     $_SESSION['name'] = $user->displayName;
                     $_SESSION['idTokenString'] = $idTokenString;
                     $_SESSION['status'] = "Logged in successfully as BSED-ENG Chairman";
                     header('Location: registrar.php');
@@ -139,6 +145,7 @@ if(isset($_POST['login_btn']))
                     $_SESSION['has_role'] == true;
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['idTokenString'] = $idTokenString;
+                     $_SESSION['name'] = $user->displayName;
                     $_SESSION['status'] = "Logged in successfully as BSED-SCI Chairman";
                     header('Location: registrar.php');
                     exit();
@@ -152,6 +159,7 @@ if(isset($_POST['login_btn']))
                     $_SESSION['verified_ch-ed_math'] = true;
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['idTokenString'] = $idTokenString;
+                     $_SESSION['name'] = $user->displayName;
                     $_SESSION['status'] = "Logged in successfully as BSED-MATH Chairman";
                     header('Location: registrar.php');
                     exit();
@@ -166,6 +174,7 @@ if(isset($_POST['login_btn']))
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['has_role'] == true;
                     $_SESSION['idTokenString'] = $idTokenString;
+                     $_SESSION['name'] = $user->displayName;
                     $_SESSION['status'] = "Logged in successfully as BSCS Teacher";
                     header('Location: registrar.php');
                     exit();
@@ -177,6 +186,7 @@ if(isset($_POST['login_btn']))
                     $_SESSION['has_role'] == true;
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['idTokenString'] = $idTokenString;
+                     $_SESSION['name'] = $user->displayName;
                     $_SESSION['status'] = "Logged in successfully as ABREED Teacher";
                     header('Location: registrar.php');
                     exit();
@@ -188,6 +198,7 @@ if(isset($_POST['login_btn']))
                     $_SESSION['has_role'] == true;
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['idTokenString'] = $idTokenString;
+                     $_SESSION['name'] = $user->displayName;
                     $_SESSION['status'] = "Logged in successfully as BEED Teacher";
                     header('Location: registrar.php');
                     exit();
@@ -199,6 +210,7 @@ if(isset($_POST['login_btn']))
                     $_SESSION['has_role'] == true;
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['idTokenString'] = $idTokenString;
+                     $_SESSION['name'] = $user->displayName;
                     $_SESSION['status'] = "Logged in successfully as BSOA Teacher";
                     header('Location: registrar.php');
                     exit();
@@ -210,6 +222,7 @@ if(isset($_POST['login_btn']))
                     $_SESSION['has_role'] == true;
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['idTokenString'] = $idTokenString;
+                     $_SESSION['name'] = $user->displayName;
                     $_SESSION['status'] = "Logged in successfully as BSBA Teacher";
                     header('Location: registrar.php');
                     exit();
@@ -221,6 +234,7 @@ if(isset($_POST['login_btn']))
                     $_SESSION['has_role'] == true;
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['idTokenString'] = $idTokenString;
+                     $_SESSION['name'] = $user->displayName;
                     $_SESSION['status'] = "Logged in successfully as BSED-ENG Teacher";
                     header('Location: registrar.php');
                     exit();
@@ -232,6 +246,7 @@ if(isset($_POST['login_btn']))
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['has_role'] == true;
                     $_SESSION['idTokenString'] = $idTokenString;
+                     $_SESSION['name'] = $user->displayName;
                     $_SESSION['status'] = "Logged in successfully as BSED-SCI Teacher";
                     header('Location: registrar.php');
                     exit();
@@ -243,6 +258,7 @@ if(isset($_POST['login_btn']))
                     $_SESSION['has_role'] == true;
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['idTokenString'] = $idTokenString;
+                     $_SESSION['name'] = $user->displayName;
                     $_SESSION['status'] = "Logged in successfully as BSED-MATH Teacher";
                     header('Location: registrar.php');
                     exit();
@@ -272,6 +288,9 @@ if(isset($_POST['login_btn']))
                     $_SESSION['verified_user_id'] = $uid;
                     $_SESSION['idTokenString'] = $idTokenString;
                     $_SESSION['status'] = "Logged in successfully as Registrar.";
+                     $_SESSION['name'] = $user->displayName;
+
+;
                     header('Location: registrar.php');
                     exit();
 
