@@ -14,7 +14,7 @@
     <body>
     <center>
         <div>
-            <img src="images/pegva.png" class="pegva-logo">
+            <img src="images/pregva.png" class="pegva-logo">
         </div>
     </center>
 </body> 

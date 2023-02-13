@@ -18,7 +18,20 @@
 <p class="title">
   <img src="images/logo.png" alt="Admin" class="avatar">
     <a href="registrar.php">Cainta Catholic College</a></p> 
-
+<hr>
+    <div id="admin">
+  <td>
+    <?php
+      if(isset($_SESSION['name']))
+      {
+        echo "Logged in as: ";
+        echo $_SESSION['name'];
+      }
+    ?>
+  </td>
+</div>
+<hr>
+<br>
 <?php if(isset($_SESSION['verified_chairman'])):?>
   <button class="dropdown-btn">Student List 
     <i class="fa fa-caret-down"></i>
@@ -55,15 +68,6 @@
 
 <a href="view_sched.php">Schedule</a>
 <a href="view_curriculum.php">Curriculum</a>
-<td><?php
-
-if(isset($_SESSION['name']))
-{
-  echo "Logged in as:";
-  echo $_SESSION['name'];
-}
-?>
-</td>
 
 <button class="dropdown-btn">Pre-Enrollment
     <i class="fa fa-caret-down"></i>
@@ -300,14 +304,19 @@ elseif(isset($_POST['close']))
 
 
   </div>
+  
   <div id="logoutbtn">
     <a href="logout.php" style="color:#a70000;">Logout</a>
   </div>
+
+
+
+
   <p id="footer">All content copyright © 2022, PEGVA.</p>
 </div>
 
 <div class="main">
-  
+
 </div>
 
 <script>
