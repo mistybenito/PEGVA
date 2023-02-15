@@ -35,6 +35,17 @@ if ($getdata > 0) {
             $ref_table2 = 'User/' . $key_child . '/grades/' . $where;
             $postRef_result = $database->getReference($ref_table)->update($postStatus);
             $postRef_result = $database->getReference($ref_table2)->update($postGrade);
+
+            if ($postRef_result) 
+                {
+                    $_SESSION['status'] = "Grade Added Successfully";
+                    header('Location: ../ADD_GRADE_TEST.php');
+                } 
+                else 
+                {
+                    $_SESSION['status'] = "Grade Not Added Successfully";
+                    header('Location: ../ADD_GRADE_TEST.php');
+                }
         }
     }
 
