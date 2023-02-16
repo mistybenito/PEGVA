@@ -129,6 +129,12 @@ p.title
   color: white;
   padding: 6px 8px 6px 16px;
 }
+
+#role
+{
+  color: white;
+  padding: 6px 8px 6px 16px;
+}
 .notif
 {
   margin: 5px;

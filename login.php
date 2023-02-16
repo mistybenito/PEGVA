@@ -49,7 +49,6 @@ include_once("dbcon.php");
             <div style="padding: 10px; text-align: center;">
                 <input type="submit" name = "login_btn" value="Login" class="login_btn">
                 <br><br>
-                <a href="#" class="forgot">Forgot password?</a>
                 <br>
                 <a href="register.php" class="register">Register</a>
             </div>     

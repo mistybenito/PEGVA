@@ -1,9 +1,7 @@
-<?php
-    include("nav-new.php");
-?>
+
 
 <head>
-    <title>Edit</title>
+    <title>Set Role</title>
 <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet" type="text/css">
@@ -74,11 +72,11 @@
                               
                                     <select name="role_as" id="" required>
                                         <option value="">Select Roles</option>
-                                        <?php if($role == "registrar") :?>
+                                        
                                         <option value="registrar">Registrar</option>
-                                        <?php endif; ?>       
+                                              
 
-                                        <?php if($role == "chairman") :?>
+                                        
                                         <option value="">--Course Chairman--</option>
                                         <option value="ch-bscs">BSCS Chairman</option>
                                         <option value="ch-abreed">ABREED Chairman</option>
@@ -88,7 +86,7 @@
                                         <option value="ch-ed_eng">BSED-ENG Chairman</option>
                                         <option value="ch-ed_sci">BSED-SCI Chairman</option>
                                         <option value="ch-ed_math">BSED-MATH Chairman</option>
-                                        <?php endif; ?>
+                                        
 
                                         <option value="">--Teacher--</option>
                                         <option value="bscs">BSCS Teacher</option>

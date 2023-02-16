@@ -135,7 +135,7 @@
                                                 elseif ($row['grade01'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -220,7 +220,7 @@
                                                 elseif ($row['grade02'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -304,7 +304,7 @@
                                                 elseif ($row['grade03'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -386,7 +386,7 @@
                                                 elseif ($row['grade04'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -467,7 +467,7 @@
                                                 elseif ($row['grade05'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -548,7 +548,7 @@
                                                 elseif ($row['grade06'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -630,7 +630,7 @@
                                                 elseif ($row['grade07'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -711,7 +711,7 @@
                                                 elseif ($row['grade08'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -792,7 +792,7 @@
                                                 elseif ($row['grade09'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -874,7 +874,7 @@
                                                 elseif ($row['grade10'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -1062,7 +1062,7 @@
                                                 elseif ($row['grade01'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -1146,7 +1146,7 @@
                                                 elseif ($row['grade02'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -1230,7 +1230,7 @@
                                                 elseif ($row['grade03'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -1313,7 +1313,7 @@
                                                 elseif ($row['grade04'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -1395,7 +1395,7 @@
                                                 elseif ($row['grade05'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -1477,7 +1477,7 @@
                                                 elseif ($row['grade06'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -1559,7 +1559,7 @@
                                                 elseif ($row['grade07'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -1641,7 +1641,7 @@
                                                 elseif ($row['grade08'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -1723,7 +1723,7 @@
                                                 elseif ($row['grade09'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -1806,7 +1806,7 @@
                                                 elseif ($row['grade10'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -1966,7 +1966,7 @@
                                                 elseif ($row['grade01'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -2050,7 +2050,7 @@
                                                 elseif ($row['grade02'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -2134,7 +2134,7 @@
                                                 elseif ($row['grade03'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -2217,7 +2217,7 @@
                                                 elseif ($row['grade04'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -2299,7 +2299,7 @@
                                                 elseif ($row['grade05'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -2381,7 +2381,7 @@
                                                 elseif ($row['grade06'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -2463,7 +2463,7 @@
                                                 elseif ($row['grade07'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -2545,7 +2545,7 @@
                                                 elseif ($row['grade08'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -2627,7 +2627,7 @@
                                                 elseif ($row['grade09'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -2710,7 +2710,7 @@
                                                 elseif ($row['grade10'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -2863,7 +2863,7 @@
                                                 elseif ($row['grade01'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -2947,7 +2947,7 @@
                                                 elseif ($row['grade02'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -3032,7 +3032,7 @@
                                                 elseif ($row['grade03'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -3116,7 +3116,7 @@
                                                 elseif ($row['grade04'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -3199,7 +3199,7 @@
                                                 elseif ($row['grade05'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -3282,7 +3282,7 @@
                                                 elseif ($row['grade06'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -3365,7 +3365,7 @@
                                                 elseif ($row['grade07'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -3448,7 +3448,7 @@
                                                 elseif ($row['grade08'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -3530,7 +3530,7 @@
                                                 elseif ($row['grade09'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -3614,7 +3614,7 @@
                                                 elseif ($row['grade10'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -3773,7 +3773,7 @@
                                                 elseif ($row['grade01'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -3857,7 +3857,7 @@
                                                 elseif ($row['grade02'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -3942,7 +3942,7 @@
                                                 elseif ($row['grade03'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -4025,7 +4025,7 @@
                                                 elseif ($row['grade04'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -4107,7 +4107,7 @@
                                                 elseif ($row['grade05'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -4189,7 +4189,7 @@
                                                 elseif ($row['grade06'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -4272,7 +4272,7 @@
                                                 elseif ($row['grade07'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -4355,7 +4355,7 @@
                                                 elseif ($row['grade08'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -4439,7 +4439,7 @@
                                                 elseif ($row['grade09'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -4523,7 +4523,7 @@
                                                 elseif ($row['grade10'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -4696,7 +4696,7 @@
                                                 elseif ($row['grade01'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -4780,7 +4780,7 @@
                                                 elseif ($row['grade02'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -4865,7 +4865,7 @@
                                                 elseif ($row['grade03'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -4948,7 +4948,7 @@
                                                 elseif ($row['grade04'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -5030,7 +5030,7 @@
                                                 elseif ($row['grade05'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -5112,7 +5112,7 @@
                                                 elseif ($row['grade06'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -5194,7 +5194,7 @@
                                                 elseif ($row['grade07'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -5277,7 +5277,7 @@
                                                 elseif ($row['grade08'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -5360,7 +5360,7 @@
                                                 elseif ($row['grade09'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -5443,7 +5443,7 @@
                                                 elseif ($row['grade10'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -5604,7 +5604,7 @@
                                                 elseif ($row['grade01'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -5688,7 +5688,7 @@
                                                 elseif ($row['grade02'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -5773,7 +5773,7 @@
                                                 elseif ($row['grade03'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -5856,7 +5856,7 @@
                                                 elseif ($row['grade04'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -5938,7 +5938,7 @@
                                                 elseif ($row['grade05'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
@@ -6079,7 +6079,7 @@
                                                 elseif ($row['grade01'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>

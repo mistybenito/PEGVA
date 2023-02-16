@@ -19,17 +19,31 @@
   <img src="images/logo.png" alt="Admin" class="avatar">
     <a href="registrar.php">Cainta Catholic College</a></p> 
 <hr>
-    <div id="admin">
+
+
+<div id="admin">
   <td>
     <?php
       if(isset($_SESSION['name']))
       {
         echo "Logged in as: ";
         echo $_SESSION['name'];
+        
+       
       }
     ?>
   </td>
+  <td>
+    <?php
+     if(isset($_SESSION['role']))
+     {
+        echo "\nRole: ";
+        echo $_SESSION['role'];
+     }
+    ?>
+    </td>
 </div>
+
 <hr>
 <br>
 <?php if(isset($_SESSION['verified_chairman'])):?>
@@ -52,14 +66,37 @@
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-container">
+    <?php if(isset($_SESSION['verified_abreed'])):?>
     <a href="viewsub_ABREED.php">ABREED</a>
+    <?php endif; ?>
+
+    <?php if(isset($_SESSION['verified_beed'])):?>
     <a href="viewsub_BEED.php">BEED</a>
+    <?php endif; ?>
+
+    <?php if(isset($_SESSION['verified_ed_eng'])):?>
     <a href="viewsub_BSED-ENG.php">BSED-ENG</a>
+    <?php endif; ?>
+
+    <?php if(isset($_SESSION['verified_ed_math'])):?>
     <a href="viewsub_BSED-MATH.php">BSED-MATH</a>
+    <?php endif; ?>
+
+    <?php if(isset($_SESSION['verified_ed_sci'])):?>
     <a href="viewsub_BSED-SCI.php">BSED-SCI</a>
+    <?php endif; ?>
+
+    <?php if(isset($_SESSION['verified_bsba'])):?>
     <a href="viewsub_BSBA.php">BSBA</a>
+    <?php endif; ?>
+
+    <?php if(isset($_SESSION['verified_bscs'])):?>
     <a href="viewsub_BSCS.php">BSCS</a>
+    <?php endif; ?>
+
+    <?php if(isset($_SESSION['verified_bsoa'])):?>
     <a href="viewsub_BSOA.php">BSOA</a>
+    <?php endif; ?>
   </div>
 
   <?php if(isset($_SESSION['verified_registrar'])) :?>
@@ -69,11 +106,18 @@
 <a href="view_sched.php">Schedule</a>
 <a href="view_curriculum.php">Curriculum</a>
 
-<button class="dropdown-btn">Pre-Enrollment
+<div id="logoutbtn">
+    <a href="logout.php" style="color:#a70000;">Logout</a>
+  </div>
+
+<?php if(isset($_SESSION['verified_registrar'])) :?>
+<button class="dropdown-btn">Pre-Registration
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-container">
-   <?php 
+  <?php endif; ?>
+
+   <?php
 if(isset($_POST['open']))
 {
 function sendNotif($to, $notif){
@@ -110,7 +154,7 @@ function sendNotif($to, $notif){
   $to  ='/topics/newsletter';
   $notif = array(
     'title'=>'Greetings!',
-    'body'=>'The Enrollment is now OPEN'
+    'body'=>'The Registration is now OPEN'
   );
 
 sendNotif($to, $notif);
@@ -122,7 +166,7 @@ $open_status = $_POST['open_status'];
         'status'=>$open_status, 
     ];
 
-    $ref_table = 'pre_enrollment';
+    $ref_table = 'pre_Registration';
 
 
 
@@ -177,7 +221,7 @@ elseif(isset($_POST['close']))
     $to  ='/topics/newsletter';
     $notif = array(
   
-      'body'=>'The Enrollment is now CLOSED'
+      'body'=>'The Registration is now CLOSED'
     );
   
   sendNotif($to, $notif);
@@ -244,7 +288,7 @@ elseif(isset($_POST['close']))
       $to  ='/topics/newsletter';
       $notif = array(
         'title'=>'Greetings!',
-        'body'=>'The Enrollment is now OPEN'
+        'body'=>'The Registration is now OPEN'
       );
     
     sendNotif($to, $notif);
@@ -256,7 +300,7 @@ elseif(isset($_POST['close']))
             'status'=>$open_status, 
         ];
     
-        $ref_table = 'pre_enrollment';
+        $ref_table = 'pre_Registration';
     
     
     
@@ -274,9 +318,10 @@ elseif(isset($_POST['close']))
                 header('Location: registrar.php');
             }
     }
-
+    
 
 ?>
+<?php if(isset($_SESSION['verified_registrar'])) :?>
 
 <form method="post">
     <input type ="hidden" name = "open_status" value = "OPEN" class="status">
@@ -284,10 +329,14 @@ elseif(isset($_POST['close']))
     <input type="submit" name="open" value="OPEN"  class="notif"/></input><br>
     <input type="submit" name="close" value="CLOSE" class="notif"/></input>
     <br>
-    <p style="padding-left:10px;color:#256a8f;">Pre-Enrollment Status: </p>
+    <p style="padding-left:10px;color:#256a8f;">Pre-Registration Status: </p>
+    
+
+
+    
     <?php
       include('dbcon.php');
-      $ref_table = 'pre_enrollment';
+      $ref_table = 'pre_Registration';
       $fetchdata = $database->getReference($ref_table)->getValue();
       if ($fetchdata > 0) 
       {
@@ -302,12 +351,15 @@ elseif(isset($_POST['close']))
 
 
 
+<?php endif; ?>
+
+
+
+
 
   </div>
   
-  <div id="logoutbtn">
-    <a href="logout.php" style="color:#a70000;">Logout</a>
-  </div>
+  
 
 
 
