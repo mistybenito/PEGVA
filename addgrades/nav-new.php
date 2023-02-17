@@ -16,8 +16,8 @@
                 <i class="fa fa-bars"></i>
             </label>
 <p class="title">
-  <img src="images/logo.png" alt="Admin" class="avatar">
-    <a href="registrar.php">Cainta Catholic College</a></p> 
+  <img src="../images/logo.png" alt="Admin" class="avatar">
+    <a href="../registrar.php">Cainta Catholic College</a></p> 
 <hr>
     <div id="admin">
   <td>
@@ -37,14 +37,14 @@
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-container">
-    <a href="student_ABREED.php">ABREED</a>
-    <a href="student_BEED.php">BEED</a>
-    <a href="student_BSED-ENG.php">BSED-ENG</a>
-    <a href="student_BSED-MATH.php">BSED-MATH</a>
-    <a href="student_BSED-SCI.php">BSED-SCI</a>
-    <a href="student_BSBA.php">BSBA</a>
-    <a href="student_BSCS.php">BSCS</a>
-    <a href="student_BSOA.php">BSOA</a>
+    <a href="../student_ABREED.php">ABREED</a>
+    <a href="../student_BEED.php">BEED</a>
+    <a href="../student_BSED-ENG.php">BSED-ENG</a>
+    <a href="../student_BSED-MATH.php">BSED-MATH</a>
+    <a href="../student_BSED-SCI.php">BSED-SCI</a>
+    <a href="../student_BSBA.php">BSBA</a>
+    <a href="../student_BSCS.php">BSCS</a>
+    <a href="../student_BSOA.php">BSOA</a>
   </div>
   <?php endif; ?>
 
@@ -52,22 +52,22 @@
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-container">
-    <a href="viewsub_ABREED.php">ABREED</a>
-    <a href="viewsub_BEED.php">BEED</a>
-    <a href="viewsub_BSED-ENG.php">BSED-ENG</a>
-    <a href="viewsub_BSED-MATH.php">BSED-MATH</a>
-    <a href="viewsub_BSED-SCI.php">BSED-SCI</a>
-    <a href="viewsub_BSBA.php">BSBA</a>
-    <a href="viewsub_BSCS.php">BSCS</a>
-    <a href="viewsub_BSOA.php">BSOA</a>
+    <a href="../viewsub_ABREED.php">ABREED</a>
+    <a href="../viewsub_BEED.php">BEED</a>
+    <a href="../viewsub_BSED-ENG.php">BSED-ENG</a>
+    <a href="../viewsub_BSED-MATH.php">BSED-MATH</a>
+    <a href="../viewsub_BSED-SCI.php">BSED-SCI</a>
+    <a href="../viewsub_BSBA.php">BSBA</a>
+    <a href="../viewsub_BSCS.php">BSCS</a>
+    <a href="../viewsub_BSOA.php">BSOA</a>
   </div>
 
   <?php if(isset($_SESSION['verified_registrar'])) :?>
-  <a href="user-list.php">User List</a>
+  <a href="../user-list.php">User List</a>
   <?php endif; ?>
 
-<a href="view_sched.php">Schedule</a>
-<a href="view_curriculum.php">Curriculum</a>
+<a href="../view_sched.php">Schedule</a>
+<a href="../view_curriculum.php">Curriculum</a>
 
 <button class="dropdown-btn">Pre-Enrollment
     <i class="fa fa-caret-down"></i>
@@ -266,12 +266,12 @@ elseif(isset($_POST['close']))
             {
     
                 $_SESSION['status'] = "Updated Status";
-                header('Location: registrar.php');
+                header('Location: ../registrar.php');
             }
             else
             {
                 $_SESSION['status'] = "Status not updated.";
-                header('Location: registrar.php');
+                header('Location: ../registrar.php');
             }
     }
 
@@ -306,7 +306,7 @@ elseif(isset($_POST['close']))
   </div>
   
   <div id="logoutbtn">
-    <a href="logout.php" style="color:#a70000;">Logout</a>
+    <a href="../logout.php" style="color:#a70000;">Logout</a>
   </div>
 
 

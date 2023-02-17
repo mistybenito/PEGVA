@@ -1,6 +1,7 @@
 <?php
     include("authentication.php");
     include("nav-new.php");
+    
 ?>
 <!DOCTYPE html>
 <html>
@@ -106,10 +107,13 @@
                                     ?>
                                             
                                                 <tr>
-                                                    <td> <?= $row['Student_number']; ?> </td>
+                                                    
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
                                                     <td> <?= $row['Course']; ?> </td>
                                                     <td> <?= $row['Email']; ?> </td>
-                                                    <td> <?= $row['Name']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
+
+                                                
                                                     
                                                     <?php
                                             if ($row['Grade'] == '0') {
@@ -117,13 +121,14 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                         <td> N/A </td>
                                                     </tr>
                                                     <?php
                                             } else {
                                                     ?>
+
                                                         <td> <?= $row['grade01']; ?></td>
                                                         <?php
                                                 if ($row['grade01'] <= "3.0") 
@@ -135,12 +140,12 @@
                                                 elseif ($row['grade01'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit </a>
                                                         </td>
                                                         <td> Delete </td>
                                                         
@@ -193,17 +198,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -220,12 +225,12 @@
                                                 elseif ($row['grade02'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <td> Delete </td>
                                                             
@@ -277,17 +282,17 @@
                                                 ?>
                                     
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -304,12 +309,12 @@
                                                 elseif ($row['grade03'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -359,17 +364,17 @@
                                                 ?>
                                     
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -386,12 +391,12 @@
                                                 elseif ($row['grade04'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -440,17 +445,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -467,12 +472,12 @@
                                                 elseif ($row['grade05'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -521,17 +526,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -548,12 +553,12 @@
                                                 elseif ($row['grade06'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -603,17 +608,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -630,12 +635,12 @@
                                                 elseif ($row['grade07'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -684,17 +689,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -711,12 +716,12 @@
                                                 elseif ($row['grade08'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -765,17 +770,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -792,12 +797,12 @@
                                                 elseif ($row['grade09'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -847,17 +852,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>              
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>              
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -874,12 +879,12 @@
                                                 elseif ($row['grade10'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -1035,17 +1040,17 @@
                                                 ?>
                                     
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1062,12 +1067,12 @@
                                                 elseif ($row['grade01'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -1119,17 +1124,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1146,12 +1151,12 @@
                                                 elseif ($row['grade02'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -1203,17 +1208,17 @@
                                                 ?>
                                     
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1230,12 +1235,12 @@
                                                 elseif ($row['grade03'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -1286,17 +1291,17 @@
                                                 ?>
                                     
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1313,12 +1318,12 @@
                                                 elseif ($row['grade04'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -1368,17 +1373,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1395,12 +1400,12 @@
                                                 elseif ($row['grade05'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -1450,17 +1455,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1477,12 +1482,12 @@
                                                 elseif ($row['grade06'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -1532,17 +1537,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1559,12 +1564,12 @@
                                                 elseif ($row['grade07'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -1614,17 +1619,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1641,12 +1646,12 @@
                                                 elseif ($row['grade08'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -1696,17 +1701,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1723,12 +1728,12 @@
                                                 elseif ($row['grade09'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -1779,17 +1784,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1806,12 +1811,12 @@
                                                 elseif ($row['grade10'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -1936,10 +1941,10 @@
                                                 ?>
                                     
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') 
                                             {
@@ -1947,7 +1952,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -1966,12 +1971,12 @@
                                                 elseif ($row['grade01'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -2023,17 +2028,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2050,12 +2055,12 @@
                                                 elseif ($row['grade02'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -2107,17 +2112,17 @@
                                                 ?>
                                     
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2134,12 +2139,12 @@
                                                 elseif ($row['grade03'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -2190,17 +2195,17 @@
                                                 ?>
                                     
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2217,12 +2222,12 @@
                                                 elseif ($row['grade04'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -2272,17 +2277,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2299,12 +2304,12 @@
                                                 elseif ($row['grade05'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -2354,17 +2359,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     < <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2381,12 +2386,12 @@
                                                 elseif ($row['grade06'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -2436,17 +2441,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2463,12 +2468,12 @@
                                                 elseif ($row['grade07'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -2518,17 +2523,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2545,12 +2550,12 @@
                                                 elseif ($row['grade08'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -2600,17 +2605,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2627,12 +2632,12 @@
                                                 elseif ($row['grade09'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -2683,17 +2688,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2710,12 +2715,12 @@
                                                 elseif ($row['grade10'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -2835,10 +2840,10 @@
                                                 ?>
                                     
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
@@ -2846,7 +2851,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2863,12 +2868,12 @@
                                                 elseif ($row['grade01'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -2920,17 +2925,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -2947,12 +2952,12 @@
                                                 elseif ($row['grade02'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -3005,17 +3010,17 @@
                                                 ?>
                                     
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3032,12 +3037,12 @@
                                                 elseif ($row['grade03'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -3089,17 +3094,17 @@
                                                 ?>
                                     
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3116,12 +3121,12 @@
                                                 elseif ($row['grade04'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -3172,17 +3177,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3199,12 +3204,12 @@
                                                 elseif ($row['grade05'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -3255,17 +3260,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3282,12 +3287,12 @@
                                                 elseif ($row['grade06'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -3338,17 +3343,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3365,12 +3370,12 @@
                                                 elseif ($row['grade07'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -3421,17 +3426,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3448,12 +3453,12 @@
                                                 elseif ($row['grade08'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -3504,16 +3509,16 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
-                                                         <td> <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a><a href="addgrades/22_addgrades_REED221.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <td> <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a><a href="addgrades/22_addgrades_REED221.php?id=<?= $key_child; ?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3530,12 +3535,12 @@
                                                 elseif ($row['grade09'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -3587,17 +3592,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3614,12 +3619,12 @@
                                                 elseif ($row['grade10'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -3746,17 +3751,17 @@
                                                 ?>
                                     
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3773,12 +3778,12 @@
                                                 elseif ($row['grade01'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -3830,17 +3835,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3857,12 +3862,12 @@
                                                 elseif ($row['grade02'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -3915,17 +3920,17 @@
                                                 ?>
                                     
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -3942,12 +3947,12 @@
                                                 elseif ($row['grade03'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -3998,17 +4003,17 @@
                                                 ?>
                                     
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <<?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -4025,12 +4030,12 @@
                                                 elseif ($row['grade04'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -4080,17 +4085,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -4107,12 +4112,12 @@
                                                 elseif ($row['grade05'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -4162,17 +4167,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -4189,12 +4194,12 @@
                                                 elseif ($row['grade06'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -4244,10 +4249,10 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
@@ -4255,7 +4260,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -4272,12 +4277,12 @@
                                                 elseif ($row['grade07'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -4327,10 +4332,10 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
@@ -4338,7 +4343,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -4355,12 +4360,12 @@
                                                 elseif ($row['grade08'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -4411,10 +4416,10 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
@@ -4422,7 +4427,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -4439,12 +4444,12 @@
                                                 elseif ($row['grade09'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -4495,10 +4500,10 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <td> <?= $row['Grade'];?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
@@ -4506,7 +4511,7 @@
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -4523,12 +4528,12 @@
                                                 elseif ($row['grade10'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -4669,17 +4674,17 @@
                                                 ?>
                                     
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -4696,12 +4701,12 @@
                                                 elseif ($row['grade01'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -4753,17 +4758,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -4780,12 +4785,12 @@
                                                 elseif ($row['grade02'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -4838,17 +4843,17 @@
                                                 ?>
                                     
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -4865,12 +4870,12 @@
                                                 elseif ($row['grade03'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -4921,17 +4926,17 @@
                                                 ?>
                                     
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -4948,12 +4953,12 @@
                                                 elseif ($row['grade04'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -5003,17 +5008,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -5030,12 +5035,12 @@
                                                 elseif ($row['grade05'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -5085,17 +5090,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -5112,12 +5117,12 @@
                                                 elseif ($row['grade06'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -5167,17 +5172,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -5194,12 +5199,12 @@
                                                 elseif ($row['grade07'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -5250,17 +5255,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -5277,12 +5282,12 @@
                                                 elseif ($row['grade08'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -5333,17 +5338,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -5360,12 +5365,12 @@
                                                 elseif ($row['grade09'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -5416,17 +5421,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -5443,12 +5448,12 @@
                                                 elseif ($row['grade10'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -5578,17 +5583,17 @@
                                                 ?>
                                     
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                     </tr>
                                                     <?php
                                             } else {
@@ -5604,12 +5609,12 @@
                                                 elseif ($row['grade01'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -5661,17 +5666,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -5688,12 +5693,12 @@
                                                 elseif ($row['grade02'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -5746,17 +5751,17 @@
                                                 ?>
                                     
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -5773,12 +5778,12 @@
                                                 elseif ($row['grade03'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -5829,17 +5834,17 @@
                                                 ?>
                                     
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -5856,12 +5861,12 @@
                                                 elseif ($row['grade04'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -5911,17 +5916,17 @@
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -5938,12 +5943,12 @@
                                                 elseif ($row['grade05'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }
@@ -6052,17 +6057,17 @@
                                                 ?>
                                     
                                                 <tr>
-                                                    <td> <?= $row['Student_number'];?> </td>
-                                                    <td> <?= $row['Course'];?> </td>
-                                                    <td> <?= $row['Name'];?> </td>
-                                                    <td> <?= $row['Email'];?> </td>
+                                                    <td> <?= $snumb = $row['Student_number']; ?> </td>
+                                                    <td> <?= $row['Course']; ?> </td>
+                                                    <td> <?= $row['Email']; ?> </td>
+                                                    <td> <?= $sname = $row['Name']; ?> </td>
                                                     <?php // here
                                             if ($row['Grade'] == '0') {
                                                     ?>
                                                         <td> No Grades yet.</td>
                                                         <td> N/A </td>
                                                          <td> 
-                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
+                                                         <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Add </a>
                                                         </td>
                                                     </tr>
                                                     <?php
@@ -6079,12 +6084,12 @@
                                                 elseif ($row['grade01'] > "3.0") 
                                                 {
                                                             ?>
-                                                            <td> Failed </td>
+                                                            <td><font color= "#FF0000"> Failed</font> </td>
                                                             <?php
                                                 }
                                                             ?>
                                                         <td> 
-                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
+                                                        <a href="addgrades/BSOA_addgrades.php?id=<?= $key_child; ?>&Subject_code=<?= $scode; ?>&ref=<?= $reference; ?>&sub=<?= $ref_table; ?>&where=<?= $sub_table;?>&student=<?=$sname;?>&snumber=<?=$snumb;?>" class = "btn btn btn-primary" style="color=black"> Edit  </a>
                                                         </td>
                                                         <?php
                                             }

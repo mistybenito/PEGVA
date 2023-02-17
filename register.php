@@ -19,7 +19,8 @@ include_once("dbcon.php");
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">        
     </head>
 
-    <body style="background: linear-gradient(157deg, #111d3c, #014a99, #3b89ba, #4bb0e8); background-repeat: no-repeat; background-attachment: fixed;">
+ <body>
+ <body style="background: linear-gradient(157deg, #111d3c, #014a99, #3b89ba, #4bb0e8); background-repeat: no-repeat; background-attachment: fixed;">
 
 <nav>
     <p class="title"><img src="images/logo.png" alt="Admin" class="avatar">Cainta Catholic College</p>    

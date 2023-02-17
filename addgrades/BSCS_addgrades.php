@@ -21,6 +21,8 @@
 
 	<table>
 	<?php
+		$name = $_GET['student'];
+		$snumb = $_GET['snumber'];
 		$key_child = $_GET['id'];
 		$scode = $_GET['Subject_code'];
 		$ccode = $_GET['ref'];
@@ -36,6 +38,15 @@
 						<input type="hidden" name = "reference" value = "<?= $ccode;?>">
 						<input type="hidden" name = "sub" value = "<?= $sub;?>">
 						<input type="hidden" name = "where" value = "<?= $where;?>">
+					<tr> 
+						<td>Student Name</td>
+						<td><input type="text" name = "Name" value = "<?=$name;?>"></td>
+					</tr>
+					<tr> 
+						<td>Student Number</td>
+						<td><input type="text" name = "Number" value = "<?=$snumb;?>"></td>
+					</tr>
+					
 					<tr> 
 						<td>Course</td>
 						<td><input type="text" name = "Course" value = "Bachelor of Science in Computer Science"></td>

@@ -35,7 +35,7 @@ include_once("dbcon.php");
     
         <form class="container"  action="logincode.php" method="POST">
         <div class="imgcontainer">                        
-            <img src="images/pegva.png" alt="logo" style="width:50px; ">
+            <img src="images/pregva.png" alt="logo" style="width:50px; ">
                 <h3>Hello Admin! Welcome!</h3>
         </div>
       

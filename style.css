@@ -60,7 +60,7 @@ div.register-form
     border-radius: 8px;
     box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
     box-sizing: border-box;
-    margin: 5% 0 0;
+    margin: 10% 0 0;
     padding:20px 30px;
     width: fit-content; 
 }

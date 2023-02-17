@@ -46,7 +46,7 @@
 
 <hr>
 <br>
-<?php if(isset($_SESSION['verified_chairman'])):?>
+<?php if(isset($_SESSION['verified_registrar'])):?>
   <button class="dropdown-btn">Student List 
     <i class="fa fa-caret-down"></i>
   </button>
