@@ -20,6 +20,8 @@
 
 	<table>
 	<?php
+		$name = $_GET['student'];
+		$snumb = $_GET['snumber'];
 		$key_child = $_GET['id'];
 		$scode = $_GET['Subject_code'];
 		$ccode = $_GET['ref'];
